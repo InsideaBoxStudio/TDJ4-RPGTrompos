@@ -12,8 +12,9 @@ public class EndGame : MonoBehaviour
     [SerializeField] private bool isPracticeMode = false;
     private bool[] playersDefeated;
     [SerializeField] private string sceneToLoad = "InitMenu";
-    private bool gameFinished = false;
-    private int playerID = 0;
+    public bool gameFinished = false;
+    public int playerID = 0;
+    public string loseCause = "Dead"; 
 
     void Start()
     {

@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GravityToPoint
   gravityPoint: {fileID: 0}
-  gravityStrength: 9.8
+  gravityStrength: 5
   spinDirection: -1
   frictionStrength: 0.3
 --- !u!58 &6201842438804373670

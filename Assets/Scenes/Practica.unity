@@ -853,7 +853,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sierra
+  m_text: Escudo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1434,7 +1434,7 @@ Transform:
   m_GameObject: {fileID: 415560316}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26132, y: 0.03678, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1442,7 +1442,7 @@ Transform:
   - {fileID: 875647201}
   - {fileID: 1519406962}
   - {fileID: 265705280}
-  m_Father: {fileID: 571370243}
+  m_Father: {fileID: 716172782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &415560318
 Rigidbody2D:
@@ -2817,6 +2817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6225d80eabbe34ca72469e9dd6d3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimingBar
+  endGame: {fileID: 2097228478}
   countDown: {fileID: 1022612339}
   scrollbar: {fileID: 490640438}
   vida: {fileID: 1014463349}
@@ -2911,6 +2912,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420035}
   - component: {fileID: 519420034}
   - component: {fileID: 519420033}
   m_Layer: 0
@@ -3069,13 +3071,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 305372ed971117d4a95ddccad9dca87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollowTwoPlayers
-  player1: {fileID: 1014463344}
+  player1: {fileID: 1533879948}
   player2: {fileID: 415560317}
+  smoothSpeed: 5
+  offset: {x: 0, y: 0, z: -10}
+  minZoom: 1
+  maxZoom: 2.5
+  zoomLimiter: 7
+  cam: {fileID: 519420031}
+  rotationSmoothSpeed: 1
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586e705c12dcb364683ad901782209ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollowPlayers
+  players: []
   smoothSpeed: 5
   offset: {x: 0, y: 0, z: -10}
   minZoom: 1
@@ -3576,7 +3598,7 @@ MonoBehaviour:
   playerIndex: 0
   energyCost: 4
   moveDuration: 2
-  Recoil: 10
+  Recoil: 5
 --- !u!1 &571370242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,11 +3624,11 @@ Transform:
   m_GameObject: {fileID: 571370242}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26132, y: -0.03678, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 415560317}
+  - {fileID: 716172782}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606881848
@@ -4694,6 +4716,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678650825}
   m_CullTransparentMesh: 1
+--- !u!1 &716172781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716172782}
+  m_Layer: 0
+  m_Name: Magus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &716172782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716172781}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 415560317}
+  m_Father: {fileID: 571370243}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720616130
 GameObject:
   m_ObjectHideFlags: 0
@@ -6814,7 +6868,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067900326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa42510c0dcf122418e0b4f88f7722be, type: 3}
   m_Name: 
@@ -6832,21 +6886,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067900326}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e569bcf0bc6a18e4fa043de32f03573e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaunchClone
-  ClonePrefab: {fileID: 5772441645642728929, guid: e403375fbc8dc4042aa9a174d71170a1, type: 3}
+  ClonePrefab: {fileID: 2861692847417878887, guid: c6531e3577070c445baace534164bb82, type: 3}
   Prompter: {fileID: 766853976}
   pointerPosition: {fileID: 1533879948}
   rpgTurn: {fileID: 1533879950}
   energyCounter: {fileID: 722704008}
   rb: {fileID: 1533879949}
   playerIndex: 0
-  energyCost: 5
+  energyCost: 3
   moveDuration: 1
-  Recoil: 5
+  Recoil: 1
 --- !u!114 &1067900330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7717,7 +7771,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Escudo
+  m_text: Orbe Perseguidor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9511,7 +9565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1417587098}
   m_Layer: 0
-  m_Name: Mago
+  m_Name: Magus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9723,6 +9777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6225d80eabbe34ca72469e9dd6d3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimingBar
+  endGame: {fileID: 0}
   countDown: {fileID: 1022612339}
   scrollbar: {fileID: 1440636554}
   vida: {fileID: 1533879953}
@@ -10342,6 +10397,7 @@ GameObject:
   - component: {fileID: 1533879953}
   - component: {fileID: 1533879952}
   - component: {fileID: 1533879951}
+  - component: {fileID: 1533879960}
   m_Layer: 3
   m_Name: 0
   m_TagString: Player
@@ -10674,6 +10730,24 @@ MonoBehaviour:
   gravityStrength: 9.8
   spinDirection: -1
   frictionStrength: 0.3
+--- !u!114 &1533879960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533879947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db2a28441ae21f44949faf1c6ce5b6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Parry
+  parryTime: 0.1
+  playerTurn: {fileID: 1533879950}
+  failTime: 1
+  energycost: 1
+  beybladeSprite: {fileID: 1236293330}
+  Energy: {fileID: 722704008}
 --- !u!1 &1535040286
 GameObject:
   m_ObjectHideFlags: 0
@@ -13478,6 +13552,81 @@ MonoBehaviour:
   - {fileID: 415560316}
   isPracticeMode: 1
   sceneToLoad: InitMenu
+  gameFinished: 0
+  playerID: 0
+  loseCause: Dead
+--- !u!1 &2112625972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2112625973}
+  - component: {fileID: 2112625974}
+  - component: {fileID: 2112625975}
+  m_Layer: 0
+  m_Name: Eventos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2112625973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112625972}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 643.9224, y: 384.27618, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112625974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112625972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b147891048540e64db365f816deb7b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelStart
+  analyticsEventName: LevelStart
+  analyticsParametersName:
+  - player1Char
+  - player2Char
+  players: []
+  ActivationAnalytics: 1
+  ActivationDebugLog: 1
+  playerChar:
+  - 
+  - 
+--- !u!114 &2112625975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112625972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd1f53fa684a3a458c16762a4f23e53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelComplete
+  analyticsEventName: LevelComplete
+  ActivationAnalytics: 1
+  ActivationDebugLog: 1
+  endGameScript: {fileID: 2097228478}
+  time: 0
 --- !u!1 &2119396756
 GameObject:
   m_ObjectHideFlags: 0
@@ -13568,7 +13717,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1224379796}
-  - {fileID: 571370243}
   - {fileID: 807469216}
+  - {fileID: 571370243}
   - {fileID: 2097228473}
   - {fileID: 1964378493}
+  - {fileID: 2112625973}

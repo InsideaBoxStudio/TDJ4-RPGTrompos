@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class TimingBar : MonoBehaviour
 {
+    [SerializeField] private EndGame endGame;
     [SerializeField] private CountDown countDown;
     [SerializeField] private Scrollbar scrollbar;
     [SerializeField] private Vida vida;
@@ -34,8 +35,9 @@ public class TimingBar : MonoBehaviour
             float value = Mathf.PingPong(Time.unscaledTime * barSpeed, 1f);
             scrollbar.value = value;
         }
-        else
+        else // si se acabo el tiempo y el jugador no lanzo su trompo.
         {
+            endGame.loseCause = "Fail";
             barStopped = true;
             vida.WaitForInfo(2);
         }
