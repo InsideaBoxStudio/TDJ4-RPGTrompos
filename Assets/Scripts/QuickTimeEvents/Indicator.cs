@@ -28,12 +28,10 @@ public class Indicator : MonoBehaviour
             if ((Vector2.Distance(transform.position, zone.transform.position) <= (zone.transform.localScale.x / 2)) && !isTrigger)
             {
                 isTrigger = true;
-                Debug.Log(isTrigger);
             }
             else if (isTrigger && (Vector2.Distance(transform.position, zone.transform.position) >= (zone.transform.localScale.x / 2)))
             {
                 isTrigger = false;
-                Debug.Log(isTrigger);
             }
         }
     }

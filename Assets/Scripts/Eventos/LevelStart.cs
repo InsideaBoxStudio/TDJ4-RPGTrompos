@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using Unity.Services.Analytics;
+using Unity.Services.Core;
+using UnityEngine;
 
 public class LevelStart : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class LevelStart : MonoBehaviour
 
         if (ActivationAnalytics)
         {
-            if (!PlayerPrefs.HasKey("AnalyticsConsent") || PlayerPrefs.GetInt("AnalyticsConsent") == 0) return; // si los usuarios aceptaron el consentimiento de analytics
+            if (PlayerPrefs.GetInt("AnalyticsConsent") == 0) return; // si los usuarios aceptaron el consentimiento de analytics
         }
         
         players.AddRange( //buscar a todos los Players en la escena
@@ -44,6 +45,7 @@ public class LevelStart : MonoBehaviour
 
         if (players.Count < 2) return; // si no hay suficientes jugadores
 
+        Debug.Log("funciona");
         SendAnalytics();
         DebugAnalytics();
     }
@@ -65,7 +67,7 @@ public class LevelStart : MonoBehaviour
     private void DebugAnalytics() // imprimir los datos en consola
     {
         if (!ActivationDebugLog) return;
-        
+
         Debug.Log(analyticsEventName);
         for (int i = 0; i < analyticsParametersName.Length; i++)
         {

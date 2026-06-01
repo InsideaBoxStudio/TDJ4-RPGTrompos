@@ -12,7 +12,7 @@ public class AnalyticsConsent : MonoBehaviour
         {
             await UnityServices.InitializeAsync(); // Inicializar los servicios de Unity
 
-            if (PlayerPrefs.HasKey("AnalyticsConsent")) //comprueba si el usuario ya dio su concentimiento previamente
+            if (PlayerPrefs.HasKey("AnalyticsConsent") && PlayerPrefs.GetInt("AnalyticsConsent") == 1) // comprueba si el usuario ya dio su consentimiento previamente
             {
                 bool accepted = PlayerPrefs.GetInt("AnalyticsConsent") == 1;
 
@@ -29,7 +29,7 @@ public class AnalyticsConsent : MonoBehaviour
             }
             else
             {
-                consentPanel.SetActive(true); // activar panel de consentimiento si no ha dado su concentimiento
+                consentPanel.SetActive(true); // activar panel de consentimiento si no ha dado su consentimiento
             }
         }
         catch (System.Exception e) //en caso de un error al iniciar los servicios de Unity
@@ -49,6 +49,8 @@ public class AnalyticsConsent : MonoBehaviour
         PlayerPrefs.SetInt("AnalyticsConsent", 1); // guarda el consentimiento del usuario para futuras sesiones
         PlayerPrefs.Save();
 
+        Debug.Log(PlayerPrefs.GetInt("AnalyticsConsent"));
+
         consentPanel.SetActive(false); // desactiva el panel de consentimiento
     }
 
@@ -62,6 +64,8 @@ public class AnalyticsConsent : MonoBehaviour
 
         PlayerPrefs.SetInt("AnalyticsConsent", 0); // guarda el consentimiento del usuario para futuras sesiones
         PlayerPrefs.Save();
+
+        Debug.Log(PlayerPrefs.GetInt("AnalyticsConsent"));
 
         consentPanel.SetActive(false); // desactiva el panel de consentimiento
     }
