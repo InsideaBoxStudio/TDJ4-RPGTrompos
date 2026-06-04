@@ -10,7 +10,7 @@ public class ExpandMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].buttonWest.isPressed)
+        if (rpgTurn.isTurnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonWest.isPressed)
         {
             menuToExpand.SetActive(true);
         }

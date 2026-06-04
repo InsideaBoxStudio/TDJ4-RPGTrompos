@@ -24,28 +24,37 @@ public class LaunchShuriken : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
+        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
         {
-            if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
-            rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
+            DoLaunch();
+        }
+    }
 
-            rb.linearVelocity = Prompter.right * -Recoil;
+    // Cuánta energía cuesta (la IA lo consulta para decidir).
+    public int EnergyCost => energyCost;
 
-            //lanzar shuriken
-            GameObject instantiatedShuriken = Instantiate(ShurikenPrefab, pointerPosition.position, Quaternion.identity);
-            instantiatedShuriken.GetComponent<Shuriken>().Launch(Prompter);
+    // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
+    public void DoLaunch()
+    {
+        if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
+        energyCounter.ChangeEnergy(-energyCost);
+        rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
-            foreach (Transform child in rb.transform)
+        rb.linearVelocity = Prompter.right * -Recoil;
+
+        //lanzar shuriken
+        GameObject instantiatedShuriken = Instantiate(ShurikenPrefab, pointerPosition.position, Quaternion.identity);
+        instantiatedShuriken.GetComponent<Shuriken>().Launch(Prompter);
+
+        foreach (Transform child in rb.transform)
+        {
+            if (child.CompareTag("Poison"))
             {
-                if (child.CompareTag("Poison"))
-                {
-                    child.GetComponent<Poison>().ChangeParent(instantiatedShuriken, false);
-                }
-                if (child.CompareTag("Redirect"))
-                {
-                    child.GetComponent<Redirection>().ChangeParent(instantiatedShuriken);
-                }
+                child.GetComponent<Poison>().ChangeParent(instantiatedShuriken, false);
+            }
+            if (child.CompareTag("Redirect"))
+            {
+                child.GetComponent<Redirection>().ChangeParent(instantiatedShuriken);
             }
         }
     }

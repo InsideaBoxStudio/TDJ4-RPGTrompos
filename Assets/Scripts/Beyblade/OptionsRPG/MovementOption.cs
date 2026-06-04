@@ -21,13 +21,19 @@ public class MovementOption : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && Gamepad.all[playerIndex].buttonNorth.wasPressedThisFrame)
+        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonNorth.wasPressedThisFrame)
         {
-            if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
-            rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
-
-            rb.linearVelocity = Prompter.right * moveSpeed;
+            DoMove();
         }
+    }
+
+    // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
+    public void DoMove()
+    {
+        if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
+        energyCounter.ChangeEnergy(-energyCost);
+        rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
+
+        rb.linearVelocity = Prompter.right * moveSpeed;
     }
 }

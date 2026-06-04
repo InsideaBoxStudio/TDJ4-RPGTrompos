@@ -39,11 +39,21 @@ public class CheckPlayerTurn : MonoBehaviour
         }
 
         bool playerReady = playersRb.linearVelocity.magnitude < maxVelocityTurn;
-        
+
         if (playerReady && !isTurnActive)
         {
             rpgTurn.NotifyReady(this);
         }
+    }
+
+    // Llamado por la IA (AIBrain) para pedir su turno activamente, sin depender de
+    // la ventana de sincronización pensada para dos jugadores humanos.
+    public void RequestTurnNow()
+    {
+        if (!isTurnPosible) return;
+        if (isTurnActive) return;
+        if (countDownRPG.countDownTime <= 0) return;
+        rpgTurn.NotifyReadyImmediate(this); // versión sin corrutina (la IA no usa la ventana de sync)
     }
 
     public void Ready()
