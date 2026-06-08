@@ -48,4 +48,10 @@ public class Vida : MonoBehaviour
             lifeBar.transform.localScale.y,
             lifeBar.transform.localScale.z);
     }
+
+    // Llamado por la IA (AIBrain) para cargarse vida llena sin usar la barra de timing.
+    public void SetFullLife()
+    {
+        vidaActual = maxLife;
+    }
 }

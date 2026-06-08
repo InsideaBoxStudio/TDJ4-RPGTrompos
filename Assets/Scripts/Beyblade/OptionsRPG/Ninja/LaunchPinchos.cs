@@ -24,23 +24,32 @@ public class LaunchPinchos : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
+        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
         {
-            if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
-            rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
+            DoLaunch();
+        }
+    }
 
-            rb.linearVelocity = Prompter.right * -Recoil;
+    // Cuánta energía cuesta (la IA lo consulta para decidir).
+    public int EnergyCost => energyCost;
 
-            //lanzar shuriken
-            GameObject instantiatedPincho = Instantiate(PinchosPrefab, pointerPosition.position, Quaternion.identity);
+    // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
+    public void DoLaunch()
+    {
+        if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
+        energyCounter.ChangeEnergy(-energyCost);
+        rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
 
-            foreach (Transform child in rb.transform)
+        rb.linearVelocity = Prompter.right * -Recoil;
+
+        //lanzar pinchos
+        GameObject instantiatedPincho = Instantiate(PinchosPrefab, pointerPosition.position, Quaternion.identity);
+
+        foreach (Transform child in rb.transform)
+        {
+            if (child.CompareTag("Poison"))
             {
-                if (child.CompareTag("Poison"))
-                {
-                    child.GetComponent<Poison>().ChangeParent(instantiatedPincho, false); //envenenar al jugador
-                }
+                child.GetComponent<Poison>().ChangeParent(instantiatedPincho, false); //envenenar al jugador
             }
         }
     }

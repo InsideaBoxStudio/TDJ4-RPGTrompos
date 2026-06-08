@@ -14,7 +14,7 @@ public class ActiveREdirect : MonoBehaviour
 
     void Update()
     {
-        if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
         {
             energyCounter.ChangeEnergy(-energyCost);
             Instantiate(PrefabRedirect, Player.transform);

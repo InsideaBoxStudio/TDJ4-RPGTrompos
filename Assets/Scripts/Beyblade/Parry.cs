@@ -29,6 +29,10 @@ public class Parry : MonoBehaviour
         if (rpgTurn.isTurnActive) return;
         if (!isParryPossible) return;
 
+        // Seguridad: si no hay un gamepad conectado en este índice (ej: el trompo-IA
+        // no tiene un joystick físico), no intentamos leerlo para no crashear.
+        if (Gamepad.all.Count <= playerIndex) return;
+
         if (Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
         {
             StartParry();

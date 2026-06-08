@@ -50,7 +50,7 @@ public class EndGame : MonoBehaviour
 
         if (!gameFinished) return;
 
-        if (Gamepad.all[playerID].buttonSouth.wasPressedThisFrame)
+        if (Gamepad.all.Count > playerID && Gamepad.all[playerID].buttonSouth.wasPressedThisFrame)
         {
             SceneManager.LoadScene(sceneToLoad);
         }
