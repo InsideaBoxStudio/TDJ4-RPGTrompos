@@ -6,7 +6,7 @@ public class CheckPlayerTurn : MonoBehaviour
     // titulo para SerializeField
     [Header("Player")]
     [SerializeField] private Rigidbody2D playersRb;
-    [SerializeField] private GameObject playersOptions;
+    [SerializeField] public GameObject playersOptions;
     [SerializeField] private EnergyCounter energyCounter;
     [SerializeField] private RPGTurn rpgTurn;
 
@@ -21,6 +21,7 @@ public class CheckPlayerTurn : MonoBehaviour
 
     private bool isTurnPosible = true;
     public bool isTurnActive = false;
+    public float turnTime = 0f;
 
     void Awake()
     {
@@ -48,7 +49,7 @@ public class CheckPlayerTurn : MonoBehaviour
 
     public void Ready()
     {
-        energyCounter.ChangeEnergy(energyGainPerTurn);
+        energyCounter.ChangeEnergy(energyGainPerTurn, "GainEnergy");
         //Debug.Log("Turno del jugador" + gameObject.name);
         isTurnActive = true;
         playersOptions.SetActive(true);
@@ -57,6 +58,7 @@ public class CheckPlayerTurn : MonoBehaviour
 
     public void PlayerChoseAnAction(float nextTurnTime, float maxVelocityNextTurn, bool isAdditionalTime) // Cuando ya eligio una accion
     {
+        turnTime = nextTurnTime;
         if (isAdditionalTime) nextTurnTime += nextTurnTime;
         else if (nextTurnTime <= 0f) nextTurnTime = minTurnTime;
         if (maxVelocityNextTurn <= 0f) maxVelocityNextTurn = maxVelTurn;
@@ -68,8 +70,6 @@ public class CheckPlayerTurn : MonoBehaviour
         countDownRPG.ResetCountDown();
         playersOptions.SetActive(false);
         rpgTurn.PlayerFinished(this);
-
-        //Debug.Log(nextTurnTime);
     }
 
     void NextTurnTime()

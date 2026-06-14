@@ -24,10 +24,10 @@ public class LaunchPinchos : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
+        if (turnActive && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "LaunchPinchos");
             rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
 
             rb.linearVelocity = Prompter.right * -Recoil;

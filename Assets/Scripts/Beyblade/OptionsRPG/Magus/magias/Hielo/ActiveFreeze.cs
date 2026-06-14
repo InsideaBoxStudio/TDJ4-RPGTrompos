@@ -1,9 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ActiveREdirect : MonoBehaviour
+public class ActiveFreezen : MonoBehaviour
 {
-    [SerializeField] private GameObject PrefabRedirect;
+    [SerializeField] private GameObject PrefabHielo;
     [SerializeField] private CheckPlayerTurn rpgTurn;
     [SerializeField] private GameObject Player;
     [SerializeField] private int playerIndex = 0;
@@ -14,10 +15,10 @@ public class ActiveREdirect : MonoBehaviour
 
     void Update()
     {
-        if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
         {
-            energyCounter.ChangeEnergy(-energyCost);
-            Instantiate(PrefabRedirect, Player.transform);
+            energyCounter.ChangeEnergy(-energyCost, "Freeze");
+            Instantiate(PrefabHielo, Player.transform);
         }
     }
 }

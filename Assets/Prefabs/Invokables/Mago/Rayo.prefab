@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3583247492250311353}
   - component: {fileID: 5908166658659302037}
   - component: {fileID: 1219493568314078214}
-  - component: {fileID: 3824409585959992639}
+  - component: {fileID: -83673085641247581}
   m_Layer: 3
-  m_Name: rediirigir
-  m_TagString: Redirect
+  m_Name: Rayo
+  m_TagString: Paralysis
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -227,8 +227,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 0, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.02768135, g: 0, b: 1, a: 1}
-        key1: {r: 0, g: 0, b: 0.6131598, a: 0.5294118}
+        key0: {r: 1, g: 1, b: 0, a: 1}
+        key1: {r: 1, g: 0.50980395, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1488,7 +1488,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+    - sprite: {fileID: 21300000, guid: 79320485971fb934d92083ee3ab3f2f3, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4837,7 +4837,7 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!114 &3824409585959992639
+--- !u!114 &-83673085641247581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4846,8 +4846,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4153060416927595316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 693affe3eab8d0549b52d04599c05138, type: 3}
+  m_Script: {fileID: 11500000, guid: 65db015d9b84a0e4d9145b969fa215c5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Redirection
-  attackTime: 1
-  Speed: 5
+  m_EditorClassIdentifier: Assembly-CSharp::Paralysis
+  damagePerSecond: 1
+  lifeDuration: 5
+  QuickTimeEvent: {fileID: 1549234623507946478, guid: c9831211bb9f64341bac19a4e054bd2d, type: 3}
+  Possibility: 25
+  isActive: 0

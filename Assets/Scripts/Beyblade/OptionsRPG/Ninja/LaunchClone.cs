@@ -25,7 +25,7 @@ public class LaunchClone : MonoBehaviour
         {
             if (energyCounter.currentEnergy < energyCost) return;
 
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "LaunchClone");
             rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
 
             // Dirección hacia donde apunta el prompter

@@ -17,7 +17,7 @@ public class ActivePoison : MonoBehaviour
     {
         if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
         {
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "Poison");
             Instantiate(PrefabVeneno, Player.transform);
         }
     }

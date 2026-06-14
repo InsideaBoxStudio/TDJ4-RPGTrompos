@@ -18,7 +18,7 @@ public class Parry : MonoBehaviour
 
     private int playerIndex;
 
-    private void Awake()
+    private void Start()
     {
         rpgTurn = GetComponent<CheckPlayerTurn>();
         playerIndex = int.Parse(transform.name);
@@ -37,7 +37,7 @@ public class Parry : MonoBehaviour
 
     private void StartParry()
     {
-        Energy.ChangeEnergy(-energycost);
+        Energy.ChangeEnergy(-energycost, "Parry");
         isParryPossible = false;
         isParryActive = true;
 
@@ -92,7 +92,7 @@ public class Parry : MonoBehaviour
         }
         else
         {
-            Debug.Log("Parry fallido");
+            //Debug.Log("Parry fallido");
         }
     }
 }

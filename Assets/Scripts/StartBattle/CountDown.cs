@@ -8,10 +8,12 @@ public class CountDown : MonoBehaviour
     [SerializeField] private GameObject[] objectsToDestroy; //objetos a eliminar despues de la cuenta regresiva
     [SerializeField] private GameObject[] objectsToActive; //objetos a ocultar despues de la cuenta regresiva
     public int countDownTime = 3;
+    private AudioSource audioSource;
 
     void Awake()
     {
         Time.timeScale = 0f;
+        audioSource = GetComponent<AudioSource>();
     }
     
     void Start()
@@ -26,6 +28,7 @@ public class CountDown : MonoBehaviour
             countDownText.text = countDownTime.ToString();
             yield return new WaitForSecondsRealtime(1f);
             countDownTime--;
+            audioSource.Play();
 
             if (countDownTime == 0)
             {

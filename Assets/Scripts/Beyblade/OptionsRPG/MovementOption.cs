@@ -24,7 +24,7 @@ public class MovementOption : MonoBehaviour
         if (turnActive && Gamepad.all[playerIndex].buttonNorth.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "Move");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             rb.linearVelocity = Prompter.right * moveSpeed;

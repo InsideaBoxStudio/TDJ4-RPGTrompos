@@ -9,6 +9,9 @@ TagManager:
   - Poison
   - Redirect
   - DamageableObject
+  - Burn
+  - Paralysis
+  - Freeze
   layers:
   - Default
   - TransparentFX

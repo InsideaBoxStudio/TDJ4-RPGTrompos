@@ -15,7 +15,7 @@ public class AttackCollider : MonoBehaviour
         // verificar que sea un jugador diferente al que lanzo el ataque
         if (collision.gameObject.layer != transform.parent.gameObject.layer)
         {
-            energyCounter.ChangeEnergy(energyGain);
+            energyCounter.ChangeEnergy(energyGain, "GainEnergy");
             collision.gameObject.GetComponent<Vida>().Damage(damage);
         }
     }

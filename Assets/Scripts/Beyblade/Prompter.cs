@@ -12,7 +12,7 @@ public class Prompter : MonoBehaviour
     private float angle;
     private Vector2 input;
 
-    private void Awake()
+    private void Start()
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 

@@ -55,10 +55,10 @@ public class LevelStart : MonoBehaviour
         if (!ActivationAnalytics) return; // si las pruebas de analytics no estan activas, retornar sin hacer nada.
         // aqui enviar el evento de analytics
         CustomEvent levelStartEvent = new CustomEvent(analyticsEventName)
-                {
-                    { analyticsParametersName[0], playerChar[0] },
-                    { analyticsParametersName[1], playerChar[1] }
-                };
+        {
+            { analyticsParametersName[0], playerChar[0] },
+            { analyticsParametersName[1], playerChar[1] }
+        };
 
         AnalyticsService.Instance.RecordEvent(levelStartEvent);
         AnalyticsService.Instance.Flush();

@@ -23,7 +23,7 @@ public class WaitOption : MonoBehaviour
         if (turnActive && Gamepad.all[playerIndex].buttonSouth.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "Wait");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             rb.linearVelocity = Prompter.right * 0;

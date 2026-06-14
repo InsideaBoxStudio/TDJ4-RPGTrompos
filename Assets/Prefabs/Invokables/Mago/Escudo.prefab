@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7582572013097038339}
   - component: {fileID: 7303147709850628461}
   - component: {fileID: 2753723469197834632}
+  - component: {fileID: 8651613661119818648}
   m_Layer: 0
   m_Name: Escudo
   m_TagString: DamageableObject
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.05618, g: 0, b: 1, a: 0.28235295}
+  m_Sprite: {fileID: 4556617768182904718, guid: 3b7d6288babd9b24bb6a6a2134909765, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.28235295}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -130,19 +131,19 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.4968583, y: 0.0022061542}
-  - {x: 0.46240762, y: -0.21282665}
-  - {x: 0.30990383, y: -0.3972038}
-  - {x: 0.078234404, y: -0.48836643}
-  - {x: -0.21900405, y: -0.4612861}
-  - {x: -0.43790236, y: -0.26362813}
-  - {x: -0.5015273, y: -0.013610266}
-  - {x: -0.44606513, y: 0.2388258}
-  - {x: -0.25899336, y: 0.43668535}
-  - {x: -0.007683143, y: 0.5019881}
-  - {x: 0.22623815, y: 0.4542414}
-  - {x: 0.4383226, y: 0.25812098}
-  - {x: 0.5025333, y: 0}
+  - {x: 0.15838933, y: 0.008107076}
+  - {x: 0.15839347, y: -0.0405519}
+  - {x: 0.11938819, y: -0.10940376}
+  - {x: 0.03364563, y: -0.1519241}
+  - {x: -0.056863204, y: -0.14511134}
+  - {x: -0.13388819, y: -0.0872999}
+  - {x: -0.15697792, y: 0.004630588}
+  - {x: -0.13597065, y: 0.08276519}
+  - {x: -0.08063838, y: 0.14685851}
+  - {x: 0.012584493, y: 0.16757248}
+  - {x: 0.09449883, y: 0.13401315}
+  - {x: 0.14038825, y: 0.083819516}
+  - {x: 0.16001058, y: 0.016214091}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -166,3 +167,15 @@ MonoBehaviour:
   moveDuration: 2
   playerID: 0
   hasCollided: 0
+--- !u!114 &8651613661119818648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992024130642920148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816315051d2c19246b7798b9e7c5a918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Burned

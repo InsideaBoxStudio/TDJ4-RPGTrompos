@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class Attack : MonoBehaviour
+public class BasicAttack : MonoBehaviour
 {
     [SerializeField] private GameObject ColliderAttack;
     [SerializeField] private Transform Prompter;
@@ -9,7 +9,6 @@ public class Attack : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private int playerIndex = 0;
-
     
     [Header("Stats")]
     [SerializeField] private int energyCost = 1; //costo de energia
@@ -24,7 +23,7 @@ public class Attack : MonoBehaviour
         if (Gamepad.all[playerIndex].dpad.up.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "BasicAttack");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             rb.linearVelocity = Prompter.right * moveSpeed;

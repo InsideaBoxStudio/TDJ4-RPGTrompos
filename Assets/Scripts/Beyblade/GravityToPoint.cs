@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class GravityToPoint : MonoBehaviour
 {
-    public Transform gravityPoint; // El punto al que atrae
+    [SerializeField] private Transform gravityPoint; // El punto al que atrae
     public float gravityStrength = 10f;
     [SerializeField] private float spinDirection = 1f;
-    [SerializeField] float frictionStrength = 0.5f;
+    public float frictionStrength = 0.5f;
 
     Rigidbody2D rb;
 

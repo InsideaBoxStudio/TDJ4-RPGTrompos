@@ -24,10 +24,10 @@ public class LaunchShuriken : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
+        if (turnActive && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "LaunchShuriken");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             rb.linearVelocity = Prompter.right * -Recoil;
@@ -42,9 +42,17 @@ public class LaunchShuriken : MonoBehaviour
                 {
                     child.GetComponent<Poison>().ChangeParent(instantiatedShuriken, false);
                 }
-                if (child.CompareTag("Redirect"))
+                else if (child.CompareTag("Burn"))
                 {
-                    child.GetComponent<Redirection>().ChangeParent(instantiatedShuriken);
+                    child.GetComponent<Burn>().ChangeParent(instantiatedShuriken, false);
+                }
+                else if (child.CompareTag("Freeze"))
+                {
+                    child.GetComponent<Freeze>().ChangeParent(instantiatedShuriken, false);
+                }
+                else if (child.CompareTag("Paralysis"))
+                {
+                    child.GetComponent<Paralysis>().ChangeParent(instantiatedShuriken, false);
                 }
             }
         }

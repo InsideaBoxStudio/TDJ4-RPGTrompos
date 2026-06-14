@@ -22,10 +22,10 @@ public class Cierra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame) // si es su turno y presiona el boton de abajo del dpad
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "Cierra"); // descontar energia
             rpgTurn.PlayerChoseAnAction(moveDuration, 2f, false);
 
             instantiatedCierra = Instantiate(PrefabCierra, rb.position, Quaternion.identity, rb.transform);
@@ -35,7 +35,19 @@ public class Cierra : MonoBehaviour
             {
                 if (child.CompareTag("Poison"))
                 {
-                    child.GetComponent<Poison>().ChangeParent(instantiatedCierra, false); //envenenar al jugador
+                    child.GetComponent<Poison>().ChangeParent(instantiatedCierra, false); //envenenar al jugadorx
+                }
+                else if (child.CompareTag("Burn"))
+                {
+                    child.GetComponent<Burn>().ChangeParent(instantiatedCierra, false);
+                }
+                else if (child.CompareTag("Freeze"))
+                {
+                    child.GetComponent<Freeze>().ChangeParent(instantiatedCierra, false);
+                }
+                else if (child.CompareTag("Paralysis"))
+                {
+                    child.GetComponent<Paralysis>().ChangeParent(instantiatedCierra, false);
                 }
             }
 

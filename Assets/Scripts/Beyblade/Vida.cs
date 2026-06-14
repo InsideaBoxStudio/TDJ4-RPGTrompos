@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class Vida : MonoBehaviour
 {
@@ -6,14 +7,22 @@ public class Vida : MonoBehaviour
     [SerializeField] private GameObject lifeBar;
     [SerializeField] private bool isPracticeMode = false;
     [SerializeField] public float vidaActual;
+    [SerializeField] public float timeDuration = 0.2f;
+
+    public AudioSource audioSource;
+
     private float potenciaDeTiro = 2;
     private float initialScaleX;
+    private float initialScaleX2;
 
     void Start()
     {
         initialScaleX = lifeBar.transform.localScale.x;
+        initialScaleX2 = lifeBar.transform.GetChild(0).localScale.x;
         if (!isPracticeMode) return;
         vidaActual = maxLife;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void WaitForInfo(float distanceFromCenter)
@@ -34,6 +43,34 @@ public class Vida : MonoBehaviour
 
     public void Damage(int DamageCount)
     {
+
+        // Efecto de sonido
+        audioSource.Play();
+
+        // -----------------------
+        // Efecto Visual
+        // -----------------------
+
+        // cambiar color momentaneamente
+        SpriteRenderer Beyblade = transform.gameObject.GetComponentInChildren<SpriteRenderer>();
+        Beyblade.color = Color.black;
+        Invoke("ReturnColor", timeDuration);
+
+        // lanzar particulas
+        transform.GetComponent<ParticleSystem>().Play();
+
+        // numero de daño recibido
+        TMP_Text damageNum = lifeBar.GetComponentInChildren<TMP_Text>();
+        damageNum.text = DamageCount.ToString();
+        Invoke("ReturnText", 1f);
+
+        // hacer temblar la barra de vida
+        lifeBar.GetComponent<Shake>().StartShake(0.2f, 0.05f);
+
+        // -----------------------
+        // Sacar Vida
+        // -----------------------
+
         vidaActual -= DamageCount;
 
         if (vidaActual <= 0)
@@ -46,6 +83,25 @@ public class Vida : MonoBehaviour
         lifeBar.transform.localScale = new Vector3(
             initialScaleX * porcentajeVida, // reduccion proporcional al daño
             lifeBar.transform.localScale.y,
-            lifeBar.transform.localScale.z);
+            lifeBar.transform.localScale.z
+        );
+
+        damageNum.transform.localScale = new Vector3(
+            initialScaleX2 / porcentajeVida, // reduccion proporcional al daño
+            damageNum.transform.localScale.y,
+            damageNum.transform.localScale.z
+        );
+    }
+
+    private void ReturnColor()
+    {
+        SpriteRenderer Beyblade = transform.gameObject.GetComponentInChildren<SpriteRenderer>();
+        Beyblade.color = Color.white;
+    }
+
+    private void ReturnText()
+    {
+        TMP_Text damageNum = lifeBar.GetComponentInChildren<TMP_Text>();
+        damageNum.text = " ";
     }
 }

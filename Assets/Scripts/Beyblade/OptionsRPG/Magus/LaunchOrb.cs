@@ -24,10 +24,10 @@ public class LaunchOrb : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
+        if (turnActive && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost);
+            energyCounter.ChangeEnergy(-energyCost, "LaunchOrb");
             rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
 
             rb.linearVelocity = Prompter.right * -Recoil;
@@ -40,6 +40,18 @@ public class LaunchOrb : MonoBehaviour
                 if (child.CompareTag("Poison"))
                 {
                     child.GetComponent<Poison>().ChangeParent(instantiatedOrb, false); //envenenar al jugador
+                }
+                else if (child.CompareTag("Burn"))
+                {
+                    child.GetComponent<Burn>().ChangeParent(instantiatedOrb, false);
+                }
+                else if (child.CompareTag("Freeze"))
+                {
+                    child.GetComponent<Freeze>().ChangeParent(instantiatedOrb, false);
+                }
+                else if (child.CompareTag("Paralysis"))
+                {
+                    child.GetComponent<Paralysis>().ChangeParent(instantiatedOrb, false);
                 }
             }
         }
