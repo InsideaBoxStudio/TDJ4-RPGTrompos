@@ -105,6 +105,14 @@ public class AttackState : AIState
             return;
         }
 
+        // En dificultad baja, a veces la IA "duda" y espera en vez de atacar
+        // (esto la hace atacar poco). En Difícil casi nunca duda.
+        if (brain.DudaYEspera())
+        {
+            brain.PerformWait();
+            return;
+        }
+
         // A veces lanza un especial (si tiene energía); si no, embestida normal.
         if (!brain.TryPerformSpecial())
         {
@@ -179,10 +187,16 @@ public class AIBrain : MonoBehaviour
     [SerializeField] private LaunchPinchos pinchosAction;
     [SerializeField] private LaunchClone cloneAction;
 
+    [Header("¿Cuáles especiales son FUERTES? (solo la dificultad Difícil los usa siempre)")]
+    [SerializeField] private bool shurikenEsFuerte = false; // shuriken = básico por defecto
+    [SerializeField] private bool pinchosEsFuerte = true;   // pinchos = fuerte
+    [SerializeField] private bool cloneEsFuerte = true;     // clon = fuerte
+
     [Header("Dificultad")]
     [SerializeField] public AIDifficulty difficulty = AIDifficulty.Normal;
+    [SerializeField] private bool usarDificultadElegida = true; // si true, toma la elegida en la pantalla de selección
 
-    [Header("Parámetros de decisión")]
+    [Header("Parámetros de decisión (se ajustan solos según la dificultad)")]
     [SerializeField] public float attackRange = 3f;   // a qué distancia decide atacar
     [SerializeField] public float lowLifeValue = 30f; // por debajo de esto se pone defensiva
     [SerializeField] public int attackEnergyCost = 1;
@@ -190,6 +204,13 @@ public class AIBrain : MonoBehaviour
     [SerializeField] public float aiReadyVelocity = 1.5f; // umbral de velocidad para pedir turno (mayor que el 1 del juego)
     [Range(0f, 1f)]
     [SerializeField] public float specialChance = 0.5f; // probabilidad de usar un especial al atacar
+
+    // Cuando es true (solo en Difícil), la IA usa también los especiales FUERTES.
+    private bool permitirEspecialesFuertes = true;
+    // Demora antes de actuar en su turno (segundos). Fácil = lenta, Difícil = casi instantánea.
+    private float demoraReaccion = 0f;
+    // Probabilidad de "dudar" y esperar en vez de atacar (Fácil ataca poco). Difícil ≈ 0.
+    private float probabilidadDudar = 0f;
 
     [HideInInspector] public ApproachState approachState;
     [HideInInspector] public AttackState attackState;
@@ -236,6 +257,51 @@ public class AIBrain : MonoBehaviour
                 }
             }
         }
+
+        // Tomar la dificultad elegida en la pantalla de selección (si corresponde) y aplicarla.
+        if (usarDificultadElegida) difficulty = SeleccionDificultad.DificultadElegida;
+        AplicarDificultad();
+    }
+
+    // Ajusta el comportamiento de la IA según la dificultad elegida.
+    // FÁCIL: ataca poco, se queda lejos, casi no usa especiales (y nunca los fuertes),
+    //        se defiende temprano, reacciona lento.
+    // NORMAL: equilibrado.
+    // DIFÍCIL: ataca y se defiende intensamente, usa todos los especiales (incl. fuertes)
+    //          siempre que puede, aguanta con poca vida, reacciona casi instantáneo.
+    void AplicarDificultad()
+    {
+        switch (difficulty)
+        {
+            case AIDifficulty.Facil:
+                specialChance = 0.15f;            // casi no usa especiales
+                permitirEspecialesFuertes = false; // y nunca los fuertes
+                attackRange = 2.0f;               // espera a que el rival se acerque
+                lowLifeValue = 50f;               // se pone defensiva temprano
+                demoraReaccion = 0.8f;            // reacciona lento (da tiempo al jugador)
+                probabilidadDudar = 0.45f;        // duda seguido => ataca poco
+                break;
+
+            case AIDifficulty.Dificil:
+                specialChance = 0.9f;             // usa especiales casi siempre
+                permitirEspecialesFuertes = true; // incluidos los fuertes
+                attackRange = 4.5f;               // busca pelea de lejos
+                lowLifeValue = 12f;               // aguanta con muy poca vida
+                demoraReaccion = 0.1f;            // reacciona casi al instante
+                probabilidadDudar = 0f;           // nunca duda => ataca siempre
+                break;
+
+            default: // Normal
+                specialChance = 0.5f;
+                permitirEspecialesFuertes = true;
+                attackRange = 3.0f;
+                lowLifeValue = 30f;
+                demoraReaccion = 0.4f;
+                probabilidadDudar = 0.15f;
+                break;
+        }
+        Debug.Log("[IA] Dificultad: " + difficulty + " | specialChance=" + specialChance +
+                  " | attackRange=" + attackRange + " | lowLife=" + lowLifeValue);
     }
 
     void Start()
@@ -267,6 +333,7 @@ public class AIBrain : MonoBehaviour
     }
 
     private float monitorTimer = 0f;
+    private float tiempoEnTurno = 0f; // cuánto lleva la IA en su turno actual (para la demora de reacción)
 
     void Update()
     {
@@ -293,13 +360,20 @@ public class AIBrain : MonoBehaviour
         {
             if (!hasActedThisTurn)
             {
-                hasActedThisTurn = true;
-                currentState.Execute();
+                // Demora de reacción según dificultad: la Fácil "piensa" más lento.
+                // Usamos unscaledDeltaTime porque durante el turno el tiempo está congelado.
+                tiempoEnTurno += Time.unscaledDeltaTime;
+                if (tiempoEnTurno >= demoraReaccion)
+                {
+                    hasActedThisTurn = true;
+                    currentState.Execute();
+                }
             }
         }
         else
         {
             hasActedThisTurn = false;
+            tiempoEnTurno = 0f;
 
             // La IA pide su turno activamente cuando su trompo está lo bastante lento.
             // Así no depende de la ventana de sincronización (pensada para 2 humanos)
@@ -364,6 +438,13 @@ public class AIBrain : MonoBehaviour
         PerformWait();
     }
 
+    // Devuelve true si la IA "duda" este turno y prefiere esperar en vez de atacar.
+    // En Fácil pasa seguido (ataca poco); en Difícil nunca.
+    public bool DudaYEspera()
+    {
+        return Random.value < probabilidadDudar;
+    }
+
     // Intenta lanzar un especial del Ninja (shuriken / pinchos / clon).
     // Devuelve true si lanzó alguno; false si no (entonces se hace ataque normal).
     public bool TryPerformSpecial()
@@ -376,13 +457,18 @@ public class AIBrain : MonoBehaviour
         System.Collections.Generic.List<System.Action> opciones =
             new System.Collections.Generic.List<System.Action>();
 
-        if (shurikenAction != null && energyCounter.currentEnergy >= shurikenAction.EnergyCost)
+        // Un especial entra en la lista solo si: existe, hay energía, y —si es FUERTE—
+        // la dificultad actual permite usar especiales fuertes (solo Difícil).
+        if (shurikenAction != null && energyCounter.currentEnergy >= shurikenAction.EnergyCost
+            && (!shurikenEsFuerte || permitirEspecialesFuertes))
             opciones.Add(() => { Debug.Log("IA -> SHURIKEN"); shurikenAction.DoLaunch(); });
 
-        if (pinchosAction != null && energyCounter.currentEnergy >= pinchosAction.EnergyCost)
+        if (pinchosAction != null && energyCounter.currentEnergy >= pinchosAction.EnergyCost
+            && (!pinchosEsFuerte || permitirEspecialesFuertes))
             opciones.Add(() => { Debug.Log("IA -> PINCHOS"); pinchosAction.DoLaunch(); });
 
-        if (cloneAction != null && energyCounter.currentEnergy >= cloneAction.EnergyCost)
+        if (cloneAction != null && energyCounter.currentEnergy >= cloneAction.EnergyCost
+            && (!cloneEsFuerte || permitirEspecialesFuertes))
             opciones.Add(() => { Debug.Log("IA -> CLON"); cloneAction.DoLaunch(); });
 
         if (opciones.Count == 0) return false; // no hay especiales disponibles

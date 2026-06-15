@@ -1865,7 +1865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5a950ff81c59442ae5e07a04d98181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeMap
-  map: Practica
+  map: SeleccionDificultad
 --- !u!1 &2068661977
 GameObject:
   m_ObjectHideFlags: 0

@@ -16870,6 +16870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507020125}
   - component: {fileID: 1507020126}
+  - component: {fileID: 1507020127}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -16918,13 +16919,33 @@ MonoBehaviour:
   shurikenAction: {fileID: 0}
   pinchosAction: {fileID: 0}
   cloneAction: {fileID: 0}
+  shurikenEsFuerte: 0
+  pinchosEsFuerte: 1
+  cloneEsFuerte: 1
   difficulty: 1
+  usarDificultadElegida: 1
   attackRange: 3
   lowLifeValue: 30
   attackEnergyCost: 1
   moveEnergyCost: 1
   aiReadyVelocity: 1.5
   specialChance: 0.5
+--- !u!114 &1507020127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507020124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0e4150fffe96d4685048a475bd97ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorVida
+  nombreJugador: PLAYER 2
+  colorJugador: {r: 1, g: 0, b: 0, a: 1}
+  altura: 1.6
+  tamano: 0.18
 --- !u!1 &1510296081
 GameObject:
   m_ObjectHideFlags: 0
@@ -18893,6 +18914,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Prompter
   rpgTurn: {fileID: 1014463347}
   playerIndex: 1
+--- !u!1 &1621452225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621452226}
+  - component: {fileID: 1621452227}
+  m_Layer: 0
+  m_Name: HUD_Vida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1621452226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621452225}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1703.3705, y: 526.58093, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621452227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621452225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373bba20531014b4ea18f008b3befe64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HudVida
+  vidaJugador1: {fileID: 1014463349}
+  vidaJugador2: {fileID: 409312925}
+  nombre1: PLAYER 1
+  nombre2: PLAYER 2
+  color1: {r: 0.25, g: 0.55, b: 1, a: 1}
+  color2: {r: 1, g: 0.3, b: 0.3, a: 1}
 --- !u!1 &1623794729
 GameObject:
   m_ObjectHideFlags: 0
@@ -21933,6 +22004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1954979975}
+  - component: {fileID: 1954979976}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -21957,6 +22029,22 @@ Transform:
   - {fileID: 1159422790}
   m_Father: {fileID: 807469216}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954979976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954979974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0e4150fffe96d4685048a475bd97ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IndicadorVida
+  nombreJugador: PLAYER 1
+  colorJugador: {r: 0.2, g: 0.5, b: 1, a: 1}
+  altura: 1.6
+  tamano: 0.18
 --- !u!1 &1960667903
 GameObject:
   m_ObjectHideFlags: 0
@@ -24801,4 +24889,5 @@ SceneRoots:
   - {fileID: 571370243}
   - {fileID: 2097228473}
   - {fileID: 1964378493}
+  - {fileID: 1621452226}
   - {fileID: 2112625973}

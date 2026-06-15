@@ -54,4 +54,7 @@ public class Vida : MonoBehaviour
     {
         vidaActual = maxLife;
     }
+
+    // Vida máxima actual (la usa el indicador de vida para mostrar "actual / máx").
+    public float VidaMaxima => maxLife;
 }
