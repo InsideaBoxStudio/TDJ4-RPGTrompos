@@ -12,7 +12,7 @@ public class LaunchShuriken : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private int playerIndex = 0;
 
-    
+
     [Header("Stats")]
     [SerializeField] private int energyCost = 2; //costo de energia
     [SerializeField] private float moveDuration = 1f;
@@ -23,37 +23,50 @@ public class LaunchShuriken : MonoBehaviour
     void Update()
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
-        
-        if (turnActive && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
+
+        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
         {
-            if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "LaunchShuriken");
-            rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
+            DoLaunch();
+        }
+    }
 
-            rb.linearVelocity = Prompter.right * -Recoil;
+    // Cuánta energía cuesta (la IA lo consulta para decidir).
+    public int EnergyCost => energyCost;
 
-            //lanzar shuriken
-            GameObject instantiatedShuriken = Instantiate(ShurikenPrefab, pointerPosition.position, Quaternion.identity);
-            instantiatedShuriken.GetComponent<Shuriken>().Launch(Prompter);
+    // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
+    public void DoLaunch()
+    {
+        if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
+        energyCounter.ChangeEnergy(-energyCost, "LaunchShuriken");
+        rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
-            foreach (Transform child in rb.transform)
+        rb.linearVelocity = Prompter.right * -Recoil;
+
+        //lanzar shuriken
+        GameObject instantiatedShuriken = Instantiate(ShurikenPrefab, pointerPosition.position, Quaternion.identity);
+        instantiatedShuriken.GetComponent<Shuriken>().Launch(Prompter);
+
+        foreach (Transform child in rb.transform)
+        {
+            if (child.CompareTag("Poison"))
             {
-                if (child.CompareTag("Poison"))
-                {
-                    child.GetComponent<Poison>().ChangeParent(instantiatedShuriken, false);
-                }
-                else if (child.CompareTag("Burn"))
-                {
-                    child.GetComponent<Burn>().ChangeParent(instantiatedShuriken, false);
-                }
-                else if (child.CompareTag("Freeze"))
-                {
-                    child.GetComponent<Freeze>().ChangeParent(instantiatedShuriken, false);
-                }
-                else if (child.CompareTag("Paralysis"))
-                {
-                    child.GetComponent<Paralysis>().ChangeParent(instantiatedShuriken, false);
-                }
+                child.GetComponent<Poison>().ChangeParent(instantiatedShuriken, false);
+            }
+            else if (child.CompareTag("Burn"))
+            {
+                child.GetComponent<Burn>().ChangeParent(instantiatedShuriken, false);
+            }
+            else if (child.CompareTag("Freeze"))
+            {
+                child.GetComponent<Freeze>().ChangeParent(instantiatedShuriken, false);
+            }
+            else if (child.CompareTag("Paralysis"))
+            {
+                child.GetComponent<Paralysis>().ChangeParent(instantiatedShuriken, false);
+            }
+            if (child.CompareTag("Redirect"))
+            {
+                child.GetComponent<Redirection>().ChangeParent(instantiatedShuriken);
             }
         }
     }

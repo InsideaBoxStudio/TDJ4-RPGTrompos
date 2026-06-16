@@ -10,17 +10,33 @@ public class TimingBar : MonoBehaviour
     [SerializeField] private Vida vida;
     [SerializeField] private float barSpeed = 1f;
     [SerializeField] private int jugador = 0;
+    [SerializeField] private bool isAI = false; // IA: frena la barra sola (no necesita joystick)
 
     public float distanceFromCenter = 2;
 
     private bool barStopped = false;
     private int countDownTime = 5;
-    
+
+    // El AIBrain usa esto para encontrar la barra de SU trompo (emparejando por Vida)
+    // y para frenarla solo, sin que haya que tildar nada en el Inspector.
+    public Vida GetVida() => vida;
+    public void StopAsAI() { isAI = true; }
+
     void Update()
     {
-        countDownTime = countDown.countDownTime;
-
         if (barStopped) return;
+
+        // >>> IA: frena la barra automáticamente para tener vida sin joystick (borrá este bloque para quitar) >>>
+        if (isAI)
+        {
+            barStopped = true;
+            distanceFromCenter = 0.1f; // casi centrado => casi vida máxima
+            if (vida != null) vida.WaitForInfo(distanceFromCenter);
+            return;
+        }
+        // <<< FIN IA <<<
+
+        if (countDown != null) countDownTime = countDown.countDownTime;
 
         if (Gamepad.all.Count > jugador && Gamepad.all[jugador].buttonSouth.wasPressedThisFrame)
         {

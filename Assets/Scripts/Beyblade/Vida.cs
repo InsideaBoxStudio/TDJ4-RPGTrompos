@@ -104,4 +104,13 @@ public class Vida : MonoBehaviour
         TMP_Text damageNum = lifeBar.GetComponentInChildren<TMP_Text>();
         damageNum.text = " ";
     }
+
+    // Llamado por la IA (AIBrain) para cargarse vida llena sin usar la barra de timing.
+    public void SetFullLife()
+    {
+        vidaActual = maxLife;
+    }
+
+    // Vida máxima actual (la usa el indicador de vida para mostrar "actual / máx").
+    public float VidaMaxima => maxLife;
 }
