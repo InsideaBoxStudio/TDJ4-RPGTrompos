@@ -4,11 +4,21 @@ using UnityEngine.EventSystems;
 
 public class InitButtonSelected : MonoBehaviour
 {
+    private Button boton;
+
     void Start()
     {
-        Button boton = GetComponent<Button>();
+        boton = GetComponent<Button>();
 
-        if (boton == null) return;
-        EventSystem.current.SetSelectedGameObject(boton.gameObject);
+        if (boton != null)
+            EventSystem.current.SetSelectedGameObject(boton.gameObject);
+    }
+
+    void Update()
+    {
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            EventSystem.current.SetSelectedGameObject(boton.gameObject);
+        }
     }
 }
