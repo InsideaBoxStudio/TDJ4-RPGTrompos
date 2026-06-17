@@ -9,6 +9,7 @@ public class CountDown : MonoBehaviour
     [SerializeField] private GameObject[] objectsToActive; //objetos a ocultar despues de la cuenta regresiva
     public int countDownTime = 3;
     private AudioSource audioSource;
+    public bool finished = false; // true cuando la cuenta regresiva inicial terminó (la IA espera esto)
 
     void Awake()
     {
@@ -54,5 +55,6 @@ public class CountDown : MonoBehaviour
 
         //reanudar tiempo
         Time.timeScale = 1f;
+        finished = true; // ahora sí la pelea empieza (la IA puede actuar)
     }
 }

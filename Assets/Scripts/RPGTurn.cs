@@ -12,6 +12,16 @@ public class RPGTurn : MonoBehaviour
 
     public void NotifyReady(CheckPlayerTurn player)
     {
+        // Si este componente está en un objeto inactivo (ej: escena Practica, donde
+        // el RPGTurn vive en un EventSystem desactivado), NO se pueden correr corrutinas.
+        // En ese caso activamos el turno de inmediato. En 1VS1 (RPGTurn activo) se usa
+        // la corrutina original con su ventana de sincronización -> comportamiento intacto.
+        if (!isActiveAndEnabled)
+        {
+            NotifyReadyImmediate(player);
+            return;
+        }
+
         if (readyPlayers.Contains(player)) return;
 
         if (readyPlayers.Count == 0)
@@ -24,6 +34,17 @@ public class RPGTurn : MonoBehaviour
         {
             readyPlayers.Add(player);
         }
+    }
+
+    // Para la IA: activa el turno YA, sin corrutina ni ventana de sincronización.
+    // Necesario porque el RPGTurn puede vivir en un objeto inactivo (no puede correr
+    // corrutinas) y porque la IA no necesita sincronizarse con otro jugador humano.
+    public void NotifyReadyImmediate(CheckPlayerTurn player)
+    {
+        if (activePlayers.Contains(player)) return;
+        activePlayers.Add(player);
+        player.Ready();
+        Time.timeScale = 0f;
     }
 
     public void PlayerFinished(CheckPlayerTurn player)

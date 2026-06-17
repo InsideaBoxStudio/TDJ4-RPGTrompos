@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 257328298}
   - component: {fileID: 257328302}
   m_Layer: 5
-  m_Name: Practica
+  m_Name: Modo 1 vs 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,7 +794,8 @@ MonoBehaviour:
   activeGameObject:
   - {fileID: 1088669758}
   - {fileID: 1188964910}
-  map: Practica
+  map: 1VS1
+  noSelected: 0
 --- !u!114 &257328299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1910,7 +1911,7 @@ GameObject:
   - component: {fileID: 676488348}
   - component: {fileID: 676488350}
   m_Layer: 5
-  m_Name: 1 vs 1
+  m_Name: Modo Practica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1988,7 +1989,8 @@ MonoBehaviour:
   activeGameObject:
   - {fileID: 1088669758}
   - {fileID: 1188964910}
-  map: 1VS1
+  map: SeleccionDificultad
+  noSelected: 1
 --- !u!114 &676488351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2885,6 +2887,7 @@ MonoBehaviour:
   - {fileID: 1088669758}
   - {fileID: 1188964910}
   map: Practica
+  noSelected: 0
 --- !u!114 &936683750
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,36 +21,45 @@ public class LaunchClone : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive;
 
-        if (turnActive && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
+        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
         {
-            if (energyCounter.currentEnergy < energyCost) return;
+            DoLaunch();
+        }
+    }
 
-            energyCounter.ChangeEnergy(-energyCost, "LaunchClone");
-            rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
+    // Cuánta energía cuesta (la IA lo consulta para decidir).
+    public int EnergyCost => energyCost;
 
-            // Dirección hacia donde apunta el prompter
-            Vector2 dir = Prompter.right.normalized;
+    // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
+    public void DoLaunch()
+    {
+        if (energyCounter.currentEnergy < energyCost) return;
 
-            // Dirección perpendicular (90 grados)
-            Vector2 perpendicular = new Vector2(-dir.y, dir.x);
+        energyCounter.ChangeEnergy(-energyCost, "LaunchClone");
+        rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
 
-            // Recoil del jugador
-            rb.linearVelocity = -perpendicular * Recoil;
+        // Dirección hacia donde apunta el prompter
+        Vector2 dir = Prompter.right.normalized;
 
-            // Crear clon
-            GameObject clone = Instantiate(
-                ClonePrefab,
-                pointerPosition.position,
-                Quaternion.identity
-            );
+        // Dirección perpendicular (90 grados)
+        Vector2 perpendicular = new Vector2(-dir.y, dir.x);
 
-            // Recoil del clon en dirección opuesta
-            Rigidbody2D cloneRb = clone.GetComponent<Rigidbody2D>();
+        // Recoil del jugador
+        rb.linearVelocity = -perpendicular * Recoil;
 
-            if (cloneRb != null)
-            {
-                cloneRb.linearVelocity = perpendicular * Recoil;
-            }
+        // Crear clon
+        GameObject clone = Instantiate(
+            ClonePrefab,
+            pointerPosition.position,
+            Quaternion.identity
+        );
+
+        // Recoil del clon en dirección opuesta
+        Rigidbody2D cloneRb = clone.GetComponent<Rigidbody2D>();
+
+        if (cloneRb != null)
+        {
+            cloneRb.linearVelocity = perpendicular * Recoil;
         }
     }
 }

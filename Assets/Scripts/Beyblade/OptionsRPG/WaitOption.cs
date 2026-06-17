@@ -20,13 +20,19 @@ public class WaitOption : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && Gamepad.all[playerIndex].buttonSouth.wasPressedThisFrame)
+        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonSouth.wasPressedThisFrame)
         {
-            if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "Wait");
-            rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
-
-            rb.linearVelocity = Prompter.right * 0;
+            DoWait();
         }
+    }
+
+    // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
+    public void DoWait()
+    {
+        if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
+        energyCounter.ChangeEnergy(-energyCost, "Wait");
+        rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
+
+        rb.linearVelocity = Prompter.right * 0;
     }
 }
