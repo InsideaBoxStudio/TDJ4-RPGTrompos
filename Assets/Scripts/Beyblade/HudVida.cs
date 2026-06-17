@@ -26,11 +26,16 @@ public class HudVida : MonoBehaviour
     [SerializeField] private Color color1 = new Color(0.25f, 0.55f, 1f); // azul P1
     [SerializeField] private Color color2 = new Color(1f, 0.30f, 0.30f); // rojo P2
 
+    [Header("Posición del cartel (ajustar si no queda centrado sobre el trompo)")]
+    [SerializeField] private float offsetX = -0.5f;  // negativo = hacia la izquierda (mundo)
+    [SerializeField] private float offsetY = 0.45f;  // hacia arriba (mundo)
+
     // Etiquetas flotantes que siguen a cada trompo (renderizadas en el HUD de pantalla).
     private RectTransform canvasRT;
     private Camera cam;
     private Text etiqueta1, etiqueta2;
     private Transform trompo1, trompo2;
+    private EndGame endGame; // para ocultar las etiquetas al terminar la partida
 
     void Start()
     {
@@ -44,6 +49,7 @@ public class HudVida : MonoBehaviour
         trompo1 = TrompoQueSeMueve(vidaJugador1);
         trompo2 = TrompoQueSeMueve(vidaJugador2);
         cam = Camera.main;
+        endGame = FindFirstObjectByType<EndGame>(); // para saber cuándo termina la partida
 
         // Crear Canvas propio (Screen Space Overlay).
         var canvasGO = new GameObject("HUD_Vida_Canvas");
@@ -73,8 +79,27 @@ public class HudVida : MonoBehaviour
     // los trompos, así la etiqueta queda pegada sin retraso ("perderse en el aire").
     void LateUpdate()
     {
+        // Ocultar las etiquetas P1/P2 cuando termina la partida (para que no queden
+        // flotando sobre la pantalla negra del ganador). Doble criterio por seguridad:
+        //  - el flag gameFinished del EndGame, si lo encontramos
+        //  - o que algún trompo haya llegado a 0 de vida (fin de partida)
+        if (PartidaTerminada())
+        {
+            if (etiqueta1 != null) etiqueta1.enabled = false;
+            if (etiqueta2 != null) etiqueta2.enabled = false;
+            return;
+        }
+
         SeguirTrompo(etiqueta1, trompo1);
         SeguirTrompo(etiqueta2, trompo2);
+    }
+
+    bool PartidaTerminada()
+    {
+        // Solo el flag del EndGame (preciso). Si no lo teníamos, intentamos
+        // encontrarlo de nuevo, incluyendo objetos inactivos.
+        if (endGame == null) endGame = FindFirstObjectByType<EndGame>(FindObjectsInactive.Include);
+        return endGame != null && endGame.gameFinished;
     }
 
     // Devuelve el Transform que realmente se mueve dentro del trompo de esa Vida.
@@ -96,8 +121,8 @@ public class HudVida : MonoBehaviour
     {
         if (etiqueta == null || trompo == null || cam == null) return;
 
-        // Punto apenas arriba del trompo (más pegado), llevado a coordenadas de pantalla.
-        Vector3 mundo = trompo.position + Vector3.up * 0.45f;
+        // Punto sobre el trompo (con offset ajustable), llevado a coordenadas de pantalla.
+        Vector3 mundo = trompo.position + new Vector3(offsetX, offsetY, 0f);
         Vector3 pantalla = cam.WorldToScreenPoint(mundo);
 
         bool visible = pantalla.z > 0f; // que esté delante de la cámara

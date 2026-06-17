@@ -3043,7 +3043,7 @@ MonoBehaviour:
   activeGameObject:
   - {fileID: 1088669758}
   - {fileID: 1188964910}
-  map: Practica
+  map: SeleccionDificultad
 --- !u!1 &1975365559
 GameObject:
   m_ObjectHideFlags: 0

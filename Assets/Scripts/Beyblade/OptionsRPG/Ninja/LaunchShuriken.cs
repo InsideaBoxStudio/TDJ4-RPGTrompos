@@ -64,10 +64,6 @@ public class LaunchShuriken : MonoBehaviour
             {
                 child.GetComponent<Paralysis>().ChangeParent(instantiatedShuriken, false);
             }
-            if (child.CompareTag("Redirect"))
-            {
-                child.GetComponent<Redirection>().ChangeParent(instantiatedShuriken);
-            }
         }
     }
 }

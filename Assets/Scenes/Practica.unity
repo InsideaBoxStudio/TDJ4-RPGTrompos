@@ -359,6 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 112042223}
+  - component: {fileID: 112042224}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Untagged
@@ -382,6 +383,41 @@ Transform:
   - {fileID: 1970217405}
   m_Father: {fileID: 571370243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112042224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112042222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c57bf007cbf57b47b76c8d606fa7813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIBrain
+  check: {fileID: 0}
+  energyCounter: {fileID: 0}
+  rb: {fileID: 0}
+  vida: {fileID: 0}
+  enemy: {fileID: 0}
+  countDown: {fileID: 0}
+  attackAction: {fileID: 0}
+  moveAction: {fileID: 0}
+  waitAction: {fileID: 0}
+  shurikenAction: {fileID: 0}
+  pinchosAction: {fileID: 0}
+  cloneAction: {fileID: 0}
+  shurikenEsFuerte: 0
+  pinchosEsFuerte: 1
+  cloneEsFuerte: 1
+  difficulty: 1
+  usarDificultadElegida: 1
+  attackRange: 3
+  lowLifeValue: 30
+  attackEnergyCost: 1
+  moveEnergyCost: 1
+  aiReadyVelocity: 1.5
+  specialChance: 0.5
 --- !u!1 &142889712
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +757,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180934649}
   m_CullTransparentMesh: 1
+--- !u!1 &203785896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203785898}
+  - component: {fileID: 203785897}
+  m_Layer: 0
+  m_Name: HudVida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &203785897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203785896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373bba20531014b4ea18f008b3befe64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HudVida
+  vidaJugador1: {fileID: 0}
+  vidaJugador2: {fileID: 0}
+  color1: {r: 0.25, g: 0.55, b: 1, a: 1}
+  color2: {r: 1, g: 0.3, b: 0.3, a: 1}
+  offsetX: -0.05
+  offsetY: 0.45
+--- !u!4 &203785898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203785896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &222908075
 GameObject:
   m_ObjectHideFlags: 0
@@ -8473,6 +8559,7 @@ MonoBehaviour:
   vida: {fileID: 1014463349}
   barSpeed: 2
   jugador: 0
+  isAI: 0
   distanceFromCenter: 2
 --- !u!1 &503770994
 GameObject:
@@ -10390,6 +10477,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 716172782}
+  - component: {fileID: 716172783}
   m_Layer: 0
   m_Name: Magus
   m_TagString: Untagged
@@ -10413,6 +10501,41 @@ Transform:
   - {fileID: 415560317}
   m_Father: {fileID: 571370243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &716172783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716172781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c57bf007cbf57b47b76c8d606fa7813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIBrain
+  check: {fileID: 0}
+  energyCounter: {fileID: 0}
+  rb: {fileID: 0}
+  vida: {fileID: 0}
+  enemy: {fileID: 0}
+  countDown: {fileID: 0}
+  attackAction: {fileID: 0}
+  moveAction: {fileID: 0}
+  waitAction: {fileID: 0}
+  shurikenAction: {fileID: 0}
+  pinchosAction: {fileID: 0}
+  cloneAction: {fileID: 0}
+  shurikenEsFuerte: 0
+  pinchosEsFuerte: 1
+  cloneEsFuerte: 1
+  difficulty: 1
+  usarDificultadElegida: 1
+  attackRange: 3
+  lowLifeValue: 30
+  attackEnergyCost: 1
+  moveEnergyCost: 1
+  aiReadyVelocity: 1.5
+  specialChance: 0.5
 --- !u!1 &720616130
 GameObject:
   m_ObjectHideFlags: 0
@@ -17948,6 +18071,7 @@ MonoBehaviour:
   - {fileID: 2097228470}
   - {fileID: 1324680081}
   countDownTime: 5
+  finished: 0
 --- !u!82 &1022612340
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22027,6 +22151,7 @@ MonoBehaviour:
   vida: {fileID: 1533879953}
   barSpeed: 2
   jugador: 0
+  isAI: 0
   distanceFromCenter: 2
 --- !u!114 &1440636554
 MonoBehaviour:
@@ -37246,3 +37371,4 @@ SceneRoots:
   - {fileID: 1964378493}
   - {fileID: 2112625973}
   - {fileID: 1324680083}
+  - {fileID: 203785898}

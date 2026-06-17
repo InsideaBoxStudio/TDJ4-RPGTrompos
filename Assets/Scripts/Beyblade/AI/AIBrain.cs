@@ -242,7 +242,7 @@ public class AIBrain : MonoBehaviour
         if (shurikenAction == null) shurikenAction = GetComponentInChildren<LaunchShuriken>(true);
         if (pinchosAction == null) pinchosAction = GetComponentInChildren<LaunchPinchos>(true);
         if (cloneAction == null) cloneAction = GetComponentInChildren<LaunchClone>(true);
-        if (countDown == null) countDown = FindObjectOfType<CountDown>(); // cuenta regresiva inicial de la escena
+        if (countDown == null) countDown = FindFirstObjectByType<CountDown>(); // cuenta regresiva inicial de la escena
 
         // Buscar al rival: otro objeto con tag "Player" en otra layer.
         if (enemy == null)
