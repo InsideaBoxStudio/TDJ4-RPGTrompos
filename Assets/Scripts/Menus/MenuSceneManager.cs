@@ -68,6 +68,10 @@ public class MenuSceneManager : MonoBehaviour
     {
         foreach (GameObject obj in initMenuObjects)
         {
+            // Mantener activo el EventSystem
+            if (obj.GetComponent<UnityEngine.EventSystems.EventSystem>() != null)
+                continue;
+
             obj.SetActive(false);
         }
     }
