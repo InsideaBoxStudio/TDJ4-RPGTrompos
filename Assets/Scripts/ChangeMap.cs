@@ -6,11 +6,12 @@ public class ChangeMap : MonoBehaviour
     [SerializeField] private GameObject[] activeGameObject;
     [SerializeField] private string map = "elegir mapa";
     [SerializeField] private bool noSelected = false;
+    [SerializeField] private float wait = 0.2f;
 
     private bool isSceneChanged = false;
     public void ChangeScene()
     {
-        isSceneChanged = true;
+        Invoke("WaitScene", wait);
         if (noSelected) return;
 
         for(int i = 0; i < activeGameObject.Length; i++)
@@ -29,5 +30,10 @@ public class ChangeMap : MonoBehaviour
         {
             SceneManager.LoadScene(map);
         }
+    }
+
+    private void WaitScene()
+    {
+        isSceneChanged = true;
     }
 }

@@ -53,9 +53,11 @@ public class TimingBar : MonoBehaviour
         }
         else // si se acabo el tiempo y el jugador no lanzo su trompo.
         {
-            if (endGame != null) endGame.loseCause = "Fail";
             barStopped = true;
-            if (vida != null) vida.WaitForInfo(2);
+
+            distanceFromCenter = 0.5f;
+
+            vida.WaitForInfo(distanceFromCenter);
         }
     }
 }

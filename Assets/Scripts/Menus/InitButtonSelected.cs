@@ -16,7 +16,9 @@ public class InitButtonSelected : MonoBehaviour
 
     void Update()
     {
-        if (EventSystem.current.currentSelectedGameObject == null)
+        if (
+            EventSystem.current.currentSelectedGameObject == null
+            )
         {
             EventSystem.current.SetSelectedGameObject(boton.gameObject);
         }

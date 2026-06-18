@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SeleccionDificultad.unity
     guid: e5f5ae7a7e14eb14da88bb6879437d5f
+  - enabled: 1
+    path: Assets/Scenes/ConfigMenu.unity
+    guid: 7f1a403cdb350e244b2b355d538ae65a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
