@@ -192,6 +192,10 @@ public class AIBrain : MonoBehaviour
     [SerializeField] private bool pinchosEsFuerte = true;   // pinchos = fuerte
     [SerializeField] private bool cloneEsFuerte = true;     // clon = fuerte
 
+    [Header("Índice de jugador de la CPU (jugador 1 = 0, CPU = 1)")]
+    [SerializeField] private bool forzarPlayerIndex = true; // reescribe el playerIndex de los scripts del trompo
+    [SerializeField] private int playerIndexCPU = 1;        // la CPU es el jugador 2 (índice 1)
+
     [Header("Dificultad")]
     [SerializeField] public AIDifficulty difficulty = AIDifficulty.Normal;
     [SerializeField] private bool usarDificultadElegida = true; // si true, toma la elegida en la pantalla de selección
@@ -228,39 +232,92 @@ public class AIBrain : MonoBehaviour
         defendState = new DefendState(this);
         currentState = approachState;
 
-        // Autocompletar referencias buscando DENTRO del personaje donde está el AIBrain
-        // (este objeto + sus hijos). IMPORTANTE: poné el AIBrain en el personaje ACTIVO
-        // (ej: Ninja), NO en el padre "Jugadores2", para no agarrar por error los scripts
-        // del otro personaje desactivado (ej: Mago).
-        if (check == null) check = GetComponentInChildren<CheckPlayerTurn>(true);
-        if (energyCounter == null) energyCounter = GetComponentInChildren<EnergyCounter>(true);
-        if (rb == null) rb = GetComponentInChildren<Rigidbody2D>(true);
-        if (vida == null) vida = GetComponentInChildren<Vida>(true);
-        if (attackAction == null) attackAction = GetComponentInChildren<BasicAttack>(true);
-        if (moveAction == null) moveAction = GetComponentInChildren<MovementOption>(true);
-        if (waitAction == null) waitAction = GetComponentInChildren<WaitOption>(true);
-        if (shurikenAction == null) shurikenAction = GetComponentInChildren<LaunchShuriken>(true);
-        if (pinchosAction == null) pinchosAction = GetComponentInChildren<LaunchPinchos>(true);
-        if (cloneAction == null) cloneAction = GetComponentInChildren<LaunchClone>(true);
-        if (countDown == null) countDown = FindFirstObjectByType<CountDown>(); // cuenta regresiva inicial de la escena
+        // Convertir el trompo (copiado de Jugador1) a jugador 2: reescribe el playerIndex
+        // de todos sus scripts. Así no hay que tocar índices a mano en el editor.
+        if (forzarPlayerIndex) ForzarPlayerIndex();
 
-        // Buscar al rival: otro objeto con tag "Player" en otra layer.
-        if (enemy == null)
-        {
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            foreach (GameObject p in players)
-            {
-                if (p != gameObject && p.layer != gameObject.layer)
-                {
-                    enemy = p.transform;
-                    break;
-                }
-            }
-        }
+        // Autocompletar referencias (este objeto + hijos). Se reintenta en Update
+        // por si los componentes se activan tarde (sistema de selección de personajes).
+        AutocompletarReferencias();
+
+        // Buscar al rival (puede no estar activo todavía: el sistema de selección de
+        // personajes lo activa en Awake, y el orden no está garantizado). Si no lo
+        // encuentra acá, se reintenta en Update hasta que aparezca.
+        BuscarRival();
 
         // Tomar la dificultad elegida en la pantalla de selección (si corresponde) y aplicarla.
         if (usarDificultadElegida) difficulty = SeleccionDificultad.DificultadElegida;
         AplicarDificultad();
+    }
+
+    // Fuerza el índice de jugador (playerIndex/jugador/playerID) en TODOS los scripts
+    // del trompo de la CPU. Permite copiar el trompo de Jugador1 (índice 0) y que la
+    // IA lo convierta a jugador 2 sin tocar nada a mano en el editor.
+    void ForzarPlayerIndex()
+    {
+        var comps = GetComponentsInChildren<MonoBehaviour>(true);
+        string[] campos = { "playerIndex", "jugador", "playerID", "playerIndexForKeyboard" };
+        foreach (var comp in comps)
+        {
+            if (comp == null || comp == this) continue;
+            var tipo = comp.GetType();
+            foreach (var nombre in campos)
+            {
+                var f = tipo.GetField(nombre,
+                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+                if (f != null && f.FieldType == typeof(int))
+                    f.SetValue(comp, playerIndexCPU);
+            }
+        }
+    }
+
+    // Busca los componentes de combate del propio trompo. Busca en este objeto y sus
+    // hijos; si no los encuentra (porque el AIBrain quedó por encima en la jerarquía),
+    // busca también desde el objeto raíz del personaje hacia abajo. Reintentable.
+    void AutocompletarReferencias()
+    {
+        if (check == null) check = BuscarEnTrompo<CheckPlayerTurn>();
+        if (energyCounter == null) energyCounter = BuscarEnTrompo<EnergyCounter>();
+        if (rb == null) rb = BuscarEnTrompo<Rigidbody2D>();
+        if (vida == null) vida = BuscarEnTrompo<Vida>();
+        if (attackAction == null) attackAction = BuscarEnTrompo<BasicAttack>();
+        if (moveAction == null) moveAction = BuscarEnTrompo<MovementOption>();
+        if (waitAction == null) waitAction = BuscarEnTrompo<WaitOption>();
+        if (shurikenAction == null) shurikenAction = BuscarEnTrompo<LaunchShuriken>();
+        if (pinchosAction == null) pinchosAction = BuscarEnTrompo<LaunchPinchos>();
+        if (cloneAction == null) cloneAction = BuscarEnTrompo<LaunchClone>();
+        if (countDown == null) countDown = FindFirstObjectByType<CountDown>();
+    }
+
+    // Busca un componente primero en este objeto+hijos; si no, desde la raíz del
+    // personaje hacia abajo (cubre el caso de que el AIBrain esté por encima).
+    T BuscarEnTrompo<T>() where T : Component
+    {
+        T c = GetComponentInChildren<T>(true);
+        if (c == null) c = transform.root.GetComponentInChildren<T>(true);
+        return c;
+    }
+
+    // ¿Ya tiene todas las referencias esenciales para pelear?
+    bool ReferenciasCompletas()
+    {
+        return check != null && energyCounter != null && rb != null
+            && vida != null && attackAction != null && moveAction != null && waitAction != null;
+    }
+
+    // Busca al rival: otro objeto activo con tag "Player" en otra layer.
+    // Solo cuenta objetos ACTIVOS (el personaje no elegido está desactivado).
+    void BuscarRival()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject p in players)
+        {
+            if (p != gameObject && p.activeInHierarchy && p.layer != gameObject.layer)
+            {
+                enemy = p.transform;
+                return;
+            }
+        }
     }
 
     // Ajusta el comportamiento de la IA según la dificultad elegida.
@@ -351,6 +408,11 @@ public class AIBrain : MonoBehaviour
                       " | timeScale=" + Time.timeScale);
         }
         // ---------------------------------------------------------------
+
+        // Reintentar enganchar referencias/rival si algo quedó null (los componentes
+        // o el personaje rival pueden activarse tarde por el sistema de selección).
+        if (!ReferenciasCompletas()) AutocompletarReferencias();
+        if (enemy == null) BuscarRival();
 
         // Esperar a que termine la cuenta regresiva inicial ("3,2,1,GO!") antes de
         // que la IA haga NADA. Así la pelea no arranca antes de tiempo.

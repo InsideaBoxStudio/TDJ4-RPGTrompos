@@ -14,10 +14,15 @@ public class Prompter : MonoBehaviour
 
     private void Start()
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-
         cam = GameObject.FindGameObjectWithTag("MainCamera");
+        BuscarRival();
+    }
 
+    // Busca al rival (otro Player activo en otra layer). Reintentable: el rival
+    // puede activarse tarde por el sistema de selección de personajes.
+    private void BuscarRival()
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
             if (player != gameObject &&
@@ -25,7 +30,7 @@ public class Prompter : MonoBehaviour
                 player.layer != gameObject.layer)
             {
                 pointerPlayer = player;
-                break;
+                return;
             }
         }
     }
@@ -58,8 +63,13 @@ public class Prompter : MonoBehaviour
         }
         else if (!turnActive)
         {
-            Vector2 direction = (pointerPlayer.transform.position - transform.position).normalized;
-            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            // Si todavía no encontró al rival (se activó tarde), reintentar.
+            if (pointerPlayer == null) BuscarRival();
+            if (pointerPlayer != null)
+            {
+                Vector2 direction = (pointerPlayer.transform.position - transform.position).normalized;
+                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            }
         }
 
         transform.rotation = Quaternion.Euler(0, 0, angle);
