@@ -24,7 +24,10 @@ public class LaunchPinchos : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
+        // Joystick (dpad izquierda) O teclado del Jugador 1 (tecla R)
+        bool joy = Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame;
+        bool tecla = playerIndex == 0 && Keyboard.current != null && Keyboard.current.rKey.wasPressedThisFrame;
+        if (turnActive && (joy || tecla))
         {
             DoLaunch();
         }

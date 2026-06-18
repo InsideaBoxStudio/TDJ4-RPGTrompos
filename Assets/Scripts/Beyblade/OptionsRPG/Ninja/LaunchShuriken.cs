@@ -24,7 +24,10 @@ public class LaunchShuriken : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
+        // Joystick (dpad derecha) O teclado del Jugador 1 (tecla E)
+        bool joy = Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame;
+        bool tecla = playerIndex == 0 && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame;
+        if (turnActive && (joy || tecla))
         {
             DoLaunch();
         }

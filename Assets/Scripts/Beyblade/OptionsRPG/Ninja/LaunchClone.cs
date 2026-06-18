@@ -21,7 +21,10 @@ public class LaunchClone : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive;
 
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
+        // Joystick (R1) O teclado del Jugador 1 (tecla F)
+        bool joy = Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame;
+        bool tecla = playerIndex == 0 && Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame;
+        if (turnActive && (joy || tecla))
         {
             DoLaunch();
         }

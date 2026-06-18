@@ -44,6 +44,17 @@ public class Prompter : MonoBehaviour
             input = Gamepad.all[playerIndex].leftStick.ReadValue();
         }
 
+        // Teclado (Jugador 1): WASD arma la dirección de apuntado
+        if (playerIndex == 0 && Keyboard.current != null)
+        {
+            Vector2 teclado = Vector2.zero;
+            if (Keyboard.current.dKey.isPressed) teclado.x += 1f;
+            if (Keyboard.current.aKey.isPressed) teclado.x -= 1f;
+            if (Keyboard.current.wKey.isPressed) teclado.y += 1f;
+            if (Keyboard.current.sKey.isPressed) teclado.y -= 1f;
+            if (teclado != Vector2.zero) input = teclado;
+        }
+
         if (turnActive && input != Vector2.zero)
         {
             // Obtener direcciones de la cámara

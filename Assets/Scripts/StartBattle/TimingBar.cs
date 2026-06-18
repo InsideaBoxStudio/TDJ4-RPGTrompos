@@ -38,7 +38,11 @@ public class TimingBar : MonoBehaviour
 
         if (countDown != null) countDownTime = countDown.countDownTime;
 
-        if (Gamepad.all.Count > jugador && Gamepad.all[jugador].buttonSouth.wasPressedThisFrame)
+        // Medir/lanzar la barra con joystick (X) O con la tecla C (teclado del Jugador 1).
+        // C reemplaza a la X: misma tecla para la barra de carga y para "esperar" (no se pisan, pasan en momentos distintos).
+        bool lanzar = (Gamepad.all.Count > jugador && Gamepad.all[jugador].buttonSouth.wasPressedThisFrame)
+                      || (jugador == 0 && Keyboard.current != null && Keyboard.current.cKey.wasPressedThisFrame);
+        if (lanzar)
         {
             barStopped = true;
 

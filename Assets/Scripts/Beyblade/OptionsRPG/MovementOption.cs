@@ -20,8 +20,13 @@ public class MovementOption : MonoBehaviour
     void Update()
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
-        
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonNorth.wasPressedThisFrame)
+
+        // Joystick (botón norte) O teclado del Jugador 1 (W/A/S/D): mover/impulsar hacia donde apuntás
+        bool joy = Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonNorth.wasPressedThisFrame;
+        bool tecla = playerIndex == 0 && Keyboard.current != null &&
+            (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.aKey.wasPressedThisFrame ||
+             Keyboard.current.sKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame);
+        if (turnActive && (joy || tecla))
         {
             DoMove();
         }

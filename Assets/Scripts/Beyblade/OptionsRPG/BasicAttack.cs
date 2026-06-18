@@ -19,8 +19,11 @@ public class BasicAttack : MonoBehaviour
     void Update()
     {
         if (!rpgTurn.isTurnActive) return; // actualizar estado del turno
-        
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.up.wasPressedThisFrame)
+
+        // Joystick (dpad arriba) O teclado del Jugador 1 (tecla Q)
+        bool joy = Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.up.wasPressedThisFrame;
+        bool tecla = playerIndex == 0 && Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame;
+        if (joy || tecla)
         {
             DoAttack();
         }
