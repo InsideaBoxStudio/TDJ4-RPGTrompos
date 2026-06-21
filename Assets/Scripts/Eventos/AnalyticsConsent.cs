@@ -1,6 +1,7 @@
 using Unity.Services.Core;
 using UnityEngine;
 using UnityEngine.UnityConsent;
+using UnityEngine.SceneManagement;
 
 public class AnalyticsConsent : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class AnalyticsConsent : MonoBehaviour
                     AdsIntent = ConsentStatus.Denied
                 });
 
+                ChangeScene();
                 consentPanel.SetActive(false); // desactivar panel de consentimiento
             }
             else
@@ -51,6 +53,7 @@ public class AnalyticsConsent : MonoBehaviour
 
         Debug.Log(PlayerPrefs.GetInt("AnalyticsConsent"));
 
+        ChangeScene();
         consentPanel.SetActive(false); // desactiva el panel de consentimiento
     }
 
@@ -67,6 +70,12 @@ public class AnalyticsConsent : MonoBehaviour
 
         Debug.Log(PlayerPrefs.GetInt("AnalyticsConsent"));
 
+        ChangeScene();
         consentPanel.SetActive(false); // desactiva el panel de consentimiento
+    }
+
+    private void ChangeScene()
+    {
+        SceneManager.LoadScene("InitMenu");
     }
 }
