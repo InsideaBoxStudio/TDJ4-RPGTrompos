@@ -3,7 +3,7 @@ using UnityEngine;
 public class ActiveCharacter : MonoBehaviour
 {
     [SerializeField] private bool isPlayer1 = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Awake()
     {
         if (isPlayer1)

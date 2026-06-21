@@ -4,6 +4,7 @@ using TMPro;
 public class Vida : MonoBehaviour
 {
     [SerializeField] private float maxLife = 100;
+    [SerializeField] private Color DamageColor = Color.red;
     [SerializeField] private GameObject lifeBar;
     [SerializeField] private bool isPracticeMode = false;
     [SerializeField] public float vidaActual;
@@ -17,8 +18,10 @@ public class Vida : MonoBehaviour
 
     void Start()
     {
+        /*
         initialScaleX = lifeBar.transform.localScale.x;
         initialScaleX2 = lifeBar.transform.GetChild(0).localScale.x;
+        */
         if (!isPracticeMode) return;
         vidaActual = maxLife;
 
@@ -53,7 +56,7 @@ public class Vida : MonoBehaviour
 
         // cambiar color momentaneamente
         SpriteRenderer Beyblade = transform.gameObject.GetComponentInChildren<SpriteRenderer>();
-        Beyblade.color = Color.black;
+        Beyblade.color = DamageColor;
         Invoke("ReturnColor", timeDuration);
 
         // lanzar particulas
@@ -79,7 +82,11 @@ public class Vida : MonoBehaviour
             Time.timeScale = 0f;
         }
 
-        float porcentajeVida = vidaActual / maxLife;
+        float porcentajeVida = vidaActual / maxLife * 100;
+        lifeBar.GetComponent<CircularBar>().healthPercent = porcentajeVida;
+
+        Debug.Log(porcentajeVida);
+        /*
         lifeBar.transform.localScale = new Vector3(
             initialScaleX * porcentajeVida, // reduccion proporcional al daño
             lifeBar.transform.localScale.y,
@@ -91,6 +98,7 @@ public class Vida : MonoBehaviour
             damageNum.transform.localScale.y,
             damageNum.transform.localScale.z
         );
+        */
     }
 
     private void ReturnColor()

@@ -49,9 +49,6 @@ public class MenuSceneManager : MonoBehaviour
     {
         if (!isConfigOpen) return;
 
-        GameObject eventSistem = GameObject.FindGameObjectWithTag("EventSistemOption");
-        eventSistem.SetActive(false);
-
         ResumeInitMenu();
 
         Scene configScene = SceneManager.GetSceneByName(configMenuScene);
