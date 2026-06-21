@@ -12,6 +12,8 @@ TagManager:
   - Burn
   - Paralysis
   - Freeze
+  - SnapshotImage
+  - EventSistemOption
   layers:
   - Default
   - TransparentFX

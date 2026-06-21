@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e569bcf0bc6a18e4fa043de32f03573e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaunchClone
-  ClonePrefab: {fileID: 5772441645642728929, guid: 02bd8d237d73025418c568cbc3104c0a, type: 3}
+  ClonePrefab: {fileID: 5772441645642728929, guid: e403375fbc8dc4042aa9a174d71170a1, type: 3}
   Prompter: {fileID: 1689749903}
   pointerPosition: {fileID: 843861149}
   rpgTurn: {fileID: 843861148}
@@ -2694,8 +2694,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1983250580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.359}
+  m_AnchorMax: {x: 1, y: 0.359}
   m_AnchoredPosition: {x: 0.0000009536743, y: 0}
   m_SizeDelta: {x: 64, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12140,8 +12140,6 @@ MonoBehaviour:
   shurikenEsFuerte: 0
   pinchosEsFuerte: 1
   cloneEsFuerte: 1
-  forzarPlayerIndex: 1
-  playerIndexCPU: 1
   difficulty: 1
   usarDificultadElegida: 1
   attackRange: 3
@@ -12405,7 +12403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 746689945}
   - component: {fileID: 746689946}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13313,7 +13311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &814166403
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13601,8 +13599,8 @@ GameObject:
   - component: {fileID: 843861137}
   - component: {fileID: 843861136}
   - component: {fileID: 843861135}
-  m_Layer: 3
-  m_Name: 0
+  m_Layer: 6
+  m_Name: 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18673,7 +18671,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0, b: 1, a: 0.5882353}
+      key0: {r: 1, g: 0, b: 0, a: 0.5882353}
       key1: {r: 0, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -18903,7 +18901,7 @@ Transform:
   m_GameObject: {fileID: 843861133}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19402,7 +19400,7 @@ GameObject:
   - component: {fileID: 942035131}
   - component: {fileID: 942035130}
   m_Layer: 5
-  m_Name: TimingBar_J1
+  m_Name: TimingBar_J2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19445,8 +19443,8 @@ MonoBehaviour:
   scrollbar: {fileID: 942035131}
   vida: {fileID: 843861142}
   barSpeed: 2
-  jugador: 0
-  isAI: 0
+  jugador: 1
+  isAI: 1
   distanceFromCenter: 2
 --- !u!114 &942035131
 MonoBehaviour:
@@ -19909,7 +19907,7 @@ GameObject:
   - component: {fileID: 1003375859}
   - component: {fileID: 1003375861}
   - component: {fileID: 1003375860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ColliderAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19996,7 +19994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010250240}
   - component: {fileID: 1010250241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PressButtonBar_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20257,7 +20255,7 @@ MonoBehaviour:
   playersOptions: {fileID: 1099303144}
   energyCounter: {fileID: 1130093692}
   rpgTurn: {fileID: 2097228477}
-  minTurnTime: 2
+  minTurnTime: 1
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
@@ -20727,7 +20725,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0, b: 0, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 1}
         key1: {r: 1, g: 1, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -22046,7 +22044,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 79320485971fb934d92083ee3ab3f2f3, type: 3}
+    - sprite: {fileID: 21300000, guid: 9843f5c6cf02efc418fb80b140774e74, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -26850,7 +26848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1153104341}
   - component: {fileID: 1153104342}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27544,7 +27542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200557161}
   - component: {fileID: 1200557160}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Beyblade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30265,7 +30263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424331272}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: RPG Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37836,7 +37834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689749903}
   - component: {fileID: 1689749904}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: PointerArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37873,7 +37871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Prompter
   rpgTurn: {fileID: 843861148}
-  playerIndex: 0
+  playerIndex: 1
 --- !u!1 &1693407748
 GameObject:
   m_ObjectHideFlags: 0
@@ -37930,7 +37928,7 @@ GameObject:
   - component: {fileID: 1700914471}
   - component: {fileID: 1700914473}
   - component: {fileID: 1700914472}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DamageNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38810,7 +38808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807107875}
   - component: {fileID: 1807107876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PressButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40395,7 +40393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1995672986}
   - component: {fileID: 1995672987}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Sombra_Beyblade_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41541,7 +41539,7 @@ GameObject:
   - component: {fileID: 2081460613}
   - component: {fileID: 2081460612}
   - component: {fileID: 2081460611}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Vida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41826,8 +41824,6 @@ MonoBehaviour:
   shurikenEsFuerte: 0
   pinchosEsFuerte: 1
   cloneEsFuerte: 1
-  forzarPlayerIndex: 1
-  playerIndexCPU: 1
   difficulty: 1
   usarDificultadElegida: 1
   attackRange: 3
@@ -42022,7 +42018,7 @@ MonoBehaviour:
   Players:
   - {fileID: 1014463339}
   - {fileID: 1533879947}
-  - {fileID: 0}
+  - {fileID: 843861133}
   - {fileID: 415560316}
   isPracticeMode: 1
   sceneToLoad: InitMenu
@@ -42148,7 +42144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112625972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b147891048540e64db365f816deb7b5a, type: 3}
   m_Name: 
@@ -42170,7 +42166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112625972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dd1f53fa684a3a458c16762a4f23e53, type: 3}
   m_Name: 

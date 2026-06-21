@@ -11,7 +11,7 @@ public class Vida : MonoBehaviour
 
     public AudioSource audioSource;
 
-    private float potenciaDeTiro = 2;
+    private float potenciaDeTiro = 0.5f;
     private float initialScaleX;
     private float initialScaleX2;
 

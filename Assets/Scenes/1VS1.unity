@@ -909,7 +909,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 62e6cf01da2b0bf4f9501d56ae67846e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 987126d2ad1e3624fbccfc18f2e6fdf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1248,6 +1248,8 @@ MonoBehaviour:
   lifeBar: {fileID: 196856994}
   isPracticeMode: 0
   vidaActual: 0
+  timeDuration: 0.2
+  audioSource: {fileID: 0}
 --- !u!114 &171504554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,6 +1490,7 @@ MonoBehaviour:
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
+  turnTime: 0
 --- !u!4 &171504561
 Transform:
   m_ObjectHideFlags: 0
@@ -3753,7 +3756,7 @@ GameObject:
   - component: {fileID: 412957139}
   - component: {fileID: 412957138}
   m_Layer: 3
-  m_Name: 0
+  m_Name: 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3826,6 +3829,8 @@ MonoBehaviour:
   lifeBar: {fileID: 673331847}
   isPracticeMode: 0
   vidaActual: 0
+  timeDuration: 0.2
+  audioSource: {fileID: 0}
 --- !u!114 &412957141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4066,6 +4071,7 @@ MonoBehaviour:
   countDownRPG: {fileID: 0}
   energyGainPerTurn: 1
   isTurnActive: 0
+  turnTime: 0
 --- !u!4 &412957148
 Transform:
   m_ObjectHideFlags: 0
@@ -5652,11 +5658,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6225d80eabbe34ca72469e9dd6d3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimingBar
+  endGame: {fileID: 0}
   countDown: {fileID: 1022612339}
   scrollbar: {fileID: 490640438}
   vida: {fileID: 1014463349}
   barSpeed: 2
   jugador: 0
+  isAI: 0
   distanceFromCenter: 2
 --- !u!1 &498933289
 GameObject:
@@ -8243,11 +8251,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6225d80eabbe34ca72469e9dd6d3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimingBar
+  endGame: {fileID: 0}
   countDown: {fileID: 0}
   scrollbar: {fileID: 719128574}
   vida: {fileID: 412957140}
   barSpeed: 2
   jugador: 0
+  isAI: 0
   distanceFromCenter: 2
 --- !u!114 &719128574
 MonoBehaviour:
@@ -8417,7 +8427,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 62e6cf01da2b0bf4f9501d56ae67846e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c144a72a9f441545a7cdd7ef3170f8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12310,6 +12320,7 @@ MonoBehaviour:
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
+  turnTime: 0
 --- !u!96 &1014463348
 TrailRenderer:
   serializedVersion: 4
@@ -12445,6 +12456,8 @@ MonoBehaviour:
   lifeBar: {fileID: 1995848663}
   isPracticeMode: 0
   vidaActual: 0
+  timeDuration: 0.2
+  audioSource: {fileID: 0}
 --- !u!114 &1014463350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12660,6 +12673,7 @@ MonoBehaviour:
   - {fileID: 882816066}
   - {fileID: 2097228470}
   countDownTime: 5
+  finished: 0
 --- !u!1 &1024257194
 GameObject:
   m_ObjectHideFlags: 0
@@ -15279,7 +15293,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 62e6cf01da2b0bf4f9501d56ae67846e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c144a72a9f441545a7cdd7ef3170f8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16629,7 +16643,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 7f27b7dc8610b0d41b73765336b3ee59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 987126d2ad1e3624fbccfc18f2e6fdf3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17835,11 +17849,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6225d80eabbe34ca72469e9dd6d3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimingBar
+  endGame: {fileID: 0}
   countDown: {fileID: 1022612339}
   scrollbar: {fileID: 1440636554}
   vida: {fileID: 1533879953}
   barSpeed: 2
   jugador: 1
+  isAI: 0
   distanceFromCenter: 2
 --- !u!114 &1440636554
 MonoBehaviour:
@@ -18645,6 +18661,7 @@ MonoBehaviour:
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
+  turnTime: 0
 --- !u!114 &1533879951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18685,6 +18702,8 @@ MonoBehaviour:
   lifeBar: {fileID: 2083538964}
   isPracticeMode: 0
   vidaActual: 0
+  timeDuration: 0.2
+  audioSource: {fileID: 0}
 --- !u!114 &1533879954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22079,11 +22098,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb6225d80eabbe34ca72469e9dd6d3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimingBar
+  endGame: {fileID: 0}
   countDown: {fileID: 1022612339}
   scrollbar: {fileID: 1977899460}
   vida: {fileID: 171504553}
   barSpeed: 2
   jugador: 0
+  isAI: 0
   distanceFromCenter: 2
 --- !u!114 &1977899460
 MonoBehaviour:
@@ -23456,6 +23477,9 @@ MonoBehaviour:
   - {fileID: 1533879947}
   isPracticeMode: 0
   sceneToLoad: InitMenu
+  gameFinished: 0
+  playerID: 0
+  loseCause: Dead
 --- !u!1 &2119396756
 GameObject:
   m_ObjectHideFlags: 0
