@@ -277,6 +277,10 @@ public class AIBrain : MonoBehaviour
     void AutocompletarReferencias()
     {
         if (check == null) check = BuscarEnTrompo<CheckPlayerTurn>();
+        // Marcar el turno de la CPU como controlado por IA, para que su cooldown entre
+        // turnos siga usando el tiempo escalado original (su embestida física conecta
+        // igual que antes). El fix de tiempo real es solo para el humano. >>> FIX TURNOS IA <<<
+        if (check != null) check.controladoPorIA = true;
         if (energyCounter == null) energyCounter = BuscarEnTrompo<EnergyCounter>();
         if (rb == null) rb = BuscarEnTrompo<Rigidbody2D>();
         if (vida == null) vida = BuscarEnTrompo<Vida>();

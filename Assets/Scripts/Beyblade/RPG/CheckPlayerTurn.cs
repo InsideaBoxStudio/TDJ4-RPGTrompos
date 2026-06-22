@@ -26,11 +26,13 @@ public class CheckPlayerTurn : MonoBehaviour
     // >>> FIX TURNOS IA <<<
     // En el combate contra la IA, la IA congela el juego (Time.timeScale = 0) cada vez
     // que toma su turno y actúa en tiempo REAL (unscaledDeltaTime). El cooldown entre
-    // turnos del jugador usaba Invoke(), que corre en tiempo ESCALADO y queda congelado
-    // mientras timeScale = 0 -> el jugador casi no podía volver a empezar su turno
-    // ("la IA no te deja atacar"). Solución: en modo IA el cooldown corre en tiempo real.
-    // En 1VS1 (humano vs humano) NO hay AIBrain -> modoIA = false -> Invoke original intacto.
-    private bool modoIA = false;
+    // turnos del JUGADOR HUMANO usaba Invoke(), que corre en tiempo ESCALADO y queda
+    // congelado mientras timeScale = 0 -> el humano casi no podía volver a empezar su
+    // turno ("la IA no te deja atacar"). Solución: SOLO el cooldown del humano corre en
+    // tiempo real. La IA queda EXACTAMENTE como estaba (Invoke escalado), así su embestida
+    // física conecta igual que antes. En 1VS1 (sin AIBrain) -> modoIA = false -> todo Invoke.
+    private bool modoIA = false;                  // hay una IA en la escena (Practica)
+    public bool controladoPorIA = false;          // este turno pertenece a la CPU (lo marca el AIBrain)
     private Coroutine nextTurnCoroutine;
 
     void Awake()
@@ -100,16 +102,18 @@ public class CheckPlayerTurn : MonoBehaviour
 
         CancelInvoke("NextTurnTime");
         // >>> FIX TURNOS IA <<<
-        if (modoIA)
+        if (modoIA && !controladoPorIA)
         {
-            // Cooldown en tiempo REAL: se rehabilita aunque la IA tenga el juego
-            // congelado (timeScale = 0). Así el jugador puede volver a tomar turno.
+            // SOLO el humano en modo IA: cooldown en tiempo REAL, se rehabilita aunque la
+            // IA tenga el juego congelado (timeScale = 0). Así el humano puede volver a
+            // tomar turno y atacar.
             if (nextTurnCoroutine != null) StopCoroutine(nextTurnCoroutine);
             nextTurnCoroutine = StartCoroutine(NextTurnTimeRealtime(nextTurnTime));
         }
         else
         {
-            Invoke("NextTurnTime", nextTurnTime); // 1VS1: comportamiento original intacto
+            // IA (su embestida física necesita tiempo escalado) y 1VS1: Invoke original.
+            Invoke("NextTurnTime", nextTurnTime);
         }
 
         isTurnPosible = false;
