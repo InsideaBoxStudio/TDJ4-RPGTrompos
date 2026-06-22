@@ -20,7 +20,8 @@ public class BasicAttack : MonoBehaviour
     {
         if (!rpgTurn.isTurnActive) return; // actualizar estado del turno
         
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.up.wasPressedThisFrame)
+        if ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.up.wasPressedThisFrame)
+            || TeclasJugador.Atacar(playerIndex)) // >>> TECLADO <<<
         {
             DoAttack();
         }

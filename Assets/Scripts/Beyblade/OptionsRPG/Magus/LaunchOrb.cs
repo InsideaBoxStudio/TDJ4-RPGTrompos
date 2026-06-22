@@ -24,7 +24,8 @@ public class LaunchOrb : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+        if (turnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+            || TeclasJugador.Abajo(playerIndex))) // >>> TECLADO <<<
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
             energyCounter.ChangeEnergy(-energyCost, "LaunchOrb");

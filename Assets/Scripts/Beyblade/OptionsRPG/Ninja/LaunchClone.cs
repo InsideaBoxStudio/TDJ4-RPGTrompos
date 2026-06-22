@@ -21,7 +21,8 @@ public class LaunchClone : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive;
 
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
+        if (turnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
+            || TeclasJugador.Clon(playerIndex))) // >>> TECLADO <<<
         {
             DoLaunch();
         }

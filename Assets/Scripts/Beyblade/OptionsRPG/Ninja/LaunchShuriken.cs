@@ -24,7 +24,8 @@ public class LaunchShuriken : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
+        if (turnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
+            || TeclasJugador.Shuriken(playerIndex))) // >>> TECLADO <<<
         {
             DoLaunch();
         }

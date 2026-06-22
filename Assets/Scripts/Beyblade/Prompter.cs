@@ -49,6 +49,11 @@ public class Prompter : MonoBehaviour
             input = Gamepad.all[playerIndex].leftStick.ReadValue();
         }
 
+        // >>> TECLADO <<< si se toca WASD/IJKL, apuntar con el teclado
+        Vector2 teclas = TeclasJugador.Apuntar(playerIndex);
+        if (teclas != Vector2.zero) input = teclas;
+        // <<< TECLADO <<<
+
         if (turnActive && input != Vector2.zero)
         {
             // Obtener direcciones de la cámara

@@ -15,7 +15,8 @@ public class ActiveBurn : MonoBehaviour
 
     void Update()
     {
-        if (rpgTurn.isTurnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+            || TeclasJugador.L1(playerIndex))) // >>> TECLADO <<<
         {
             energyCounter.ChangeEnergy(-energyCost, "ActiveBurn");
             Instantiate(PrefabFuego, Player.transform);

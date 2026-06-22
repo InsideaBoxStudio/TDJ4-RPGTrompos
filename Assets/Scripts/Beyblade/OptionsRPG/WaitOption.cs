@@ -20,7 +20,8 @@ public class WaitOption : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonSouth.wasPressedThisFrame)
+        if (turnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonSouth.wasPressedThisFrame)
+            || TeclasJugador.Esperar(playerIndex))) // >>> TECLADO <<<
         {
             DoWait();
         }

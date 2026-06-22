@@ -30,10 +30,10 @@ public class Parry : MonoBehaviour
         if (!isParryPossible) return;
 
         // Seguridad: si no hay un gamepad conectado en este índice (ej: el trompo-IA
-        // no tiene un joystick físico), no intentamos leerlo para no crashear.
-        if (Gamepad.all.Count <= playerIndex) return;
+        // no tiene un joystick físico), no lo leemos para no crashear. El teclado igual funciona.
+        bool joystick = Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame;
 
-        if (Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+        if (joystick || TeclasJugador.L1(playerIndex)) // >>> TECLADO <<< (Parry = R defendiendo)
         {
             StartParry();
         }

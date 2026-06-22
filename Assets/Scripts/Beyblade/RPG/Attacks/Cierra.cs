@@ -22,7 +22,8 @@ public class Cierra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rpgTurn.isTurnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame) // si es su turno y presiona el boton de abajo del dpad
+        if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+            || TeclasJugador.Abajo(playerIndex))) // >>> TECLADO <<< (si es su turno y presiona abajo)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
             energyCounter.ChangeEnergy(-energyCost, "Cierra"); // descontar energia

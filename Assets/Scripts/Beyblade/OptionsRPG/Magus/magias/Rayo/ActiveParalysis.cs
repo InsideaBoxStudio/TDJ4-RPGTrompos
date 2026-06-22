@@ -15,7 +15,8 @@ public class ActiveParalysis : MonoBehaviour
 
     void Update()
     {
-        if (rpgTurn.isTurnActive && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+            || TeclasJugador.L1(playerIndex))) // >>> TECLADO <<< (+ guarda anti-crash sin joystick)
         {
             energyCounter.ChangeEnergy(-energyCost, "Paralysis");
             Instantiate(PrefabHielo, Player.transform);

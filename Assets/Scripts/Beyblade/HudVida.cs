@@ -43,6 +43,15 @@ public class HudVida : MonoBehaviour
         // (los dos primeros trompos con tag "Player").
         if (vidaJugador1 == null || vidaJugador2 == null) AutoBuscarVidas();
 
+        // A prueba de errores: el Jugador 1 (etiqueta azul "P1") debe ser SIEMPRE el
+        // trompo humano. La CPU es el trompo que tiene un AIBrain en su jerarquía.
+        // Si quedaron al revés (humano en el casillero 2), los intercambiamos solos,
+        // así no importa en qué orden se arrastren en el Inspector.
+        if (EsCPU(vidaJugador1) && !EsCPU(vidaJugador2))
+        {
+            Vida tmp = vidaJugador1; vidaJugador1 = vidaJugador2; vidaJugador2 = tmp;
+        }
+
         // El trompo a seguir = el objeto que SE MUEVE. Preferimos el Rigidbody2D
         // (el cuerpo físico que realmente se desplaza/golpea); si no, el sprite;
         // y como último recurso, el objeto de la Vida.
@@ -161,6 +170,13 @@ public class HudVida : MonoBehaviour
         outline.effectColor = Color.black;
         outline.effectDistance = new Vector2(2, -2);
         return t;
+    }
+
+    // ¿Este trompo es la CPU? Lo es si tiene un AIBrain en algún lado de su jerarquía
+    // (el humano no tiene). Incluye objetos inactivos (el personaje no elegido).
+    bool EsCPU(Vida v)
+    {
+        return v != null && v.transform.root.GetComponentInChildren<AIBrain>(true) != null;
     }
 
     void AutoBuscarVidas()

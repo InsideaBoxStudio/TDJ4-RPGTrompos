@@ -86,11 +86,17 @@ public class Vida : MonoBehaviour
             lifeBar.transform.localScale.z
         );
 
-        damageNum.transform.localScale = new Vector3(
-            initialScaleX2 / porcentajeVida, // reduccion proporcional al daño
-            damageNum.transform.localScale.y,
-            damageNum.transform.localScale.z
-        );
+        // Evitar division por cero: cuando la vida llega a 0, porcentajeVida = 0 y
+        // initialScaleX2 / 0 = Infinity -> escala invalida en 'DamageNum'. Solo escalamos
+        // si queda vida; al morir, el numero conserva su ultima escala.
+        if (porcentajeVida > 0f)
+        {
+            damageNum.transform.localScale = new Vector3(
+                initialScaleX2 / porcentajeVida, // reduccion proporcional al daño
+                damageNum.transform.localScale.y,
+                damageNum.transform.localScale.z
+            );
+        }
     }
 
     private void ReturnColor()
