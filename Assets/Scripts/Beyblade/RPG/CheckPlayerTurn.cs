@@ -23,9 +23,27 @@ public class CheckPlayerTurn : MonoBehaviour
     public bool isTurnActive = false;
     public float turnTime = 0f;
 
+    // >>> FIX TURNOS IA <<<
+    // En el combate contra la IA, la IA congela el juego (Time.timeScale = 0) cada vez
+    // que toma su turno y actúa en tiempo REAL (unscaledDeltaTime). El cooldown entre
+    // turnos del jugador usaba Invoke(), que corre en tiempo ESCALADO y queda congelado
+    // mientras timeScale = 0 -> el jugador casi no podía volver a empezar su turno
+    // ("la IA no te deja atacar"). Solución: en modo IA el cooldown corre en tiempo real.
+    // En 1VS1 (humano vs humano) NO hay AIBrain -> modoIA = false -> Invoke original intacto.
+    private bool modoIA = false;
+    private Coroutine nextTurnCoroutine;
+
     void Awake()
     {
         maxVelTurn = maxVelocityTurn;
+    }
+
+    void Start()
+    {
+        // Detectar si estamos en combate contra la IA (escena Practica tiene AIBrain).
+        // Incluye objetos inactivos por si el personaje de la CPU se activa más tarde
+        // (sistema de selección de personajes).
+        modoIA = FindFirstObjectByType<AIBrain>(FindObjectsInactive.Include) != null;
     }
 
     void Update()
@@ -81,7 +99,18 @@ public class CheckPlayerTurn : MonoBehaviour
         maxVelocityTurn = maxVelocityNextTurn;
 
         CancelInvoke("NextTurnTime");
-        Invoke("NextTurnTime", nextTurnTime);
+        // >>> FIX TURNOS IA <<<
+        if (modoIA)
+        {
+            // Cooldown en tiempo REAL: se rehabilita aunque la IA tenga el juego
+            // congelado (timeScale = 0). Así el jugador puede volver a tomar turno.
+            if (nextTurnCoroutine != null) StopCoroutine(nextTurnCoroutine);
+            nextTurnCoroutine = StartCoroutine(NextTurnTimeRealtime(nextTurnTime));
+        }
+        else
+        {
+            Invoke("NextTurnTime", nextTurnTime); // 1VS1: comportamiento original intacto
+        }
 
         isTurnPosible = false;
         isTurnActive = false;
@@ -99,6 +128,15 @@ public class CheckPlayerTurn : MonoBehaviour
 
     void NextTurnTime()
     {
+        isTurnPosible = true;
+    }
+
+    // >>> FIX TURNOS IA <<<
+    // Versión del cooldown en tiempo REAL (no escalado). WaitForSecondsRealtime sigue
+    // contando aunque Time.timeScale = 0 (mientras la IA tiene el juego congelado).
+    private IEnumerator NextTurnTimeRealtime(float segundos)
+    {
+        yield return new WaitForSecondsRealtime(segundos);
         isTurnPosible = true;
     }
 }
