@@ -37,10 +37,17 @@ public class SeleccionDificultad : MonoBehaviour
 
     private void Update()
     {
+        // >>> TECLADO <<<
+        // Confirmar/volver tambien con teclado (Enter), ademas del boton del joystick.
+        // Antes, si no habia gamepad conectado se hacia "return" y la pantalla quedaba
+        // trabada para quien solo tenia teclado.
+        bool confirmar =
+            (Gamepad.all.Count > 0 && Gamepad.all[0].buttonEast.wasPressedThisFrame)
+            || (Keyboard.current != null && Keyboard.current.enterKey.wasPressedThisFrame);
+
         if (ActiveObject.activeSelf == true) // si el selector de personajes esta activo
         {
-            if (Gamepad.current == null) return;
-            if (Gamepad.all[0].buttonEast.wasPressedThisFrame)
+            if (confirmar)
             {
                 ActiveObject.SetActive(false);
                 DesactiveObject.SetActive(true);
@@ -57,8 +64,7 @@ public class SeleccionDificultad : MonoBehaviour
         }
         else // si el selector de personajes no esta activo
         {
-            if (Gamepad.current == null) return;
-            if (Gamepad.all[0].buttonEast.wasPressedThisFrame)
+            if (confirmar)
             {
                 Invoke("NextScene", time);
             }
