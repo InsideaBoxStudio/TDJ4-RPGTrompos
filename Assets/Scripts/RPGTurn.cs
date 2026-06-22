@@ -47,18 +47,26 @@ public class RPGTurn : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void PlayerFinished(CheckPlayerTurn player)
+    public bool PlayerFinished(CheckPlayerTurn player)
     {
         if (activePlayers.Contains(player))
         {
             activePlayers.Remove(player);
         }
 
-        // reanuda cuando TODOS terminaron
-        if (activePlayers.Count == 0)
+        bool everyoneFinished = activePlayers.Count == 0;
+
+        if (everyoneFinished)
         {
             Time.timeScale = 1f;
         }
+
+        return everyoneFinished;
+    }
+
+    public bool AreAllPlayersFinished()
+    {
+        return activePlayers.Count == 0;
     }
 
     IEnumerator CheckSync()

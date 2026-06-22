@@ -6,7 +6,7 @@ public class Burned : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            if (child.CompareTag("StateEffect"))
+            if (child.CompareTag("Burn"))
             {
                 child.GetComponent<Burn>().ChangeParent(player, true);
             }

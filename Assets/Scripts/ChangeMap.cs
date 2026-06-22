@@ -20,6 +20,11 @@ public class ChangeMap : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     void Update()
     {
         if (

@@ -1,4 +1,6 @@
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 // ============================================================================
@@ -14,6 +16,10 @@ using UnityEngine.SceneManagement;
 public class SeleccionDificultad : MonoBehaviour
 {
     [SerializeField] private string escenaPractica = "Practica";
+    [SerializeField] private string sceneName = "InitMenu";
+    [SerializeField] private float time;
+    [SerializeField] private GameObject DesactiveObject;
+    [SerializeField] private GameObject ActiveObject;
 
     // Dificultad elegida, accesible desde cualquier escena (static = sobrevive al cambio de escena).
     public static AIDifficulty DificultadElegida = AIDifficulty.Normal;
@@ -25,6 +31,42 @@ public class SeleccionDificultad : MonoBehaviour
     private void Elegir(AIDifficulty dif)
     {
         DificultadElegida = dif;
-        SceneManager.LoadScene(escenaPractica);
+        ActiveObject.SetActive(true);
+        DesactiveObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (ActiveObject.activeSelf == true) // si el selector de personajes esta activo
+        {
+            if (Gamepad.current == null) return;
+            if (Gamepad.all[0].buttonEast.wasPressedThisFrame)
+            {
+                ActiveObject.SetActive(false);
+                DesactiveObject.SetActive(true);
+            }
+
+            if (
+                CharacterData.characterIndex1 != " " &&
+                CharacterData.characterIndex2 != " "
+                )
+            {
+                sceneName = escenaPractica;
+                NextScene();
+            }
+        }
+        else // si el selector de personajes no esta activo
+        {
+            if (Gamepad.current == null) return;
+            if (Gamepad.all[0].buttonEast.wasPressedThisFrame)
+            {
+                Invoke("NextScene", time);
+            }
+        }
+    }
+
+    private void NextScene()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

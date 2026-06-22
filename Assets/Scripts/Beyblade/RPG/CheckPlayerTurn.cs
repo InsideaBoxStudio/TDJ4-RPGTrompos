@@ -66,20 +66,35 @@ public class CheckPlayerTurn : MonoBehaviour
         countDownRPG.isCountingDown = true;
     }
 
-    public void PlayerChoseAnAction(float nextTurnTime, float maxVelocityNextTurn, bool isAdditionalTime) // Cuando ya eligio una accion
+    public void PlayerChoseAnAction(float nextTurnTime, float maxVelocityNextTurn, bool isAdditionalTime)
     {
         turnTime = nextTurnTime;
-        if (isAdditionalTime) nextTurnTime += nextTurnTime;
-        else if (nextTurnTime <= 0f) nextTurnTime = minTurnTime;
-        if (maxVelocityNextTurn <= 0f) maxVelocityNextTurn = maxVelTurn;
+
+        if (isAdditionalTime)
+            nextTurnTime += nextTurnTime;
+        else if (nextTurnTime <= 0f)
+            nextTurnTime = minTurnTime;
+
+        if (maxVelocityNextTurn <= 0f)
+            maxVelocityNextTurn = maxVelTurn;
+
         maxVelocityTurn = maxVelocityNextTurn;
+
         CancelInvoke("NextTurnTime");
-        Invoke("NextTurnTime", nextTurnTime); // Esperar antes de poder hacer otra accion
+        Invoke("NextTurnTime", nextTurnTime);
+
         isTurnPosible = false;
         isTurnActive = false;
-        countDownRPG.ResetCountDown();
+
         playersOptions.SetActive(false);
-        rpgTurn.PlayerFinished(this);
+
+        bool everyoneFinished = rpgTurn.PlayerFinished(this);
+
+        // Sólo el último jugador resetea el contador
+        if (everyoneFinished)
+        {
+            countDownRPG.ResetCountDown();
+        }
     }
 
     void NextTurnTime()
