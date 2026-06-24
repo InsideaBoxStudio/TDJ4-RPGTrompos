@@ -46,7 +46,7 @@ public class Prompter : MonoBehaviour
         // verificar que exista el gamepad
         if (Gamepad.all.Count > playerIndex)
         {
-            input = Gamepad.all[playerIndex].leftStick.ReadValue();
+            input = Gamepad.all[playerIndex].rightStick.ReadValue();
         }
 
         // >>> TECLADO <<< si se toca WASD/IJKL, apuntar con el teclado

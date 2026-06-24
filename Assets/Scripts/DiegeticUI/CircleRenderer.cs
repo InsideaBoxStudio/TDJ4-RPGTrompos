@@ -6,7 +6,7 @@ public class CircleRenderer : MonoBehaviour
     public float radius = 2f;
     public int segments = 100;
 
-    void Start()
+    public void DrawCircle()
     {
         line.positionCount = segments + 1;
         line.loop = true;

@@ -5,6 +5,7 @@ public class Clone : MonoBehaviour
 {
     [SerializeField] private float timeAttack = 1;
     [SerializeField] private float timeDead = 2;
+    [SerializeField] private int damage = 5;
     [SerializeField] private float velocity;
     [SerializeField] private Transform prompter;
 
@@ -31,7 +32,7 @@ public class Clone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && isAttacking)
         {
-            collision.gameObject.GetComponent<Vida>().Damage(10);
+            collision.gameObject.GetComponent<Vida>().Damage(damage);
             Vector2 direction = (transform.position - collision.gameObject.transform.position).normalized;
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-direction * velocity, ForceMode2D.Impulse);
             Destroy(gameObject);

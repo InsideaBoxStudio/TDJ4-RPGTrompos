@@ -157,7 +157,7 @@ MonoBehaviour:
   colliderDuration: 1
   reboundPlayer: 3
   reboundOtherPlayer: 10
-  damage: 5
+  damage: 2
   moveDuration: 2
   playerID: 0
   hasCollided: 0

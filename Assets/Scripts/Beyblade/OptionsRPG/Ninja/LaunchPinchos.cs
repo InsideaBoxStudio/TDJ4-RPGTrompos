@@ -52,6 +52,11 @@ public class LaunchPinchos : MonoBehaviour
             {
                 child.GetComponent<Poison>().ChangeParent(instantiatedPincho, false); //envenenar al jugador
             }
+            else if (child.CompareTag("Sustitution")){
+                child.transform.SetParent(instantiatedPincho.transform);
+                child.GetComponent<Sustitution>().parent = instantiatedPincho;
+                child.GetComponent<Sustitution>().playerIndex = playerIndex;
+            }
         }
     }
 }

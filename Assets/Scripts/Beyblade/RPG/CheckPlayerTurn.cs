@@ -133,6 +133,7 @@ public class CheckPlayerTurn : MonoBehaviour
     void NextTurnTime()
     {
         isTurnPosible = true;
+        Debug.Log("isTurnPosible: " + isTurnPosible);
     }
 
     // >>> FIX TURNOS IA <<<
