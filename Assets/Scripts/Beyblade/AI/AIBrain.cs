@@ -408,6 +408,11 @@ public class AIBrain : MonoBehaviour
 
     private float monitorTimer = 0f;
     private float tiempoEnTurno = 0f; // cuánto lleva la IA en su turno actual (para la demora de reacción)
+    // Red de seguridad: tiempo desde que la IA actuó esperando que el turno cierre.
+    // Si no cierra (alguna acción cerró el turno de otro personaje, o algo falló), lo
+    // forzamos tras este límite en vez de quedar congelados hasta el countdown (~10s).
+    private float tiempoTrasActuar = 0f;
+    private const float maxEsperaCierreTurno = 1.0f; // >>> FIX MAGUS CONGELADO <<<
 
     void Update()
     {
@@ -445,7 +450,21 @@ public class AIBrain : MonoBehaviour
                 if (tiempoEnTurno >= demoraReaccion)
                 {
                     hasActedThisTurn = true;
+                    tiempoTrasActuar = 0f;
                     currentState.Execute();
+                }
+            }
+            else
+            {
+                // RED DE SEGURIDAD >>> FIX MAGUS CONGELADO <<<
+                // La IA ya actuó este turno. Normalmente la acción cierra el turno en el
+                // mismo frame; si por lo que sea NO se cerró, lo forzamos acá tras un
+                // instante para que la IA no quede congelada esperando el countdown.
+                tiempoTrasActuar += Time.unscaledDeltaTime;
+                if (tiempoTrasActuar >= maxEsperaCierreTurno)
+                {
+                    tiempoTrasActuar = 0f;
+                    check.PlayerChoseAnAction(0f, 0f, false); // cierra el turno de la IA
                 }
             }
         }
@@ -453,6 +472,7 @@ public class AIBrain : MonoBehaviour
         {
             hasActedThisTurn = false;
             tiempoEnTurno = 0f;
+            tiempoTrasActuar = 0f;
 
             // La IA pide su turno activamente cuando su trompo está lo bastante lento.
             // Así no depende de la ventana de sincronización (pensada para 2 humanos)
