@@ -287,9 +287,14 @@ public class AIBrain : MonoBehaviour
         if (attackAction == null) attackAction = BuscarEnTrompo<BasicAttack>();
         if (moveAction == null) moveAction = BuscarEnTrompo<MovementOption>();
         if (waitAction == null) waitAction = BuscarEnTrompo<WaitOption>();
-        if (shurikenAction == null) shurikenAction = BuscarEnTrompo<LaunchShuriken>();
-        if (pinchosAction == null) pinchosAction = BuscarEnTrompo<LaunchPinchos>();
-        if (cloneAction == null) cloneAction = BuscarEnTrompo<LaunchClone>();
+        // Los especiales (Shuriken/Pinchos/Clon) son del NINJA. Se buscan SOLO en el propio
+        // personaje (sin caer al hermano por transform.root): si esta IA es un Magus, no los
+        // tiene -> quedan null -> no los usa. Antes, el Magus agarraba los del Ninja hermano y
+        // al lanzarlos se cerraba el turno del NINJA (no el del Magus) -> el Magus quedaba
+        // congelado en su turno hasta el countdown. >>> FIX MAGUS CONGELADO <<<
+        if (shurikenAction == null) shurikenAction = BuscarEnPersonaje<LaunchShuriken>();
+        if (pinchosAction == null) pinchosAction = BuscarEnPersonaje<LaunchPinchos>();
+        if (cloneAction == null) cloneAction = BuscarEnPersonaje<LaunchClone>();
         if (countDown == null) countDown = FindFirstObjectByType<CountDown>();
     }
 
@@ -300,6 +305,14 @@ public class AIBrain : MonoBehaviour
         T c = GetComponentInChildren<T>(true);
         if (c == null) c = transform.root.GetComponentInChildren<T>(true);
         return c;
+    }
+
+    // Busca SOLO dentro de este personaje (este objeto + hijos), sin caer al trompo
+    // completo. Se usa para los especiales, que pertenecen a un personaje concreto:
+    // así la IA no toma por error los de otro personaje (Ninja vs Magus). >>> FIX MAGUS CONGELADO <<<
+    T BuscarEnPersonaje<T>() where T : Component
+    {
+        return GetComponentInChildren<T>(true);
     }
 
     // ¿Ya tiene todas las referencias esenciales para pelear?
