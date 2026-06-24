@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class Vida : MonoBehaviour
 {
@@ -11,10 +12,10 @@ public class Vida : MonoBehaviour
     [SerializeField] public float timeDuration = 0.2f;
 
     public AudioSource audioSource;
+    public float hitStopDuration = 0.05f;
 
     private float potenciaDeTiro = 0.5f;
-    private float initialScaleX;
-    private float initialScaleX2;
+    private float originalTimeScale = 1;
 
     void Start()
     {
@@ -67,6 +68,8 @@ public class Vida : MonoBehaviour
         damageNum.text = DamageCount.ToString();
         Invoke("ReturnText", 1f);
 
+        StartCoroutine(HitStop());
+
         // hacer temblar la barra de vida
         lifeBar.GetComponent<Shake>().StartShake(0.2f, 0.05f);
 
@@ -84,27 +87,27 @@ public class Vida : MonoBehaviour
 
         float porcentajeVida = vidaActual / maxLife * 100;
         lifeBar.GetComponent<CircularBar>().healthPercent = porcentajeVida;
-
-        Debug.Log(porcentajeVida);
-        /*
-        lifeBar.transform.localScale = new Vector3(
-            initialScaleX * porcentajeVida, // reduccion proporcional al daño
-            lifeBar.transform.localScale.y,
-            lifeBar.transform.localScale.z
-        );
-
-        damageNum.transform.localScale = new Vector3(
-            initialScaleX2 / porcentajeVida, // reduccion proporcional al daño
-            damageNum.transform.localScale.y,
-            damageNum.transform.localScale.z
-        );
-        */
     }
 
     private void ReturnColor()
     {
         SpriteRenderer Beyblade = transform.gameObject.GetComponentInChildren<SpriteRenderer>();
         Beyblade.color = Color.white;
+    }
+
+    private IEnumerator HitStop()
+    {
+        if (Time.timeScale >= 0)
+        {
+            originalTimeScale = 1;
+        }
+
+        Time.timeScale = 0f;
+
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        Time.timeScale = originalTimeScale;
+        Debug.Log("TimeScale" + originalTimeScale);
     }
 
     private void ReturnText()

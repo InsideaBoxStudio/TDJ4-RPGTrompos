@@ -27,6 +27,11 @@ public class EndGame : MonoBehaviour
 
     void Update()
     {
+        if (gameFinished)
+        {
+            Time.timeScale = 0f;
+        }
+
         for (int i = 0; i < Players.Length; i++)
         {
             playersDefeated[i] = Players[i].GetComponent<Vida>().vidaActual <= 0;

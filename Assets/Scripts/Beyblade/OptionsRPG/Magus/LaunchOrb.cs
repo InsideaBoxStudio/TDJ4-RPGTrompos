@@ -18,8 +18,6 @@ public class LaunchOrb : MonoBehaviour
     [SerializeField] private float moveDuration = 2f;
     [SerializeField] private float Recoil = 10f;
 
-
-
     void Update()
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno

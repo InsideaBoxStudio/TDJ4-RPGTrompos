@@ -14,6 +14,7 @@ TagManager:
   - Freeze
   - SnapshotImage
   - EventSistemOption
+  - Sustitution
   layers:
   - Default
   - TransparentFX

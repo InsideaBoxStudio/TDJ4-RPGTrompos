@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GravityToPoint : MonoBehaviour
 {
-    [SerializeField] private Transform gravityPoint; // El punto al que atrae
+    [SerializeField] public Transform gravityPoint; // El punto al que atrae
     public float gravityStrength = 10f;
     [SerializeField] private float spinDirection = 1f;
     public float frictionStrength = 0.5f;

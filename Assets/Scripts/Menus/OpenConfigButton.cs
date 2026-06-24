@@ -18,7 +18,7 @@ public class OpenConfigButton : MonoBehaviour
 
     private void Update()
     {
-        if (Gamepad.all[0].selectButton.wasPressedThisFrame)
+        if (Gamepad.all.Count > 0 && Gamepad.all[0].selectButton.wasPressedThisFrame)
         {
             OpenConfig();
         }

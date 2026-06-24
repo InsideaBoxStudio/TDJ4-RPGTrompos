@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PausePlayer : MonoBehaviour
 {
+    private float nextTurn = 0;
     public void Pause(float time)
     {
         var gravity = GetComponent<GravityToPoint>();
@@ -21,6 +22,7 @@ public class PausePlayer : MonoBehaviour
 
         if (turn != null)
         {
+            nextTurn = turn.minTurnTime;
             turn.PlayerChoseAnAction(10000f, -1f, false);
         }
 
@@ -30,6 +32,9 @@ public class PausePlayer : MonoBehaviour
 
     public void UnPause()
     {
+        var turn = GetComponent<CheckPlayerTurn>();
+        turn.PlayerChoseAnAction(nextTurn, -1f, false);
+
         var gravity = GetComponent<GravityToPoint>();
         var collider = GetComponent<BeybladeCollider>();
         var rb = GetComponent<Rigidbody2D>();

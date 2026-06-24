@@ -7174,15 +7174,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Modo 1 vs 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 727d63e8903e4fe498ff8e9baefcace9, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 727d63e8903e4fe498ff8e9baefcace9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292237898
-  m_fontColor: {r: 0.2901961, g: 0.3529412, b: 0.83921576, a: 1}
+    rgba: 4288629315
+  m_fontColor: {r: 0.2627451, g: 0.2901961, b: 0.62352943, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7688,8 +7688,8 @@ RectTransform:
   m_Children:
   - {fileID: 1962070277}
   - {fileID: 1292292860}
-  - {fileID: 1364051537}
   - {fileID: 343854843}
+  - {fileID: 1364051537}
   m_Father: {fileID: 893617105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14120,15 +14120,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Configuraci\xF3nes"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 727d63e8903e4fe498ff8e9baefcace9, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 727d63e8903e4fe498ff8e9baefcace9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292237898
-  m_fontColor: {r: 0.2901961, g: 0.3529412, b: 0.83921576, a: 1}
+    rgba: 4288629315
+  m_fontColor: {r: 0.2627451, g: 0.2901961, b: 0.62352943, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15332,15 +15332,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Modo Practica
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 727d63e8903e4fe498ff8e9baefcace9, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 727d63e8903e4fe498ff8e9baefcace9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292237898
-  m_fontColor: {r: 0.2901961, g: 0.3529412, b: 0.83921576, a: 1}
+    rgba: 4288629315
+  m_fontColor: {r: 0.2627451, g: 0.2901961, b: 0.62352943, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

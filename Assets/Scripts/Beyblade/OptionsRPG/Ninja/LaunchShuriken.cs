@@ -52,6 +52,12 @@ public class LaunchShuriken : MonoBehaviour
             {
                 child.GetComponent<Poison>().ChangeParent(instantiatedShuriken, false);
             }
+            else if (child.CompareTag("Sustitution"))
+            {
+                child.transform.SetParent(instantiatedShuriken.transform);
+                child.GetComponent<Sustitution>().parent = instantiatedShuriken;
+                child.GetComponent<Sustitution>().playerIndex = playerIndex;
+            }
             else if (child.CompareTag("Burn"))
             {
                 child.GetComponent<Burn>().ChangeParent(instantiatedShuriken, false);
