@@ -30,11 +30,12 @@ public class EnergyCounter : MonoBehaviour
 
         UpdateBar();
 
-        if (cantidad < 0)
+        if (cantidad < 0 && (nombreAtaque != "Ninguno" && nombreAtaque != "BasicAttack"))
         {
             // contar cual es el ataque mas usado
 
             string nombreClase = nombreAtaque;
+            UnityEngine.Debug.Log(nombreAtaque);
 
             UnityEngine.Debug.Log($"Ataque usado: {nombreClase}");
             RegistrarAtaque(nombreClase);
@@ -54,7 +55,7 @@ public class EnergyCounter : MonoBehaviour
     public string ObtenerAtaqueMasUsado()
     {
         if (ataquesUsados.Count == 0)
-            return "Ninguno";
+            return "SwordThrust";
 
         return ataquesUsados
             .OrderByDescending(x => x.Value)

@@ -26,7 +26,7 @@ public class Cierra : MonoBehaviour
             || TeclasJugador.Abajo(playerIndex))) // >>> TECLADO <<< (si es su turno y presiona abajo)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "Cierra"); // descontar energia
+            energyCounter.ChangeEnergy(-energyCost, "Sierra"); // descontar energia
             rpgTurn.PlayerChoseAnAction(moveDuration, 2f, false);
 
             instantiatedCierra = Instantiate(PrefabCierra, rb.position, Quaternion.identity, rb.transform);

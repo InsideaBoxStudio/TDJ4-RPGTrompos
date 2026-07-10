@@ -26,6 +26,8 @@ public class LevelComplete : MonoBehaviour
     {
         if (!trigger)
         {
+
+            levelComplete = endGameScript.gameFinished;
             time += Time.unscaledDeltaTime; // Tiempo de juego real (no usar DeltaTime para que no lo afecten las pausas al elegir acciones)
 
             if (levelComplete)
@@ -54,8 +56,6 @@ public class LevelComplete : MonoBehaviour
                 DebugAnalytics(); // imprimir en consola
             }
         }
-
-        levelComplete = endGameScript.gameFinished;
     }
 
     private void SendAnalytics()

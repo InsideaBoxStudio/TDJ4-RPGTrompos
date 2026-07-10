@@ -33,7 +33,7 @@ public class InvokeSword : MonoBehaviour
         if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "BasicAttack");
+            energyCounter.ChangeEnergy(-energyCost, "SwordSlash");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             instantiateSword = Instantiate(sword, players[playerIndex].transform);

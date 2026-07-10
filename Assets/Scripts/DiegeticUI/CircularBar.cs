@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [RequireComponent(typeof(LineRenderer))]
 public class CircularBar : MonoBehaviour
 {
+    public Light2D light;
     public LineRenderer line;
     public float radius = 1.5f;
     public int segments = 100;
@@ -10,8 +12,9 @@ public class CircularBar : MonoBehaviour
     private float angle = 0;
 
     [Header("Color")]
-    public Color startColor = Color.white;
-    public Color endColor = Color.red;
+    public Color startColor = Color.green;   // 100%
+    public Color middleColor = Color.yellow; // 50%
+    public Color endColor = Color.red;       // 0%
     public float alpha = 0.5f;
 
     [Range(0, 100)]
@@ -61,10 +64,25 @@ public class CircularBar : MonoBehaviour
     }
     void UpdateColor()
     {
-        float t = 1f - (healthPercent / 100f);
+        Color currentColor;
 
-        Color currentColor = Color.Lerp(startColor, endColor, t);
+        if (healthPercent >= 50f)
+        {
+            // De 100% a 50%
+            float t = Mathf.InverseLerp(100f, 50f, healthPercent);
+            currentColor = Color.Lerp(startColor, middleColor, t);
+        }
+        else
+        {
+            // De 50% a 0%
+            float t = Mathf.InverseLerp(50f, 0f, healthPercent);
+            currentColor = Color.Lerp(middleColor, endColor, t);
+        }
+
         currentColor.a = alpha;
+
+        if (light != null)
+            light.color = currentColor;
 
         line.startColor = currentColor;
         line.endColor = currentColor;

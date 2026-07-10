@@ -16,27 +16,21 @@ public class Shake : MonoBehaviour
 
     private IEnumerator ShakeCoroutine(float duration, float strength)
     {
-        float elapsed = 0f;
+        float endTime = Time.unscaledTime + duration;
 
-        while (elapsed < duration)
+        while (Time.unscaledTime < endTime)
         {
-            // Elimina el offset anterior
             transform.localPosition -= shakeOffset;
 
-            // Genera uno nuevo
-            shakeOffset = Random.insideUnitCircle * strength;
+            shakeOffset = (Vector3)(Random.insideUnitCircle * strength);
 
-            // Aplica el nuevo offset
             transform.localPosition += shakeOffset;
 
-            elapsed += Time.deltaTime;
             yield return null;
         }
 
-        // Elimina el último offset antes de terminar
         transform.localPosition -= shakeOffset;
         shakeOffset = Vector3.zero;
-
         currentShake = null;
     }
 }

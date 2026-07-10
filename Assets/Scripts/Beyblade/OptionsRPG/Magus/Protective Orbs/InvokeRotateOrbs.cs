@@ -33,12 +33,31 @@ public class InvokeRotateOrbs : MonoBehaviour
         if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "LaunchOrb");
+            energyCounter.ChangeEnergy(-energyCost, "ProtectOrbs");
             rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
 
             GameObject instantiatedOrbs = Instantiate(OrbPrefab);
             instantiatedOrbs.transform.SetParent(players[playerIndex].transform);
             instantiatedOrbs.transform.position = players[playerIndex].transform.position;
+
+            foreach (Transform child in players[playerIndex].transform)
+            {
+                if (child.CompareTag("Burn"))
+                {
+                    child.GetComponent<Burn>().ChangeParent(instantiatedOrbs, false);
+                    child.transform.position = instantiatedOrbs.transform.position;
+                }
+                else if (child.CompareTag("Freeze"))
+                {
+                    child.GetComponent<Freeze>().ChangeParent(instantiatedOrbs, false);
+                    child.transform.position = instantiatedOrbs.transform.position;
+                }
+                else if (child.CompareTag("Paralysis"))
+                {
+                    child.GetComponent<Paralysis>().ChangeParent(instantiatedOrbs, false);
+                    child.transform.position = instantiatedOrbs.transform.position;
+                }
+            }
         }
     }
 }

@@ -34,7 +34,7 @@ public class InvokeGravity : MonoBehaviour
         if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "BasicAttack");
+            energyCounter.ChangeEnergy(-energyCost, "Gravity");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             instantiateGravity = Instantiate(gravity, players[playerIndex].transform);

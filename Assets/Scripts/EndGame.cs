@@ -13,7 +13,7 @@ public class EndGame : MonoBehaviour
     private bool[] playersDefeated;
     [SerializeField] private string sceneToLoad = "InitMenu";
     public bool gameFinished = false;
-    public int playerID = 0;
+    public int playerID = 1;
     public string loseCause = "Dead"; 
 
     void Start()
@@ -46,7 +46,7 @@ public class EndGame : MonoBehaviour
                 playerID = 0;
                 winText.text = "It's a tie!";
             }
-            if (isPracticeMode) playerID = 0;
+            if (isPracticeMode) playerID = 1;
 
             Time.timeScale = 0f;
             gameFinished = true;

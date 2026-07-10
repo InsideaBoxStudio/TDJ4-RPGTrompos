@@ -33,7 +33,7 @@ public class useShockwave : MonoBehaviour
         if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "BasicAttack");
+            energyCounter.ChangeEnergy(-energyCost, "Shockwave");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             shockwaveInstantiate = Instantiate(shockwave);

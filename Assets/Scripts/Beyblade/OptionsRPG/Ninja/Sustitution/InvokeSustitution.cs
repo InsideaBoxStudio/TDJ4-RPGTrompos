@@ -34,7 +34,7 @@ public class InvokeSustitution : MonoBehaviour
         if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftTrigger.wasPressedThisFrame)
         {
             if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
-            energyCounter.ChangeEnergy(-energyCost, "BasicAttack");
+            energyCounter.ChangeEnergy(-energyCost, "Sustitution");
             rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
             instantiateSustitution = Instantiate(sustitution, players[playerIndex].transform);

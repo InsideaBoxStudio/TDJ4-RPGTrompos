@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3583247492250311353}
   - component: {fileID: 5908166658659302037}
   - component: {fileID: 1219493568314078214}
-  - component: {fileID: 5788841080070731207}
   - component: {fileID: 4610456848219306853}
   m_Layer: 3
   m_Name: Fuego
@@ -4838,22 +4837,6 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!114 &5788841080070731207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4153060416927595316}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d17fa606f346ca4429af3495e27b2a8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Poison
-  damagePerSecond: 2
-  lifeDuration: 5
-  QuickTimeEvent: {fileID: 1549234623507946478, guid: c9831211bb9f64341bac19a4e054bd2d, type: 3}
-  isActive: 0
 --- !u!114 &4610456848219306853
 MonoBehaviour:
   m_ObjectHideFlags: 0
