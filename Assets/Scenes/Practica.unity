@@ -42812,6 +42812,7 @@ GameObject:
   - component: {fileID: 929401498}
   - component: {fileID: 929401500}
   - component: {fileID: 929401499}
+  - component: {fileID: 929401501}
   m_Layer: 5
   m_Name: EndBattle
   m_TagString: Untagged
@@ -42878,6 +42879,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929401497}
   m_CullTransparentMesh: 1
+--- !u!114 &929401501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929401497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa954c9af045b7448821a39ff92ff73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReturnToMenu
+  map: InitMenu
 --- !u!1 &931151452
 GameObject:
   m_ObjectHideFlags: 0
