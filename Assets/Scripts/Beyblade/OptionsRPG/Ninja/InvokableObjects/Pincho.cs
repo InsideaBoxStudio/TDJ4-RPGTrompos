@@ -13,7 +13,8 @@ public class Pincho : MonoBehaviour
         Vida vida = collision.gameObject.GetComponent<Vida>();
         if (vida == null) return;
 
-        vida.Damage(damage);
+        Vector3 contactPoint = collision.GetContact(0).point;
+        vida.Damage(damage, contactPoint);
         Vector2 direction = (collision.transform.position - transform.position).normalized;
         collision.gameObject.GetComponent<Rigidbody2D>().AddForce(direction * rebound, ForceMode2D.Impulse);
 

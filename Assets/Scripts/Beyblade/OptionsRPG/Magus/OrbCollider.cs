@@ -34,7 +34,9 @@ public class OrbCollider : MonoBehaviour
         if (collision.gameObject != pointerPlayer) return;
 
         collision.gameObject.GetComponent<Rigidbody2D>().AddForce((pointerPlayer.transform.position - transform.position).normalized * reboundForce, ForceMode2D.Impulse);
-        collision.gameObject.GetComponent<Vida>().Damage(damage);
+
+        Vector3 contactPoint = collision.ClosestPoint(transform.position);
+        collision.gameObject.GetComponent<Vida>().Damage(damage, contactPoint);
         Destroy(gameObject);
     }
 

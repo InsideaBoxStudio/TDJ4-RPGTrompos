@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class Shockwave : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class Shockwave : MonoBehaviour
     private bool end = false;
 
     private TopDownJumpScale jumpScript;
+
     private void Awake()
     {
         camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -34,9 +36,24 @@ public class Shockwave : MonoBehaviour
             .ToArray();
 
         player = players[playerIndex];
-        jumpScript = player.transform.GetChild(0).GetComponent<TopDownJumpScale>();
+
+
+        foreach (Transform child in player.transform.GetComponentsInChildren<Transform>(true))
+        {
+            if (child.CompareTag("PlayerSprite"))
+            {
+                jumpScript = child.GetComponent<TopDownJumpScale>();
+                break;
+            }
+        }
+
         circleRenderer = transform.GetComponent<CircleRenderer>();
         transform.position = player.transform.position;
+    }
+
+    private void Start()
+    {
+        
     }
 
     // Update is called once per frame
@@ -101,7 +118,7 @@ public class Shockwave : MonoBehaviour
 
                     if(distanciaSqr < radius + 0.16f)
                     {
-                        players[i].GetComponent<Vida>().Damage(damage);
+                        players[i].GetComponent<Vida>().Damage(damage, players[i].transform.position);
 
                         // calcular direccion para impulsar
                         Vector2 direction = (players[i].transform.position - player.transform.position).normalized;

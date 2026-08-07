@@ -11,7 +11,8 @@ public class StadiumCollider : MonoBehaviour
 
         if (vida != null)
         {
-            vida.Damage(2);
+            Vector3 contactPoint = collision.GetContact(0).point;
+            vida.Damage(2, contactPoint);
         }
     }
 }

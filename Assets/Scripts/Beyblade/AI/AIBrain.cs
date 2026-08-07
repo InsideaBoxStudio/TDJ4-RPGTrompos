@@ -374,8 +374,6 @@ public class AIBrain : MonoBehaviour
                 probabilidadDudar = 0.15f;
                 break;
         }
-        Debug.Log("[IA] Dificultad: " + difficulty + " | specialChance=" + specialChance +
-                  " | attackRange=" + attackRange + " | lowLife=" + lowLifeValue);
     }
 
     void Start()
@@ -400,10 +398,6 @@ public class AIBrain : MonoBehaviour
         }
 
         // Mensaje de confirmación: si ves esto en consola, el AIBrain está bien puesto.
-        Debug.Log("=== AIBrain ACTIVO en '" + gameObject.name + "' ===  check=" + (check != null) +
-                  " | attack=" + (attackAction != null) + " | move=" + (moveAction != null) +
-                  " | wait=" + (waitAction != null) + " | enemy=" + (enemy != null) +
-                  " | vida=" + (vida != null));
     }
 
     private float monitorTimer = 0f;
@@ -424,10 +418,6 @@ public class AIBrain : MonoBehaviour
             float vel = rb != null ? rb.linearVelocity.magnitude : -1f;
             bool turno = check != null && check.isTurnActive;
             int ener = energyCounter != null ? energyCounter.currentEnergy : -1;
-            Debug.Log("[MONITOR IA] velocidad=" + vel.ToString("F2") +
-                      " | turnoActivo=" + turno +
-                      " | energia=" + ener +
-                      " | timeScale=" + Time.timeScale);
         }
         // ---------------------------------------------------------------
 
@@ -487,7 +477,6 @@ public class AIBrain : MonoBehaviour
     public void SetState(AIState next)
     {
         currentState = next;
-        Debug.Log("IA cambia a estado: " + next.Name);
     }
 
     public string CurrentStateName => currentState != null ? currentState.Name : "-";
@@ -511,7 +500,6 @@ public class AIBrain : MonoBehaviour
     {
         if (attackAction == null) { Debug.LogError("La IA no tiene script Attack en su trompo."); return; }
         if (!HasEnergyToAttack()) { PerformWait(); return; }
-        Debug.Log("IA -> ATACA");
         attackAction.DoAttack();
     }
 
@@ -519,14 +507,12 @@ public class AIBrain : MonoBehaviour
     {
         if (moveAction == null) { Debug.LogError("La IA no tiene script MovementOption en su trompo."); return; }
         if (!HasEnergyToMove()) { PerformWait(); return; }
-        Debug.Log("IA -> avanza");
         moveAction.DoMove();
     }
 
     public void PerformWait()
     {
         if (waitAction == null) { Debug.LogError("La IA no tiene script WaitOption en su trompo."); return; }
-        Debug.Log("IA -> espera/defiende");
         waitAction.DoWait();
     }
 

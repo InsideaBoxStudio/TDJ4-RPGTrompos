@@ -11,7 +11,8 @@ public class Shuriken : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Vida>().Damage(Damage);
+            Vector3 contactPoint = collision.GetContact(0).point;
+            collision.gameObject.GetComponent<Vida>().Damage(Damage, contactPoint);
             gameObject.GetComponent<Collider2D>().enabled = false;
             Invoke("Dead", 0.1f);
             return;

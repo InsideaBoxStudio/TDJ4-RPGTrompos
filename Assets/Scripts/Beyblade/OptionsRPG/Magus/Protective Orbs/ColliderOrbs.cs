@@ -23,11 +23,12 @@ public class ColliderOrbs : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Vector3 contactPoint = collision.GetContact(0).point;
             playerAttacked = collision.gameObject;
 
             // quitar vida
             vida = playerAttacked.GetComponent<Vida>();
-            vida.Damage(damage);
+            vida.Damage(damage, contactPoint);
 
             // calcular direccion para impulsar
             direction = (playerAttacked.transform.position - transform.position).normalized;
@@ -55,7 +56,7 @@ public class ColliderOrbs : MonoBehaviour
                 {
                     if (barrInstantiate.GetComponent<CircularBarState>().stateValue > 0)
                     {
-                        vida.Damage(damage);
+                        vida.Damage(damage, contactPoint);
                     }
 
                     barrInstantiate.GetComponent<CircularBarState>().AddState(-damage);
@@ -64,7 +65,7 @@ public class ColliderOrbs : MonoBehaviour
                 {
                     if (barrInstantiate.GetComponent<CircularBarState>().stateValue < 0)
                     {
-                        vida.Damage(damage);
+                        vida.Damage(damage, contactPoint);
                     }
 
                     barrInstantiate.GetComponent<CircularBarState>().AddState(+damage);
@@ -82,8 +83,9 @@ public class ColliderOrbs : MonoBehaviour
             playerAttacked = collision.gameObject;
 
             // quitar vida
+            Vector3 contactPoint = collision.ClosestPoint(transform.position);
             vida = playerAttacked.GetComponent<Vida>();
-            vida.Damage(damage);
+            vida.Damage(damage, contactPoint);
 
             // calcular direccion para impulsar
             direction = (playerAttacked.transform.position - transform.position).normalized;
@@ -111,7 +113,7 @@ public class ColliderOrbs : MonoBehaviour
                 {
                     if (barrInstantiate.GetComponent<CircularBarState>().stateValue > 0)
                     {
-                        vida.Damage(damage);
+                        vida.Damage(damage, contactPoint);
                     }
 
                     barrInstantiate.GetComponent<CircularBarState>().AddState(-damage);
@@ -120,7 +122,7 @@ public class ColliderOrbs : MonoBehaviour
                 {
                     if (barrInstantiate.GetComponent<CircularBarState>().stateValue < 0)
                     {
-                        vida.Damage(damage);
+                        vida.Damage(damage, contactPoint);
                     }
 
                     barrInstantiate.GetComponent<CircularBarState>().AddState(+damage);

@@ -15,6 +15,7 @@ TagManager:
   - SnapshotImage
   - EventSistemOption
   - Sustitution
+  - PlayerSprite
   layers:
   - Default
   - TransparentFX

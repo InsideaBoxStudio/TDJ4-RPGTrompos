@@ -1,12 +1,14 @@
-using UnityEngine;
-using TMPro;
 using System.Collections;
+using TMPro;
+using UnityEngine;
+using UnityEngine.U2D;
 
 public class Vida : MonoBehaviour
 {
     [SerializeField] private float maxLife = 100;
     [SerializeField] private Color DamageColor = Color.red;
     [SerializeField] private GameObject lifeBar;
+    [SerializeField] private GameObject JuiceEffects;
     [SerializeField] private bool isPracticeMode = false;
     [SerializeField] public float vidaActual;
     [SerializeField] public float timeDuration = 0.2f;
@@ -16,13 +18,19 @@ public class Vida : MonoBehaviour
 
     private float potenciaDeTiro = 0.5f;
     private float originalTimeScale = 1;
+    private SpriteRenderer Beyblade;
 
     void Start()
     {
-        /*
-        initialScaleX = lifeBar.transform.localScale.x;
-        initialScaleX2 = lifeBar.transform.GetChild(0).localScale.x;
-        */
+        foreach (Transform child in transform.GetComponentsInChildren<Transform>(true))
+        {
+            if (child.CompareTag("PlayerSprite"))
+            {
+                Beyblade = child.GetComponent<SpriteRenderer>();
+                break;
+            }
+        }
+
         if (!isPracticeMode) return;
         vidaActual = maxLife;
 
@@ -45,7 +53,7 @@ public class Vida : MonoBehaviour
         }
     }
 
-    public void Damage(int DamageCount)
+    public void Damage(int DamageCount, Vector3 damagePosition)
     {
 
         // Efecto de sonido
@@ -56,12 +64,12 @@ public class Vida : MonoBehaviour
         // -----------------------
 
         // cambiar color momentaneamente
-        SpriteRenderer Beyblade = transform.gameObject.GetComponentInChildren<SpriteRenderer>();
         Beyblade.color = DamageColor;
         Invoke("ReturnColor", timeDuration);
 
         // lanzar particulas
-        transform.GetComponent<ParticleSystem>().Play();
+        GameObject juice = Instantiate(JuiceEffects);
+        juice.transform.position = damagePosition;
 
         // numero de daño recibido
         TMP_Text damageNum = lifeBar.GetComponentInChildren<TMP_Text>();
@@ -107,7 +115,6 @@ public class Vida : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.1f);
 
         Time.timeScale = originalTimeScale;
-        Debug.Log("TimeScale" + originalTimeScale);
     }
 
     private void ReturnText()

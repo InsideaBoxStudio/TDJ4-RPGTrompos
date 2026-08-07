@@ -23,8 +23,9 @@ public class SwordCollider : MonoBehaviour
         swordTrigger.enabled = false;
 
         // quitar vida
+        Vector3 contactPoint = collision.ClosestPoint(transform.position);
         vida = playerAttacked.GetComponent<Vida>();
-        vida.Damage(damage);
+        vida.Damage(damage, contactPoint);
 
         // calcular direccion para impulsar
         direction = (playerAttacked.transform.position - attackingPlayer.transform.position).normalized;

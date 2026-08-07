@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 12748007088121525}
   - component: {fileID: -8321397210057642868}
   - component: {fileID: 8069795228370223823}
+  - component: {fileID: 6968463791276869802}
   m_Layer: 0
   m_Name: Pinchos
   m_TagString: DamageableObject
@@ -167,3 +168,15 @@ MonoBehaviour:
   damage: 3
   rebound: 2
   additionalTime: 1
+--- !u!114 &6968463791276869802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320365557658325219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b21f6f7b4cc308d409c72418269ca90e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateObjectScript

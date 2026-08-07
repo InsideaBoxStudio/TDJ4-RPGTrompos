@@ -46,7 +46,7 @@ public class Poison : MonoBehaviour
 
             if (vida == null) return;
 
-            vida.Damage(damagePerSecond);
+            vida.Damage(damagePerSecond, player.transform.position);
         }
 
         if (lifeDuration <= 0)

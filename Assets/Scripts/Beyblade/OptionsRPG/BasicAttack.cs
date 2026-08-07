@@ -32,7 +32,7 @@ public class BasicAttack : MonoBehaviour
     {
         if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
         energyCounter.ChangeEnergy(-energyCost, "BasicAttack");
-        rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
+        rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, true);
 
         rb.linearVelocity = Prompter.right * moveSpeed;
 

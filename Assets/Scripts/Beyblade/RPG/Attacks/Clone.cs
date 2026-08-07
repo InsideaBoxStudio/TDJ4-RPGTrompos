@@ -21,7 +21,8 @@ public class Clone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && isAttacking)
         {
-            collision.gameObject.GetComponent<Vida>().Damage(10);
+            Vector3 contactPoint = collision.GetContact(0).point;
+            collision.gameObject.GetComponent<Vida>().Damage(10, contactPoint);
             Vector2 direction = (transform.position - collision.gameObject.transform.position).normalized;
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-direction * velocity, ForceMode2D.Impulse);
             Destroy(gameObject);
@@ -32,7 +33,8 @@ public class Clone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && isAttacking)
         {
-            collision.gameObject.GetComponent<Vida>().Damage(damage);
+            Vector3 contactPoint = collision.ClosestPoint(transform.position);
+            collision.gameObject.GetComponent<Vida>().Damage(damage, contactPoint);
             Vector2 direction = (transform.position - collision.gameObject.transform.position).normalized;
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(-direction * velocity, ForceMode2D.Impulse);
             Destroy(gameObject);

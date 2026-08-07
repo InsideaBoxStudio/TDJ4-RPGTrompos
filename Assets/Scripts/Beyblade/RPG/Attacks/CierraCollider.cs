@@ -16,6 +16,8 @@ public class CierraCollider : MonoBehaviour
     public bool hasCollided = false;
     private float timer;
 
+    private Vector3 contactPoint;
+
     void Awake()
     {
         if (transform.parent.gameObject.layer == 3)
@@ -43,6 +45,7 @@ public class CierraCollider : MonoBehaviour
         // verificar que sea un jugador diferente al que lanzo el ataque
         if (hasCollided == false && collision.gameObject.layer != transform.parent.gameObject.layer)
         {
+            contactPoint = collision.ClosestPoint(transform.position);
             otherPlayer = collision.gameObject;
             player.GetComponent<PausePlayer>().Pause(0f);
             otherPlayer.GetComponent<PausePlayer>().Pause(0f);
@@ -60,7 +63,7 @@ public class CierraCollider : MonoBehaviour
             if ((Gamepad.all.Count > playerID && Gamepad.all[playerID].buttonSouth.wasPressedThisFrame)
                 || TeclasJugador.Esperar(playerID)) // >>> TECLADO <<<
             {
-                otherPlayer.GetComponent<Vida>().Damage(damage);
+                otherPlayer.GetComponent<Vida>().Damage(damage, contactPoint);
             }
 
             timer -= Time.unscaledDeltaTime;

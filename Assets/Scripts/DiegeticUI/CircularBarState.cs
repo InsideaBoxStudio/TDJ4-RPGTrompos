@@ -119,7 +119,7 @@ public class CircularBarState : MonoBehaviour
 
     void OnBurnTick()
     {
-        gameObject.GetComponentInParent<Vida>().Damage(1);
+        gameObject.GetComponentInParent<Vida>().Damage(1, transform.position);
     }
 
     void DecayState()

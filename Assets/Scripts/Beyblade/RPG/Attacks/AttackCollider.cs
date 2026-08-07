@@ -16,7 +16,9 @@ public class AttackCollider : MonoBehaviour
         if (collision.gameObject.layer != transform.parent.gameObject.layer)
         {
             energyCounter.ChangeEnergy(energyGain, "GainEnergy");
-            collision.gameObject.GetComponent<Vida>().Damage(damage);
+
+            Vector3 contactPoint = collision.GetContact(0).point;
+            collision.gameObject.GetComponent<Vida>().Damage(damage, contactPoint);
         }
     }
 }

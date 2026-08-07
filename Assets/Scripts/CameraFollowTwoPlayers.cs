@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CameraFollowPlayers : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class CameraFollowPlayers : MonoBehaviour
     public float zoomLimiter = 10f;
 
     public Camera cam;
+    public PixelPerfectCamera ppc;
+
+    public bool isPixelPerfect = false;
 
     [Header("Rotación")]
     public float rotationSmoothSpeed = 5f;
@@ -60,17 +64,38 @@ public class CameraFollowPlayers : MonoBehaviour
         // ============================
 
         float greatestDistance = Mathf.Max(bounds.size.x, bounds.size.y);
-        float newZoom = Mathf.Lerp(
-            minZoom,
-            maxZoom,
-            Mathf.Clamp01(greatestDistance / zoomLimiter)
-        );
 
-        cam.orthographicSize = Mathf.Lerp(
-            cam.orthographicSize,
-            newZoom,
-            smoothSpeed * dt
-        );
+        if (isPixelPerfect && ppc != null)
+        {
+            // Distancia normalizada entre 0 y 1
+            float t = Mathf.Clamp01(greatestDistance / zoomLimiter);
+
+            // Cuando los jugadores están lejos usamos menor PPU (más alejado)
+            int targetPPU = Mathf.RoundToInt(Mathf.Lerp( minZoom * 100, maxZoom * 100, t));
+
+            // Cambio suave
+            float smoothPPU = Mathf.Lerp(
+                ppc.assetsPPU,
+                targetPPU,
+                smoothSpeed * dt
+            );
+
+            ppc.assetsPPU = Mathf.RoundToInt(smoothPPU);
+        }
+        else
+        {
+            float newZoom = Mathf.Lerp(
+                minZoom,
+                maxZoom,
+                Mathf.Clamp01(greatestDistance / zoomLimiter)
+            );
+
+            cam.orthographicSize = Mathf.Lerp(
+                cam.orthographicSize,
+                newZoom,
+                smoothSpeed * dt
+            );
+        }
 
         // ======================
         // ====== Rotacion ======
@@ -79,7 +104,7 @@ public class CameraFollowPlayers : MonoBehaviour
         Transform a = players[0];
         Transform b = players[1];
 
-        if (players.Count > 2) // si hyay mas de 2 jugadores
+        if (players.Count > 2) // si hay mas de 2 jugadores
         {
             float maxDistance = 0f;
 
