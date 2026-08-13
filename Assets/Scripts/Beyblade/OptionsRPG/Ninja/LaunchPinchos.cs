@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class LaunchPinchos : MonoBehaviour
+public class LaunchPinchos : MonoBehaviour, IAIAction
 {
     [SerializeField] private GameObject PinchosPrefab;
     [SerializeField] private Transform Prompter;
@@ -18,6 +18,9 @@ public class LaunchPinchos : MonoBehaviour
     [SerializeField] private float moveDuration = 1f;
     [SerializeField] private float Recoil = 10f;
 
+    // Especial FUERTE: solo la dificultad Difícil lo usa siempre.
+    [SerializeField] private bool esEspecialFuerte = true;
+
 
 
     void Update()
@@ -31,8 +34,11 @@ public class LaunchPinchos : MonoBehaviour
         }
     }
 
-    // Cuánta energía cuesta (la IA lo consulta para decidir).
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
     public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => energyCounter != null && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoLaunch();
 
     // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
     public void DoLaunch()

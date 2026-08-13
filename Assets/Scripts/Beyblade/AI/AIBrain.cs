@@ -8,8 +8,12 @@ using UnityEngine;
 //   - Cuando es su turno, el estado actual DECIDE una acción y a qué estado ir.
 //
 //  La IA ejecuta sus acciones llamando a los MISMOS scripts que usa el jugador
-//  (Attack, MovementOption, WaitOption). Por eso su ataque hace daño exactamente
-//  igual que el del jugador.
+//  (BasicAttack, MovementOption, WaitOption). Por eso su ataque hace daño
+//  exactamente igual que el del jugador.
+//
+//  ESPECIALES: el cerebro NO conoce personajes. Todo lo que implemente IAIAction
+//  dentro del personaje se descubre solo en Awake (ver IAIAction.cs). Agregar un
+//  personaje o un especial nuevo no requiere tocar este archivo.
 //
 //  Contiene 3 partes:
 //   1) La clase abstracta AIState (plantilla de todo estado).
@@ -182,15 +186,16 @@ public class AIBrain : MonoBehaviour
     [SerializeField] private MovementOption moveAction;
     [SerializeField] private WaitOption waitAction;
 
-    [Header("Especiales del Ninja (se autocompletan si el trompo los tiene)")]
-    [SerializeField] private LaunchShuriken shurikenAction;
-    [SerializeField] private LaunchPinchos pinchosAction;
-    [SerializeField] private LaunchClone cloneAction;
+    // Especiales del personaje: NO se listan acá. La IA descubre en Awake todo lo que
+    // implemente IAIAction dentro de su propio personaje. Así el cerebro no conoce
+    // personajes concretos y agregar uno nuevo no obliga a tocar este archivo.
+    // Cada acción declara sola su costo y si es "fuerte" (ver IAIAction.cs).
+    private IAIAction[] especiales;
 
-    [Header("¿Cuáles especiales son FUERTES? (solo la dificultad Difícil los usa siempre)")]
-    [SerializeField] private bool shurikenEsFuerte = false; // shuriken = básico por defecto
-    [SerializeField] private bool pinchosEsFuerte = true;   // pinchos = fuerte
-    [SerializeField] private bool cloneEsFuerte = true;     // clon = fuerte
+    // Buffer reusable para elegir especial sin generar basura para el GC en cada
+    // ataque de la IA (antes se creaba una List<Action> + closures por ataque).
+    private readonly System.Collections.Generic.List<IAIAction> candidatos =
+        new System.Collections.Generic.List<IAIAction>();
 
     [Header("Índice de jugador de la CPU (jugador 1 = 0, CPU = 1)")]
     [SerializeField] private bool forzarPlayerIndex = true; // reescribe el playerIndex de los scripts del trompo
@@ -287,14 +292,12 @@ public class AIBrain : MonoBehaviour
         if (attackAction == null) attackAction = BuscarEnTrompo<BasicAttack>();
         if (moveAction == null) moveAction = BuscarEnTrompo<MovementOption>();
         if (waitAction == null) waitAction = BuscarEnTrompo<WaitOption>();
-        // Los especiales (Shuriken/Pinchos/Clon) son del NINJA. Se buscan SOLO en el propio
-        // personaje (sin caer al hermano por transform.root): si esta IA es un Magus, no los
-        // tiene -> quedan null -> no los usa. Antes, el Magus agarraba los del Ninja hermano y
-        // al lanzarlos se cerraba el turno del NINJA (no el del Magus) -> el Magus quedaba
-        // congelado en su turno hasta el countdown. >>> FIX MAGUS CONGELADO <<<
-        if (shurikenAction == null) shurikenAction = BuscarEnPersonaje<LaunchShuriken>();
-        if (pinchosAction == null) pinchosAction = BuscarEnPersonaje<LaunchPinchos>();
-        if (cloneAction == null) cloneAction = BuscarEnPersonaje<LaunchClone>();
+        // Los especiales se buscan SOLO dentro del propio personaje (sin caer al hermano
+        // por transform.root): si esta IA es un Magus, encuentra los del Magus y ninguno
+        // del Ninja. Antes, el Magus agarraba los del Ninja hermano y al lanzarlos se
+        // cerraba el turno del NINJA (no el del Magus) -> el Magus quedaba congelado en su
+        // turno hasta el countdown. >>> FIX MAGUS CONGELADO <<<
+        if (especiales == null) especiales = GetComponentsInChildren<IAIAction>(true);
         if (countDown == null) countDown = FindFirstObjectByType<CountDown>();
     }
 
@@ -305,14 +308,6 @@ public class AIBrain : MonoBehaviour
         T c = GetComponentInChildren<T>(true);
         if (c == null) c = transform.root.GetComponentInChildren<T>(true);
         return c;
-    }
-
-    // Busca SOLO dentro de este personaje (este objeto + hijos), sin caer al trompo
-    // completo. Se usa para los especiales, que pertenecen a un personaje concreto:
-    // así la IA no toma por error los de otro personaje (Ninja vs Magus). >>> FIX MAGUS CONGELADO <<<
-    T BuscarEnPersonaje<T>() where T : Component
-    {
-        return GetComponentInChildren<T>(true);
     }
 
     // ¿Ya tiene todas las referencias esenciales para pelear?
@@ -396,12 +391,14 @@ public class AIBrain : MonoBehaviour
                 }
             }
         }
-
-        // Mensaje de confirmación: si ves esto en consola, el AIBrain está bien puesto.
     }
 
-    private float monitorTimer = 0f;
     private float tiempoEnTurno = 0f; // cuánto lleva la IA en su turno actual (para la demora de reacción)
+    // Los reintentos de enganche (referencias/rival) se hacen cada tanto, no cada frame:
+    // BuscarRival() aloca un array con FindGameObjectsWithTag y no vale la pena pagarlo
+    // 60 veces por segundo mientras el sistema de selección termina de activar todo.
+    private float reintentoTimer = 0f;
+    private const float intervaloReintento = 0.25f;
     // Red de seguridad: tiempo desde que la IA actuó esperando que el turno cierre.
     // Si no cierra (alguna acción cerró el turno de otro personaje, o algo falló), lo
     // forzamos tras este límite en vez de quedar congelados hasta el countdown (~10s).
@@ -410,21 +407,18 @@ public class AIBrain : MonoBehaviour
 
     void Update()
     {
-        // ---- MONITOR DE DIAGNÓSTICO: reporta cada 1 seg qué está pasando ----
-        monitorTimer += Time.unscaledDeltaTime;
-        if (monitorTimer >= 1f)
-        {
-            monitorTimer = 0f;
-            float vel = rb != null ? rb.linearVelocity.magnitude : -1f;
-            bool turno = check != null && check.isTurnActive;
-            int ener = energyCounter != null ? energyCounter.currentEnergy : -1;
-        }
-        // ---------------------------------------------------------------
-
         // Reintentar enganchar referencias/rival si algo quedó null (los componentes
         // o el personaje rival pueden activarse tarde por el sistema de selección).
-        if (!ReferenciasCompletas()) AutocompletarReferencias();
-        if (enemy == null) BuscarRival();
+        if (!ReferenciasCompletas() || enemy == null)
+        {
+            reintentoTimer += Time.unscaledDeltaTime;
+            if (reintentoTimer >= intervaloReintento)
+            {
+                reintentoTimer = 0f;
+                if (!ReferenciasCompletas()) AutocompletarReferencias();
+                if (enemy == null) BuscarRival();
+            }
+        }
 
         // Esperar a que termine la cuenta regresiva inicial ("3,2,1,GO!") antes de
         // que la IA haga NADA. Así la pelea no arranca antes de tiempo.
@@ -530,37 +524,38 @@ public class AIBrain : MonoBehaviour
         return Random.value < probabilidadDudar;
     }
 
-    // Intenta lanzar un especial del Ninja (shuriken / pinchos / clon).
+    // Intenta lanzar un especial del personaje (cualquiera que implemente IAIAction).
     // Devuelve true si lanzó alguno; false si no (entonces se hace ataque normal).
+    // Sin allocations: reusa la lista 'candidatos' en vez de crear una por ataque.
     public bool TryPerformSpecial()
     {
         // Tirar el dado: a veces NO usa especial, para variar.
         if (Random.value > specialChance) return false;
+        if (especiales == null || especiales.Length == 0) return false;
 
-        // Armar la lista de especiales disponibles (que existan y tengan energía).
-        // Se mezcla el orden para que no use siempre el mismo.
-        System.Collections.Generic.List<System.Action> opciones =
-            new System.Collections.Generic.List<System.Action>();
+        candidatos.Clear();
+        for (int i = 0; i < especiales.Length; i++)
+        {
+            IAIAction accion = especiales[i];
+            if (accion == null) continue;
 
-        // Un especial entra en la lista solo si: existe, hay energía, y —si es FUERTE—
-        // la dificultad actual permite usar especiales fuertes (solo Difícil).
-        if (shurikenAction != null && energyCounter.currentEnergy >= shurikenAction.EnergyCost
-            && (!shurikenEsFuerte || permitirEspecialesFuertes))
-            opciones.Add(() => { Debug.Log("IA -> SHURIKEN"); shurikenAction.DoLaunch(); });
+            // Saltear los especiales de un personaje desactivado (el no elegido en la
+            // pantalla de selección puede seguir colgando de la jerarquía).
+            MonoBehaviour comp = accion as MonoBehaviour;
+            if (comp == null || !comp.isActiveAndEnabled) continue;
 
-        if (pinchosAction != null && energyCounter.currentEnergy >= pinchosAction.EnergyCost
-            && (!pinchosEsFuerte || permitirEspecialesFuertes))
-            opciones.Add(() => { Debug.Log("IA -> PINCHOS"); pinchosAction.DoLaunch(); });
+            // Los especiales FUERTES solo entran si la dificultad los permite (Difícil).
+            if (accion.IsStrong && !permitirEspecialesFuertes) continue;
 
-        if (cloneAction != null && energyCounter.currentEnergy >= cloneAction.EnergyCost
-            && (!cloneEsFuerte || permitirEspecialesFuertes))
-            opciones.Add(() => { Debug.Log("IA -> CLON"); cloneAction.DoLaunch(); });
+            if (!accion.CanExecute()) continue;
 
-        if (opciones.Count == 0) return false; // no hay especiales disponibles
+            candidatos.Add(accion);
+        }
+
+        if (candidatos.Count == 0) return false; // no hay especiales disponibles
 
         // Elegir uno al azar y ejecutarlo.
-        int i = Random.Range(0, opciones.Count);
-        opciones[i].Invoke();
+        candidatos[Random.Range(0, candidatos.Count)].Execute();
         return true;
     }
 }
