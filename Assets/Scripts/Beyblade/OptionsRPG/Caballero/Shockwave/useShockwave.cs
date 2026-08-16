@@ -24,6 +24,8 @@ public class useShockwave : MonoBehaviour, IAIAction
     // corren antes que cualquier Start, así que acá el índice ya es el definitivo.
     private void Start()
     {
+        playerIndex = PlayerIdentity.Resolve(this, playerIndex);
+
         players = GameObject
             .FindGameObjectsWithTag("Player")
             .OrderBy(go => go.name)

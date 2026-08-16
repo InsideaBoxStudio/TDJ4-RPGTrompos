@@ -14,6 +14,8 @@ public class Prompter : MonoBehaviour
 
     private void Start()
     {
+        playerIndex = PlayerIdentity.Resolve(this, playerIndex);
+
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         BuscarRival();
     }

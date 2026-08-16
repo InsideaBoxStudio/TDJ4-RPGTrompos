@@ -255,25 +255,25 @@ public class AIBrain : MonoBehaviour
         AplicarDificultad();
     }
 
-    // Fuerza el índice de jugador (playerIndex/jugador/playerID) en TODOS los scripts
-    // del trompo de la CPU. Permite copiar el trompo de Jugador1 (índice 0) y que la
-    // IA lo convierta a jugador 2 sin tocar nada a mano en el editor.
+    // Marca al trompo de la CPU como jugador 2. Permite copiar el trompo de Jugador1
+    // (índice 0) y que la IA lo convierta sin tocar nada a mano en el editor.
+    //
+    // Antes esto se hacía con reflection: recorría TODOS los MonoBehaviour del trompo
+    // buscando campos llamados "playerIndex"/"jugador"/"playerID" por string y se los
+    // reescribía. Andaba, pero se rompía en silencio si alguien renombraba un campo.
+    // Ahora se fija un único PlayerIdentity y todos los scripts lo leen desde ahí en
+    // su Start (ver PlayerIdentity.cs). Corre en Awake: todos los Awake pasan antes
+    // que cualquier Start, así que cuando los scripts consultan, el valor ya está.
     void ForzarPlayerIndex()
     {
-        var comps = GetComponentsInChildren<MonoBehaviour>(true);
-        string[] campos = { "playerIndex", "jugador", "playerID", "playerIndexForKeyboard" };
-        foreach (var comp in comps)
-        {
-            if (comp == null || comp == this) continue;
-            var tipo = comp.GetType();
-            foreach (var nombre in campos)
-            {
-                var f = tipo.GetField(nombre,
-                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
-                if (f != null && f.FieldType == typeof(int))
-                    f.SetValue(comp, playerIndexCPU);
-            }
-        }
+        PlayerIdentity id = GetComponentInChildren<PlayerIdentity>(true);
+
+        // Si el trompo todavía no tiene el componente (escena sin migrar), se lo
+        // agregamos acá: queda por encima del personaje en la jerarquía, así que
+        // GetComponentInParent lo encuentra desde cualquier script de abajo.
+        if (id == null) id = gameObject.AddComponent<PlayerIdentity>();
+
+        id.PlayerIndex = playerIndexCPU;
     }
 
     // Busca los componentes de combate del propio trompo. Busca en este objeto y sus

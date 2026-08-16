@@ -16,6 +16,13 @@ public class WaitOption : MonoBehaviour
     [SerializeField] private float moveDuration = 1f;
 
 
+    // El playerIndex sale del PlayerIdentity del trompo (ver PlayerIdentity.cs).
+    // Si el trompo todavia no lo tiene, queda el valor serializado de siempre.
+    private void Start()
+    {
+        playerIndex = PlayerIdentity.Resolve(this, playerIndex);
+    }
+
     void Update()
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno

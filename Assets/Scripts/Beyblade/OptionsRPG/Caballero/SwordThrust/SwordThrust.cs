@@ -19,6 +19,13 @@ public class SwordThrust : MonoBehaviour, IAIAction
     // La estocada es el especial BÁSICO del Caballero: la IA la usa en toda dificultad.
     [SerializeField] private bool esEspecialFuerte = false;
 
+    // El playerIndex sale del PlayerIdentity del trompo (ver PlayerIdentity.cs).
+    // Si el trompo todavia no lo tiene, queda el valor serializado de siempre.
+    private void Start()
+    {
+        playerIndex = PlayerIdentity.Resolve(this, playerIndex);
+    }
+
     void Update()
     {
         if (!rpgTurn.isTurnActive) return; // actualizar estado del turno
