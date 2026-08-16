@@ -7,7 +7,6 @@ public class ExpandMenu2 : MonoBehaviour
     [SerializeField] private GameObject menuToExpand;
     [SerializeField] private int playerIndex;
 
-    // Update is called once per frame
     // El playerIndex sale del PlayerIdentity del trompo (ver PlayerIdentity.cs).
     // Si el trompo todavia no lo tiene, queda el valor serializado de siempre.
     private void Start()
@@ -15,6 +14,7 @@ public class ExpandMenu2 : MonoBehaviour
         playerIndex = PlayerIdentity.Resolve(this, playerIndex);
     }
 
+    // Update is called once per frame
     void Update()
     {
         if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonEast.isPressed)
