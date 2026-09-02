@@ -40,7 +40,7 @@ public class InvokeSustitution : MonoBehaviour, IAIAction
     {
         if (rpgTurn == null || !rpgTurn.isTurnActive) return; // actualizar estado del turno
 
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftTrigger.wasPressedThisFrame)
+        if (Controles.L2(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             DoSustitution();
         }

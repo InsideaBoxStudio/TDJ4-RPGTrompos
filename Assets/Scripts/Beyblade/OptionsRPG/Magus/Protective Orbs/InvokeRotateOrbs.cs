@@ -40,7 +40,7 @@ public class InvokeRotateOrbs : MonoBehaviour, IAIAction
         if (rpgTurn == null) return;
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
+        if (turnActive && Controles.Izquierda(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             DoProtectiveOrbs();
         }

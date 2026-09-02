@@ -4,11 +4,13 @@ using UnityEngine.InputSystem;
 // >>> TECLADO <<<
 // Mapeo de teclado centralizado para los dos jugadores.
 // Es FIEL al joystick: cada metodo equivale a un boton del gamepad.
-// Jugador 0 (P1) = teclas izquierdas: WASD (apuntar+dir) + Q E R F (botones) + C V (menus).
-// Jugador 1 (P2) = teclas derechas:  IJKL (apuntar+dir) + U O H N (botones) + M , (menus).
+// Jugador 0 (P1) = teclas izquierdas: WASD (apuntar+dir) + Q E R F T (botones) + C V (menus).
+// Jugador 1 (P2) = teclas derechas:  IJKL (apuntar+dir) + U O H N P (botones) + M , (menus).
 //
-// Para QUITAR el teclado: borrar este archivo y las lineas "|| TeclasJugador..."
-// (y el bloque de Prompter) marcadas con ">>> TECLADO <<<" en los scripts.
+// Este archivo es SOLO el mapa de teclas. Los scripts no lo llaman directo:
+// preguntan por Controles (ver Controles.cs), que une joystick + teclado en una
+// sola puerta. Para cambiar una tecla se toca aca; para cambiar un boton del
+// joystick, alla.
 public static class TeclasJugador
 {
     private static Keyboard K => Keyboard.current;
@@ -35,6 +37,9 @@ public static class TeclasJugador
     public static bool L1(int p)       => Press(p == 0 ? Key.R : Key.H);
     // rightShoulder (R1) -> P1=F, P2=N. Compartido: Clon (Ninja) / Hielo (Magus).
     public static bool R1(int p)       => Press(p == 0 ? Key.F : Key.N);
+    // leftTrigger (L2) -> Sustitucion (Ninja). P1=T, P2=P.
+    // Era el unico boton de combate sin equivalente en teclado.
+    public static bool L2(int p)       => Press(p == 0 ? Key.T : Key.P);
     // Alias legibles (misma tecla que L1/R1):
     public static bool Veneno(int p)   => L1(p);
     public static bool Clon(int p)     => R1(p);

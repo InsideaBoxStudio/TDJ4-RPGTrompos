@@ -41,7 +41,7 @@ public class InvokeMagicTurret : MonoBehaviour, IAIAction
     {
         if (rpgTurn == null || !rpgTurn.isTurnActive) return; // actualizar estado del turno
 
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+        if (Controles.Abajo(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             DoMagicTurret();
         }

@@ -40,7 +40,7 @@ public class InvokeSword : MonoBehaviour, IAIAction
     {
         if (rpgTurn == null || !rpgTurn.isTurnActive) return; // actualizar estado del turno
 
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+        if (Controles.L1(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             DoSwordSlash();
         }

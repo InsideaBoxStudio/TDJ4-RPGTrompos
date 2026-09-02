@@ -30,7 +30,7 @@ public class SwordThrust : MonoBehaviour, IAIAction
     {
         if (!rpgTurn.isTurnActive) return; // actualizar estado del turno
 
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
+        if (Controles.Izquierda(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             DoAttack();
         }

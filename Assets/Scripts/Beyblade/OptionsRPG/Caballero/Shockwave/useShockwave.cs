@@ -39,7 +39,7 @@ public class useShockwave : MonoBehaviour, IAIAction
     {
         if (rpgTurn == null || !rpgTurn.isTurnActive) return; // actualizar estado del turno
 
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
+        if (Controles.R1(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             DoShockwave();
         }

@@ -40,7 +40,7 @@ public class InvokeGravity : MonoBehaviour, IAIAction
     {
         if (rpgTurn == null || !rpgTurn.isTurnActive) return; // actualizar estado del turno
 
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.right.wasPressedThisFrame)
+        if (Controles.Derecha(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             DoGravity();
         }
