@@ -84,6 +84,7 @@ consola: no tiene que haber nada rojo.
 | Avanzar | `E` | `O` |
 | Esperar | `Q` | `U` |
 | Especiales | `A` `S` `D` `R` `F` | `J` `K` `L` `H` `N` |
+| Sustitución (nueva) | `T` | `P` |
 
 ### Prueba 1 — escena `1VS1` (la más importante)
 
@@ -112,6 +113,26 @@ Acá es donde se ve si el refactor sirvió de algo:
       disparo mágico, orbe, torreta, orbes protectores.
 - [ ] En **Difícil** la CPU tiene que usar los especiales fuertes bastante seguido;
       en **Fácil**, casi nunca.
+
+### Prueba 4 — teclado sin joystick
+
+**Desconectá todos los joysticks** y probá con teclado solo.
+
+Antes, los 4 especiales del Caballero, 2 del Magus y la sustitución del Ninja
+**solo leían joystick**: sin un control conectado esos personajes quedaban a medio
+jugar. Ahora todo pasa por una sola clase (`Controles`) que une joystick y teclado.
+
+- [ ] El Caballero tira sus 4 especiales con teclado (`A` `D` `R` `F` para el J1)
+- [ ] La torreta y los orbes protectores del Magus salen con teclado
+- [ ] La sustitución del Ninja sale con la tecla nueva (`T` para el J1, `P` para el J2)
+- [ ] Con el joystick conectado **sigue andando igual que antes**
+
+> [!WARNING]
+> **Conflicto de botones que ya existía:** en el Magus, `LaunchOrb` y
+> `InvokeMagicTurret` están los dos atados a `dpad.down` (tecla `S`/`K`). Con
+> energía suficiente, apretarlo dispara **los dos a la vez**. Pasaba igual con
+> joystick, no es nuevo. Hay que decidir qué botón le toca a cada uno — es
+> decisión de diseño, por eso no lo toqué.
 
 ---
 
@@ -152,6 +173,15 @@ No las toqué porque no son decisión mía:
 3. **`Assets/_Recovery/`** tiene 4 archivos de recuperación de Unity versionados en
    el repo. Es basura que Unity genera cuando se cierra mal. Conviene sacarlos y
    agregar la carpeta al `.gitignore`.
+
+4. **Los menús no andan sin joystick.** `PauseMenu`, `OpenOptionsMenu`,
+   `CloseOptionsMenu`, los 3 de volumen, `ReturnScene` y `EndGame` leen solo
+   `Gamepad`. Sin un control conectado no podés ni pausar. Se arregla igual que el
+   combate (pasándolos por `Controles`), pero es un laburo aparte y hay que decidir
+   qué teclas usar para navegar los menús.
+
+5. **El conflicto `dpad.down` del Magus** (ver Prueba 4): `LaunchOrb` y
+   `InvokeMagicTurret` comparten botón.
 
 ---
 
