@@ -15,8 +15,7 @@ public class Indicator : MonoBehaviour
 
     void Update()
     {
-        if ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonSouth.wasPressedThisFrame)
-            || TeclasJugador.Esperar(playerIndex)) // >>> TECLADO <<<
+        if (Controles.Esperar(playerIndex)) // joystick + teclado (ver Controles.cs)
         {
             if (isTrigger)
             {

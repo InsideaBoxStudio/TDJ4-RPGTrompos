@@ -39,8 +39,10 @@ public class PressButtomTime2 : MonoBehaviour
             t
         );
 
-        //si el jugador presiona su boton
-        if (Gamepad.all[playerIndex].buttonSouth.wasPressedThisFrame)
+        // Si el jugador presiona su boton (joystick o teclado: Q el J1, U el J2).
+        // Antes hacia Gamepad.all[playerIndex] sin chequear que existiera:
+        // con cero joysticks tiraba excepcion en cada frame.
+        if (Controles.Esperar(playerIndex))
         {
             if (pressNow == true) // si esta en tiempo de precionar
             {

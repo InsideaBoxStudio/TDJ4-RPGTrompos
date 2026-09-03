@@ -23,13 +23,13 @@ public class MusicVolume : MonoBehaviour
     void Update()
     {
         if (EventSystem.current.currentSelectedGameObject != thisButton.gameObject) return;
-        if (Gamepad.current == null) return;
-
-        if (Gamepad.all[0].dpad.left.wasPressedThisFrame)
+        // Antes hacia "if (Gamepad.current == null) return;": sin joystick no se
+        // podia cambiar el volumen. Ahora tambien con las flechas del teclado.
+        if (Controles.MenuIzquierda())
         {
             LowerVolume();
         }
-        else if (Gamepad.all[0].dpad.right.wasPressedThisFrame)
+        else if (Controles.MenuDerecha())
         {
             IncreaseVolume();
         }

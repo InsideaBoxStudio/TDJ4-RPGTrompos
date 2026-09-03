@@ -121,6 +121,76 @@ public static class Controles
         return (g != null && g.buttonEast.isPressed) || TeclasJugador.Menu2(p);
     }
 
+    // ========================================================================
+    //  MENÚS
+    //  ------------------------------------------------------------------------
+    //  Los menús NO son de un jugador en particular: los maneja cualquiera de los
+    //  dos, con cualquier joystick o con el teclado. Por eso estos métodos no
+    //  llevan índice y revisan TODOS los gamepads conectados.
+    //
+    //  Antes los menús leían el gamepad directo, así que sin joystick no se podía
+    //  ni pausar. Peor: CloseOptionsMenu hacía Gamepad.all[0] sin chequear que
+    //  hubiera alguno -> excepción cada frame con cero controles conectados.
+    // ========================================================================
+
+    // ¿Algún gamepad conectado apretó este botón? Sirve para que cualquiera de los
+    // dos jugadores maneje el menú. Devuelve false si no hay ninguno conectado.
+    private static bool AlgunPad(System.Func<Gamepad, bool> boton)
+    {
+        for (int i = 0; i < Gamepad.all.Count; i++)
+        {
+            Gamepad g = Gamepad.all[i];
+            if (g != null && boton(g)) return true;
+        }
+        return false;
+    }
+
+    private static bool Tecla(Key k)
+    {
+        return Keyboard.current != null && Keyboard.current[k].wasPressedThisFrame;
+    }
+
+    // selectButton -> abrir/cerrar la pausa. Teclado: Esc.
+    public static bool Pausa()
+    {
+        return AlgunPad(g => g.selectButton.wasPressedThisFrame) || Tecla(Key.Escape);
+    }
+
+    // buttonSouth -> confirmar / aceptar. Teclado: Enter o Espacio.
+    public static bool Confirmar()
+    {
+        return AlgunPad(g => g.buttonSouth.wasPressedThisFrame)
+            || Tecla(Key.Enter) || Tecla(Key.NumpadEnter) || Tecla(Key.Space);
+    }
+
+    // buttonEast -> volver / cancelar. Teclado: Backspace o Esc.
+    public static bool Volver()
+    {
+        return AlgunPad(g => g.buttonEast.wasPressedThisFrame)
+            || Tecla(Key.Backspace) || Tecla(Key.Escape);
+    }
+
+    // dpad -> navegar el menú. Teclado: flechas.
+    public static bool MenuArriba()
+    {
+        return AlgunPad(g => g.dpad.up.wasPressedThisFrame) || Tecla(Key.UpArrow);
+    }
+
+    public static bool MenuAbajo()
+    {
+        return AlgunPad(g => g.dpad.down.wasPressedThisFrame) || Tecla(Key.DownArrow);
+    }
+
+    public static bool MenuIzquierda()
+    {
+        return AlgunPad(g => g.dpad.left.wasPressedThisFrame) || Tecla(Key.LeftArrow);
+    }
+
+    public static bool MenuDerecha()
+    {
+        return AlgunPad(g => g.dpad.right.wasPressedThisFrame) || Tecla(Key.RightArrow);
+    }
+
     // ---- APUNTAR ----
     // Devuelve la dirección del stick derecho; si no se toca, la del teclado.
     public static Vector2 Apuntar(int p)

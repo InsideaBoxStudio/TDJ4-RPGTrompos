@@ -55,7 +55,9 @@ public class EndGame : MonoBehaviour
 
         if (!gameFinished) return;
 
-        if (Gamepad.all.Count > playerID && Gamepad.all[playerID].buttonSouth.wasPressedThisFrame)
+        // Sin joystick no se podia salir de la pantalla de fin de partida.
+        // Ahora tambien con teclado (Enter / Espacio).
+        if (Controles.Confirmar())
         {
             SceneManager.LoadScene(sceneToLoad);
         }

@@ -10,8 +10,9 @@ public class ReturnScene : MonoBehaviour
 
     void Update()
     {
-        if (Gamepad.current == null) return;
-        if (Gamepad.all[0].buttonEast.wasPressedThisFrame)
+        // Antes hacia "if (Gamepad.current == null) return;": sin joystick no se
+        // podia volver atras nunca. Ahora tambien con teclado (Backspace / Esc).
+        if (Controles.Volver())
         {
             Invoke("NextScene", time);
         }
