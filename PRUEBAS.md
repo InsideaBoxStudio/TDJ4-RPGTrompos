@@ -86,6 +86,15 @@ consola: no tiene que haber nada rojo.
 | Especiales | `A` `S` `D` `R` `F` | `J` `K` `L` `H` `N` |
 | Sustitución (nueva) | `T` | `P` |
 
+**Menús** (los maneja cualquiera de los dos, con teclado o joystick):
+
+| Acción | Tecla |
+|---|---|
+| Pausar / cerrar opciones | `Esc` |
+| Confirmar | `Enter` o `Espacio` |
+| Volver | `Backspace` o `Esc` |
+| Navegar | Flechas |
+
 ### Prueba 1 — escena `1VS1` (la más importante)
 
 Dos humanos, sin IA de por medio. Es la que aísla mejor si rompí algo.
@@ -134,6 +143,34 @@ jugar. Ahora todo pasa por una sola clase (`Controles`) que une joystick y tecla
 > joystick, no es nuevo. Hay que decidir qué botón le toca a cada uno — es
 > decisión de diseño, por eso no lo toqué.
 
+### Prueba 5 — menús con teclado
+
+Sin joystick, antes el juego era casi injugable: no se podía pausar, ni abrir o
+cerrar opciones, ni cambiar el volumen, ni volver atrás, ni salir de la pantalla
+de fin de partida.
+
+Y había **dos crasheos**: `CloseOptionsMenu` y `PressButtomTime2` hacían
+`Gamepad.all[i]` sin verificar que hubiera alguno conectado, así que con cero
+joysticks tiraban excepción **en cada frame**.
+
+- [ ] `Esc` pausa la partida y `Esc` de nuevo la despausa
+- [ ] Se abre y se cierra el menú de opciones
+- [ ] Las flechas cambian el volumen (general, música y sonido)
+- [ ] `Backspace` vuelve atrás en el selector de personaje
+- [ ] Al terminar una partida, `Enter` sale de la pantalla de fin
+- [ ] La consola **no escupe excepciones** en el menú de configuración
+
+> [!CAUTION]
+> **`PauseMenu` cambió de comportamiento, revisalo.** El código anterior tenía dos
+> problemas: el bucle que detectaba la pausa cortaba el método entero con el
+> primer joystick que no estuviera apretando el botón, y al pausar ponía
+> `Time.timeScale = 0` pero el camino de "despausar" nunca lo restauraba — la
+> pausa era un camino de ida.
+>
+> Ahora es un toggle real que devuelve el tiempo a 1. **Es un arreglo, pero cambia
+> cómo se comporta el juego**, así que confirmá que la pausa haga lo que ustedes
+> esperan.
+
 ---
 
 ## Qué avisar
@@ -174,14 +211,15 @@ No las toqué porque no son decisión mía:
    el repo. Es basura que Unity genera cuando se cierra mal. Conviene sacarlos y
    agregar la carpeta al `.gitignore`.
 
-4. **Los menús no andan sin joystick.** `PauseMenu`, `OpenOptionsMenu`,
-   `CloseOptionsMenu`, los 3 de volumen, `ReturnScene` y `EndGame` leen solo
-   `Gamepad`. Sin un control conectado no podés ni pausar. Se arregla igual que el
-   combate (pasándolos por `Controles`), pero es un laburo aparte y hay que decidir
-   qué teclas usar para navegar los menús.
-
-5. **El conflicto `dpad.down` del Magus** (ver Prueba 4): `LaunchOrb` y
+4. **El conflicto `dpad.down` del Magus** (ver Prueba 4): `LaunchOrb` y
    `InvokeMagicTurret` comparten botón.
+
+5. **Quedan ~13 scripts de combate con el patrón viejo.** Cosas como
+   `BasicAttack` o `LaunchShuriken` todavía preguntan
+   `Gamepad.all[...] || TeclasJugador.X(...)` en línea, en vez de usar `Controles`.
+   **Funcionan bien** — no son un bug, es inconsistencia nomás. Los dejé sin tocar
+   a propósito para que este cambio quedara acotado a lo que estaba roto. Se pasan
+   cuando quieran.
 
 ---
 
