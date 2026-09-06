@@ -1,14 +1,21 @@
-# Pruebas — rama `feature/player-identity`
+# Pruebas — `main` después del merge
 
-Hola Nehe 👋 Acá está lo que hay que probar antes de mergear esta rama.
+Hola Nehe 👋 Ya está todo mergeado en `main`: tu `arte_callejero` primero, y
+arriba nuestra rama `feature/player-identity`. Esto es lo que hay que probar.
 
 > [!IMPORTANT]
 > **Estos cambios los hice con IA (Claude).** Lo aclaro para que los mires con ojo
-> crítico y no des nada por sentado. Todo compila sin errores y sin advertencias
-> nuevas, pero **el juego no se ejecutó ni una vez** — la parte de "compila" está
-> verificada, la parte de "anda" es justamente lo que te pido.
+> crítico y no des nada por sentado. Compila sin errores, pero **el juego no se
+> ejecutó ni una vez** — la parte de "compila" está verificada, la parte de "anda"
+> es justamente lo que te pido.
 >
 > Se tocaron 23 scripts de combate. Si algo se rompió, se va a notar acá.
+
+> [!TIP]
+> **El merge respetó tu reorganización.** Moviste los 113 scripts a
+> `Assets/Resources/Scripts/`; nuestros cambios aterrizaron ahí y los 4 archivos
+> nuevos también. Donde tu trabajo y el nuestro se pisaban, ganó el tuyo — el
+> detalle está en el mensaje del commit de merge.
 
 ---
 
@@ -153,9 +160,15 @@ Y había **dos crasheos**: `CloseOptionsMenu` y `PressButtomTime2` hacían
 `Gamepad.all[i]` sin verificar que hubiera alguno conectado, así que con cero
 joysticks tiraban excepción **en cada frame**.
 
+> [!NOTE]
+> **Al mergear, el de `CloseOptionsMenu` quedó resuelto por otro lado.** Nehemías
+> reescribió todo el menú de opciones y ese script ya no existe; sus versiones
+> nuevas no usan `Gamepad` (van por UI de Unity), así que el crasheo se fue igual.
+> Lo mismo con los 3 de volumen. El arreglo de `PressButtomTime2` sí es nuestro.
+
 - [ ] `Esc` pausa la partida y `Esc` de nuevo la despausa
-- [ ] Se abre y se cierra el menú de opciones
-- [ ] Las flechas cambian el volumen (general, música y sonido)
+- [ ] Se abre y se cierra el menú de opciones (menú nuevo de Nehemías)
+- [ ] Se puede cambiar el volumen sin joystick
 - [ ] `Backspace` vuelve atrás en el selector de personaje
 - [ ] Al terminar una partida, `Enter` sale de la pantalla de fin
 - [ ] La consola **no escupe excepciones** en el menú de configuración
@@ -207,9 +220,9 @@ No las toqué porque no son decisión mía:
 2. **`Shield.cs` está vacío** — `Start` y `Update` sin cuerpo. ¿Se implementa o se
    borra? (Un `Update()` vacío igual cuesta una llamada por frame.)
 
-3. **`Assets/_Recovery/`** tiene 4 archivos de recuperación de Unity versionados en
-   el repo. Es basura que Unity genera cuando se cierra mal. Conviene sacarlos y
-   agregar la carpeta al `.gitignore`.
+3. **`Assets/_Recovery/`** tiene ahora **6** archivos de recuperación de Unity
+   versionados en el repo. Es basura que Unity genera cuando se cierra mal.
+   Conviene sacarlos y agregar la carpeta al `.gitignore`.
 
 4. **El conflicto `dpad.down` del Magus** (ver Prueba 4): `LaunchOrb` y
    `InvokeMagicTurret` comparten botón.
@@ -220,6 +233,17 @@ No las toqué porque no son decisión mía:
    **Funcionan bien** — no son un bug, es inconsistencia nomás. Los dejé sin tocar
    a propósito para que este cambio quedara acotado a lo que estaba roto. Se pasan
    cuando quieran.
+
+6. **`TurnIndicator` quedó en `Resources/Scripts/Beyblade/RPG/`**, no en `AI/`
+   donde vos lo pusiste. Lo sacamos de `AI/` porque no es código de IA (pinta el
+   trompo en su turno, sirve para humanos también). Es cosmético: si preferís tu
+   ubicación, se mueve sin romper nada.
+
+7. **Los scripts viven bajo `Assets/Resources/`.** Ojo con esto: todo lo que está
+   en una carpeta `Resources` Unity lo mete en el build sí o sí, aunque no se use.
+   Para código no suele hacer falta (Unity compila los `.cs` estén donde estén).
+   No lo cambié porque es tu decisión y tocar 113 archivos ahora sería un merge
+   infernal, pero vale la pena que lo charlen.
 
 ---
 
