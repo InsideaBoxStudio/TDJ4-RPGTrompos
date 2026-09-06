@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 339a48e67c6d9e149991b759fc8c6104
+guid: bfccdd10b08c02e4ab9630d609e3246a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7084398305996499268
-    second: 4x-scanlines-1920x896-ver2_0
+      213: 1350140964032583771
+    second: JoysticConfig_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4x-scanlines-1920x896-ver2_0
+      name: JoysticConfig_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1920
-        height: 896
+        y: 10
+        width: 329
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb613b386492fad90800000000000000
-      internalID: -7084398305996499268
+      spriteID: b589dddad0aacb210800000000000000
+      internalID: 1350140964032583771
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      4x-scanlines-1920x896-ver2_0: -7084398305996499268
+      JoysticConfig_0: 1350140964032583771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

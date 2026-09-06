@@ -43,9 +43,7 @@ public class TimingBar : MonoBehaviour
         {
             barStopped = true;
 
-            distanceFromCenter = Mathf.Abs(scrollbar.value - 0.5f) * 2f;
-
-            vida.WaitForInfo(distanceFromCenter);
+            vida.WaitForInfo(scrollbar.value);
         }
         else if (countDownTime > 0)
         {

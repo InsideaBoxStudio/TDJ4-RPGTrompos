@@ -50,7 +50,7 @@ public class Vida : MonoBehaviour
         }
         else
         {
-            maxLife = maxLife * (1 - potenciaDeTiro);
+            maxLife = maxLife * potenciaDeTiro;
             vidaActual = maxLife;
         }
     }

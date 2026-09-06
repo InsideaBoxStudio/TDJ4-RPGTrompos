@@ -92,7 +92,7 @@ public class Shockwave : MonoBehaviour
             if (scriptQTE.success)
             {
                 player.GetComponent<GravityToPoint>().enabled = false;
-                jumpScript.StartJump(); // comenzar salto
+                jumpScript.StartJump(1f, 2f); // comenzar salto
             }
             else
             {

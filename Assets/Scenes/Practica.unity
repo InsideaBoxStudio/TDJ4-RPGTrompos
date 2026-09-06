@@ -902,7 +902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
-  collider: {fileID: 1054457965}
+  collider: {fileID: 1014463363}
   isTouchingFloor: 1
   isJumping: 0
   jumpDuration: 1
@@ -70032,6 +70032,7 @@ GameObject:
   - component: {fileID: 1236293329}
   - component: {fileID: 1236293330}
   - component: {fileID: 1236293331}
+  - component: {fileID: 1236293332}
   m_Layer: 3
   m_Name: Beyblade
   m_TagString: PlayerSprite
@@ -70126,6 +70127,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateBeyblade
   rotateSpeed: 3600
+--- !u!114 &1236293332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236293328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
+  collider: {fileID: 1533879958}
+  isTouchingFloor: 0
+  isJumping: 1
+  jumpDuration: 1
+  maxScale: 2
 --- !u!1 &1239711018
 GameObject:
   m_ObjectHideFlags: 0
@@ -77395,8 +77413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
   collider: {fileID: 1054457965}
-  isTouchingFloor: 1
-  isJumping: 0
+  isTouchingFloor: 0
+  isJumping: 1
   jumpDuration: 1
   maxScale: 2
 --- !u!212 &1326522398

@@ -34,7 +34,5 @@ public class ActiveOptions : MonoBehaviour
         Transform target = buttonSelected.transform.GetChild(0).GetChild(0);
 
         EventSystem.current.SetSelectedGameObject(target.gameObject);
-
-        Debug.Log(target.gameObject.name);
     }
 }
