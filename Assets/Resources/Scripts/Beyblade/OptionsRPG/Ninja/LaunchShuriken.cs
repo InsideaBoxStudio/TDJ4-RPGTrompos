@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class LaunchShuriken : MonoBehaviour
+public class LaunchShuriken : MonoBehaviour, IAIAction
 {
     [SerializeField] private GameObject ShurikenPrefab;
     [SerializeField] private Transform Prompter;
@@ -18,7 +18,17 @@ public class LaunchShuriken : MonoBehaviour
     [SerializeField] private float moveDuration = 1f;
     [SerializeField] private float Recoil = 1f;
 
+    // El shuriken es el especial BÁSICO del Ninja: la IA lo usa en toda dificultad.
+    [SerializeField] private bool esEspecialFuerte = false;
 
+
+
+    // El playerIndex sale del PlayerIdentity del trompo (ver PlayerIdentity.cs).
+    // Si el trompo todavia no lo tiene, queda el valor serializado de siempre.
+    private void Start()
+    {
+        playerIndex = PlayerIdentity.Resolve(this, playerIndex);
+    }
 
     void Update()
     {
@@ -31,8 +41,11 @@ public class LaunchShuriken : MonoBehaviour
         }
     }
 
-    // Cuánta energía cuesta (la IA lo consulta para decidir).
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
     public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => energyCounter != null && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoLaunch();
 
     // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
     public void DoLaunch()

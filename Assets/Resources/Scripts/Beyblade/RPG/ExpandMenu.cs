@@ -7,6 +7,13 @@ public class ExpandMenu : MonoBehaviour
     [SerializeField] private GameObject menuToExpand;
     [SerializeField] private int playerIndex;
 
+    // El playerIndex sale del PlayerIdentity del trompo (ver PlayerIdentity.cs).
+    // Si el trompo todavia no lo tiene, queda el valor serializado de siempre.
+    private void Start()
+    {
+        playerIndex = PlayerIdentity.Resolve(this, playerIndex);
+    }
+
     // Update is called once per frame
     void Update()
     {

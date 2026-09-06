@@ -38,6 +38,14 @@ public class CheckPlayerTurn : MonoBehaviour
     void Awake()
     {
         maxVelTurn = maxVelocityTurn;
+
+        // Un prefab NO puede guardar referencias a objetos de la escena: al colocar
+        // una instancia, estos dos campos vienen vacíos. Como hay uno solo de cada
+        // uno por escena, los buscamos acá. Así el trompo puede ser un prefab sin
+        // que haya que recablear nada a mano en cada instancia.
+        // Si están asignados en el Inspector (escenas viejas), se respetan.
+        if (rpgTurn == null) rpgTurn = FindFirstObjectByType<RPGTurn>();
+        if (countDownRPG == null) countDownRPG = FindFirstObjectByType<CountDownRPG>();
     }
 
     void Start()

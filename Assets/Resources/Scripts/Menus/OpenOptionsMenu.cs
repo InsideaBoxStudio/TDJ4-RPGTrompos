@@ -50,10 +50,7 @@ public class OpenOptionsMenu : MonoBehaviour
     {
         if (isSceneChanged) return;
 
-        if (
-            Gamepad.current != null &&
-            Gamepad.all[0].selectButton.wasPressedThisFrame
-            )
+        if (Controles.Pausa()) // joystick + teclado (Esc) — ver Controles.cs
         {
             ChangeScene();
         }

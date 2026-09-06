@@ -6,7 +6,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject[] options;
     private int optionSelected = 0;
-    private int playerIndex = -1;
     private bool paused = false;
 
     void Update()
@@ -17,15 +16,15 @@ public class PauseMenu : MonoBehaviour
             return;
         }
 
-        // si un jugador presiona el boton de options
-        for (int i = 0; i < Gamepad.all.Count; i++)
+        // Antes esto recorria los gamepads con un "if (!...) return;" adentro del
+        // for: con el primer joystick que NO estuviera apretando el boton cortaba
+        // el metodo entero, y con CERO joysticks el bucle no corria nunca -> no
+        // se podia pausar. Ahora lo maneja cualquiera de los dos, con joystick o
+        // con Esc.
+        if (Controles.Pausa())
         {
-            if (!Gamepad.all[i].selectButton.wasPressedThisFrame) return;
             optionsMenu.SetActive(false);
-            playerIndex = i;
             paused = true;
-            break;
-
         }
     }
 
@@ -34,36 +33,25 @@ public class PauseMenu : MonoBehaviour
         optionsMenu.SetActive(true);
         Time.timeScale = 0f;
 
-        // si un jugador presiona el boton de options
-        if (Gamepad.all[playerIndex].selectButton.wasPressedThisFrame)
+        // Salir de la pausa
+        if (Controles.Pausa())
         {
-            paused = true;
+            paused = false;
+            optionsMenu.SetActive(false);
+            Time.timeScale = 1f;
             return;
         }
 
-        // si un jugador presiona el boton de arriba
-        if (Gamepad.all[playerIndex].dpad.up.wasPressedThisFrame)
+        if (options == null || options.Length == 0) return;
+
+        // Navegar el menu (flechas o dpad)
+        if (Controles.MenuArriba())
         {
-            if (optionSelected > 0)
-            {
-                optionSelected--;
-            }
-            else
-            {
-                optionSelected = options.Length - 1;
-            }
+            optionSelected = (optionSelected > 0) ? optionSelected - 1 : options.Length - 1;
         }
-        // si un jugador presiona el boton de abajo
-        else if (Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+        else if (Controles.MenuAbajo())
         {
-            if (optionSelected < options.Length - 1)
-            {
-                optionSelected++;
-            }
-            else
-            {
-                optionSelected = 0;
-            }
+            optionSelected = (optionSelected < options.Length - 1) ? optionSelected + 1 : 0;
         }
     }
 }
