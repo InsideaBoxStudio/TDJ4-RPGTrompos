@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4620889254366465970}
   - component: {fileID: 8430831543604570423}
   - component: {fileID: 4901969950217947425}
-  m_Layer: 3
+  - component: {fileID: -1840365177660735009}
+  m_Layer: 0
   m_Name: Orb
   m_TagString: DamageableObject
   m_Icon: {fileID: 0}
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.88, y: 0.96, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -173,3 +174,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1840365177660735009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861692847417878887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816315051d2c19246b7798b9e7c5a918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Burned
