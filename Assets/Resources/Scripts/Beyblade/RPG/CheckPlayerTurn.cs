@@ -75,13 +75,22 @@ public class CheckPlayerTurn : MonoBehaviour
         }
     }
 
-    // Llamado por la IA (AIBrain) para pedir su turno activamente, sin depender de
-    // la ventana de sincronización pensada para dos jugadores humanos.
+    // Umbral de velocidad con el que ESTE jugador puede tomar turno ahora mismo.
+    // No es un valor fijo: cada acción lo reescribe (BasicAttack lo deja en 1000,
+    // o sea "a cualquier velocidad"). La IA lo lee para pedir turno con la MISMA
+    // regla que el humano en vez de tener un umbral propio. >>> FIX TURNOS IA <<<
+    public float VelocidadParaTomarTurno => maxVelocityTurn;
+
+    // Llamado por la IA (AIBrain) para pedir su turno activamente.
+    // Ahora valida la velocidad igual que Update() para el humano: antes la IA
+    // decidía sola con su propio umbral y entraba en turno antes. >>> FIX TURNOS IA <<<
     public void RequestTurnNow()
     {
         if (!isTurnPosible) return;
         if (isTurnActive) return;
         if (countDownRPG.countDownTime <= 0) return;
+        if (playersRb != null && playersRb.linearVelocity.magnitude >= maxVelocityTurn) return;
+
         rpgTurn.NotifyReadyImmediate(this); // versión sin corrutina (la IA no usa la ventana de sync)
     }
 

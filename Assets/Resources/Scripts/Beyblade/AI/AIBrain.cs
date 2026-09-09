@@ -210,7 +210,8 @@ public class AIBrain : MonoBehaviour
     [SerializeField] public float lowLifeValue = 30f; // por debajo de esto se pone defensiva
     [SerializeField] public int attackEnergyCost = 1;
     [SerializeField] public int moveEnergyCost = 1;
-    [SerializeField] public float aiReadyVelocity = 1.5f; // umbral de velocidad para pedir turno (mayor que el 1 del juego)
+    // (Se quitó aiReadyVelocity: la IA ya no tiene umbral propio para pedir turno,
+    //  usa el mismo que el jugador. Ver CheckPlayerTurn.RequestTurnNow.)
     [Range(0f, 1f)]
     [SerializeField] public float specialChance = 0.5f; // probabilidad de usar un especial al atacar
 
@@ -466,13 +467,14 @@ public class AIBrain : MonoBehaviour
             tiempoEnTurno = 0f;
             tiempoTrasActuar = 0f;
 
-            // La IA pide su turno activamente cuando su trompo está lo bastante lento.
-            // Así no depende de la ventana de sincronización (pensada para 2 humanos)
-            // ni queda trabada cuando el tiempo está congelado (timeScale=0).
-            if (check != null && rb != null && rb.linearVelocity.magnitude < aiReadyVelocity)
-            {
-                check.RequestTurnNow();
-            }
+            // La IA pide su turno activamente, pero con la MISMA regla de velocidad
+            // que el humano. >>> FIX TURNOS IA <<<
+            // Antes usaba su propio umbral fijo (aiReadyVelocity = 1.5) mientras el
+            // humano tenía que bajar de maxVelocityTurn (1.0, y variable segun la
+            // accion). O sea: la IA se habilitaba antes en CADA turno, y por eso
+            // "atacaba mucho mas". Ahora la validacion la hace RequestTurnNow() con
+            // el mismo numero que usa Update() para el jugador.
+            if (check != null) check.RequestTurnNow();
         }
     }
 
@@ -518,11 +520,23 @@ public class AIBrain : MonoBehaviour
         waitAction.DoWait();
     }
 
+    // ALEJARSE de verdad. >>> FIX RETREAT <<<
+    // Antes esto era literalmente PerformWait(): con la vida baja la IA se quedaba
+    // esperando turno tras turno y parecía colgada. Ahora se mueve en dirección
+    // CONTRARIA al rival. Hace falta el DoMove(direccion) de MovementOption porque
+    // el prompter siempre apunta al enemigo: moverse "hacia donde apunta" era
+    // justamente lo que NO queremos al retroceder.
     public void PerformRetreat()
     {
-        // El alejarse real (retroceder) se afinará al implementar las dificultades.
-        // Por ahora se comporta como defensa: frena y recupera.
-        PerformWait();
+        // Sin script de movimiento, sin energía o sin rival, no queda otra que esperar.
+        if (moveAction == null || !HasEnergyToMove() || enemy == null || rb == null)
+        {
+            PerformWait();
+            return;
+        }
+
+        Vector2 haciaElRival = (Vector2)enemy.position - rb.position;
+        moveAction.DoMove(-haciaElRival); // alejarse
     }
 
     // Devuelve true si la IA "duda" este turno y prefiere esperar en vez de atacar.

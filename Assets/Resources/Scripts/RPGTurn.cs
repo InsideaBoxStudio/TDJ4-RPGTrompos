@@ -71,12 +71,22 @@ public class RPGTurn : MonoBehaviour
 
     IEnumerator CheckSync()
     {
-        yield return new WaitForSeconds(syncWindow);
+        // Tiempo REAL, no escalado. >>> FIX TURNOS <<<
+        // Durante un turno el juego corre con Time.timeScale = 0, y WaitForSeconds
+        // se congela con él: si alguien ya estaba en turno, esta corrutina quedaba
+        // colgada y la ventana de sincronización no cerraba nunca.
+        yield return new WaitForSecondsRealtime(syncWindow);
 
-        activePlayers.Clear();
-
+        // OJO: acá NO va un activePlayers.Clear(). >>> FIX TURNOS <<<
+        // La IA toma su turno por NotifyReadyImmediate, que la agrega a activePlayers.
+        // El Clear() la borraba de la lista, y después PlayerFinished no la encontraba
+        // -> everyoneFinished salía mal -> el timeScale y el reseteo del contador
+        // quedaban desfasados. Ahora solo agregamos a quien falte.
         foreach (var p in readyPlayers)
         {
+            if (p == null) continue;
+            if (activePlayers.Contains(p)) continue; // ya estaba en turno
+
             activePlayers.Add(p);
             p.Ready();
         }

@@ -7,6 +7,11 @@ concreto, pero hace falta probarlo en Unity para descartar los otros).
 > Análisis hecho con IA (Claude) leyendo el código y las escenas. **No se ejecutó
 > el juego.** Lo que dice "confirmado" es confirmado *en el código*, no jugado.
 
+> [!IMPORTANT]
+> **Ya está todo arreglado en esta rama.** El análisis de abajo describe cómo
+> estaban las cosas; al final de cada sección dice qué se cambió. Hace falta
+> probarlo en Unity.
+
 ---
 
 ## 1. "La IA no respeta los turnos igual que el jugador, ataca mucho más"
@@ -156,23 +161,32 @@ probablemente se nota más que la duda del 15%.
 
 ---
 
-## Resumen
+## Qué se arregló
 
-| Reclamo | Veredicto | Causa |
+| # | Arreglo | Archivo |
 |---|---|---|
-| La IA ataca más | **Confirmado** | 4 asimetrías: umbral 1.5 vs 1.0, sin ventana de sync, `activePlayers.Clear()`, y `maxVelocityTurn` que la IA ignora |
-| A veces no hay daño | **Sospecha** | Carrera entre `BeybladeCollider` (que rebota) y `AttackCollider` (que daña) |
-| La IA no hace nada | **Confirmado** | Es `PerformWait()`: duda del 15% en Normal, y `RetreatState` que todavía no retrocede |
+| 1 | La IA pide turno con **la misma regla de velocidad que el humano**. Se eliminó `aiReadyVelocity` (1.5): ahora `RequestTurnNow()` valida contra `maxVelocityTurn`, el mismo número que usa `Update()` para el jugador. | `CheckPlayerTurn`, `AIBrain` |
+| 2 | Se sacó el `activePlayers.Clear()` que borraba a la IA de la lista de turnos. Ahora solo agrega a quien falte. | `RPGTurn` |
+| 3 | La ventana de sincronización usa **tiempo real**: con `WaitForSeconds` se congelaba junto con `Time.timeScale = 0` y no cerraba nunca. | `RPGTurn` |
+| 4 | `RetreatState` **retrocede de verdad**: se mueve en dirección contraria al rival en vez de esperar. Requirió un `DoMove(direccion)` nuevo, porque el prompter siempre apunta al enemigo. | `AIBrain`, `MovementOption` |
+| 5 | El golpe también se intenta en `OnCollisionStay2D`, con una bandera que garantiza **un solo impacto por ataque**. Así el rebote del cuerpo ya no puede robarle el golpe al collider de ataque. | `AttackCollider` |
+| 6 | La layer del dueño se **cachea al prender** en vez de leer `transform.parent` en cada choque (varios scripts reparentan hijos). Y si el objeto golpeado no tiene `Vida`, sale limpio en vez de tirar excepción. | `AttackCollider` |
+| 7 | `Parry` toma el índice de `PlayerIdentity` en vez de `int.Parse(transform.name)`. | `Parry` |
 
-**Nada de esto lo cambié.** Los tres tocan el balance del combate y hay decisiones
-de diseño de por medio. Díganme cuáles quieren que agarre.
+### Lo que NO se tocó, a propósito
+
+**La duda del `AttackState`** (`probabilidadDudar`: 45% en Fácil, 15% en Normal, 0%
+en Difícil). Eso no es un bug: es la palanca deliberada que hace que la Fácil sea
+fácil. Con el `RetreatState` ya arreglado, la mayor parte del "la IA no hace nada"
+debería desaparecer sola. Si igual molesta, es un número y se baja — pero es una
+decisión de **balance**, no de código, y la toman ustedes.
 
 ---
 
-## De paso, dos cosas que vi
+## Pendiente para ustedes
 
 - **Solo hay un `Parry` en cada escena**, en el GameObject llamado `"0"` (jugador 1).
-  El jugador 2 y la CPU no pueden hacer parry.
-- `Parry.Start()` hace `int.Parse(transform.name)`. Funciona **porque el objeto se
-  llama `"0"`**. Si alguien lo renombra, explota con `FormatException`. Conviene
-  cambiarlo por un campo serializado o por `PlayerIdentity`, que ya existe.
+  El jugador 2 y la CPU **no pueden hacer parry**. Eso se arregla en la escena, no
+  en el código.
+- El conflicto de `dpad.down` en el Magus (`LaunchOrb` e `InvokeMagicTurret`
+  comparten botón) sigue ahí: hay que decidir qué botón le toca a cada uno.
