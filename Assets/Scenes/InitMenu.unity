@@ -13946,10 +13946,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
-  collider: {fileID: 0}
+  collider: {fileID: 1034452521}
+  SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
-  jumpDuration: 1
+  jumpDuration: 0.5
   maxScale: 2
 --- !u!114 &1187520137
 MonoBehaviour:
@@ -15417,10 +15418,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
-  collider: {fileID: 0}
+  collider: {fileID: 849256357}
+  SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
-  jumpDuration: 1
+  jumpDuration: 0.5
   maxScale: 2
 --- !u!212 &2032202575
 SpriteRenderer:

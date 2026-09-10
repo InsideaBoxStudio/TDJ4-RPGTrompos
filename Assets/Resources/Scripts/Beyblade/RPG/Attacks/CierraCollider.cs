@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 public class CierraCollider : MonoBehaviour
 {
     [SerializeField] private float colliderDuration = 1f;
+    [SerializeField] private GameObject sprite;
 
     [Header("Stats")]
     [SerializeField] private float reboundPlayer = 3f;
@@ -55,7 +56,7 @@ public class CierraCollider : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0, 0, 360 * Time.unscaledDeltaTime);
+        sprite.transform.Rotate(0, 0, 360 * Time.unscaledDeltaTime);
 
         if (hasCollided)
         {
@@ -72,7 +73,7 @@ public class CierraCollider : MonoBehaviour
             {
                 player.GetComponent<PausePlayer>().UnPause();
                 otherPlayer.GetComponent<PausePlayer>().UnPause();
-                player.GetComponent<CheckPlayerTurn>().PlayerChoseAnAction(moveDuration, 0f, false);
+                player.GetComponent<CheckPlayerTurn>().PlayerChoseAnAction(moveDuration / 4f, 0f, false);
 
                 //calcular rebote
                 Vector2 direction = (otherPlayer.transform.position - player.transform.position).normalized;

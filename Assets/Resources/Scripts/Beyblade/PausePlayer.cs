@@ -22,8 +22,8 @@ public class PausePlayer : MonoBehaviour
 
         if (turn != null)
         {
-            nextTurn = turn.minTurnTime;
-            turn.PlayerChoseAnAction(10000f, -1f, false);
+            nextTurn = turn.turnTime;
+            turn.PlayerChoseAnAction(0.5f, -1f, false);
         }
 
         if (time <= 0f) return;

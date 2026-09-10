@@ -14,9 +14,15 @@ public class Freeze : MonoBehaviour
     private float endQuickTime = 1f;
     private GameObject quickTimeEvent;
     private GameObject parent;
+    private int TURN_ID = 0;
+
     void Awake()
     {
         //pausar todos los tag player
+
+        TURN_ID = TimeScaleController.Instance.GetMyNumberTurn();
+
+        /* cambiamos el sistema de pausar
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
         foreach (GameObject player in players)
@@ -24,6 +30,7 @@ public class Freeze : MonoBehaviour
             if (player == null) return;
             player.GetComponent<PausePlayer>().Pause(0);
         }
+        */
 
         parent = gameObject.transform.parent.gameObject;
         quickTimeEvent = Instantiate(QuickTimeEvent, parent.transform);
@@ -79,6 +86,7 @@ public class Freeze : MonoBehaviour
 
     private void Update()
     {
+        if (!TimeScaleController.Instance.IsMyTurn(TURN_ID)) return;
         if (initQuickTime)
         {
             if (!endEvent && quickTimeEvent != null)
@@ -90,6 +98,9 @@ public class Freeze : MonoBehaviour
             else
             {
                 //despausar todos los tag player
+                TimeScaleController.Instance.EndTurn(TURN_ID);
+
+                /* 
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
                 foreach (GameObject player in players)
@@ -101,6 +112,7 @@ public class Freeze : MonoBehaviour
                         player.GetComponent<CheckPlayerTurn>().PlayerChoseAnAction(1f, 3, false);
                     }
                 }
+                */
 
                 if (!isSuccess)
                 {

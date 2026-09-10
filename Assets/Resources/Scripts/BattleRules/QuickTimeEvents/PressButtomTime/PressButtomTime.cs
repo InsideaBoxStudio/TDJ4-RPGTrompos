@@ -33,7 +33,7 @@ public class PressButtomTime : MonoBehaviour
     {
         if (!isActive) return;
 
-        currentTime += Time.deltaTime;
+        currentTime += Time.unscaledDeltaTime;
 
         if(indicator != null)
         {

@@ -13,7 +13,6 @@ public class CheckPlayerTurn : MonoBehaviour
     [Header("")]
 
     [Header("Turn Settings")]
-    [SerializeField] public float minTurnTime = 1f; // tiempo minimo antes del siguiente turno
     [SerializeField] private float maxVelocityTurn = 1f; // velocidad maxima en la que el jugador debe estar para comenzar su turno
     private float maxVelTurn;
     [SerializeField] private CountDownRPG countDownRPG;
@@ -22,6 +21,8 @@ public class CheckPlayerTurn : MonoBehaviour
     private bool isTurnPosible = true;
     public bool isTurnActive = false;
     public float turnTime = 0f;
+
+    [SerializeField] public float timeUntilNextTurn = 0f;
 
     // >>> FIX TURNOS IA <<<
     // En el combate contra la IA, la IA congela el juego (Time.timeScale = 0) cada vez
@@ -37,6 +38,8 @@ public class CheckPlayerTurn : MonoBehaviour
 
     void Awake()
     {
+        PlayerChoseAnAction(2f, 1000f, false);
+        Time.timeScale = 0f;
         maxVelTurn = maxVelocityTurn;
 
         // Un prefab NO puede guardar referencias a objetos de la escena: al colocar
@@ -58,13 +61,27 @@ public class CheckPlayerTurn : MonoBehaviour
 
     void Update()
     {
-        if (!isTurnPosible) return;
-        if (countDownRPG.countDownTime <= 0){
+        if (!isTurnPosible)
+        {
+            if (modoIA && !controladoPorIA)
+                timeUntilNextTurn -= Time.deltaTime;
+            else
+                timeUntilNextTurn -= Time.deltaTime;
+            return;
+        }
+
+        if (countDownRPG.countDownTime <= 0)
+        {
             if (isTurnActive)
             {
                 PlayerChoseAnAction(0f, 0f, false);
             }
             return;
+        }
+
+        if (isTurnActive)
+        {
+            Time.timeScale = 0f;
         }
 
         bool playerReady = playersRb.linearVelocity.magnitude < maxVelocityTurn;
@@ -96,15 +113,23 @@ public class CheckPlayerTurn : MonoBehaviour
 
     public void PlayerChoseAnAction(float nextTurnTime, float maxVelocityNextTurn, bool isAdditionalTime)
     {
-        turnTime = nextTurnTime;
 
+        Debug.Log("timeUntilNextTurn: " + timeUntilNextTurn);
+        maxVelocityNextTurn = 1000;
+        turnTime = timeUntilNextTurn;
+        turnTime += nextTurnTime;
+
+        /*
         if (isAdditionalTime)
-            nextTurnTime += nextTurnTime;
+            turnTime += nextTurnTime;
         else if (nextTurnTime <= 0f)
-            nextTurnTime = minTurnTime;
-
+            turnTime = nextTurnTime;
+        */
+        
         if (maxVelocityNextTurn <= 0f)
             maxVelocityNextTurn = maxVelTurn;
+
+        timeUntilNextTurn = turnTime;
 
         maxVelocityTurn = maxVelocityNextTurn;
 
@@ -115,8 +140,10 @@ public class CheckPlayerTurn : MonoBehaviour
             // SOLO el humano en modo IA: cooldown en tiempo REAL, se rehabilita aunque la
             // IA tenga el juego congelado (timeScale = 0). Así el humano puede volver a
             // tomar turno y atacar.
-            if (nextTurnCoroutine != null) StopCoroutine(nextTurnCoroutine);
-            nextTurnCoroutine = StartCoroutine(NextTurnTimeRealtime(nextTurnTime));
+            Invoke("NextTurnTime", turnTime);
+            
+            // if (nextTurnCoroutine != null) StopCoroutine(nextTurnCoroutine);
+            // nextTurnCoroutine = StartCoroutine(NextTurnTimeRealtime(turnTime));
         }
         else
         {
@@ -141,7 +168,8 @@ public class CheckPlayerTurn : MonoBehaviour
     void NextTurnTime()
     {
         isTurnPosible = true;
-        Debug.Log("isTurnPosible: " + isTurnPosible);
+        timeUntilNextTurn = 0f;
+        // Debug.Log("isTurnPosible: " + isTurnPosible);
     }
 
     // >>> FIX TURNOS IA <<<
@@ -150,6 +178,8 @@ public class CheckPlayerTurn : MonoBehaviour
     private IEnumerator NextTurnTimeRealtime(float segundos)
     {
         yield return new WaitForSecondsRealtime(segundos);
+
         isTurnPosible = true;
+        timeUntilNextTurn = 0f;
     }
 }

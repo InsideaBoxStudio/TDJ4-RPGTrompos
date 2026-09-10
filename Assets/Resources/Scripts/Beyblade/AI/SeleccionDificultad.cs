@@ -46,8 +46,8 @@ public class SeleccionDificultad : MonoBehaviour
         {
             if (confirmar)
             {
-                ActiveObject.SetActive(false);
-                DesactiveObject.SetActive(true);
+                // ActiveObject.SetActive(false);
+                // DesactiveObject.SetActive(true);
             }
 
             if (

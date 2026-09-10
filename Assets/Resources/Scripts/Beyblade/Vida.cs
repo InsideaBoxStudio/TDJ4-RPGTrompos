@@ -18,6 +18,8 @@ public class Vida : MonoBehaviour
 
     private float potenciaDeTiro = 0.5f;
     private float originalTimeScale = 1;
+    private bool lastTurn = false;
+    private float lastAddWaitTime = 2f;
     [SerializeField] private SpriteRenderer Beyblade;
 
     void Start()
@@ -37,6 +39,14 @@ public class Vida : MonoBehaviour
 
         if (!isPracticeMode) return;
         vidaActual = maxLife;
+    }
+
+    void Update()
+    {
+        if (transform.GetComponent<CheckPlayerTurn>().isTurnActive)
+        {
+            lastTurn = true;
+        }
     }
 
     public void WaitForInfo(float distanceFromCenter)
@@ -97,6 +107,22 @@ public class Vida : MonoBehaviour
 
         float porcentajeVida = vidaActual / maxLife * 100;
         lifeBar.GetComponent<CircularBar>().healthPercent = porcentajeVida;
+
+        // -----------------------
+        // Sumar tiempo de espera por daño
+        // -----------------------
+
+        if (lastTurn)
+        {
+            lastAddWaitTime = 2f;
+            lastTurn = false;
+        }
+        else
+        {
+            lastAddWaitTime = lastAddWaitTime + 1f;
+        }
+        Debug.Log("lastAddWaitTime: " + lastAddWaitTime);
+        transform.GetComponent<CheckPlayerTurn>().PlayerChoseAnAction(DamageCount / lastAddWaitTime, 1000f, true);
     }
 
     private void ReturnColor()
@@ -107,7 +133,7 @@ public class Vida : MonoBehaviour
 
     private IEnumerator HitStop()
     {
-        if (Time.timeScale >= 0)
+        if (Time.timeScale <= 0)
         {
             originalTimeScale = 1;
         }
@@ -117,6 +143,11 @@ public class Vida : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.1f);
 
         Time.timeScale = originalTimeScale;
+
+        if (transform.GetComponent<CheckPlayerTurn>().isTurnActive)
+        {
+            Debug.Log("Error de porque el turno continua con el timeScale en 0");
+        }
     }
 
     private void ReturnText()

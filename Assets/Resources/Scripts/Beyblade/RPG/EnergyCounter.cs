@@ -35,9 +35,7 @@ public class EnergyCounter : MonoBehaviour
             // contar cual es el ataque mas usado
 
             string nombreClase = nombreAtaque;
-            UnityEngine.Debug.Log(nombreAtaque);
-
-            UnityEngine.Debug.Log($"Ataque usado: {nombreClase}");
+            
             RegistrarAtaque(nombreClase);
         }
     }

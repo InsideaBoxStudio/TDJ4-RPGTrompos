@@ -27,8 +27,12 @@ public class SwordBlow : MonoBehaviour
     private float tiempo = 0;
     private bool pauseTrigger = false;
 
+    private int TURN_ID = 0;
+
     private void Awake()
     {
+        TURN_ID = TimeScaleController.Instance.GetMyNumberTurn();
+
         players = GameObject
             .FindGameObjectsWithTag("Player")
             .OrderBy(go => go.name)
@@ -40,14 +44,30 @@ public class SwordBlow : MonoBehaviour
 
     private void Update()
     {
-        if (Time.timeScale == 0f) return;
+        if (end)
+        {
+            // mover espada;
+            Debug.Log("Mover la espada");
+            tiempo += Time.unscaledDeltaTime;
+            float t = Mathf.Clamp01(tiempo / attackDuration);
+
+            sword.transform.rotation = Quaternion.Lerp(
+                StartPosition.rotation,
+                EndPosition.rotation,
+                t
+            );
+        }
+
+        if (!TimeScaleController.Instance.IsMyTurn(TURN_ID)) return;
 
         if (!pauseTrigger)
         {
-            for (int i = 0; i < players.Length; i++)
+            /* cambiamos el sistema de pausar
+            for (int i = 0; i < players.Length; i++) // busca a todos los jugadores
             {
-                players[i].GetComponent<PausePlayer>().Pause(10f);
+                players[i].GetComponent<PausePlayer>().Pause(10f); // pausa a todos los jugadores
             }
+            */
             pauseTrigger = true;
         }
 
@@ -81,37 +101,32 @@ public class SwordBlow : MonoBehaviour
                         swordCollider.damage = damageBase;
 
                         end = true; // terminar Quick Time Events
+                        /* 
                         for (int i = 0; i < players.Length; i++)
                         {
                             players[i].GetComponent<PausePlayer>().UnPause();
                         }
+                        */
+                        TimeScaleController.Instance.EndTurn(TURN_ID);
                         Invoke("End", attackDuration * 1.2f);
                     }
                     else
                     {
                         end = true; // terminar Quick Time Events
+                        /* 
                         for (int i = 0; i < players.Length; i++)
                         {
                             players[i].GetComponent<PausePlayer>().UnPause();
                         }
+                        */
+                        
+                        TimeScaleController.Instance.EndTurn(TURN_ID);
                         Invoke("End", attackDuration * 1.2f);
                     }
                 }
             }
         }
 
-        else
-        {
-            // mover espada;
-            tiempo += Time.deltaTime;
-            float t = Mathf.Clamp01(tiempo / attackDuration);
-
-            sword.transform.rotation = Quaternion.Lerp(
-                StartPosition.rotation,
-                EndPosition.rotation,
-                t
-            );
-        }
     }
 
     private void End()

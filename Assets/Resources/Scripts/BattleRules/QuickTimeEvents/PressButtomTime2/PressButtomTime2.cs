@@ -16,13 +16,13 @@ public class PressButtomTime2 : MonoBehaviour
     public int playerIndex = 0;
     public bool success = false;
     public bool ended = false;
+    public bool destroy = false;
 
-    private bool pressNow = false;
+    public bool pressNow = false;
     private float tiempo = 0;
 
     private void Awake()
     {
-        Debug.Log(Time.timeScale);
         Invoke("PressTime", pressTime);
         Invoke("EndTime", endTime);
     }
@@ -30,7 +30,7 @@ public class PressButtomTime2 : MonoBehaviour
     void Update()
     {
         // mover indicador
-        tiempo += Time.deltaTime;
+        tiempo += Time.unscaledDeltaTime;
         float t = tiempo / endTime;
 
         indicator.transform.position = Vector3.Lerp(
@@ -55,6 +55,11 @@ public class PressButtomTime2 : MonoBehaviour
 
             EndTime();
         }
+
+        if (destroy == true)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void PressTime()
@@ -67,7 +72,6 @@ public class PressButtomTime2 : MonoBehaviour
         CancelInvoke("EndTime");
         CancelInvoke("PressTime");
         pressNow = false;
-        ended = true;
 
         if (!success)
         {

@@ -3,6 +3,7 @@ using UnityEngine;
 public class TopDownJumpScale : MonoBehaviour
 {
     [SerializeField] private Collider2D collider;
+    [SerializeField] private GameObject SmokePrefab;
 
     public bool isTouchingFloor = true;
     public bool isJumping = false;
@@ -41,6 +42,10 @@ public class TopDownJumpScale : MonoBehaviour
 
         if (t >= 1f)
         {
+            collider.gameObject.GetComponent<GravityToPoint>().enabled = true; // activar gravedad
+
+            Instantiate(SmokePrefab, transform.position, Quaternion.identity);
+
             transform.localScale = originalScale;
 
             jumping = false;
@@ -66,7 +71,7 @@ public class TopDownJumpScale : MonoBehaviour
 
     private void UpdateJump(float t)
     {
-        spriteRenderer.sortingLayerName = "UI";
+        spriteRenderer.sortingLayerName = "Jump";
         isTouchingFloor = false;
 
         // Parábola: 0 → 1 → 0
@@ -86,7 +91,7 @@ public class TopDownJumpScale : MonoBehaviour
 
     private void UpdateFall(float t)
     {
-        spriteRenderer.sortingLayerName = "UI";
+        spriteRenderer.sortingLayerName = "Jump";
         isTouchingFloor = false;
 
         // Empieza en maxScale y termina en 1
@@ -102,8 +107,16 @@ public class TopDownJumpScale : MonoBehaviour
         collider.enabled = false;
     }
 
-    public void StartJump(float jumpTime, float jumpScale)
+    public void StartJump(float jumpTime, float jumpScale, bool desactiveVelocity)
     {
+        collider.gameObject.GetComponent<GravityToPoint>().enabled = false; // desactivar gravedad
+
+        if (desactiveVelocity)
+        {
+            Rigidbody2D rb = collider.gameObject.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = Vector2.zero;
+        }
+
         jumpDuration = jumpTime;
         maxScale = jumpScale;
 
@@ -113,11 +126,13 @@ public class TopDownJumpScale : MonoBehaviour
         jumping = true;
         falling = false;
 
-        collider.enabled = true;
+        collider.enabled = false;
     }
 
     public void StartFall(float fallTime, float startScale)
     {
+        collider.gameObject.GetComponent<GravityToPoint>().enabled = false; // desactivar gravedad
+
         jumpDuration = fallTime;
         maxScale = startScale;
 
