@@ -297,7 +297,11 @@ public class AIBrain : MonoBehaviour
         // del Ninja. Antes, el Magus agarraba los del Ninja hermano y al lanzarlos se
         // cerraba el turno del NINJA (no el del Magus) -> el Magus quedaba congelado en su
         // turno hasta el countdown. >>> FIX MAGUS CONGELADO <<<
-        if (especiales == null) especiales = GetComponentsInChildren<IAIAction>(true);
+        // Se reintenta también cuando el array vino VACÍO, no solo cuando es null: si el
+        // personaje todavía no estaba armado en el primer intento, un "== null" a secas
+        // dejaba la lista vacía para siempre y la IA no usaba especiales nunca.
+        if (especiales == null || especiales.Length == 0)
+            especiales = GetComponentsInChildren<IAIAction>(true);
         if (countDown == null) countDown = FindFirstObjectByType<CountDown>();
     }
 
@@ -311,10 +315,14 @@ public class AIBrain : MonoBehaviour
     }
 
     // ¿Ya tiene todas las referencias esenciales para pelear?
+    // Incluye los especiales: si el array quedó vacío, hay que seguir reintentando.
+    // Sin esto, el reintento de Update no se disparaba nunca (las demás referencias ya
+    // estaban) y la IA se quedaba sin especiales. >>> FIX IA SOLO ATACA <<<
     bool ReferenciasCompletas()
     {
         return check != null && energyCounter != null && rb != null
-            && vida != null && attackAction != null && moveAction != null && waitAction != null;
+            && vida != null && attackAction != null && moveAction != null && waitAction != null
+            && especiales != null && especiales.Length > 0;
     }
 
     // Busca al rival: otro objeto activo con tag "Player" en otra layer.
@@ -539,10 +547,16 @@ public class AIBrain : MonoBehaviour
             IAIAction accion = especiales[i];
             if (accion == null) continue;
 
-            // Saltear los especiales de un personaje desactivado (el no elegido en la
-            // pantalla de selección puede seguir colgando de la jerarquía).
-            MonoBehaviour comp = accion as MonoBehaviour;
-            if (comp == null || !comp.isActiveAndEnabled) continue;
+            // OJO: acá NO va un chequeo de isActiveAndEnabled. >>> FIX IA SOLO ATACA <<<
+            // Los especiales viven en los objetos del menú radial ("Atacar", "Especial"),
+            // que están INACTIVOS salvo mientras un humano mantiene apretado el botón de
+            // menú. Como la IA nunca lo mantiene, un filtro por activo los descartaba a
+            // todos y la CPU quedaba haciendo solo embestidas.
+            // Llamar un método público sobre un componente desactivado funciona igual:
+            // por eso PerformAttack() —que no filtra— siempre anduvo, aunque BasicAttack
+            // vive en el MISMO GameObject que los especiales.
+            // No hace falta filtrar por personaje: 'especiales' se busca solo dentro del
+            // personaje de esta IA (ver AutocompletarReferencias). >>> FIX MAGUS CONGELADO <<<
 
             // Los especiales FUERTES solo entran si la dificultad los permite (Difícil).
             if (accion.IsStrong && !permitirEspecialesFuertes) continue;
