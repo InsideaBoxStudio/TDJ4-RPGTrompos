@@ -469,6 +469,14 @@ public class AIBrain : MonoBehaviour
             // La IA pide su turno activamente cuando su trompo está lo bastante lento.
             // Así no depende de la ventana de sincronización (pensada para 2 humanos)
             // ni queda trabada cuando el tiempo está congelado (timeScale=0).
+            //
+            // NOTA: se intentó igualar esto a la regla del humano (usar maxVelocityTurn
+            // en vez de aiReadyVelocity) para que la IA no atacara de más, y ROMPIÓ el
+            // sistema de turnos. Se revirtió. El motivo está explicado en
+            // ANALISIS-TURNOS-IA.md: maxVelocityTurn no es un umbral estable, cada
+            // acción lo reescribe (BasicAttack lo deja en 1000 = "a cualquier
+            // velocidad"), así que copiarlo acá hace lo contrario de lo buscado.
+            // Si se vuelve a intentar, hay que probarlo en Unity con el juego corriendo.
             if (check != null && rb != null && rb.linearVelocity.magnitude < aiReadyVelocity)
             {
                 check.RequestTurnNow();
@@ -518,11 +526,23 @@ public class AIBrain : MonoBehaviour
         waitAction.DoWait();
     }
 
+    // ALEJARSE de verdad. >>> FIX RETREAT <<<
+    // Antes esto era literalmente PerformWait(): con la vida baja la IA se quedaba
+    // esperando turno tras turno y parecía colgada. Ahora se mueve en dirección
+    // CONTRARIA al rival. Hace falta el DoMove(direccion) de MovementOption porque
+    // el prompter siempre apunta al enemigo: moverse "hacia donde apunta" era
+    // justamente lo que NO queremos al retroceder.
     public void PerformRetreat()
     {
-        // El alejarse real (retroceder) se afinará al implementar las dificultades.
-        // Por ahora se comporta como defensa: frena y recupera.
-        PerformWait();
+        // Sin script de movimiento, sin energía o sin rival, no queda otra que esperar.
+        if (moveAction == null || !HasEnergyToMove() || enemy == null || rb == null)
+        {
+            PerformWait();
+            return;
+        }
+
+        Vector2 haciaElRival = (Vector2)enemy.position - rb.position;
+        moveAction.DoMove(-haciaElRival); // alejarse
     }
 
     // Devuelve true si la IA "duda" este turno y prefiere esperar en vez de atacar.

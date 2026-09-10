@@ -36,12 +36,25 @@ public class MovementOption : MonoBehaviour
     }
 
     // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
+    // Mueve hacia donde apunta el prompter.
     public void DoMove()
     {
+        DoMove(Prompter.right);
+    }
+
+    // Mismo movimiento pero en una dirección cualquiera. Lo usa la IA para poder
+    // ALEJARSE del rival: el prompter siempre apunta al enemigo, así que sin esto
+    // la IA solo sabía avanzar hacia él y "retroceder" terminaba siendo esperar.
+    public void DoMove(Vector2 direccion)
+    {
         if (energyCounter.currentEnergy < energyCost) return; // verificar energia suficiente
+
+        // Sin dirección válida, moverse hacia donde apunta (comportamiento de siempre).
+        if (direccion.sqrMagnitude < 0.0001f) direccion = Prompter.right;
+
         energyCounter.ChangeEnergy(-energyCost, "Move");
         rpgTurn.PlayerChoseAnAction(moveDuration, 1000f, false);
 
-        rb.linearVelocity = Prompter.right * moveSpeed;
+        rb.linearVelocity = direccion.normalized * moveSpeed;
     }
 }

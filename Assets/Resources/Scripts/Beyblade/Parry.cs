@@ -21,7 +21,15 @@ public class Parry : MonoBehaviour
     private void Start()
     {
         rpgTurn = GetComponent<CheckPlayerTurn>();
-        playerIndex = int.Parse(transform.name);
+
+        // Antes esto era int.Parse(transform.name): el indice de jugador salia del
+        // NOMBRE del GameObject. Funcionaba de casualidad porque el objeto se llama
+        // "0"; si alguien lo renombraba, FormatException en cada Start.
+        // Ahora sale del PlayerIdentity del trompo, igual que el resto de los
+        // scripts (ver PlayerIdentity.cs). El nombre queda como ultimo recurso.
+        int porNombre = 0;
+        if (!int.TryParse(transform.name, out porNombre)) porNombre = 0;
+        playerIndex = PlayerIdentity.Resolve(this, porNombre);
     }
 
     private void Update()
