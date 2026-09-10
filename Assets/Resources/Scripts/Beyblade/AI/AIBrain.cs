@@ -210,8 +210,7 @@ public class AIBrain : MonoBehaviour
     [SerializeField] public float lowLifeValue = 30f; // por debajo de esto se pone defensiva
     [SerializeField] public int attackEnergyCost = 1;
     [SerializeField] public int moveEnergyCost = 1;
-    // (Se quitó aiReadyVelocity: la IA ya no tiene umbral propio para pedir turno,
-    //  usa el mismo que el jugador. Ver CheckPlayerTurn.RequestTurnNow.)
+    [SerializeField] public float aiReadyVelocity = 1.5f; // umbral de velocidad para pedir turno (mayor que el 1 del juego)
     [Range(0f, 1f)]
     [SerializeField] public float specialChance = 0.5f; // probabilidad de usar un especial al atacar
 
@@ -467,14 +466,21 @@ public class AIBrain : MonoBehaviour
             tiempoEnTurno = 0f;
             tiempoTrasActuar = 0f;
 
-            // La IA pide su turno activamente, pero con la MISMA regla de velocidad
-            // que el humano. >>> FIX TURNOS IA <<<
-            // Antes usaba su propio umbral fijo (aiReadyVelocity = 1.5) mientras el
-            // humano tenía que bajar de maxVelocityTurn (1.0, y variable segun la
-            // accion). O sea: la IA se habilitaba antes en CADA turno, y por eso
-            // "atacaba mucho mas". Ahora la validacion la hace RequestTurnNow() con
-            // el mismo numero que usa Update() para el jugador.
-            if (check != null) check.RequestTurnNow();
+            // La IA pide su turno activamente cuando su trompo está lo bastante lento.
+            // Así no depende de la ventana de sincronización (pensada para 2 humanos)
+            // ni queda trabada cuando el tiempo está congelado (timeScale=0).
+            //
+            // NOTA: se intentó igualar esto a la regla del humano (usar maxVelocityTurn
+            // en vez de aiReadyVelocity) para que la IA no atacara de más, y ROMPIÓ el
+            // sistema de turnos. Se revirtió. El motivo está explicado en
+            // ANALISIS-TURNOS-IA.md: maxVelocityTurn no es un umbral estable, cada
+            // acción lo reescribe (BasicAttack lo deja en 1000 = "a cualquier
+            // velocidad"), así que copiarlo acá hace lo contrario de lo buscado.
+            // Si se vuelve a intentar, hay que probarlo en Unity con el juego corriendo.
+            if (check != null && rb != null && rb.linearVelocity.magnitude < aiReadyVelocity)
+            {
+                check.RequestTurnNow();
+            }
         }
     }
 

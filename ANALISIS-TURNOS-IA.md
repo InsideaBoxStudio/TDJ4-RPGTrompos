@@ -7,10 +7,11 @@ concreto, pero hace falta probarlo en Unity para descartar los otros).
 > Análisis hecho con IA (Claude) leyendo el código y las escenas. **No se ejecutó
 > el juego.** Lo que dice "confirmado" es confirmado *en el código*, no jugado.
 
-> [!IMPORTANT]
-> **Ya está todo arreglado en esta rama.** El análisis de abajo describe cómo
-> estaban las cosas; al final de cada sección dice qué se cambió. Hace falta
-> probarlo en Unity.
+> [!CAUTION]
+> **Los cambios al sistema de turnos ROMPIERON el juego y fueron revertidos.**
+> Lo de abajo sigue siendo un diagnóstico válido de por qué la IA ataca más, pero
+> **la solución que propuse era incorrecta**. Ver "Qué se revirtió y por qué".
+> Los otros arreglos (retroceso, daño, parry) siguen en pie.
 
 ---
 
@@ -161,13 +162,33 @@ probablemente se nota más que la duda del 15%.
 
 ---
 
-## Qué se arregló
+## Qué se revirtió y por qué
+
+Los tres cambios al sistema de turnos **rompieron el juego** y se dieron de baja.
+`RPGTurn.cs` y `CheckPlayerTurn.cs` volvieron exactamente al estado anterior.
+
+**El error de fondo fue mío:** propuse que la IA pidiera turno con "la misma regla
+que el humano", leyendo `maxVelocityTurn`. Pero como está explicado más arriba en
+1D, **`maxVelocityTurn` no es un umbral estable**: cada acción lo reescribe, y
+`BasicAttack` lo deja en **1000**, que significa "tomá turno a cualquier
+velocidad". Copiar ese número para la IA no la frena — le saca el freno que tenía
+(su 1.5 fijo). O sea que hacía **lo contrario** de lo que buscaba.
+
+Lo diagnostiqué bien y lo arreglé mal. Y lo peor: escribí el análisis que explicaba
+exactamente por qué ese número no servía, y aun así lo usé.
+
+Los otros dos cambios (`activePlayers.Clear()` y `WaitForSecondsRealtime`) también
+se revirtieron. Puede que fueran correctos, pero al ir en el mismo commit no hay
+forma de saber cuál rompió qué — y con el juego roto, lo primero es volver a lo
+que funcionaba.
+
+**Si se vuelve a intentar, hay que hacerlo de a un cambio por vez y probando cada
+uno en Unity.** Sin correr el juego no alcanza para tocar el sistema de turnos.
+
+## Qué se arregló (y sigue en pie)
 
 | # | Arreglo | Archivo |
 |---|---|---|
-| 1 | La IA pide turno con **la misma regla de velocidad que el humano**. Se eliminó `aiReadyVelocity` (1.5): ahora `RequestTurnNow()` valida contra `maxVelocityTurn`, el mismo número que usa `Update()` para el jugador. | `CheckPlayerTurn`, `AIBrain` |
-| 2 | Se sacó el `activePlayers.Clear()` que borraba a la IA de la lista de turnos. Ahora solo agrega a quien falte. | `RPGTurn` |
-| 3 | La ventana de sincronización usa **tiempo real**: con `WaitForSeconds` se congelaba junto con `Time.timeScale = 0` y no cerraba nunca. | `RPGTurn` |
 | 4 | `RetreatState` **retrocede de verdad**: se mueve en dirección contraria al rival en vez de esperar. Requirió un `DoMove(direccion)` nuevo, porque el prompter siempre apunta al enemigo. | `AIBrain`, `MovementOption` |
 | 5 | El golpe también se intenta en `OnCollisionStay2D`, con una bandera que garantiza **un solo impacto por ataque**. Así el rebote del cuerpo ya no puede robarle el golpe al collider de ataque. | `AttackCollider` |
 | 6 | La layer del dueño se **cachea al prender** en vez de leer `transform.parent` en cada choque (varios scripts reparentan hijos). Y si el objeto golpeado no tiene `Vida`, sale limpio en vez de tirar excepción. | `AttackCollider` |
