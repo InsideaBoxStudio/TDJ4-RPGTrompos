@@ -3,10 +3,12 @@
 Diagnóstico y arreglo del bug que aparece en 480x854 (y en cualquier resolución
 que no sea 16:9).
 
-> Análisis hecho con IA (Claude) leyendo el código y las escenas. **No pude
-> ejecutar el juego a 480x854**, así que el diagnóstico está razonado sobre el
-> código, no comprobado en pantalla. La parte de editor hay que hacerla y probarla
-> en Unity.
+> Análisis hecho con IA (Claude) leyendo el código y las escenas.
+
+> [!TIP]
+> **Probado y funcionando en `InitMenu`.** David agregó `AspectoFijo` a la cámara
+> y a 480x854 ya se ve una sola imagen. Falta repetirlo en el resto de las
+> escenas.
 
 ---
 

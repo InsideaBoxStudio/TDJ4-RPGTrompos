@@ -5746,6 +5746,7 @@ GameObject:
   - component: {fileID: 462896056}
   - component: {fileID: 462896051}
   - component: {fileID: 462896055}
+  - component: {fileID: 462896057}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5815,7 +5816,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.17254902, g: 0.17254902, b: 0.17254902, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5921,6 +5922,20 @@ MonoBehaviour:
   ppc: {fileID: 462896055}
   isPixelPerfect: 0
   rotationSmoothSpeed: 1
+--- !u!114 &462896057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462896048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b512d5bb89b184781e893ae76655e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AspectoFijo
+  aspectoObjetivo: 1.7777778
+  colorBandas: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &477103613
 GameObject:
   m_ObjectHideFlags: 0
@@ -13334,6 +13349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GraphicsManager
   width: 640
   height: 360
+  forzarAlArrancar: 1
 --- !u!4 &1070127170
 Transform:
   m_ObjectHideFlags: 0
