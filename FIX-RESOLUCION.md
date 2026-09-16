@@ -35,23 +35,24 @@ depende del aspecto: está calibrada para 16:9. En 9:16 (480x854 es vertical)
 aprieta la imagen hacia el centro y la deja en un recuadro chico. El borde curvo
 que se ve es eso.
 
-### 2. La mitad de la UI no pasa por el CRT
+### 2. La copia de afuera es el "estirado" de la lente
 
-En `InitMenu` hay:
+> [!NOTE]
+> **Corrección.** La primera versión de este documento decía que `InitMenu` tenía
+> 2 Canvas en `Screen Space - Overlay` y que esa era la segunda causa. **Era
+> falso**: salió de buscar `m_RenderMode` en todo el archivo de escena, y ese
+> campo también aparece en otros componentes. Mirando los componentes Canvas de
+> verdad, `InitMenu` tiene **uno solo, y ya está en Screen Space - Camera**.
 
-| Canvas | Render Mode | ¿Lo afecta el CRT? |
-|---|---|---|
-| 2 canvas | **Screen Space - Overlay** | **No** |
-| 1 canvas | Screen Space - Camera | Sí |
+La imagen grande y borrosa de atrás no es un segundo canvas: es **la misma
+imagen, estirada hacia afuera por la lente**.
 
-Los Canvas en **Overlay se dibujan DESPUÉS del post-procesado**. Nunca los toca
-la lente: siguen ocupando la pantalla completa.
+Cuando `LensDistortion` comprime el centro, los píxeles del borde se estiran
+radialmente hacia los costados. Por eso afuera se ve el logo y los botones más
+grandes, más oscuros y desenfocados: es el borde del recuadro repetido hacia
+afuera.
 
-Entonces: la UI que va por cámara queda encerrada en el recuadro chico, y la UI
-Overlay sigue a pantalla completa. **Esas son las dos copias.**
-
-A 16:9 las dos coinciden bastante y no se nota. Cuanto más se aleja el aspecto
-de 16:9, más se separan.
+O sea: **una sola causa, no dos.** El aspecto que no es 16:9.
 
 ### 3. De yapa: la resolución se pisaba sola
 
@@ -77,30 +78,44 @@ que fue calibrado.
 
 ## Lo que falta hacer en Unity (no lo puedo hacer yo)
 
-**Paso 1 — Poner `AspectoFijo` en la cámara principal de cada escena.**
-No hay nada que configurar: 16:9 viene por defecto.
+**Paso único — Poner `AspectoFijo` en la cámara principal de cada escena.**
 
-**Paso 2 — Pasar los Canvas de `Screen Space - Overlay` a `Screen Space - Camera`.**
+1. Abrir la escena (empezar por `InitMenu`).
+2. En la Hierarchy, seleccionar la cámara principal.
+3. **Add Component** → buscar `AspectoFijo`.
+4. No tocar nada más: 16:9 viene por defecto.
+5. Guardar la escena (`Ctrl+S`).
 
-Este es el paso que de verdad arregla las dos copias. Un Canvas en Overlay
-**ignora la cámara**, así que las bandas negras del paso 1 no lo afectan: va a
-seguir ocupando la pantalla entera.
+Repetir en las otras escenas: `Practica`, `1VS1`, `ConfigMenu`,
+`SeleccionDePersonaje`, `SeleccionDificultad`.
 
-Por cada Canvas en Overlay:
-1. Render Mode → **Screen Space - Camera**
-2. Render Camera → la cámara principal de esa escena
-3. Plane Distance → algo como 10 (que quede delante de todo)
+**Probar:** abrir el juego a 480x854. Tiene que verse **una sola imagen**,
+centrada, con bandas negras arriba y abajo — y el CRT con la misma curva de
+siempre.
 
-Empezar por `InitMenu`, que es donde está el problema de la captura. Después
-revisar el resto de las escenas.
+---
+
+## Aparte: 2 Canvas en Overlay en `Practica`
+
+Nada que ver con el bug de la captura, pero lo encontré de paso y es una
+inconsistencia real:
+
+| Escena | PlayerCanvas en Camera | PlayerCanvas en Overlay |
+|---|---|---|
+| `1VS1` | 6 | 0 |
+| `Practica` | 3 | **2** |
+
+En `1VS1` **todos** los PlayerCanvas están en `Screen Space - Camera`; en
+`Practica` hay dos que quedaron en `Overlay`. Esos dos no reciben el efecto CRT,
+así que el HUD de esos jugadores se ve "limpio" mientras el resto tiene el filtro.
+
+Se arregla igual: Render Mode → `Screen Space - Camera`, asignar la cámara,
+Plane Distance ~10.
 
 > [!WARNING]
-> El paso 2 toca las escenas, y Nehemías estuvo trabajando ahí. **Coordinen antes**
+> Eso toca `Practica.unity`, y Nehemías estuvo trabajando ahí. **Coordinen antes**
 > — los conflictos de merge en archivos `.unity` no se resuelven, se pierde una de
 > las dos versiones.
-
-**Paso 3 — Probar.** Abrir el juego a 480x854 y verificar que se vea una sola
-imagen, centrada, con bandas negras arriba y abajo.
 
 ---
 
