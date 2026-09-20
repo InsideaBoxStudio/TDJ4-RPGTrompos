@@ -1277,10 +1277,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InvokeGravity
   playerIndex: 0
-  gravity: {fileID: 0}
+  gravity: {fileID: 7804267209929472815, guid: f49a62a752615a4458ccc63a52898737, type: 3}
   energyCounter: {fileID: 0}
   moveDuration: 1
   energyCost: 2
+  esEspecialFuerte: 1
 --- !u!114 &89132052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,6 +1300,7 @@ MonoBehaviour:
   energyCounter: {fileID: 2052786185}
   moveDuration: 4
   energyCost: 4
+  esEspecialFuerte: 0
 --- !u!114 &89132053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,6 +1318,7 @@ MonoBehaviour:
   energyCounter: {fileID: 2052786185}
   moveDuration: 6
   energyCost: 3
+  esEspecialFuerte: 0
 --- !u!114 &89132054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2478,7 +2481,7 @@ MonoBehaviour:
   maxLife: 150
   DamageColor: {r: 0, g: 0, b: 0, a: 1}
   lifeBar: {fileID: 196856994}
-  JuiceEffects: {fileID: 0}
+  JuiceEffects: {fileID: 8053819847391071697, guid: 231be1d21e8f25e4da1f1f6ba44e7262, type: 3}
   isPracticeMode: 0
   vidaActual: 0
   timeDuration: 0.2
@@ -2633,7 +2636,7 @@ MonoBehaviour:
   reboundForceBeybladeStay: 10
   maxSpeedForRebound: 1
   randomAngle: 10
-  particles: {fileID: 0}
+  particles: {fileID: 7312431849772668253, guid: 49af2676b8036cc4885c7c87c683405c, type: 3}
 --- !u!95 &171504557
 Animator:
   serializedVersion: 7
@@ -2724,12 +2727,12 @@ MonoBehaviour:
   playersOptions: {fileID: 1686156665}
   energyCounter: {fileID: 1332804366}
   rpgTurn: {fileID: 2097228477}
-  minTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
   turnTime: 0
+  timeUntilNextTurn: 0
   controladoPorIA: 0
 --- !u!4 &171504561
 Transform:
@@ -9091,6 +9094,7 @@ MonoBehaviour:
   energyCounter: {fileID: 2052786185}
   moveDuration: 1
   energyCost: 2
+  esEspecialFuerte: 1
 --- !u!114 &272030071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9113,6 +9117,7 @@ MonoBehaviour:
   moveSpeed: 0
   moveDuration: 2
   desactiveAttack: 1
+  esEspecialFuerte: 1
 --- !u!114 &272030072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9134,6 +9139,7 @@ MonoBehaviour:
   energyCost: 3
   moveSpeed: 6
   moveDuration: 1
+  esEspecialFuerte: 0
 --- !u!114 &272030073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10135,6 +10141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
   collider: {fileID: 0}
+  SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
   jumpDuration: 1
@@ -12257,7 +12264,7 @@ MonoBehaviour:
   maxLife: 150
   DamageColor: {r: 0, g: 0, b: 0, a: 1}
   lifeBar: {fileID: 673331847}
-  JuiceEffects: {fileID: 0}
+  JuiceEffects: {fileID: 8053819847391071697, guid: 231be1d21e8f25e4da1f1f6ba44e7262, type: 3}
   isPracticeMode: 0
   vidaActual: 0
   timeDuration: 0.2
@@ -12412,7 +12419,7 @@ MonoBehaviour:
   reboundForceBeybladeStay: 10
   maxSpeedForRebound: 1
   randomAngle: 10
-  particles: {fileID: 0}
+  particles: {fileID: 7312431849772668253, guid: 49af2676b8036cc4885c7c87c683405c, type: 3}
 --- !u!95 &412957144
 Animator:
   serializedVersion: 7
@@ -12503,12 +12510,12 @@ MonoBehaviour:
   playersOptions: {fileID: 1345657985}
   energyCounter: {fileID: 842503160}
   rpgTurn: {fileID: 2097228477}
-  minTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
   turnTime: 0
+  timeUntilNextTurn: 0
   controladoPorIA: 0
 --- !u!4 &412957148
 Transform:
@@ -17940,6 +17947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
   collider: {fileID: 0}
+  SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
   jumpDuration: 1
@@ -18878,7 +18886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &466255221
 Transform:
   m_ObjectHideFlags: 0
@@ -20314,10 +20322,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.0005847953
+    y: 0.001039501
+    width: 0.9988304
+    height: 0.997921
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -21055,6 +21063,7 @@ MonoBehaviour:
   moveSpeed: 5
   moveDuration: 2
   desactiveAttack: 1
+  esEspecialFuerte: 1
 --- !u!114 &548504792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21077,6 +21086,7 @@ MonoBehaviour:
   energyCost: 2
   moveDuration: 1
   Recoil: 3
+  esEspecialFuerte: 1
 --- !u!114 &548504793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21099,6 +21109,7 @@ MonoBehaviour:
   energyCost: 2
   moveDuration: 0.5
   Recoil: 1
+  esEspecialFuerte: 0
 --- !u!114 &548504794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21517,6 +21528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
   collider: {fileID: 0}
+  SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
   jumpDuration: 1
@@ -22751,7 +22763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &619394801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22759,7 +22771,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619394800}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -23599,6 +23611,7 @@ MonoBehaviour:
   energyCost: 2
   moveDuration: 0.5
   Recoil: 1
+  esEspecialFuerte: 0
 --- !u!114 &652383079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23621,6 +23634,7 @@ MonoBehaviour:
   energyCost: 2
   moveDuration: 1
   Recoil: 3
+  esEspecialFuerte: 1
 --- !u!114 &652383080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23643,6 +23657,7 @@ MonoBehaviour:
   moveSpeed: 5
   moveDuration: 2
   desactiveAttack: 1
+  esEspecialFuerte: 1
 --- !u!114 &652383081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26007,6 +26022,7 @@ MonoBehaviour:
   energyCost: 4
   moveDuration: 2
   Recoil: 4
+  esEspecialFuerte: 1
 --- !u!114 &795810571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26114,6 +26130,7 @@ MonoBehaviour:
   energyCounter: {fileID: 1332804366}
   energyCost: 4
   moveDuration: 2
+  esEspecialFuerte: 1
 --- !u!114 &795810577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26133,6 +26150,7 @@ MonoBehaviour:
   moveDuration: 4
   energyCost: 4
   moveSpeed: 3
+  esEspecialFuerte: 1
 --- !u!114 &795810578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26156,6 +26174,7 @@ MonoBehaviour:
   energyCost: 2
   moveDuration: 0.5
   Recoil: 1
+  esEspecialFuerte: 0
 --- !u!1 &803574344
 GameObject:
   m_ObjectHideFlags: 0
@@ -27593,7 +27612,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 599784187
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -28813,7 +28832,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 599784187
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -30833,7 +30852,7 @@ MonoBehaviour:
   reboundForceBeybladeStay: 10
   maxSpeedForRebound: 1
   randomAngle: 10
-  particles: {fileID: 0}
+  particles: {fileID: 7312431849772668253, guid: 49af2676b8036cc4885c7c87c683405c, type: 3}
 --- !u!114 &1014463347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30850,12 +30869,12 @@ MonoBehaviour:
   playersOptions: {fileID: 1099303144}
   energyCounter: {fileID: 1130093692}
   rpgTurn: {fileID: 2097228477}
-  minTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
   turnTime: 0
+  timeUntilNextTurn: 0
   controladoPorIA: 0
 --- !u!96 &1014463348
 TrailRenderer:
@@ -30991,7 +31010,7 @@ MonoBehaviour:
   maxLife: 100
   DamageColor: {r: 0, g: 0, b: 0, a: 1}
   lifeBar: {fileID: 1995848663}
-  JuiceEffects: {fileID: 0}
+  JuiceEffects: {fileID: 8053819847391071697, guid: 231be1d21e8f25e4da1f1f6ba44e7262, type: 3}
   isPracticeMode: 0
   vidaActual: 0
   timeDuration: 0.2
@@ -46506,6 +46525,7 @@ MonoBehaviour:
   energyCost: 4
   moveDuration: 1
   Recoil: 0
+  esEspecialFuerte: 1
 --- !u!114 &1067900330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46591,6 +46611,7 @@ MonoBehaviour:
   energyCounter: {fileID: 722704008}
   moveDuration: 0.1
   energyCost: 2
+  esEspecialFuerte: 1
 --- !u!1 &1074866364
 GameObject:
   m_ObjectHideFlags: 0
@@ -48783,6 +48804,7 @@ MonoBehaviour:
   moveSpeed: 0
   moveDuration: 2
   desactiveAttack: 1
+  esEspecialFuerte: 1
 --- !u!114 &1183709026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48805,6 +48827,7 @@ MonoBehaviour:
   energyCost: 4
   moveDuration: 2
   Recoil: 10
+  esEspecialFuerte: 1
 --- !u!114 &1183709029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48917,6 +48940,7 @@ MonoBehaviour:
   energyCost: 2
   moveDuration: 0.5
   Recoil: 1
+  esEspecialFuerte: 0
 --- !u!1 &1185896683
 GameObject:
   m_ObjectHideFlags: 0
@@ -55388,7 +55412,7 @@ MonoBehaviour:
   maxLife: 150
   DamageColor: {r: 0, g: 0, b: 0, a: 1}
   lifeBar: {fileID: 790300154}
-  JuiceEffects: {fileID: 0}
+  JuiceEffects: {fileID: 8053819847391071697, guid: 231be1d21e8f25e4da1f1f6ba44e7262, type: 3}
   isPracticeMode: 0
   vidaActual: 0
   timeDuration: 0.2
@@ -55543,7 +55567,7 @@ MonoBehaviour:
   reboundForceBeybladeStay: 10
   maxSpeedForRebound: 1
   randomAngle: 10
-  particles: {fileID: 0}
+  particles: {fileID: 7312431849772668253, guid: 49af2676b8036cc4885c7c87c683405c, type: 3}
 --- !u!95 &1265500526
 Animator:
   serializedVersion: 7
@@ -55634,12 +55658,12 @@ MonoBehaviour:
   playersOptions: {fileID: 1472840956}
   energyCounter: {fileID: 1917858586}
   rpgTurn: {fileID: 2097228477}
-  minTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
   turnTime: 0
+  timeUntilNextTurn: 0
   controladoPorIA: 0
 --- !u!4 &1265500530
 Transform:
@@ -67691,15 +67715,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1946611745302377168, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1946611745302377168, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1946611745302377168, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3795547789189819144, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -75288,12 +75312,12 @@ MonoBehaviour:
   playersOptions: {fileID: 12125294}
   energyCounter: {fileID: 722704008}
   rpgTurn: {fileID: 2097228477}
-  minTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
   turnTime: 0
+  timeUntilNextTurn: 0
   controladoPorIA: 0
 --- !u!114 &1533879951
 MonoBehaviour:
@@ -75322,7 +75346,7 @@ MonoBehaviour:
   maxLife: 100
   DamageColor: {r: 0, g: 0, b: 0, a: 1}
   lifeBar: {fileID: 2083538964}
-  JuiceEffects: {fileID: 0}
+  JuiceEffects: {fileID: 8053819847391071697, guid: 231be1d21e8f25e4da1f1f6ba44e7262, type: 3}
   isPracticeMode: 0
   vidaActual: 0
   timeDuration: 0.2
@@ -75477,7 +75501,7 @@ MonoBehaviour:
   reboundForceBeybladeStay: 10
   maxSpeedForRebound: 1
   randomAngle: 10
-  particles: {fileID: 0}
+  particles: {fileID: 7312431849772668253, guid: 49af2676b8036cc4885c7c87c683405c, type: 3}
 --- !u!95 &1533879957
 Animator:
   serializedVersion: 7
@@ -81052,7 +81076,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 599784187
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -81285,6 +81309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
   collider: {fileID: 0}
+  SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
   jumpDuration: 1
@@ -83546,7 +83571,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 599784187
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -84444,6 +84469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GraphicsManager
   width: 640
   height: 360
+  forzarAlArrancar: 1
 --- !u!4 &1777264154
 Transform:
   m_ObjectHideFlags: 0
@@ -87516,6 +87542,7 @@ MonoBehaviour:
   energyCounter: {fileID: 1917858586}
   moveDuration: 6
   energyCost: 3
+  esEspecialFuerte: 0
 --- !u!114 &1911301807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87564,6 +87591,7 @@ MonoBehaviour:
   energyCounter: {fileID: 1917858586}
   moveDuration: 4
   energyCost: 4
+  esEspecialFuerte: 0
 --- !u!114 &1911301810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87592,10 +87620,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InvokeGravity
   playerIndex: 0
-  gravity: {fileID: 0}
+  gravity: {fileID: 7804267209929472815, guid: f49a62a752615a4458ccc63a52898737, type: 3}
   energyCounter: {fileID: 0}
   moveDuration: 1
   energyCost: 2
+  esEspecialFuerte: 1
 --- !u!1 &1917858584
 GameObject:
   m_ObjectHideFlags: 0
@@ -89736,6 +89765,7 @@ MonoBehaviour:
   moveSpeed: 0
   moveDuration: 2
   desactiveAttack: 1
+  esEspecialFuerte: 1
 --- !u!114 &2005737027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89757,6 +89787,7 @@ MonoBehaviour:
   energyCost: 3
   moveSpeed: 6
   moveDuration: 1
+  esEspecialFuerte: 0
 --- !u!114 &2005737028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89774,6 +89805,7 @@ MonoBehaviour:
   energyCounter: {fileID: 1917858586}
   moveDuration: 1
   energyCost: 2
+  esEspecialFuerte: 1
 --- !u!1 &2008262985
 GameObject:
   m_ObjectHideFlags: 0
@@ -95153,6 +95185,7 @@ MonoBehaviour:
   energyCost: 3
   moveDuration: 1
   Recoil: 0
+  esEspecialFuerte: 1
 --- !u!114 &2031445077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95203,6 +95236,7 @@ MonoBehaviour:
   energyCounter: {fileID: 1130093692}
   moveDuration: 0.1
   energyCost: 2
+  esEspecialFuerte: 1
 --- !u!1 &2031903105
 GameObject:
   m_ObjectHideFlags: 0
@@ -95381,7 +95415,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 599784187
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -96860,7 +96894,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 599784187
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
@@ -102560,13 +102594,13 @@ MonoBehaviour:
   maxLife: 150
   DamageColor: {r: 0, g: 0, b: 0, a: 1}
   lifeBar: {fileID: 279206794}
-  JuiceEffects: {fileID: 0}
+  JuiceEffects: {fileID: 8053819847391071697, guid: 231be1d21e8f25e4da1f1f6ba44e7262, type: 3}
   isPracticeMode: 0
   vidaActual: 0
   timeDuration: 0.2
   audioSource: {fileID: 2126766583}
   hitStopDuration: 0.1
-  Beyblade: {fileID: 0}
+  Beyblade: {fileID: 571374104}
 --- !u!114 &2126766587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102715,7 +102749,7 @@ MonoBehaviour:
   reboundForceBeybladeStay: 10
   maxSpeedForRebound: 1
   randomAngle: 10
-  particles: {fileID: 0}
+  particles: {fileID: 7312431849772668253, guid: 49af2676b8036cc4885c7c87c683405c, type: 3}
 --- !u!95 &2126766590
 Animator:
   serializedVersion: 7
@@ -102806,12 +102840,12 @@ MonoBehaviour:
   playersOptions: {fileID: 1149026553}
   energyCounter: {fileID: 2052786185}
   rpgTurn: {fileID: 2097228477}
-  minTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   energyGainPerTurn: 1
   isTurnActive: 0
   turnTime: 0
+  timeUntilNextTurn: 0
   controladoPorIA: 0
 --- !u!4 &2126766594
 Transform:
