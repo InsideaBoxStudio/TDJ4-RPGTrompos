@@ -2707,7 +2707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048402d43e4ae574a9b9eb310d18a0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GravityToPoint
-  gravityPoint: {fileID: 0}
+  gravityPoint: {fileID: 1224379796}
   gravityStrength: 6
   spinDirection: -1
   frictionStrength: 0.3
@@ -10140,7 +10140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
-  collider: {fileID: 0}
+  collider: {fileID: 1014463341}
   SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
@@ -12490,7 +12490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048402d43e4ae574a9b9eb310d18a0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GravityToPoint
-  gravityPoint: {fileID: 0}
+  gravityPoint: {fileID: 1224379796}
   gravityStrength: 6
   spinDirection: -1
   frictionStrength: 0.3
@@ -17946,7 +17946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
-  collider: {fileID: 0}
+  collider: {fileID: 1533879958}
   SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
@@ -20322,10 +20322,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0005847953
-    y: 0.001039501
-    width: 0.9988304
-    height: 0.997921
+    x: 0.00058616645
+    y: 0
+    width: 0.99882764
+    height: 1.0002084
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -21527,7 +21527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
-  collider: {fileID: 0}
+  collider: {fileID: 2126766591}
   SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
@@ -81308,7 +81308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2c3e931aadad5647a02b646cc3734f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDownJumpScale
-  collider: {fileID: 0}
+  collider: {fileID: 1265500527}
   SmokePrefab: {fileID: 5525935787523925909, guid: cae6ec693f66a05409066f149b725608, type: 3}
   isTouchingFloor: 1
   isJumping: 0
