@@ -2487,7 +2487,7 @@ MonoBehaviour:
   timeDuration: 0.2
   audioSource: {fileID: 171504562}
   hitStopDuration: 0.1
-  Beyblade: {fileID: 0}
+  Beyblade: {fileID: 1790720091}
 --- !u!114 &171504554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12270,7 +12270,7 @@ MonoBehaviour:
   timeDuration: 0.2
   audioSource: {fileID: 412957149}
   hitStopDuration: 0.1
-  Beyblade: {fileID: 0}
+  Beyblade: {fileID: 818788642}
 --- !u!114 &412957141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20322,10 +20322,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.00058616645
+    x: 0
     y: 0
-    width: 0.99882764
-    height: 1.0002084
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -31016,7 +31016,7 @@ MonoBehaviour:
   timeDuration: 0.2
   audioSource: {fileID: 1014463356}
   hitStopDuration: 0.1
-  Beyblade: {fileID: 0}
+  Beyblade: {fileID: 327163675}
 --- !u!114 &1014463350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31057,7 +31057,7 @@ MonoBehaviour:
   playerTurn: {fileID: 1014463347}
   failTime: 1
   energycost: 1
-  beybladeSprite: {fileID: 0}
+  beybladeSprite: {fileID: 327163675}
   Energy: {fileID: 1130093692}
 --- !u!198 &1014463354
 ParticleSystem:
@@ -55418,7 +55418,7 @@ MonoBehaviour:
   timeDuration: 0.2
   audioSource: {fileID: 1265500517}
   hitStopDuration: 0.1
-  Beyblade: {fileID: 0}
+  Beyblade: {fileID: 1577080458}
 --- !u!114 &1265500523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75352,7 +75352,7 @@ MonoBehaviour:
   timeDuration: 0.2
   audioSource: {fileID: 1533879960}
   hitStopDuration: 0.1
-  Beyblade: {fileID: 0}
+  Beyblade: {fileID: 427778882}
 --- !u!114 &1533879954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84448,6 +84448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777264154}
   - component: {fileID: 1777264152}
+  - component: {fileID: 1777264155}
   m_Layer: 0
   m_Name: Configs
   m_TagString: Untagged
@@ -84485,6 +84486,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777264155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777264151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b4ce7965b093e4ea7bc139927288d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeScaleController
+  currentTurn: 0
 --- !u!1 &1783573193
 GameObject:
   m_ObjectHideFlags: 0
