@@ -191,6 +191,25 @@ public static class Controles
         return AlgunPad(g => g.dpad.right.wasPressedThisFrame) || Tecla(Key.RightArrow);
     }
 
+    // ========================================================================
+    //  MENÚ POR JUGADOR
+    //  ------------------------------------------------------------------------
+    //  Los de arriba son para menús que maneja CUALQUIERA. Estos son para
+    //  pantallas donde cada jugador tiene su propio cursor al mismo tiempo (la
+    //  selección de personaje del 1vs1). Cada uno lee SOLO su joystick y SUS
+    //  teclas, así que los dos pueden moverse sin pisarse.
+    //
+    //  Son alias de las acciones de combate: usan exactamente los mismos
+    //  botones (dpad + WASD / IJKL, confirmar = Q / U). No se inventan teclas
+    //  nuevas; solo se les da un nombre que dice lo que significan en un menú.
+    // ========================================================================
+
+    public static bool MenuArriba(int p)    => Atacar(p);     // dpad.up    / W - I
+    public static bool MenuAbajo(int p)     => Abajo(p);      // dpad.down  / S - K
+    public static bool MenuIzquierda(int p) => Izquierda(p);  // dpad.left  / A - J
+    public static bool MenuDerecha(int p)   => Derecha(p);    // dpad.right / D - L
+    public static bool Confirmar(int p)     => Esperar(p);    // buttonSouth / Q - U
+
     // ---- APUNTAR ----
     // Devuelve la dirección del stick derecho; si no se toca, la del teclado.
     public static Vector2 Apuntar(int p)
