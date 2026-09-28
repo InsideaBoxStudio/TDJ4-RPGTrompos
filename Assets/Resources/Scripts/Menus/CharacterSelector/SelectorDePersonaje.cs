@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 // ============================================================================
 //  SELECTOR DE PERSONAJE POR JUGADOR (los dos eligen al mismo tiempo)
@@ -25,7 +26,10 @@ using UnityEngine.EventSystems;
 //              Mover           Confirmar / cambiar de opinión
 //   Jugador 1  A D  (o W S)    Q
 //   Jugador 2  J L  (o I K)    U
-//   Joystick   D-pad           Botón de abajo (A en Xbox)
+//   Joystick   D-pad o palanca Botón de abajo (X en PlayStation, A en Xbox)
+//
+//  Con un solo joystick conectado, ese joystick es del Jugador 1 y el
+//  Jugador 2 usa el teclado.
 //
 //  Confirmar dos veces DESBLOQUEA la elección, por si alguien quiere cambiar
 //  mientras el otro todavía está eligiendo. Cuando los dos confirmaron,
@@ -56,6 +60,7 @@ public class SelectorDePersonaje : MonoBehaviour
     private int actual;
     private bool confirmado;
     private Vector3[] escalasOriginales;
+    private Animator[] animadores;
 
     private void Start()
     {
@@ -70,9 +75,17 @@ public class SelectorDePersonaje : MonoBehaviour
         }
 
         escalasOriginales = new Vector3[opciones.Length];
+        animadores = new Animator[opciones.Length];
         for (int i = 0; i < opciones.Length; i++)
         {
             escalasOriginales[i] = opciones[i].transform.localScale;
+
+            // Los botones de personaje resaltan con un Animator (giro + sombra).
+            // Antes lo disparaba el EventSystem al seleccionar; ahora lo
+            // disparamos nosotros. Tiempo sin escalar: si la escena anterior dejó
+            // el timeScale en 0, el Animator quedaba congelado y no se veía nada.
+            animadores[i] = opciones[i].GetComponent<Animator>();
+            if (animadores[i] != null) animadores[i].updateMode = AnimatorUpdateMode.UnscaledTime;
 
             // El cursor lo manejamos nosotros: que la navegación de Unity no mueva
             // la selección por su cuenta.
@@ -94,6 +107,11 @@ public class SelectorDePersonaje : MonoBehaviour
 
         actual = Mathf.Clamp(opcionInicial, 0, opciones.Length - 1);
         Resaltar();
+
+        // Una línea por jugador al entrar: si algo no responde, dice si el
+        // selector arrancó y si Unity ve el joystick como Gamepad.
+        Debug.Log($"SelectorDePersonaje ({name}): Jugador {playerIndex + 1}, "
+                + $"{opciones.Length} personajes, joysticks detectados: {Gamepad.all.Count}");
     }
 
     private void Update()
@@ -142,9 +160,26 @@ public class SelectorDePersonaje : MonoBehaviour
     {
         for (int i = 0; i < opciones.Length; i++)
         {
-            float factor = (i == actual) ? escalaResaltado : 1f;
+            bool esActual = i == actual;
+            float factor = esActual ? escalaResaltado : 1f;
             opciones[i].transform.localScale = escalasOriginales[i] * factor;
+            Animar(i, esActual);
         }
+    }
+
+    // Mismos triggers que usa el Button (Normal / Selected), así se ve igual
+    // que cuando lo resaltaba el EventSystem.
+    private void Animar(int i, bool resaltado)
+    {
+        Animator anim = animadores[i];
+        if (anim == null || anim.runtimeAnimatorController == null || !anim.isActiveAndEnabled) return;
+
+        AnimationTriggers t = opciones[i].animationTriggers;
+        string activar = resaltado ? t.selectedTrigger : t.normalTrigger;
+        string limpiar = resaltado ? t.normalTrigger : t.selectedTrigger;
+
+        anim.ResetTrigger(limpiar);
+        anim.SetTrigger(activar);
     }
 
     // A qué jugador pertenece este menú, según a qué método llaman sus botones.
