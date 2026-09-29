@@ -111,7 +111,19 @@ public class SelectorDePersonaje : MonoBehaviour
         // Una línea por jugador al entrar: si algo no responde, dice si el
         // selector arrancó y si Unity ve el joystick como Gamepad.
         Debug.Log($"SelectorDePersonaje ({name}): Jugador {playerIndex + 1}, "
-                + $"{opciones.Length} personajes, joysticks detectados: {Gamepad.all.Count}");
+                + $"{opciones.Length} personajes, joysticks detectados: {Gamepad.all.Count}"
+                + NombresDeJoysticks());
+    }
+
+    // Con los nombres se ve si un mismo control físico aparece dos veces (pasa
+    // con DS4Windows o Steam: el control real + uno virtual de Xbox). En ese
+    // caso cada botón cuenta para los dos jugadores a la vez.
+    private static string NombresDeJoysticks()
+    {
+        string lista = "";
+        for (int i = 0; i < Gamepad.all.Count; i++)
+            lista += $"\n   joystick {i} (Jugador {i + 1}): {Gamepad.all[i].displayName} [{Gamepad.all[i].layout}]";
+        return lista;
     }
 
     private void Update()
