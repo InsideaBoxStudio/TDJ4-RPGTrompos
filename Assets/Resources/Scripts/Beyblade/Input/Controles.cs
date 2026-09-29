@@ -191,41 +191,6 @@ public static class Controles
         return AlgunPad(g => g.dpad.right.wasPressedThisFrame) || Tecla(Key.RightArrow);
     }
 
-    // ========================================================================
-    //  MENÚ POR JUGADOR
-    //  ------------------------------------------------------------------------
-    //  Los de arriba son para menús que maneja CUALQUIERA. Estos son para
-    //  pantallas donde cada jugador tiene su propio cursor al mismo tiempo (la
-    //  selección de personaje del 1vs1). Cada uno lee SOLO su joystick y SUS
-    //  teclas, así que los dos pueden moverse sin pisarse.
-    //
-    //  Usan los mismos botones que el combate (dpad + WASD / IJKL, confirmar =
-    //  Q / U), más la palanca izquierda, que en un menú es lo primero que uno
-    //  toca. Cada dirección de la palanca es un botón con punto de activación
-    //  (0.5 por defecto): wasPressedThisFrame da UN toque por empujón, no uno
-    //  por frame mientras se mantiene inclinada.
-    // ========================================================================
-
-    public static bool MenuArriba(int p)    => Atacar(p)    || Palanca(p, 0);  // W - I
-    public static bool MenuAbajo(int p)     => Abajo(p)     || Palanca(p, 1);  // S - K
-    public static bool MenuIzquierda(int p) => Izquierda(p) || Palanca(p, 2);  // A - J
-    public static bool MenuDerecha(int p)   => Derecha(p)   || Palanca(p, 3);  // D - L
-    public static bool Confirmar(int p)     => Esperar(p);  // buttonSouth (X en PlayStation, A en Xbox) / Q - U
-
-    // 0 = arriba, 1 = abajo, 2 = izquierda, 3 = derecha
-    private static bool Palanca(int p, int direccion)
-    {
-        Gamepad g = Pad(p);
-        if (g == null) return false;
-        switch (direccion)
-        {
-            case 0:  return g.leftStick.up.wasPressedThisFrame;
-            case 1:  return g.leftStick.down.wasPressedThisFrame;
-            case 2:  return g.leftStick.left.wasPressedThisFrame;
-            default: return g.leftStick.right.wasPressedThisFrame;
-        }
-    }
-
     // ---- APUNTAR ----
     // Devuelve la dirección del stick derecho; si no se toca, la del teclado.
     public static Vector2 Apuntar(int p)

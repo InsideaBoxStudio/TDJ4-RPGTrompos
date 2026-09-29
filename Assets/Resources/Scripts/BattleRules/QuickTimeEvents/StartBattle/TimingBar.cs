@@ -22,15 +22,6 @@ public class TimingBar : MonoBehaviour
     public Vida GetVida() => vida;
     public void StopAsAI() { isAI = true; }
 
-    void Start()
-    {
-        // En el 1VS1 ninguno de los 6 Lanzador tiene la CountDown asignada, y sin
-        // ella nunca corre el "se acabó el tiempo" de abajo: el que no frenaba su
-        // barra quedaba con vida 0, y al terminar la cuenta EndGame lo daba por
-        // muerto -> la pelea terminaba sin empezar. Hay una sola por escena.
-        if (countDown == null) countDown = FindFirstObjectByType<CountDown>();
-    }
-
     void Update()
     {
         if (barStopped) return;
