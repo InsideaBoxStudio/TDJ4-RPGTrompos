@@ -17,7 +17,7 @@ public class CountDownRPG : MonoBehaviour
     }
 
     // Los trompos llaman a ResetCountDown desde SU Awake, que puede correr antes
-    // que este (ActiveCharacter los prende primero). Si el valor inicial se
+    // que este (el orden entre Awakes no está garantizado). Si el valor inicial se
     // guardaba solo acá, ese Reset dejaba countDownTime en 0 para siempre, y con
     // 0 CheckPlayerTurn nunca da el turno: los trompos quedaban girando sin pelear.
     private void GuardarTiempoInicial()
