@@ -19,6 +19,11 @@ public class CountDown : MonoBehaviour
     
     void Start()
     {
+        // Se vuelve a congelar acá porque el Awake no alcanza: TimeScaleController
+        // pone timeScale = 1 en SU Awake, y el orden entre Awakes no está
+        // garantizado. Si el suyo corría después, los trompos arrancaban sin
+        // esperar la cuenta regresiva. Start corre cuando ya terminaron todos.
+        Time.timeScale = 0f;
         StartCoroutine(CountDownCoroutine());
     }
 
