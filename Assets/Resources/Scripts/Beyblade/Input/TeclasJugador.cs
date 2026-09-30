@@ -30,8 +30,10 @@ public static class TeclasJugador
     public static bool Abajo(int p)    => Press(p == 0 ? Key.S : Key.K);
     // buttonNorth -> Avanzar (P1=E, P2=O)
     public static bool Avanzar(int p)  => Press(p == 0 ? Key.E : Key.O);
-    // buttonSouth -> Esperar + frenar barra (P1=Q, P2=U)
-    public static bool Esperar(int p)  => Press(p == 0 ? Key.Q : Key.U);
+    // buttonSouth -> Esperar + frenar barra (P1=Q, P2=U). El J2 tambien con Enter,
+    // para que coincida con el que usa para elegir personaje (flechas + Enter).
+    public static bool Esperar(int p)  => Press(p == 0 ? Key.Q : Key.U)
+                                       || (p == 1 && (Press(Key.Enter) || Press(Key.NumpadEnter)));
     // leftShoulder (L1) -> P1=R, P2=H. Boton fisico compartido:
     //   en tu turno: Veneno (Ninja) / Fuego / Paralisis (Magus). Defendiendo: Parry.
     public static bool L1(int p)       => Press(p == 0 ? Key.R : Key.H);
