@@ -31,6 +31,9 @@ using UnityEngine.InputSystem;
 //  Con un solo joystick conectado, ese joystick es del Jugador 1 y el
 //  Jugador 2 usa el teclado.
 //
+//  ¿El joystick maneja el lado equivocado? L1 lo pasa a la izquierda, R1 a la
+//  derecha (ver ReclamarJoystick). Vale también para la pelea.
+//
 //  Confirmar dos veces DESBLOQUEA la elección, por si alguien quiere cambiar
 //  mientras el otro todavía está eligiendo. Cuando los dos confirmaron,
 //  CharacterSelecteds carga la pelea.
@@ -128,6 +131,8 @@ public class SelectorDePersonaje : MonoBehaviour
 
     private void Update()
     {
+        if (ReclamarJoystick()) return;
+
         if (Controles.Confirmar(playerIndex))
         {
             if (confirmado) Desconfirmar();
@@ -147,6 +152,31 @@ public class SelectorDePersonaje : MonoBehaviour
         // Vuelta circular: desde el último se pasa al primero y viceversa.
         actual = (actual + delta + opciones.Length) % opciones.Length;
         Resaltar();
+    }
+
+    // Windows numera los joysticks por orden de conexión, no por en qué puerto
+    // están, y ese número decide de qué lado juega cada uno (en la selección Y
+    // en la pelea). Como no hay forma confiable de saber el puerto físico, cada
+    // jugador lo dice con un botón: L1 = "juego a la izquierda", R1 = "juego a
+    // la derecha". Con dos joysticks alcanza con que apriete uno solo.
+    // Devuelve true si reasignó, para no procesar ese frame con el orden viejo.
+    private bool ReclamarJoystick()
+    {
+        for (int i = 0; i < Gamepad.all.Count; i++)
+        {
+            Gamepad g = Gamepad.all[i];
+            bool reclama = playerIndex == 0 ? g.leftShoulder.wasPressedThisFrame
+                                            : g.rightShoulder.wasPressedThisFrame;
+            if (!reclama || i == playerIndex) continue;
+
+            if (Controles.AsignarJoystick(g, playerIndex))
+            {
+                Debug.Log($"SelectorDePersonaje: el joystick que apretó "
+                        + $"{(playerIndex == 0 ? "L1" : "R1")} ahora es del Jugador {playerIndex + 1}.");
+                return true;
+            }
+        }
+        return false;
     }
 
     private void Confirmar()

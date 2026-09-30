@@ -39,6 +39,32 @@ public static class Controles
         return (p >= 0 && Gamepad.all.Count > p) ? Gamepad.all[p] : null;
     }
 
+    // ---- QUÉ JOYSTICK ES DE QUÉ JUGADOR ----
+    // Todo el juego (y muchos scripts de la pelea que leen Gamepad.all[i] directo)
+    // toma el joystick N como el del Jugador N+1, y Gamepad.all está ordenado por
+    // cuándo se conectó cada uno. Para pasar un joystick a otro jugador sin tocar
+    // esos scripts, se reordena la lista: se sacan todos y se vuelven a agregar en
+    // el orden deseado. Cada joystick conserva su id, así que sigue recibiendo
+    // input normalmente (verificado en InputManager.AddDevice/RemoveDevice).
+    // Devuelve false si no había nada que cambiar.
+    public static bool AsignarJoystick(Gamepad g, int jugador)
+    {
+        int actual = -1;
+        for (int i = 0; i < Gamepad.all.Count; i++)
+            if (Gamepad.all[i] == g) actual = i;
+
+        if (actual < 0 || actual == jugador || jugador < 0 || jugador >= Gamepad.all.Count)
+            return false;
+
+        var orden = new System.Collections.Generic.List<Gamepad>(Gamepad.all);
+        orden.Remove(g);
+        orden.Insert(jugador, g);
+
+        foreach (Gamepad pad in orden) InputSystem.RemoveDevice(pad);
+        foreach (Gamepad pad in orden) InputSystem.AddDevice(pad);
+        return true;
+    }
+
     // ---- ACCIONES DE COMBATE ----
     // Cada una equivale a UN botón del joystick, y a su tecla equivalente.
 
