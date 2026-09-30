@@ -9,29 +9,21 @@ public class MarkCharacterSelected : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( isPlayer1 )
+        string elegido = isPlayer1 ? CharacterData.characterIndex1 : CharacterData.characterIndex2;
+
+        for (int i = 0; i < characters.Length; i++)
         {
-            for( int i = 0; i < characters.Length; i++)
+            if (elegido == characters[i].name)
             {
-                if( CharacterData.characterIndex1 == characters[i].name)
-                {
-                    mark.SetActive(true);
-                    mark.transform.position = characters[i].transform.position;
-                    break;
-                }
+                mark.SetActive(true);
+                mark.transform.position = characters[i].transform.position;
+                return;
             }
         }
-        else
-        {
-            for (int i = 0; i < characters.Length; i++)
-            {
-                if (CharacterData.characterIndex2 == characters[i].name)
-                {
-                    mark.SetActive(true);
-                    mark.transform.position = characters[i].transform.position;
-                    break;
-                }
-            }
-        }
+
+        // Nadie elegido (o el jugador desconfirmó con el SelectorDePersonaje):
+        // antes la marca quedaba prendida en el último personaje aunque ya no
+        // estuviera elegido.
+        mark.SetActive(false);
     }
 }
