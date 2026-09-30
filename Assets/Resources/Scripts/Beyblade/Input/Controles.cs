@@ -232,11 +232,22 @@ public static class Controles
     //  por frame mientras se mantiene inclinada.
     // ========================================================================
 
-    public static bool MenuArriba(int p)    => Atacar(p)    || Palanca(p, 0);  // W - I
-    public static bool MenuAbajo(int p)     => Abajo(p)     || Palanca(p, 1);  // S - K
-    public static bool MenuIzquierda(int p) => Izquierda(p) || Palanca(p, 2);  // A - J
-    public static bool MenuDerecha(int p)   => Derecha(p)   || Palanca(p, 3);  // D - L
-    public static bool Confirmar(int p)     => Esperar(p);  // buttonSouth (X en PlayStation, A en Xbox) / Q - U
+    // Solo en estos menús, el Jugador 2 (p == 1) maneja también con las flechas y
+    // Enter, que es lo natural para quien está del lado derecho del teclado. En
+    // combate NO cambia nada: sigue siendo I J K L / U (ver TeclasJugador).
+    public static bool MenuArriba(int p)    => Atacar(p)    || Palanca(p, 0) || FlechaP2(p, Key.UpArrow);
+    public static bool MenuAbajo(int p)     => Abajo(p)     || Palanca(p, 1) || FlechaP2(p, Key.DownArrow);
+    public static bool MenuIzquierda(int p) => Izquierda(p) || Palanca(p, 2) || FlechaP2(p, Key.LeftArrow);
+    public static bool MenuDerecha(int p)   => Derecha(p)   || Palanca(p, 3) || FlechaP2(p, Key.RightArrow);
+
+    // buttonSouth (X en PlayStation, A en Xbox) / Q (J1) - U o Enter (J2)
+    public static bool Confirmar(int p)
+    {
+        return Esperar(p) || FlechaP2(p, Key.Enter) || FlechaP2(p, Key.NumpadEnter);
+    }
+
+    // Tecla extra que solo vale para el Jugador 2.
+    private static bool FlechaP2(int p, Key k) => p == 1 && Tecla(k);
 
     // 0 = arriba, 1 = abajo, 2 = izquierda, 3 = derecha
     private static bool Palanca(int p, int direccion)

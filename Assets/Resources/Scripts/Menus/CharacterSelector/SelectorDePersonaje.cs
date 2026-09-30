@@ -25,7 +25,7 @@ using UnityEngine.InputSystem;
 //  CONTROLES
 //              Mover           Confirmar / cambiar de opinión
 //   Jugador 1  A D  (o W S)    Q
-//   Jugador 2  J L  (o I K)    U
+//   Jugador 2  flechas         Enter   (también J L / I K y U)
 //   Joystick   D-pad o palanca Botón de abajo (X en PlayStation, A en Xbox)
 //
 //  Con un solo joystick conectado, ese joystick es del Jugador 1 y el
