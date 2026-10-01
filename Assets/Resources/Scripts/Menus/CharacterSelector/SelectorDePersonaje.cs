@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -34,6 +35,10 @@ using UnityEngine.InputSystem;
 //  ¿El joystick maneja el lado equivocado? L1 lo pasa a la izquierda, R1 a la
 //  derecha (ver ReclamarJoystick). Vale también para la pelea.
 //
+//  VIBRACIÓN: al enchufar un joystick (o al entrar a esta pantalla, o al
+//  reasignarlo con L1/R1) vibra: 1 pulso = Jugador 1 (izquierda), 2 pulsos =
+//  Jugador 2 (derecha). El primero que se conecta es el de la izquierda.
+//
 //  Confirmar dos veces DESBLOQUEA la elección, por si alguien quiere cambiar
 //  mientras el otro todavía está eligiendo. Cuando los dos confirmaron,
 //  CharacterSelecteds carga la pelea.
@@ -64,6 +69,23 @@ public class SelectorDePersonaje : MonoBehaviour
     private bool confirmado;
     private Vector3[] escalasOriginales;
     private Animator[] animadores;
+
+    // Vibración: la forma de que cada jugador sienta cuál control es el suyo.
+    private Coroutine vibracion;
+    private Gamepad padVibrando;
+    private const float DURACION_PULSO = 0.22f;
+    private const float PAUSA_ENTRE_PULSOS = 0.18f;
+
+    private void OnEnable()
+    {
+        InputSystem.onDeviceChange += AlCambiarDispositivos;
+    }
+
+    private void OnDisable()
+    {
+        InputSystem.onDeviceChange -= AlCambiarDispositivos;
+        DetenerVibracion(); // si no, el motor puede quedar prendido al cambiar de escena
+    }
 
     private void Start()
     {
@@ -116,6 +138,64 @@ public class SelectorDePersonaje : MonoBehaviour
         Debug.Log($"SelectorDePersonaje ({name}): Jugador {playerIndex + 1}, "
                 + $"{opciones.Length} personajes, joysticks detectados: {Gamepad.all.Count}"
                 + NombresDeJoysticks());
+
+        // Al entrar, el control de cada lado avisa que es suyo.
+        VibrarJoystickPropio();
+    }
+
+    // Se dispara cuando se enchufa un joystick (y también cuando ReclamarJoystick
+    // reordena la lista, que los saca y los vuelve a agregar). El control nuevo
+    // vibra solo si le tocó MI lado, así cada selector avisa al suyo y no se
+    // pisan. Al agregarse, Gamepad.all ya lo incluye en su posición final.
+    private void AlCambiarDispositivos(InputDevice dispositivo, InputDeviceChange cambio)
+    {
+        if (cambio != InputDeviceChange.Added || playerIndex < 0) return;
+        if (!(dispositivo is Gamepad pad)) return;
+        if (IndiceDe(pad) == playerIndex) Vibrar(pad);
+    }
+
+    private void VibrarJoystickPropio()
+    {
+        if (playerIndex >= 0 && playerIndex < Gamepad.all.Count) Vibrar(Gamepad.all[playerIndex]);
+    }
+
+    private static int IndiceDe(Gamepad pad)
+    {
+        for (int i = 0; i < Gamepad.all.Count; i++)
+            if (Gamepad.all[i] == pad) return i;
+        return -1;
+    }
+
+    // Izquierda = 1 pulso, derecha = 2 pulsos: así se distinguen sin mirar la pantalla.
+    private void Vibrar(Gamepad pad)
+    {
+        DetenerVibracion();
+        vibracion = StartCoroutine(Pulsos(pad, playerIndex + 1));
+    }
+
+    private IEnumerator Pulsos(Gamepad pad, int cantidad)
+    {
+        padVibrando = pad;
+        for (int i = 0; i < cantidad; i++)
+        {
+            if (pad == null || !pad.added) break; // se desenchufó a mitad de camino
+            pad.SetMotorSpeeds(0.5f, 0.8f);
+            yield return new WaitForSecondsRealtime(DURACION_PULSO);
+
+            if (pad == null || !pad.added) break;
+            pad.SetMotorSpeeds(0f, 0f);
+            yield return new WaitForSecondsRealtime(PAUSA_ENTRE_PULSOS);
+        }
+        DetenerVibracion();
+    }
+
+    private void DetenerVibracion()
+    {
+        if (vibracion != null) StopCoroutine(vibracion);
+        vibracion = null;
+
+        if (padVibrando != null && padVibrando.added) padVibrando.ResetHaptics();
+        padVibrando = null;
     }
 
     // Con los nombres se ve si un mismo control físico aparece dos veces (pasa
