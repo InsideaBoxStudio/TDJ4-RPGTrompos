@@ -26,6 +26,11 @@ public class TimeScaleController : MonoBehaviour
 
     public bool IsMyTurn(int turnID)
     {
+        // Un hechizo recién lanzado puede sacar un número mayor que el tamaño de
+        // la lista (que solo crece cuando termina un turno). Todavía no le toca:
+        // antes esto tiraba IndexOutOfRange en cada frame hasta que la fila llegaba.
+        if (turnID < 0 || turnID >= turns.Length) return false;
+
         if (turns[turnID])
         {
             Time.timeScale = 0f;
@@ -40,8 +45,9 @@ public class TimeScaleController : MonoBehaviour
 
         Debug.Log("Turno terminado: " + turnID);
 
-        // Evitar que un script que no tiene el turno lo termine
-        if (!turns[turnID])
+        // Evitar que un script que no tiene el turno lo termine (incluye el que
+        // todavía ni entra en la lista, ver IsMyTurn)
+        if (turnID < 0 || turnID >= turns.Length || !turns[turnID])
             return;
 
         turns[turnID] = false;
