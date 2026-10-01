@@ -301,8 +301,30 @@ public class AIBrain : MonoBehaviour
         // personaje todavía no estaba armado en el primer intento, un "== null" a secas
         // dejaba la lista vacía para siempre y la IA no usaba especiales nunca.
         if (especiales == null || especiales.Length == 0)
+        {
             especiales = GetComponentsInChildren<IAIAction>(true);
+            LogEspeciales();
+        }
         if (countDown == null) countDown = FindFirstObjectByType<CountDown>();
+    }
+
+    // Una línea cuando la IA descubre sus poderes: sirve para comprobar de un vistazo
+    // que el personaje de la CPU es el que corresponde. Si un Magus lista
+    // LaunchShuriken o LaunchPinchos, ese "Magus" es en realidad una copia del Ninja
+    // (pasó en la escena Practica). Corre una vez por descubrimiento, no por frame.
+    private void LogEspeciales()
+    {
+        if (especiales == null || especiales.Length == 0) return;
+
+        var sb = new System.Text.StringBuilder();
+        sb.Append($"AIBrain ({name}): {especiales.Length} poderes, dificultad {difficulty}:");
+        for (int i = 0; i < especiales.Length; i++)
+        {
+            IAIAction a = especiales[i];
+            if (a == null) continue;
+            sb.Append($"\n   {a.GetType().Name}  costo {a.EnergyCost}  {(a.IsStrong ? "fuerte" : "basico")}");
+        }
+        Debug.Log(sb.ToString());
     }
 
     // Busca un componente primero en este objeto+hijos; si no, desde la raíz del
