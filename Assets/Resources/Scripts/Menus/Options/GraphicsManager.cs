@@ -22,7 +22,14 @@ public class GraphicsManager : MonoBehaviour
 
         yaSeAplico = true;
 
+#if !UNITY_WEBGL
         // Ancho, Alto, Pantalla completa
         Screen.SetResolution(width, height, FullScreenMode.FullScreenWindow);
+#endif
+        // En la versión web NO se fuerza nada: el tamaño del juego lo manda la
+        // página (el canvas se ajusta a la ventana del navegador) y la pantalla
+        // completa solo se puede pedir desde un clic del jugador (ver
+        // FullscreenToggle). Forzarla al arrancar, sin que nadie haya hecho clic,
+        // el navegador la bloquea y puede dejar el canvas con un tamaño raro.
     }
 }
