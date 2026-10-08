@@ -1,24 +1,43 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaitBar : MonoBehaviour
 {
     [SerializeField] private CheckPlayerTurn checkPlayerTurn;
+    [SerializeField] private Image waitBar;
     private float waitTime = 0f;
+    private float maxWaitTime = 0f;
+
+    void Start()
+    {
+        maxWaitTime = checkPlayerTurn.maxWaitTime;
+        if (waitBar == null)
+        {
+            waitBar = gameObject.GetComponent<Image>();
+        }
+    }
 
     void Update()
     {
         waitTime = checkPlayerTurn.timeUntilNextTurn;
 
-        waitTime = Mathf.Clamp(waitTime, 0f, 5f);
+        waitTime = Mathf.Clamp(waitTime, 0f, maxWaitTime);
 
-        // 5 segundos = escala Y 1
+        // maxWaitTime = escala Y 1
         // 0 segundos = escala Y 0
-        float scaleY = waitTime / 5f;
+        float scaleY = waitTime / maxWaitTime;
 
-        transform.localScale = new Vector3(
-            transform.localScale.x,
-            scaleY,
-            transform.localScale.z
-        );
+        if (waitBar == null)
+        {
+            transform.localScale = new Vector3(
+                transform.localScale.x,
+                scaleY,
+                transform.localScale.z
+            );
+        }
+        else
+        {
+            waitBar.fillAmount = waitTime / maxWaitTime;
+        }
     }
 }

@@ -17,6 +17,7 @@ public class FullscreenToggle : MonoBehaviour
     private void SetFullscreen(bool fullscreen)
     {
         Screen.fullScreen = fullscreen;
+        Debug.Log("Fullscreen cambiado a: " + fullscreen);
     }
 
     private void OnDestroy()

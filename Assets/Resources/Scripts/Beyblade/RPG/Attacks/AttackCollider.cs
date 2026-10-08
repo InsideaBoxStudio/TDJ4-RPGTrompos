@@ -6,6 +6,7 @@ public class AttackCollider : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private int energyGain = 2;
     [SerializeField] private int damage = 3;
+    [SerializeField] private int playerID = 0;
 
     // >>> FIX DANO PERDIDO <<<
     // El cuerpo del trompo tiene su propio collider (BeybladeCollider) que al chocar
@@ -28,6 +29,11 @@ public class AttackCollider : MonoBehaviour
     {
         yaGolpeo = false;
         if (transform.parent != null) layerDuenio = transform.parent.gameObject.layer;
+
+        if (energyCounter == null)
+        {
+            energyCounter = PlayerSettings.player[playerID].GetComponent<DefPlayerID>().energyCounter;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class RotateObjectScript : MonoBehaviour
 {
+    [SerializeField] private bool invert;
+    [SerializeField] private int addZ = 0;
     private GameObject cameraObject;
 
     void Start()
@@ -11,6 +13,13 @@ public class RotateObjectScript : MonoBehaviour
 
     void Update()
     {
-        transform.rotation = cameraObject.transform.rotation;
+        if (!invert)
+        {
+            transform.rotation = cameraObject.transform.rotation;
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(-0f, -0f, -cameraObject.transform.rotation.z + addZ);
+        }
     }
 }

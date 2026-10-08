@@ -1,0 +1,6059 @@
+fileFormatVersion: 2
+guid: bac0f17389a49e741b6fd67c37351ad9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7941549410937978194
+    second: QuicktimeEventConsejo_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25dbb25fc1d063e60800000000000000
+      internalID: 7941549410937978194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc1dafdd19ab1440949ce51a55865ff
+      internalID: 1843607759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c675d74227637041b5ba06edcd626f3
+      internalID: 1270376942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47b52bfbb447b440bc16daea8deebda
+      internalID: 1701292815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb776ef7940c1543b43396d2d55c0c5
+      internalID: -1203987929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_5
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f279a25bcb02a44b6b4fe139f8cc85
+      internalID: 1225869398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9bf2690da6bb5499ff74995fd1c561
+      internalID: -1112810975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_7
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43eb07a22bf97d346accf871fff0c999
+      internalID: -1746889817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_8
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d648b7783b3974fbb425066e9dcbdf
+      internalID: -496264278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_9
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b913f555af9ae44f9bd6124ad08c7c5
+      internalID: 447682586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad6eb64035bdcd44896f57d2cc04867e
+      internalID: -1050659811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_11
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b058de6817b7454fb2479af4c9a61f7
+      internalID: -664531098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_12
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3905e568b8fde4c91d5495addd5033
+      internalID: 887693531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_13
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ee2835bd410804dbbf6ef45728c50b
+      internalID: -159765103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_14
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4f4e2b387a1014ab07d5155b8e88a5
+      internalID: 1582723049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_15
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3563ee543a9c52540813cc35cae6a4ba
+      internalID: 1760216344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_16
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c77114da674edf4fab564f3aa1c051d
+      internalID: 2110473070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e9266f0120c5c4a98964de0d97318c
+      internalID: -320325787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6af13145bc436a46b2ce5c8704e9a10
+      internalID: -14722093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cee4c9991de3ac4aa7d696ef113f710
+      internalID: 46397193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_20
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0b47f54b3995e4482ef68364ea2548
+      internalID: -329860177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2fb16751de3fc439fe3a3d07eead27
+      internalID: -2046583186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_22
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4b1efb824d6704c88c4fedd3097f30
+      internalID: -520079941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_23
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5371df6333a971478cdd21e4cd6abed
+      internalID: -1802323654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_24
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed2f877ced2abf41ab7d9057182f4fc
+      internalID: -1236365995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_25
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d43b43c2345ad469aa0a927b15ccdc
+      internalID: 836204063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_26
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91922b0d696fa7c4bb4bae3b146b7018
+      internalID: 1856241117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_27
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3583e990476e0004c9b2da5fb7403840
+      internalID: 1240923204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_28
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfaafc4522e4ebe4aaffa04f9518954c
+      internalID: -388175890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_29
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2fb771304d96e544bce178e6943e788
+      internalID: 329073166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_30
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52613ab35332954eb278861bcbd1161
+      internalID: 1212239847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_31
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7789a714b200d0f48b3ef06934c23327
+      internalID: -2019289349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_32
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dab9d039a7ae654dbdb5223f4d7dce2
+      internalID: -2083691535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_33
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d822cab503512f84aa5e3009d5f27cc8
+      internalID: -1385518338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1531e7f0f4e2a441bebc487504a0f2d
+      internalID: 663498118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d4a2660f8997740bf6371ebd46ebcf
+      internalID: 1418841375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_36
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d127da3bd8fdcc14da8cc59ad882fd4f
+      internalID: 324065720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_37
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d17698e7dfd13419d656202f1ef427
+      internalID: -906086589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_38
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0867e2806a54948ae9f07d5c9ed419
+      internalID: 484881587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_39
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61bd7f2db65f7a546b6c7838cc12f7e9
+      internalID: -87300521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_40
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcf9d3630db1f8439d59a7588e3f7c9
+      internalID: 401811612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_41
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a71e20d063e81546879419c23538a31
+      internalID: 1842268982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_42
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba22e6d279087b46a8c2f7586555726
+      internalID: -2115629525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_43
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df608068cb07c14da62d49f48a251bd
+      internalID: 1802378259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_44
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d821f6c7d4326b74887ece4ad867058b
+      internalID: -1082221343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_45
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a72fd563d033214ba63628e6fb65bef
+      internalID: 1389719250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_46
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ddfd498bfd7614e8127bba1a8c2f8e
+      internalID: 1441505547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_47
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976e356767ea2dd4090b9da38189a38f
+      internalID: -797920029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_48
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158cabcdabf24d2468a009324332e2ab
+      internalID: 896667501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_49
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd581c205598ef846afb6d2f57ec212f
+      internalID: -2142190367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_50
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea5b170b15b9b543a69036f3290d709
+      internalID: 2134300704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f9e5238c604a4459dd92a3e516a516
+      internalID: 609335305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_52
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44146c23b50a5d34e93237fc550b1b35
+      internalID: -433917300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_53
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b1fd569f1158e4bae9a0fed073ef9b
+      internalID: -24047660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_54
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b4e0f2a2529404fbd5ec68cee27fac
+      internalID: 2003056954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_55
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcea7ca7a3cfc3043b5a1f9037072cd2
+      internalID: 701521961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_56
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3085adc72f9572d4f96fbcc996ba8dc5
+      internalID: -239482465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_57
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a058f5dc656d40343bd5227709ebc8ba
+      internalID: 1875491099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_58
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4029f3db5eb354bb07f2468dc83346
+      internalID: -1997120564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_59
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbf228513fd9c44683878d5ebc57212
+      internalID: 696076183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_60
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1805b902ef8375c47a0b8a621803b4be
+      internalID: 142263601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_61
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7f2805ba3117547bd168e1052c1303
+      internalID: 1544982864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_62
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0686112bd75663048a83daaa0fb2010a
+      internalID: -114389011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_63
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735f77955b594104f835fce20ca8b37d
+      internalID: 917443349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_64
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af002a1bb47d7a4fae6be4376f64308
+      internalID: -2051478977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_65
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf4b5d8ce825cc47b79fda4dae0eb3c
+      internalID: -35029051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_66
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3171a430ffb024eb0a62637ac1f6da
+      internalID: -163079597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_67
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b239b390017bd8a42a244b9e0acb10ae
+      internalID: -1186533251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5c2400552067745995ed79856d73eb
+      internalID: 234526298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_69
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac71e6af1300f634fb9c29e146146be8
+      internalID: -88446036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_70
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94f4e65a9c21e5409a27bc8b5eb2d18
+      internalID: 705865072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_71
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4c40502682ede4c8b29c2983767bf4
+      internalID: -859548165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_72
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32a20c207df2f745b4dd3ab6edf9809
+      internalID: 828660870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_73
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c706a0f049e615419d973d6e8af1599
+      internalID: -1490856343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_74
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e29a447256e6234d8792be52b9723a1
+      internalID: 927246752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_75
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a6dbac72b31fa4ba61dc3429f1f1a5
+      internalID: -79008067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_76
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73de15a51ad3f3142bc57f19d31faa72
+      internalID: -1130122195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_77
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5d5a7f4d4bda6448ef610b509781dc
+      internalID: -1903330261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_78
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0565f0c74b6117f4fbc479d73d73aa65
+      internalID: 327073212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_79
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35ed2852f59ce44fa80b46963faadef
+      internalID: 1987416405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_80
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc60074a57344254bb990338f4dfae55
+      internalID: 1361037562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_81
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9a913a13af98b498895c53f9ad01b1
+      internalID: -558224327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_82
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33e773d877711846a3d64cfceea60de
+      internalID: -1118164061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_83
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ab05f591be99a4f89031f5368a0de8
+      internalID: 1842617240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_84
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a18f8c173336c549a413577e32bb021
+      internalID: -1459468764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5065d06a695fe4ca28b8cedf3ae92e
+      internalID: 2121655229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_86
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee659a359eb0534c9ce86c87a84dcdf
+      internalID: 1482082967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_87
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d35b07cd0546e43869c4afee65b66e
+      internalID: -1454944345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_88
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f3f9d2626b64a49816a0db671f2e99
+      internalID: -819068956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_89
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69499ce17c9c7d44afc656945786bbf
+      internalID: -1640832157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_90
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3a06fe935c7ff48b9d8b8622e6bad3
+      internalID: 269012334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_91
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6ad8862b9dbb445aa194fd8b6997e9
+      internalID: 1544565436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_92
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc5931e32509e74a899cf5110dd4bbd
+      internalID: -529865985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_93
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7a6615345b2a64ebc192ee4d213168
+      internalID: 1665405538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_94
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff7f804f36f0fc4ab7c06df9a8816ba
+      internalID: -1371080569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_95
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc77978828c780349b153b116327f7cb
+      internalID: 1642834757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_96
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3318fe92877038b4daaf5dcabfb7b843
+      internalID: -112745779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_97
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4223b117db88244a80909e5dc4811af
+      internalID: -1952236526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_98
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f0c14c622a97647b4c5a8f70244ae5
+      internalID: 1142847043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_99
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8de71c1466d8004c829dacbf3a92cfe
+      internalID: 2067006132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_100
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b331782110fee24580b8ff42da382ee
+      internalID: -2115609822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_101
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409b10a781a3106449c3a313b3d0ad87
+      internalID: 610742451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70260bbaf5b43254a9b5f15b6abbe7d5
+      internalID: 1454305520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_103
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36789cfc285742c4583676c91ae41afa
+      internalID: -738673963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_104
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303a0e2bd4c32374b98a137f2f78de5c
+      internalID: 1447031639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_105
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e0ce039c847e54e9ec1f0bd9869d13
+      internalID: 1057559424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_106
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0573a95deaa88474181b9301c61a66a1
+      internalID: 1023197975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_107
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e1688e757858942a8c383bb418c304
+      internalID: -1835446877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_108
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383e07b6aec2e3f40a654d0da12ca26a
+      internalID: -1513349073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_109
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c089965116a2908409fbd83e8b17935b
+      internalID: -1790094579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_110
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af16bf89d76ca8f46893af7a2e53b6ec
+      internalID: -1534137949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_111
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e300ef9ee4df1443bd0e7ad93eec1b3
+      internalID: 1198856686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_112
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032ca972b21f3364b91ec25f8809092a
+      internalID: 1358229308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_113
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b24b1a3afc17741a23fbc34e364031
+      internalID: 683248303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_114
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9bf51eb76716e4590b8ccbe53b4740
+      internalID: -183226828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_115
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34f19c0718dc8414690653029f8f19ff
+      internalID: 1687087777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_116
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26caeec675bcffd47aa01faf4baf6c12
+      internalID: 1616977314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_117
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7721106b25c2f3744b863465101d44a0
+      internalID: 1225634044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_118
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102ee61420bfcde4dba5ff11b7b415cc
+      internalID: 522900765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86888863947811149814ed86a89a8aca
+      internalID: -1141232194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_120
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ae8769a0dd1d043a15d9d336a5a3d5
+      internalID: -1932282933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_121
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721fc6298ea2c0241a48323ddb8ddb17
+      internalID: -47033373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_122
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74641d5525f66ff4a94c61a7ab37dc92
+      internalID: -594167591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_123
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4fb942dcad38443bd76cecc2f96e2d
+      internalID: -896646636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_124
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973ee8575e2102f469adceb4a8dbdd01
+      internalID: -1100915372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_125
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91be63e7eadd615478e06da7b061977b
+      internalID: -629957053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_126
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07faf197cf07e6d4781bd40db0492391
+      internalID: 2110502164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_127
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064e7a5389d19234193fd9415503596f
+      internalID: -2118108128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_128
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4de7e730c4900429d270544601b768
+      internalID: 124224468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_129
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1da3c733b4d7354fb31e4c781aeda7f
+      internalID: 963556398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_130
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229ede01d7d8243429fa11673351bc73
+      internalID: -2060862010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_131
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ed46e55ed0be84d891b73b16638764
+      internalID: -964211609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_132
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604fc2edd224a09479d81903e449c2fc
+      internalID: -1664794210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_133
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a871acb56b88f409ecd30340e338d0
+      internalID: -489132617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_134
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ae3b12ab5a5d54fa1803e3bbf04e40
+      internalID: -1194349855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_135
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef701f013a33344d926b285f441970b
+      internalID: -556529385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999c2eb8a9602a343bdf9cee8a7d9cb5
+      internalID: 2114155336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_137
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b28c3f92a873844a98dcc95d09d1cbd
+      internalID: -1383697630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_138
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8824b79dc57a28548aa00ba9f7be7d88
+      internalID: -1742700957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_139
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bbb0afc5e4e3743a1ac5debc1cbad4
+      internalID: 230352970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_140
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79c87381c2cff34f8e56191c705fd85
+      internalID: -1551919433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_141
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c904bbe6c1549a4198b6337acbca19a
+      internalID: -1563575275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_142
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97152818f003eaa45bea7c9aab2bb1bf
+      internalID: -725376495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_143
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3912aa29f44800b49b24b646cfe81f5d
+      internalID: 2000022801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_144
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9006bb38f47f4d49ac1f6fb1d8937e1
+      internalID: 1957085336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_145
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c8c6041309d9c4eba172a93a81df06
+      internalID: -330427645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_146
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1280c8dc279045d43a4326b0a2e0136f
+      internalID: -870045926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_147
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e51b2eac4f522346a5c343c507eaa30
+      internalID: 1351128194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_148
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478e8f3e3bf89d84cb564c1c13099eff
+      internalID: 1354029530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_149
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f860b3a5a65a9041b168862ac80c078
+      internalID: -889353673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_150
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d4661515e87afc43ba74727a65b0c4e
+      internalID: -2064468454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_151
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec407b426d1201d4d8d965603fb40c46
+      internalID: -469404486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_152
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acba407a8a8229418255b323b1edaa4
+      internalID: -335005452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_153
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed63952db1c42a746bd10a75a6e14ee6
+      internalID: -17658199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_154
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597241cb7459b97408bfa045908b6921
+      internalID: -1030684849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_155
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ee90f6377035145a0464a0d29abf81
+      internalID: -1324129432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_156
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60381c54e9baa68439f1e88d6abf0e90
+      internalID: 1555517697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_157
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b216f03b92dc542875a08c6925e0d2
+      internalID: -1277028080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_158
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e19b36459acbe4586d69fb4f1eaee5
+      internalID: 479057313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_159
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608cc101688e6c24b9f0e9a59f1b87c3
+      internalID: -2110814098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_160
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf1a8219ae39b84c933f27db30613b2
+      internalID: -819023379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_161
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d999cf6b8815e429860f01c6f2d848
+      internalID: -892184934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_162
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651ffb68b5910bc4b9e8e0291ade8d75
+      internalID: -462815693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_163
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba80234eaada534f8b36c238e9a36f7
+      internalID: 1028882753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_164
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0f2753e927d874787bd7cf792283b9
+      internalID: -240624901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_165
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24271ff4e1d012441bdd5ad5928dcae0
+      internalID: -337978200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_166
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355afed2a71e66446b6acccd5e81c8e6
+      internalID: 72510134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_167
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168ae4677fca1ca48861d4154d1e5b8b
+      internalID: -294305722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_168
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171c5789441ddfd4f828e7f14f7c1616
+      internalID: 1989363926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_169
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e2f573366bda04db6e30040d9b6e8f
+      internalID: -1749601370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5984d3f72d5790488699935cb18db79
+      internalID: -1298950041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_171
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021749b69d77caf46a6474abf455e328
+      internalID: -776845336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_172
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4278603080a0965439ebdaf61db5a77c
+      internalID: -1763777310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_173
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80975350ee30a84ea2ffa8fb1d4092e
+      internalID: 767407073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_174
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce1b04857a059b4bb0abe0547a5e414
+      internalID: -1252760758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_175
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8a2504d34469c4bb1eb9d2e68b7f1a
+      internalID: -1684665548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_176
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fba7bacbdeea0448a0b27febd9f7424
+      internalID: 498691801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_177
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3715748f1e406f445b3b57feb0b28999
+      internalID: 1547944580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_178
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efada0ae61f22a64182b5f022ee854eb
+      internalID: 1625668255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_179
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527436ef4599c324898c5a7844744f27
+      internalID: -1776051631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_180
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ace6029f7842fa479fb5bc18854ffdd
+      internalID: 1993060949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_181
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e2976fbf625ba43bf9c7c330bf38b9
+      internalID: 7452281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_182
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c729bb68158beb345b4ecc9091f7d188
+      internalID: -1038729019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_183
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbfa4ae2205188489514709827984c4
+      internalID: 898264290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_184
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e85806f4f54294fabd6279cbaa1be7
+      internalID: 1110484573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_185
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cef2ae1999dcb244b623018a9b8a725
+      internalID: -463542397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_186
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409ec4dd05ced6c43a1414471d460c25
+      internalID: 1562309146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_187
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80914eb44dd6e740ac53ccbb3cc2bd4
+      internalID: -550998695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_188
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042bae93822dbc64d875f90b1ae124bd
+      internalID: 550520352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_189
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183649bcd8cd1614cbd7d6c4d7208c84
+      internalID: -1974198415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_190
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc168b6e62e7b44dbd98ba70d860c9a
+      internalID: 1277558660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_191
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54213f4cfdc5a04ab401aff47b75827
+      internalID: 1190798957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_192
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a13adb817f4dc9743b9e91d7473907cc
+      internalID: 123877726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_193
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59ede300fb1bdd448907bcc3eb03624
+      internalID: 1505833233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_194
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3b3332d9350724593690e32bef640d
+      internalID: 1859687025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_195
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa78bc763f35fd41a9a24c9809c1600
+      internalID: -1438700265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_196
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb7a36030bfb9646b3993b8a5501b7f
+      internalID: 382942824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_197
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480a0e3808687a74c92c94212d22e33d
+      internalID: 793388042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_198
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4165c16928f63478cd967448a47241
+      internalID: -1518642198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_199
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f07b327158815f4491130dffbdd946e
+      internalID: -691457808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_200
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e75f0954a88894d9c89b6efb4ef079
+      internalID: 1350627483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_201
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d721b40c32f3d0b44840b2095bb800ce
+      internalID: -1775603445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_202
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c90a1f1b5a443704983bec20f5e5d935
+      internalID: 1490599635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_203
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca4c45e548049b40afae4dd6f815a35
+      internalID: 1867783395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_204
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f026cc7b4ab11d4c9ef2a7777ae6380
+      internalID: -603557328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_205
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547249b83f4b88240853571f363864ab
+      internalID: -564576735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_206
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81aa13fb843c6aa43b51584e7f21679b
+      internalID: 244152912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_207
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03841f51fcb23744abee434059ed138
+      internalID: 565706851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_208
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34592a5447a7b5644aa184d18f0b2f27
+      internalID: 46992207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_209
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe86714986f5584ea7707421252dc83
+      internalID: -2103878264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_210
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7699bc16363d441952a1325a078a46
+      internalID: -1558167574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_211
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525babff7183753418757ad84721f4de
+      internalID: -427745913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_212
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdd7cf95f05c6f4d852796ce0ca59b2
+      internalID: -1999471125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_213
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d5a1ae7105f3d4a879ff4c73e870e6
+      internalID: 1655797278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_214
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3e07214c6d7e949b2bd4edee170091
+      internalID: -461571853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_215
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420fa318b0b140546b0c240784ce43f1
+      internalID: -1057566231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_216
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58fb46d13b5dd44c820fc5470fabbe2
+      internalID: -115861255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_217
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dea465d07766f43a1a79c0c6948ad9
+      internalID: 427626343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_218
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b200119951e594b8158725920b9c1a
+      internalID: 1638320131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_219
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 980cb4c2e4549b64a93d428ffe4afe3e
+      internalID: 1262827214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_220
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303706e105995ca49b12ba14a58550d1
+      internalID: 901805136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_221
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e846b0367a11b4a8bb5fa2a21abb4f
+      internalID: 796951603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_222
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a529b7a63fb128045aab1c177fad8f7c
+      internalID: -886010145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_223
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ef3423859b5c5429847826c5db3cc9
+      internalID: 360619923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_224
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d06450454665a243b163f91c831664c
+      internalID: 1879601731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_225
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6797fb7dc5728db439d933249890934c
+      internalID: 993989020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_226
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71acbab82c939f742a4035c9f31ffb4a
+      internalID: -979792972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_227
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d447e1e6ecb6be448bb8da509426edf
+      internalID: 573576680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_228
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5fc4fffc1239748b021e7e8121b048
+      internalID: -995463676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_229
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfed0db39aca0b49832e8af77f82cd8
+      internalID: 1546272243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_230
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14520e908e9b33546b7db91c5706ae1d
+      internalID: 726603550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_231
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184d75f95346c8547987c923e9bcb6af
+      internalID: -1759419619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_232
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135a4df746eb67848882b4d9813df84e
+      internalID: 1203495921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_233
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9633e37bf4ae0794996d940eb3dd6ba2
+      internalID: -1586030988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_234
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629c1bf18310c8d41a43b8d4c853d08a
+      internalID: 98345087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_235
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd419e78e8f86274c883450b8c6b6f6b
+      internalID: -71323146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_236
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf238c0f601054d4ea55c06fd05c25bd
+      internalID: 1444453570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_237
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20afc62707a4daa4596ce496e7867f40
+      internalID: 2049635445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387cb36c566db6f41ade6163c126e9fb
+      internalID: -1628183005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_239
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbcd6ae38169424f9573f420ceec096
+      internalID: -1887247881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_240
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae8da093af3bba4fb34fadbf14323b5
+      internalID: -618580933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_241
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bedfb1dd84bea4d8fac3cee88f9b37
+      internalID: 1872144962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_242
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1354a3367c699f34fabbd2d093bc9db6
+      internalID: 386657024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_243
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be26a43c10c4f844592406ac9ea82397
+      internalID: -1487949746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_244
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2f08d416644ae4b9c3a6245ef2ab55
+      internalID: -1149594881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_245
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e3bf6cb721cce4eb907fc1df8c6d9a
+      internalID: 92349769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_246
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d85d346a776cc46bafa5822bbdfb44
+      internalID: -1971276576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_247
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab065fa30f46af489e184232d18947b
+      internalID: 846141829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_248
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae3be1a4fde83c49a8b3962330b6a83
+      internalID: -1987701702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_249
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515b3f51c42ab644e8d5ee13c55e5d5b
+      internalID: -1438883817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_250
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685aa8e2df1237c40a64589406118755
+      internalID: 1618767019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_251
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de489c2e30d94ab4d9a4d11d5ef5b9dd
+      internalID: 1646062454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_252
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554eb766a25444e4c8bf53f014500b85
+      internalID: 1899453654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_253
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135dfdf132d79fa49abd6f2a864ba764
+      internalID: -850342709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_254
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4b7c8cb4dc6b2448559cee84bfbaeb
+      internalID: 1125356122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_255
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa63599192668cd47990f4477d09bb73
+      internalID: 1413847814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: QuicktimeEventConsejo_256
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad46c8366f3f5f4e850777abb51a37b
+      internalID: -370625193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 62467346bdebb44488a0843ed8e267b5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":17.0,"y":16.0},"gridSpriteSize":{"x":240.0,"y":135.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      QuicktimeEventConsejo_0: 7941549410937978194
+      QuicktimeEventConsejo_1: 1843607759
+      QuicktimeEventConsejo_10: -1050659811
+      QuicktimeEventConsejo_100: -2115609822
+      QuicktimeEventConsejo_101: 610742451
+      QuicktimeEventConsejo_102: 1454305520
+      QuicktimeEventConsejo_103: -738673963
+      QuicktimeEventConsejo_104: 1447031639
+      QuicktimeEventConsejo_105: 1057559424
+      QuicktimeEventConsejo_106: 1023197975
+      QuicktimeEventConsejo_107: -1835446877
+      QuicktimeEventConsejo_108: -1513349073
+      QuicktimeEventConsejo_109: -1790094579
+      QuicktimeEventConsejo_11: -664531098
+      QuicktimeEventConsejo_110: -1534137949
+      QuicktimeEventConsejo_111: 1198856686
+      QuicktimeEventConsejo_112: 1358229308
+      QuicktimeEventConsejo_113: 683248303
+      QuicktimeEventConsejo_114: -183226828
+      QuicktimeEventConsejo_115: 1687087777
+      QuicktimeEventConsejo_116: 1616977314
+      QuicktimeEventConsejo_117: 1225634044
+      QuicktimeEventConsejo_118: 522900765
+      QuicktimeEventConsejo_119: -1141232194
+      QuicktimeEventConsejo_12: 887693531
+      QuicktimeEventConsejo_120: -1932282933
+      QuicktimeEventConsejo_121: -47033373
+      QuicktimeEventConsejo_122: -594167591
+      QuicktimeEventConsejo_123: -896646636
+      QuicktimeEventConsejo_124: -1100915372
+      QuicktimeEventConsejo_125: -629957053
+      QuicktimeEventConsejo_126: 2110502164
+      QuicktimeEventConsejo_127: -2118108128
+      QuicktimeEventConsejo_128: 124224468
+      QuicktimeEventConsejo_129: 963556398
+      QuicktimeEventConsejo_13: -159765103
+      QuicktimeEventConsejo_130: -2060862010
+      QuicktimeEventConsejo_131: -964211609
+      QuicktimeEventConsejo_132: -1664794210
+      QuicktimeEventConsejo_133: -489132617
+      QuicktimeEventConsejo_134: -1194349855
+      QuicktimeEventConsejo_135: -556529385
+      QuicktimeEventConsejo_136: 2114155336
+      QuicktimeEventConsejo_137: -1383697630
+      QuicktimeEventConsejo_138: -1742700957
+      QuicktimeEventConsejo_139: 230352970
+      QuicktimeEventConsejo_14: 1582723049
+      QuicktimeEventConsejo_140: -1551919433
+      QuicktimeEventConsejo_141: -1563575275
+      QuicktimeEventConsejo_142: -725376495
+      QuicktimeEventConsejo_143: 2000022801
+      QuicktimeEventConsejo_144: 1957085336
+      QuicktimeEventConsejo_145: -330427645
+      QuicktimeEventConsejo_146: -870045926
+      QuicktimeEventConsejo_147: 1351128194
+      QuicktimeEventConsejo_148: 1354029530
+      QuicktimeEventConsejo_149: -889353673
+      QuicktimeEventConsejo_15: 1760216344
+      QuicktimeEventConsejo_150: -2064468454
+      QuicktimeEventConsejo_151: -469404486
+      QuicktimeEventConsejo_152: -335005452
+      QuicktimeEventConsejo_153: -17658199
+      QuicktimeEventConsejo_154: -1030684849
+      QuicktimeEventConsejo_155: -1324129432
+      QuicktimeEventConsejo_156: 1555517697
+      QuicktimeEventConsejo_157: -1277028080
+      QuicktimeEventConsejo_158: 479057313
+      QuicktimeEventConsejo_159: -2110814098
+      QuicktimeEventConsejo_16: 2110473070
+      QuicktimeEventConsejo_160: -819023379
+      QuicktimeEventConsejo_161: -892184934
+      QuicktimeEventConsejo_162: -462815693
+      QuicktimeEventConsejo_163: 1028882753
+      QuicktimeEventConsejo_164: -240624901
+      QuicktimeEventConsejo_165: -337978200
+      QuicktimeEventConsejo_166: 72510134
+      QuicktimeEventConsejo_167: -294305722
+      QuicktimeEventConsejo_168: 1989363926
+      QuicktimeEventConsejo_169: -1749601370
+      QuicktimeEventConsejo_17: -320325787
+      QuicktimeEventConsejo_170: -1298950041
+      QuicktimeEventConsejo_171: -776845336
+      QuicktimeEventConsejo_172: -1763777310
+      QuicktimeEventConsejo_173: 767407073
+      QuicktimeEventConsejo_174: -1252760758
+      QuicktimeEventConsejo_175: -1684665548
+      QuicktimeEventConsejo_176: 498691801
+      QuicktimeEventConsejo_177: 1547944580
+      QuicktimeEventConsejo_178: 1625668255
+      QuicktimeEventConsejo_179: -1776051631
+      QuicktimeEventConsejo_18: -14722093
+      QuicktimeEventConsejo_180: 1993060949
+      QuicktimeEventConsejo_181: 7452281
+      QuicktimeEventConsejo_182: -1038729019
+      QuicktimeEventConsejo_183: 898264290
+      QuicktimeEventConsejo_184: 1110484573
+      QuicktimeEventConsejo_185: -463542397
+      QuicktimeEventConsejo_186: 1562309146
+      QuicktimeEventConsejo_187: -550998695
+      QuicktimeEventConsejo_188: 550520352
+      QuicktimeEventConsejo_189: -1974198415
+      QuicktimeEventConsejo_19: 46397193
+      QuicktimeEventConsejo_190: 1277558660
+      QuicktimeEventConsejo_191: 1190798957
+      QuicktimeEventConsejo_192: 123877726
+      QuicktimeEventConsejo_193: 1505833233
+      QuicktimeEventConsejo_194: 1859687025
+      QuicktimeEventConsejo_195: -1438700265
+      QuicktimeEventConsejo_196: 382942824
+      QuicktimeEventConsejo_197: 793388042
+      QuicktimeEventConsejo_198: -1518642198
+      QuicktimeEventConsejo_199: -691457808
+      QuicktimeEventConsejo_2: 1270376942
+      QuicktimeEventConsejo_20: -329860177
+      QuicktimeEventConsejo_200: 1350627483
+      QuicktimeEventConsejo_201: -1775603445
+      QuicktimeEventConsejo_202: 1490599635
+      QuicktimeEventConsejo_203: 1867783395
+      QuicktimeEventConsejo_204: -603557328
+      QuicktimeEventConsejo_205: -564576735
+      QuicktimeEventConsejo_206: 244152912
+      QuicktimeEventConsejo_207: 565706851
+      QuicktimeEventConsejo_208: 46992207
+      QuicktimeEventConsejo_209: -2103878264
+      QuicktimeEventConsejo_21: -2046583186
+      QuicktimeEventConsejo_210: -1558167574
+      QuicktimeEventConsejo_211: -427745913
+      QuicktimeEventConsejo_212: -1999471125
+      QuicktimeEventConsejo_213: 1655797278
+      QuicktimeEventConsejo_214: -461571853
+      QuicktimeEventConsejo_215: -1057566231
+      QuicktimeEventConsejo_216: -115861255
+      QuicktimeEventConsejo_217: 427626343
+      QuicktimeEventConsejo_218: 1638320131
+      QuicktimeEventConsejo_219: 1262827214
+      QuicktimeEventConsejo_22: -520079941
+      QuicktimeEventConsejo_220: 901805136
+      QuicktimeEventConsejo_221: 796951603
+      QuicktimeEventConsejo_222: -886010145
+      QuicktimeEventConsejo_223: 360619923
+      QuicktimeEventConsejo_224: 1879601731
+      QuicktimeEventConsejo_225: 993989020
+      QuicktimeEventConsejo_226: -979792972
+      QuicktimeEventConsejo_227: 573576680
+      QuicktimeEventConsejo_228: -995463676
+      QuicktimeEventConsejo_229: 1546272243
+      QuicktimeEventConsejo_23: -1802323654
+      QuicktimeEventConsejo_230: 726603550
+      QuicktimeEventConsejo_231: -1759419619
+      QuicktimeEventConsejo_232: 1203495921
+      QuicktimeEventConsejo_233: -1586030988
+      QuicktimeEventConsejo_234: 98345087
+      QuicktimeEventConsejo_235: -71323146
+      QuicktimeEventConsejo_236: 1444453570
+      QuicktimeEventConsejo_237: 2049635445
+      QuicktimeEventConsejo_238: -1628183005
+      QuicktimeEventConsejo_239: -1887247881
+      QuicktimeEventConsejo_24: -1236365995
+      QuicktimeEventConsejo_240: -618580933
+      QuicktimeEventConsejo_241: 1872144962
+      QuicktimeEventConsejo_242: 386657024
+      QuicktimeEventConsejo_243: -1487949746
+      QuicktimeEventConsejo_244: -1149594881
+      QuicktimeEventConsejo_245: 92349769
+      QuicktimeEventConsejo_246: -1971276576
+      QuicktimeEventConsejo_247: 846141829
+      QuicktimeEventConsejo_248: -1987701702
+      QuicktimeEventConsejo_249: -1438883817
+      QuicktimeEventConsejo_25: 836204063
+      QuicktimeEventConsejo_250: 1618767019
+      QuicktimeEventConsejo_251: 1646062454
+      QuicktimeEventConsejo_252: 1899453654
+      QuicktimeEventConsejo_253: -850342709
+      QuicktimeEventConsejo_254: 1125356122
+      QuicktimeEventConsejo_255: 1413847814
+      QuicktimeEventConsejo_256: -370625193
+      QuicktimeEventConsejo_26: 1856241117
+      QuicktimeEventConsejo_27: 1240923204
+      QuicktimeEventConsejo_28: -388175890
+      QuicktimeEventConsejo_29: 329073166
+      QuicktimeEventConsejo_3: 1701292815
+      QuicktimeEventConsejo_30: 1212239847
+      QuicktimeEventConsejo_31: -2019289349
+      QuicktimeEventConsejo_32: -2083691535
+      QuicktimeEventConsejo_33: -1385518338
+      QuicktimeEventConsejo_34: 663498118
+      QuicktimeEventConsejo_35: 1418841375
+      QuicktimeEventConsejo_36: 324065720
+      QuicktimeEventConsejo_37: -906086589
+      QuicktimeEventConsejo_38: 484881587
+      QuicktimeEventConsejo_39: -87300521
+      QuicktimeEventConsejo_4: -1203987929
+      QuicktimeEventConsejo_40: 401811612
+      QuicktimeEventConsejo_41: 1842268982
+      QuicktimeEventConsejo_42: -2115629525
+      QuicktimeEventConsejo_43: 1802378259
+      QuicktimeEventConsejo_44: -1082221343
+      QuicktimeEventConsejo_45: 1389719250
+      QuicktimeEventConsejo_46: 1441505547
+      QuicktimeEventConsejo_47: -797920029
+      QuicktimeEventConsejo_48: 896667501
+      QuicktimeEventConsejo_49: -2142190367
+      QuicktimeEventConsejo_5: 1225869398
+      QuicktimeEventConsejo_50: 2134300704
+      QuicktimeEventConsejo_51: 609335305
+      QuicktimeEventConsejo_52: -433917300
+      QuicktimeEventConsejo_53: -24047660
+      QuicktimeEventConsejo_54: 2003056954
+      QuicktimeEventConsejo_55: 701521961
+      QuicktimeEventConsejo_56: -239482465
+      QuicktimeEventConsejo_57: 1875491099
+      QuicktimeEventConsejo_58: -1997120564
+      QuicktimeEventConsejo_59: 696076183
+      QuicktimeEventConsejo_6: -1112810975
+      QuicktimeEventConsejo_60: 142263601
+      QuicktimeEventConsejo_61: 1544982864
+      QuicktimeEventConsejo_62: -114389011
+      QuicktimeEventConsejo_63: 917443349
+      QuicktimeEventConsejo_64: -2051478977
+      QuicktimeEventConsejo_65: -35029051
+      QuicktimeEventConsejo_66: -163079597
+      QuicktimeEventConsejo_67: -1186533251
+      QuicktimeEventConsejo_68: 234526298
+      QuicktimeEventConsejo_69: -88446036
+      QuicktimeEventConsejo_7: -1746889817
+      QuicktimeEventConsejo_70: 705865072
+      QuicktimeEventConsejo_71: -859548165
+      QuicktimeEventConsejo_72: 828660870
+      QuicktimeEventConsejo_73: -1490856343
+      QuicktimeEventConsejo_74: 927246752
+      QuicktimeEventConsejo_75: -79008067
+      QuicktimeEventConsejo_76: -1130122195
+      QuicktimeEventConsejo_77: -1903330261
+      QuicktimeEventConsejo_78: 327073212
+      QuicktimeEventConsejo_79: 1987416405
+      QuicktimeEventConsejo_8: -496264278
+      QuicktimeEventConsejo_80: 1361037562
+      QuicktimeEventConsejo_81: -558224327
+      QuicktimeEventConsejo_82: -1118164061
+      QuicktimeEventConsejo_83: 1842617240
+      QuicktimeEventConsejo_84: -1459468764
+      QuicktimeEventConsejo_85: 2121655229
+      QuicktimeEventConsejo_86: 1482082967
+      QuicktimeEventConsejo_87: -1454944345
+      QuicktimeEventConsejo_88: -819068956
+      QuicktimeEventConsejo_89: -1640832157
+      QuicktimeEventConsejo_9: 447682586
+      QuicktimeEventConsejo_90: 269012334
+      QuicktimeEventConsejo_91: 1544565436
+      QuicktimeEventConsejo_92: -529865985
+      QuicktimeEventConsejo_93: 1665405538
+      QuicktimeEventConsejo_94: -1371080569
+      QuicktimeEventConsejo_95: 1642834757
+      QuicktimeEventConsejo_96: -112745779
+      QuicktimeEventConsejo_97: -1952236526
+      QuicktimeEventConsejo_98: 1142847043
+      QuicktimeEventConsejo_99: 2067006132
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

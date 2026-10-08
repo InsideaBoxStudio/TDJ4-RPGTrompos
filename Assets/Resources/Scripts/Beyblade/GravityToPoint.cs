@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GravityToPoint : MonoBehaviour
 {
+    [SerializeField] public int PlayerIndex = 0; // El punto al que atrae
     [SerializeField] public Transform gravityPoint; // El punto al que atrae
     public float gravityStrength = 10f;
     [SerializeField] private float spinDirection = 1f;
@@ -19,6 +20,15 @@ public class GravityToPoint : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0; // Desactivamos gravedad normal
         rb.linearVelocity = new Vector2(0, spinDirection);
+
+        if (gravityStrength <= 0)
+        {
+            gravityStrength = PlayerSettings.heaviness[PlayerIndex];
+        }
+        if(frictionStrength <= 0)
+        {
+            frictionStrength = PlayerSettings.frictionStrength[PlayerIndex];
+        }
     }
 
     void FixedUpdate()

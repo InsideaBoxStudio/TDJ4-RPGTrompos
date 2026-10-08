@@ -252,6 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1991306237353142336}
   - component: {fileID: 2593261634377119009}
+  - component: {fileID: 4563632298585016847}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -269,7 +270,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.7900001, z: 0.03}
-  m_LocalScale: {x: 3.96, y: 9.900001, z: 0.79200006}
+  m_LocalScale: {x: 0.18, y: 0.45000005, z: 0.036000002}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 843621312917773672}
@@ -323,7 +324,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1570590642, guid: b1baa935cab32cb43a85508f1041bc91, type: 3}
+  m_Sprite: {fileID: 4137372895538922657, guid: a7b72883c352f29448b99374a605dfdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -333,6 +334,22 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4563632298585016847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4860111379822204423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c617e81d90f414193b2d0ab37e5a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeSpriteButton
+  playerIndex: 0
+  buttonImage: {fileID: 0}
+  buttonSprite: {fileID: 2593261634377119009}
+  buttonType: 0
 --- !u!1 &5139245463695559188
 GameObject:
   m_ObjectHideFlags: 0

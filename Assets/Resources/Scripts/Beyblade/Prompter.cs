@@ -58,15 +58,18 @@ public class Prompter : MonoBehaviour
 
         if (turnActive && input != Vector2.zero)
         {
-            // Obtener direcciones de la cámara
-            Vector3 camForward = cam.transform.up;     // eje Y de la cámara en 2D
-            Vector3 camRight = cam.transform.right;    // eje X de la cámara
+            if (input.magnitude >= 0.95f)
+            {
+                // Obtener direcciones de la cámara
+                Vector3 camForward = cam.transform.up;     // eje Y de la cámara en 2D
+                Vector3 camRight = cam.transform.right;    // eje X de la cámara
 
-            // Convertir input a dirección en mundo
-            Vector3 moveDir = camRight * input.x + camForward * input.y;
+                // Convertir input a dirección en mundo
+                Vector3 moveDir = camRight * input.x + camForward * input.y;
 
-            // Calcular ángulo
-            angle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg;
+                // Calcular ángulo
+                angle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg;
+            }
         }
         else if (!turnActive)
         {

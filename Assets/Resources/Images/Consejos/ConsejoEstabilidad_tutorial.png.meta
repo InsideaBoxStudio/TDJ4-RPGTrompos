@@ -1,0 +1,6059 @@
+fileFormatVersion: 2
+guid: d8bb3e796a4b8c1408b1cbfbd54e4a90
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4440394150154176920
+    second: ConsejoEstabilidad_tutorial_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8667651fb0d8062c0800000000000000
+      internalID: -4440394150154176920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5178c7c5f0fc36745b39b3d27063230d
+      internalID: -353754736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe33ace0f98e8c448589f4716d68dc2
+      internalID: -1440701379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cf8bee0d9c8c64785ca5c5596247da
+      internalID: 1596411432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657e891a00e777f4dafe5ea30d1ebfcc
+      internalID: 1391426623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_5
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd09862e5a199da41a844f383e32e89d
+      internalID: -1642233168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f578e4949af9f4da8a2be58b5ff0f9
+      internalID: -2136413399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_7
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653bcc9a6ccb1954294c39957e341469
+      internalID: 544802757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_8
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1675c25ff1d3d46bece13c0d163b25
+      internalID: 1080076171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_9
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb500b4444bdef94894346a6cf06dfea
+      internalID: 1233570119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8701aa5b61abe9c4a8288c4e343c1a43
+      internalID: 171178831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_11
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e790f1a4a8b3df641aeec091a90ad9f8
+      internalID: -725851485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_12
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775bb28549a9dac408ff15587a4fffe5
+      internalID: -282095792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_13
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef0e09b871139b4aa6a7f4906252594
+      internalID: 1492022380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_14
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db1085749f115e489dbf6282b89dc4b
+      internalID: 1721354359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_15
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1f7c62093943f4587c397e16df4d18
+      internalID: -587638777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_16
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2025
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e95006c024caec438102ba7978108a2
+      internalID: -903842786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd14cb5ce8f09fc4e91f207438b5b759
+      internalID: 289960402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db779610a1767ac40af77d9036750448
+      internalID: 386502072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a146af28ce0d4824c8a12ffa082bef59
+      internalID: -1681151070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_20
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c566b7f4bdaa0a408b68eeaf76eda8f
+      internalID: -1079649356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_21
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71df5bdd4b4eba64b928ecaef514570b
+      internalID: -948865609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_22
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6782cbd475254d54a8470792229a977b
+      internalID: 8478129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_23
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20deac09a59b60b4d84414288e65a3ce
+      internalID: 315988737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_24
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb1ba47d5278ea4e80f2806fd3974ea
+      internalID: -2143507352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_25
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb951bc5f6c3454fb436aeb423c90ca
+      internalID: 316813319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_26
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266dffd7b9189e14b9f95ee56e4800f9
+      internalID: 204970648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_27
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2a3c08f91a8be4691074ced44a8c6b
+      internalID: -145815984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_28
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f90f6a17e9a2e44af4afb660230b6d
+      internalID: 244231780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_29
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebc7709f18fdc3488eed4123a3d418f
+      internalID: 1353432953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_30
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2d1626c758f34040a6a56b8b0d086aa
+      internalID: -1027714113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_31
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17752bddd81c2d24298a2c04958ec663
+      internalID: 1039145635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_32
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292a8e369795a304b8cd1dc4acbc29eb
+      internalID: -901993722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_33
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab097284f7923e42a6b37320f69faba
+      internalID: -1173912726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba28be0777c4ec47bd466fc40043665
+      internalID: 1632712698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9d432877cfb9345a281d49fe800e7e
+      internalID: 2051376870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_36
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e681022b6b989b43a37bd4e2e2b77d9
+      internalID: 1090446223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_37
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f2d9aa98f0e564e87c88b392c108d5
+      internalID: 544899639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_38
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9bdccd1503551749b106f7ecaec91c4
+      internalID: -1461679657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_39
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffba53fa4185c8347931cf67ae58f2fb
+      internalID: -591248426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_40
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507340723955fb54aa0fc06ccdc30059
+      internalID: -1433840548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_41
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01dec6941ae98d49b6166408f380227
+      internalID: 1114570085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_42
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f74bac54d6d4ea478330c749b8246d1
+      internalID: 817559805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_43
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81b25ae7839e6e479c6cd1dd4ec62bf
+      internalID: 589420544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_44
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7144c238a2fddcd4caced775d96ac9c5
+      internalID: 1995391792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_45
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a2fcb30abd8ef4991e60b5a4869828
+      internalID: -1808430409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_46
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61047ec37e5584a4ab5b604096902b59
+      internalID: 2079787002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_47
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8f2dd039498f84a9d3ea83f9303817
+      internalID: 1353618242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_48
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3814e0c0e232ad94ab2acb5779050df6
+      internalID: -1584070636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_49
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e02d37860a1c234a9a5973e36604b2f
+      internalID: 1388346766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_50
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a06f50ae1bf1784995ffdd58b61760b
+      internalID: -511781075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234a485c337d38a4f847553e87c6a8ad
+      internalID: 965443610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_52
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafb89d4bc13bf54b8ea79793f2d98df
+      internalID: 1612543541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_53
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bb9369804e457d4a831c1989e625d89
+      internalID: 1333542918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_54
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4cae01b3f7116419f131669ea58cc3
+      internalID: 1618620311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_55
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f984bcd1403d4254c8cd37f4f46562d5
+      internalID: 496276404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_56
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac34e68937f30214993f287c14b2a085
+      internalID: -1357656235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_57
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802ffe9397e7c8444b6bd4ab31509740
+      internalID: -2068125626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_58
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17461f26b6a2c424484947bfe361da53
+      internalID: -242065876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_59
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2e91981b56c0649bcc50b270a3115d
+      internalID: -1217679404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_60
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ac930e45ba39e40a2d85c153636222
+      internalID: 1028395811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_61
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6db45048aa52a45bfcb2021c192445
+      internalID: -1853562115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_62
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34577e2b6cb0cc04eafafeda3efbd41d
+      internalID: 2062808004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_63
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5731181fc48364189cf8a0f9b1a356
+      internalID: 1863939957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_64
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e1dc535f7d6fa74d9b50e69e4548aa2
+      internalID: -1593018341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_65
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07aca446ca794043a3bcaa021347d96
+      internalID: 125219596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_66
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f614a03c34518847bae5682993f96a7
+      internalID: 308765523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_67
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c10ef46354cab4a90b954d91c759b5
+      internalID: 1303364415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03359834b4026b04da8f1120fc579848
+      internalID: 1008828517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_69
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13283117294f2e4a9688e0c57b8ca32
+      internalID: -591848621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_70
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7c4d171f2b08e428e6453e563df61a
+      internalID: 659781564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_71
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f477ec33c748a4499d55e2cf2b0986
+      internalID: 855493665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_72
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f161ab0a76bd7b429e54a7c9b067679
+      internalID: 2009744297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_73
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb69a06b3434d8543b9e16dfaf4555f1
+      internalID: 1964571465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_74
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6885e29d46c73e14b992f790c20a5fe8
+      internalID: -380691639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_75
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb2f7566b316134f8ca703edb0dcf9a
+      internalID: 1382699489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_76
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d51913faa0e274fbf895ec0b00575a
+      internalID: -1645163168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_77
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e802a39852c0f20429226cfb53435725
+      internalID: -2936300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_78
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e559c48c6f88c48b232c88308f112d
+      internalID: -2133884871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_79
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb636ab66cd15c747a1d3d440284a361
+      internalID: 483030913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_80
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c4bf1c0becf0d4c9fb382f3a56b80e
+      internalID: -2063496087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_81
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b72b5110afd56041a51124b68585680
+      internalID: 1959069770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_82
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf5615bd198ddd4c968af4a56ec193d
+      internalID: -1305524748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_83
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25e86d19ba3fca4ba08c03b94dae077
+      internalID: -1913793247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_84
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966f5d81aa058a642bc34d02d114110a
+      internalID: 311971280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_85
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f79ba1d7806cb44b906bd540953d0e5
+      internalID: -829184128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_86
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5481088974da3ae4b88f273b45767367
+      internalID: 323452565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_87
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691e9426e8845f54c8f64ff7d89553d8
+      internalID: -1037488863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_88
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd9c128944d78449b6ca2815d262eaa
+      internalID: 1371905650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_89
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4850983fbcaf3104ba856f90c17577e8
+      internalID: 410936420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_90
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11e5d090979e2846b6d5b2e8c20a400
+      internalID: -678210822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_91
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a430ab773518942a94904788f392db
+      internalID: -648377822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_92
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74b4bc0ad49724479c90617e247e7c7
+      internalID: -96061989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_93
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45613e1c8117704ab95feaf14499c37
+      internalID: -1844719459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_94
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d679c84f760ddbd4a9018bfb3b9b01df
+      internalID: -918015697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_95
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2a99c317e31d8489e321be82fb376d
+      internalID: 1235237825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_96
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1c7f54e2d594a4ba3bcee787b39252
+      internalID: -1200336348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_97
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c31b9908fe629a4f884704cda923f03
+      internalID: 89994430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_98
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c2e0626c9499c42beba89738125495
+      internalID: -819404573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_99
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5f9bedbf90d16449fb5e67699659da
+      internalID: -183939892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_100
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc56d6ed891cb614a9b96cc67404fa33
+      internalID: 1451021946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_101
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76fc794faeeb2243968844693b4f3fe
+      internalID: -2069589794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_102
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a066ed709b6018b439fb40b6093f0ed2
+      internalID: 2044132716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_103
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60115872857c55546a3575f50645ae97
+      internalID: 1935760696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_104
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2667c3d9706d2d64c9647ff800d27157
+      internalID: 405465985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_105
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cad30a3d613af54f823809956533df3
+      internalID: -961697497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_106
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e69556558bb5b4bac28aac20d529fb
+      internalID: 981702267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_107
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1736f3da04d8f9f46b5743d727e591fa
+      internalID: -743963823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_108
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e44f02fcf6ba54483124b4e6116c91
+      internalID: 285985905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_109
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bcd8a8cb2675649908506a678deb72
+      internalID: -1487189869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_110
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77080193f11884e4899b3762fd607c28
+      internalID: 1182303411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_111
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661dd2c26646ec34297e7047e8062e73
+      internalID: -1528014212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_112
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32783c5a96c636348bd4835f2423e799
+      internalID: 1904068692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_113
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1beabaeb74a86744c9f0c1575e297762
+      internalID: -390478733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_114
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d20a6b3e5bfa264dbef4ee1805a862b
+      internalID: -1879298005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_115
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b14cdcd2ccc6949969983a3d385437
+      internalID: 881090205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_116
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb2ab7e537432745989a012db6b0ab4
+      internalID: -652680470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_117
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc941d26f05d8f840a101d4d3ce245fc
+      internalID: -1023837233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_118
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b3a5958198573449edc445e83db2e5
+      internalID: -964788028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_119
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac1c5fa196e5904ca0fba3734a49166
+      internalID: -1554082205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_120
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef21a11218ffbe4b9fb2ff932c8aeef
+      internalID: 1667244052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_121
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042d3af9465508843ae92d2e5b2cccf4
+      internalID: -1247840450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_122
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35377cb26b2f50946aa4192885541eb6
+      internalID: -200339465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_123
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ecc21f014337349a0a6e4305e562c8
+      internalID: 1469919899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_124
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e56a205f65f2b94780ded7a0718c085
+      internalID: 414687233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_125
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78731afb2fc1f6546877ff0899b41717
+      internalID: -1673827474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_126
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d645733d1c0fad145b78a3df40b47d4b
+      internalID: -1428475779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_127
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537fd94ef730bc645a08cc19831d667a
+      internalID: 1185871759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_128
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e054d59ad80eaf45a870270f55ea1a7
+      internalID: 1973574290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_129
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b82e9e1ef71cc429bf6e6afc0cb0dc
+      internalID: 1522621636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_130
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44898933324a364d8922adf9331adf6
+      internalID: 166491690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_131
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b3aa1090b24f446b63b9855f1ed199
+      internalID: 468343995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_132
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661199507b95e004594cf7209fe63b64
+      internalID: 1119627113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_133
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9590911869f0a8e4188a14d8aef8b9be
+      internalID: 1715321364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_134
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddc8d4cf56f88a438494ef1a4169808
+      internalID: 101322107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_135
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24b4b35c9e95b0498113a329cceb0c1
+      internalID: 659700987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_136
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd12323b561687347bb4a85a15f61700
+      internalID: 594536848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_137
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83066e3f5334c3b4baa770b96fdb18fe
+      internalID: 843365196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_138
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a37db4fa09ec584a95f439f9ff903d1
+      internalID: 557728264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_139
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5038edd1dde1b5d4aa6c783085a692db
+      internalID: -1542912426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_140
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08826a18c1e2383459f6b8ef1a8e376f
+      internalID: 1995901188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_141
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fd74c47002b584e9841f642e448b8d
+      internalID: 1442704916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_142
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e51e710d45b1234e9c5ab3332475460
+      internalID: -380305156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_143
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1111951a0280e9540a225080c441b2f2
+      internalID: 260001257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_144
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0709efef67e413f4085d0085e5be3b97
+      internalID: -1026489240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_145
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da3ef2ebba4c894e9d8468de9a7d236
+      internalID: 464666920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_146
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5aebc517a54e5641a52fb1931c7b216
+      internalID: 982075538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_147
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b101980d3363e4a4ab59b79da53d6c23
+      internalID: -1043636524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_148
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146e08f73d81fdd4faaec1d7f0bffa3f
+      internalID: -1775555942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_149
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7547c8197d32f9445ad68d60b55df719
+      internalID: -1900565426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_150
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c4b1169ff31bd42890e08e50325284
+      internalID: -410615012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_151
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d24d959e30a060e41998a5f04a83e054
+      internalID: 77669523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_152
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a994820d50871a44ae665f9d2e0778a
+      internalID: -660017883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_153
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaaa11947ab2434fa0a458ed5ce3ed2
+      internalID: 1446494691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_154
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa26cc712ee16246b3c4cf82a926674
+      internalID: 466352974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_155
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3282a2bbf9d2e724f80d1dac249515a0
+      internalID: 1170411721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_156
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0669aa2cf93ec6b46a0311bfcad214e0
+      internalID: 144412029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_157
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbf3ff15cac8b3448427dca0c3fbe9e
+      internalID: 21062554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_158
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7758143561c95fb48956a841eb5dbf41
+      internalID: -1364734893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_159
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a97ff316d36a64d85c535cdda29dfa
+      internalID: 1170996677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_160
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43dfc3763dfd2b24b8eb31cba86a3fa2
+      internalID: -491139446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_161
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262487dd7ab09824db5d6574ffeb1370
+      internalID: 1147029835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_162
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8946a88e2369d4481967c9f9342bf8
+      internalID: -2644449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_163
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceae40bd4bde09648beff240c925a90f
+      internalID: 1013010764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_164
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18962c2fad80a2b42bb31d5fda3b13e4
+      internalID: 2139505192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_165
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e6b50e520fce14fbd67df5f5c8fe58
+      internalID: -654899013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_166
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5e9eca2efdf07479782115a01d8b72
+      internalID: -180337527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_167
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd96febba6045d147809e4a5ea1d2ae6
+      internalID: -621301922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_168
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4831958a9c6f5145aeedafdf82e1f61
+      internalID: -1316001014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_169
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478d88dba3ecf0b4fbe79560813f410f
+      internalID: 1545219645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd58cef3dc1e6b41b20d63db18d465a
+      internalID: 1571463479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_171
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f77ea3396ab0e4cbf833af19dae4e7
+      internalID: -41101985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_172
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9910de5ca1e0d42805fc3982e351c0
+      internalID: 1350934326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_173
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8356c51e8cefa41a0a190c03866485
+      internalID: 164420949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_174
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591e1d0eee96cd943b5f01b5a0cb9fc5
+      internalID: -221545782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_175
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6905603d0f2734b959e7e9ffd67f96
+      internalID: -1770698039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_176
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f81d8c3769ef944eabf63acb310edc7
+      internalID: -1191725510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_177
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0be4bacdd6a10409472274d8a6ed82
+      internalID: -348081990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_178
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de65cebf792d1044bddeb24b313231e
+      internalID: 268745281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_179
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e1ca6f7e696cc4fa80a43cb3171051
+      internalID: 36201385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_180
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c5034ea54bf3ce4e83ab0a92bf533fc
+      internalID: 1042368384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_181
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1a4ab062f104347bbe39b052a127c2
+      internalID: 986887921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_182
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d373139fab77a4b8f7bc6e4848b128
+      internalID: 1651344541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_183
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6897dd136b23a46a370404dafc023e
+      internalID: -1627145156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_184
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a73db26df820c4a9df1f9cb6fdb863
+      internalID: -1722846400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_185
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2e0a49290c7154183712e54555e6f2
+      internalID: 2032933190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_186
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58c3376b99f49d428a92ab9cab9d206
+      internalID: 439030286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_187
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fbd8fc6605fb94f88e1d10cfdfb077
+      internalID: 1569664940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_188
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f180a878736b304797e22685ef41f39
+      internalID: -462834893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_189
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551e93460de1be443945f5dc1f0f061a
+      internalID: 1869505911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_190
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7981af77d7a07041b4f1310f5a44366
+      internalID: -1327883266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_191
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc218554598e034391248e0cd4c9da0
+      internalID: -1921800543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_192
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442540f357b0d6b4e9c43e00358e5bdb
+      internalID: -1282152924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_193
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70ce5e91528ee34988aa1b29a734396
+      internalID: -623366086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_194
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6269442e81a3942b47bed7348ebcc6
+      internalID: 1094471422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_195
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bb26d581f78a54a9ec8b2093f7cc44
+      internalID: -1230378110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_196
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da42e3494b388f54d9b97bd4f8bac627
+      internalID: -740288389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_197
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ede56cf74cab34ba8d83b767135d2b
+      internalID: 610341661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_198
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77db571611f736241abfbaec5d937a75
+      internalID: -1442751358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_199
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd211ad34a438b940a28657165607732
+      internalID: 1158384121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_200
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d1a629cdc631b4c96c52121fc3ba6c
+      internalID: -1071631481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_201
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a563340173d7d174ab7b606787b0430c
+      internalID: 280009319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_202
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c017527cc83277c41ad34c5c6e30f14a
+      internalID: 107726811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_203
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927af5f55681ca1468bc714596eb3051
+      internalID: 2027193687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_204
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee4dce402e408945b7243431f5e00f4
+      internalID: -1343025765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_205
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c78e13610af18641b52f6729dfe190a
+      internalID: 1462397258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_206
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3da4d7bf1fb89246b62e2cf34f5090f
+      internalID: 1958742301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_207
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8359fd3264991be45b3d876ffa2799bb
+      internalID: -127725768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_208
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec389fa782c4a824c918738bce603594
+      internalID: -540404866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_209
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8154c7bc705162478e6fd9e932086fa
+      internalID: -1271909335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_210
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd98ebe299c63e049b6286c9bd34c73a
+      internalID: -1461817421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_211
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e981d7dea487d4aa981228cc0c6afb
+      internalID: 1907478861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_212
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e5ff6f3d3ad194c8dec9b379fd9b35
+      internalID: 742789402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_213
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4518e699f54fa24eae4017da94fe4ac
+      internalID: -1143768045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_214
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e59f9c7c38e8834f9a06513dde61487
+      internalID: 1744345546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_215
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4841adfe7c9d5f4384a3efc254e4050
+      internalID: 2034085978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_216
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1894d0b067f7ffd4881a056df199afe0
+      internalID: 1895555924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_217
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d104ae14cd9cd449f4ed76398bed2b
+      internalID: -1717354532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_218
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba97a5b084fbe644bd66a5bca60543d
+      internalID: 756376978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_219
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ba634a2b70bf44ebd5c15e84efc553
+      internalID: 342281765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_220
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8fc011c02047944a4aa01f966d2bdc
+      internalID: -2043712735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_221
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bddfbe5187c6504fb30d28e39e8bfec
+      internalID: 2131877820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_222
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b491b8f677c1bc4894ba1e158b58d60
+      internalID: -149264466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_223
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0dcd7c140710947b6b79db96f91222
+      internalID: -1149668584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_224
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf5c3f9720285d40a4e3752f684ced5
+      internalID: 1698677382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_225
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2fc16e8b3934849879a013752ee60a
+      internalID: 1148873610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_226
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b621eefaa5eb8e41a800fb1589eea8a
+      internalID: 190295688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_227
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4380292165aa442bfdefcf7e613310
+      internalID: -1136562113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_228
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a2c1918b119e746874096790ff7220
+      internalID: 1463957816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_229
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749928a545c0ccd49b15b850e50469fd
+      internalID: 751134124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_230
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44d3ccf0db69624e892716eca46f62e
+      internalID: 1229358165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_231
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b03c324866eea4bbfe1051585d3f02
+      internalID: 1030662674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_232
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3abff38ee1e7744798a5daf3ab0b631
+      internalID: -133545328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_233
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cee6a1a26d65944a0478aef8cbfaa1
+      internalID: -1044374620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_234
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0090f54567028c341964fbba8699384b
+      internalID: -714940341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_235
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3137c913d2bca0a41bab990d0824b759
+      internalID: 1749821639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_236
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e486bf1691706594ea322f1e7646f37b
+      internalID: -1205203378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_237
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcb9eba132806c43b6feca2ef9bd082
+      internalID: 1279893365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_238
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89700bd86249bc944a38f4869f1aeadb
+      internalID: -1366604093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_239
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0220841b5ebc984c9da6add42cf079b
+      internalID: 1652462202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_240
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2f4041693c6324fbbc042518133543
+      internalID: 1662821222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_241
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7682dfe950374a24e94b5d43340acbe4
+      internalID: -1610629989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_242
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ea7aef9c33b3d4abab1d7a3d12ed04
+      internalID: 1605620728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_243
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fcd22af91f8dc645929f10182743e6c
+      internalID: 32159528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_244
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50141c5979ea594ba83f9a4abf37e0d
+      internalID: -638848043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_245
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f525f46c89dc0448481a00e3750df6
+      internalID: 476441326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_246
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38baaaa2d389b76409df604648927aec
+      internalID: 689428062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_247
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8923b386442b7f4fb28b78cc5f3c1b7
+      internalID: 1587115925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_248
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0f0fc4de6909149aa21dc66ce5b2e7
+      internalID: 153096085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_249
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526a73bd61430914eaf55606b9536a14
+      internalID: 1229151482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_250
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fe822d633abe44bb302d89ee724a7a
+      internalID: -569570141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_251
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67cf39c025dc4641bede18a0d1ca554
+      internalID: -1822087639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_252
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bd6705c2b7ba14da92b29b54689723
+      internalID: 1544123193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_253
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01dfe36327a1ed47b484dd5b6ee043e
+      internalID: -1494310139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_254
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f53e590aab25f4ab6142d77811c8f8
+      internalID: -1481810704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_255
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db5f2f478b7eb5449739b96db11774b
+      internalID: 1916920070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ConsejoEstabilidad_tutorial_256
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb46dc041f85fd4aa0ed109d36e6611
+      internalID: -690324537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ada11bcb91bdb524b969445ad6c72774
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":17.0,"y":16.0},"gridSpriteSize":{"x":240.0,"y":135.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ConsejoEstabilidad_tutorial_0: -4440394150154176920
+      ConsejoEstabilidad_tutorial_1: -353754736
+      ConsejoEstabilidad_tutorial_10: 171178831
+      ConsejoEstabilidad_tutorial_100: 1451021946
+      ConsejoEstabilidad_tutorial_101: -2069589794
+      ConsejoEstabilidad_tutorial_102: 2044132716
+      ConsejoEstabilidad_tutorial_103: 1935760696
+      ConsejoEstabilidad_tutorial_104: 405465985
+      ConsejoEstabilidad_tutorial_105: -961697497
+      ConsejoEstabilidad_tutorial_106: 981702267
+      ConsejoEstabilidad_tutorial_107: -743963823
+      ConsejoEstabilidad_tutorial_108: 285985905
+      ConsejoEstabilidad_tutorial_109: -1487189869
+      ConsejoEstabilidad_tutorial_11: -725851485
+      ConsejoEstabilidad_tutorial_110: 1182303411
+      ConsejoEstabilidad_tutorial_111: -1528014212
+      ConsejoEstabilidad_tutorial_112: 1904068692
+      ConsejoEstabilidad_tutorial_113: -390478733
+      ConsejoEstabilidad_tutorial_114: -1879298005
+      ConsejoEstabilidad_tutorial_115: 881090205
+      ConsejoEstabilidad_tutorial_116: -652680470
+      ConsejoEstabilidad_tutorial_117: -1023837233
+      ConsejoEstabilidad_tutorial_118: -964788028
+      ConsejoEstabilidad_tutorial_119: -1554082205
+      ConsejoEstabilidad_tutorial_12: -282095792
+      ConsejoEstabilidad_tutorial_120: 1667244052
+      ConsejoEstabilidad_tutorial_121: -1247840450
+      ConsejoEstabilidad_tutorial_122: -200339465
+      ConsejoEstabilidad_tutorial_123: 1469919899
+      ConsejoEstabilidad_tutorial_124: 414687233
+      ConsejoEstabilidad_tutorial_125: -1673827474
+      ConsejoEstabilidad_tutorial_126: -1428475779
+      ConsejoEstabilidad_tutorial_127: 1185871759
+      ConsejoEstabilidad_tutorial_128: 1973574290
+      ConsejoEstabilidad_tutorial_129: 1522621636
+      ConsejoEstabilidad_tutorial_13: 1492022380
+      ConsejoEstabilidad_tutorial_130: 166491690
+      ConsejoEstabilidad_tutorial_131: 468343995
+      ConsejoEstabilidad_tutorial_132: 1119627113
+      ConsejoEstabilidad_tutorial_133: 1715321364
+      ConsejoEstabilidad_tutorial_134: 101322107
+      ConsejoEstabilidad_tutorial_135: 659700987
+      ConsejoEstabilidad_tutorial_136: 594536848
+      ConsejoEstabilidad_tutorial_137: 843365196
+      ConsejoEstabilidad_tutorial_138: 557728264
+      ConsejoEstabilidad_tutorial_139: -1542912426
+      ConsejoEstabilidad_tutorial_14: 1721354359
+      ConsejoEstabilidad_tutorial_140: 1995901188
+      ConsejoEstabilidad_tutorial_141: 1442704916
+      ConsejoEstabilidad_tutorial_142: -380305156
+      ConsejoEstabilidad_tutorial_143: 260001257
+      ConsejoEstabilidad_tutorial_144: -1026489240
+      ConsejoEstabilidad_tutorial_145: 464666920
+      ConsejoEstabilidad_tutorial_146: 982075538
+      ConsejoEstabilidad_tutorial_147: -1043636524
+      ConsejoEstabilidad_tutorial_148: -1775555942
+      ConsejoEstabilidad_tutorial_149: -1900565426
+      ConsejoEstabilidad_tutorial_15: -587638777
+      ConsejoEstabilidad_tutorial_150: -410615012
+      ConsejoEstabilidad_tutorial_151: 77669523
+      ConsejoEstabilidad_tutorial_152: -660017883
+      ConsejoEstabilidad_tutorial_153: 1446494691
+      ConsejoEstabilidad_tutorial_154: 466352974
+      ConsejoEstabilidad_tutorial_155: 1170411721
+      ConsejoEstabilidad_tutorial_156: 144412029
+      ConsejoEstabilidad_tutorial_157: 21062554
+      ConsejoEstabilidad_tutorial_158: -1364734893
+      ConsejoEstabilidad_tutorial_159: 1170996677
+      ConsejoEstabilidad_tutorial_16: -903842786
+      ConsejoEstabilidad_tutorial_160: -491139446
+      ConsejoEstabilidad_tutorial_161: 1147029835
+      ConsejoEstabilidad_tutorial_162: -2644449
+      ConsejoEstabilidad_tutorial_163: 1013010764
+      ConsejoEstabilidad_tutorial_164: 2139505192
+      ConsejoEstabilidad_tutorial_165: -654899013
+      ConsejoEstabilidad_tutorial_166: -180337527
+      ConsejoEstabilidad_tutorial_167: -621301922
+      ConsejoEstabilidad_tutorial_168: -1316001014
+      ConsejoEstabilidad_tutorial_169: 1545219645
+      ConsejoEstabilidad_tutorial_17: 289960402
+      ConsejoEstabilidad_tutorial_170: 1571463479
+      ConsejoEstabilidad_tutorial_171: -41101985
+      ConsejoEstabilidad_tutorial_172: 1350934326
+      ConsejoEstabilidad_tutorial_173: 164420949
+      ConsejoEstabilidad_tutorial_174: -221545782
+      ConsejoEstabilidad_tutorial_175: -1770698039
+      ConsejoEstabilidad_tutorial_176: -1191725510
+      ConsejoEstabilidad_tutorial_177: -348081990
+      ConsejoEstabilidad_tutorial_178: 268745281
+      ConsejoEstabilidad_tutorial_179: 36201385
+      ConsejoEstabilidad_tutorial_18: 386502072
+      ConsejoEstabilidad_tutorial_180: 1042368384
+      ConsejoEstabilidad_tutorial_181: 986887921
+      ConsejoEstabilidad_tutorial_182: 1651344541
+      ConsejoEstabilidad_tutorial_183: -1627145156
+      ConsejoEstabilidad_tutorial_184: -1722846400
+      ConsejoEstabilidad_tutorial_185: 2032933190
+      ConsejoEstabilidad_tutorial_186: 439030286
+      ConsejoEstabilidad_tutorial_187: 1569664940
+      ConsejoEstabilidad_tutorial_188: -462834893
+      ConsejoEstabilidad_tutorial_189: 1869505911
+      ConsejoEstabilidad_tutorial_19: -1681151070
+      ConsejoEstabilidad_tutorial_190: -1327883266
+      ConsejoEstabilidad_tutorial_191: -1921800543
+      ConsejoEstabilidad_tutorial_192: -1282152924
+      ConsejoEstabilidad_tutorial_193: -623366086
+      ConsejoEstabilidad_tutorial_194: 1094471422
+      ConsejoEstabilidad_tutorial_195: -1230378110
+      ConsejoEstabilidad_tutorial_196: -740288389
+      ConsejoEstabilidad_tutorial_197: 610341661
+      ConsejoEstabilidad_tutorial_198: -1442751358
+      ConsejoEstabilidad_tutorial_199: 1158384121
+      ConsejoEstabilidad_tutorial_2: -1440701379
+      ConsejoEstabilidad_tutorial_20: -1079649356
+      ConsejoEstabilidad_tutorial_200: -1071631481
+      ConsejoEstabilidad_tutorial_201: 280009319
+      ConsejoEstabilidad_tutorial_202: 107726811
+      ConsejoEstabilidad_tutorial_203: 2027193687
+      ConsejoEstabilidad_tutorial_204: -1343025765
+      ConsejoEstabilidad_tutorial_205: 1462397258
+      ConsejoEstabilidad_tutorial_206: 1958742301
+      ConsejoEstabilidad_tutorial_207: -127725768
+      ConsejoEstabilidad_tutorial_208: -540404866
+      ConsejoEstabilidad_tutorial_209: -1271909335
+      ConsejoEstabilidad_tutorial_21: -948865609
+      ConsejoEstabilidad_tutorial_210: -1461817421
+      ConsejoEstabilidad_tutorial_211: 1907478861
+      ConsejoEstabilidad_tutorial_212: 742789402
+      ConsejoEstabilidad_tutorial_213: -1143768045
+      ConsejoEstabilidad_tutorial_214: 1744345546
+      ConsejoEstabilidad_tutorial_215: 2034085978
+      ConsejoEstabilidad_tutorial_216: 1895555924
+      ConsejoEstabilidad_tutorial_217: -1717354532
+      ConsejoEstabilidad_tutorial_218: 756376978
+      ConsejoEstabilidad_tutorial_219: 342281765
+      ConsejoEstabilidad_tutorial_22: 8478129
+      ConsejoEstabilidad_tutorial_220: -2043712735
+      ConsejoEstabilidad_tutorial_221: 2131877820
+      ConsejoEstabilidad_tutorial_222: -149264466
+      ConsejoEstabilidad_tutorial_223: -1149668584
+      ConsejoEstabilidad_tutorial_224: 1698677382
+      ConsejoEstabilidad_tutorial_225: 1148873610
+      ConsejoEstabilidad_tutorial_226: 190295688
+      ConsejoEstabilidad_tutorial_227: -1136562113
+      ConsejoEstabilidad_tutorial_228: 1463957816
+      ConsejoEstabilidad_tutorial_229: 751134124
+      ConsejoEstabilidad_tutorial_23: 315988737
+      ConsejoEstabilidad_tutorial_230: 1229358165
+      ConsejoEstabilidad_tutorial_231: 1030662674
+      ConsejoEstabilidad_tutorial_232: -133545328
+      ConsejoEstabilidad_tutorial_233: -1044374620
+      ConsejoEstabilidad_tutorial_234: -714940341
+      ConsejoEstabilidad_tutorial_235: 1749821639
+      ConsejoEstabilidad_tutorial_236: -1205203378
+      ConsejoEstabilidad_tutorial_237: 1279893365
+      ConsejoEstabilidad_tutorial_238: -1366604093
+      ConsejoEstabilidad_tutorial_239: 1652462202
+      ConsejoEstabilidad_tutorial_24: -2143507352
+      ConsejoEstabilidad_tutorial_240: 1662821222
+      ConsejoEstabilidad_tutorial_241: -1610629989
+      ConsejoEstabilidad_tutorial_242: 1605620728
+      ConsejoEstabilidad_tutorial_243: 32159528
+      ConsejoEstabilidad_tutorial_244: -638848043
+      ConsejoEstabilidad_tutorial_245: 476441326
+      ConsejoEstabilidad_tutorial_246: 689428062
+      ConsejoEstabilidad_tutorial_247: 1587115925
+      ConsejoEstabilidad_tutorial_248: 153096085
+      ConsejoEstabilidad_tutorial_249: 1229151482
+      ConsejoEstabilidad_tutorial_25: 316813319
+      ConsejoEstabilidad_tutorial_250: -569570141
+      ConsejoEstabilidad_tutorial_251: -1822087639
+      ConsejoEstabilidad_tutorial_252: 1544123193
+      ConsejoEstabilidad_tutorial_253: -1494310139
+      ConsejoEstabilidad_tutorial_254: -1481810704
+      ConsejoEstabilidad_tutorial_255: 1916920070
+      ConsejoEstabilidad_tutorial_256: -690324537
+      ConsejoEstabilidad_tutorial_26: 204970648
+      ConsejoEstabilidad_tutorial_27: -145815984
+      ConsejoEstabilidad_tutorial_28: 244231780
+      ConsejoEstabilidad_tutorial_29: 1353432953
+      ConsejoEstabilidad_tutorial_3: 1596411432
+      ConsejoEstabilidad_tutorial_30: -1027714113
+      ConsejoEstabilidad_tutorial_31: 1039145635
+      ConsejoEstabilidad_tutorial_32: -901993722
+      ConsejoEstabilidad_tutorial_33: -1173912726
+      ConsejoEstabilidad_tutorial_34: 1632712698
+      ConsejoEstabilidad_tutorial_35: 2051376870
+      ConsejoEstabilidad_tutorial_36: 1090446223
+      ConsejoEstabilidad_tutorial_37: 544899639
+      ConsejoEstabilidad_tutorial_38: -1461679657
+      ConsejoEstabilidad_tutorial_39: -591248426
+      ConsejoEstabilidad_tutorial_4: 1391426623
+      ConsejoEstabilidad_tutorial_40: -1433840548
+      ConsejoEstabilidad_tutorial_41: 1114570085
+      ConsejoEstabilidad_tutorial_42: 817559805
+      ConsejoEstabilidad_tutorial_43: 589420544
+      ConsejoEstabilidad_tutorial_44: 1995391792
+      ConsejoEstabilidad_tutorial_45: -1808430409
+      ConsejoEstabilidad_tutorial_46: 2079787002
+      ConsejoEstabilidad_tutorial_47: 1353618242
+      ConsejoEstabilidad_tutorial_48: -1584070636
+      ConsejoEstabilidad_tutorial_49: 1388346766
+      ConsejoEstabilidad_tutorial_5: -1642233168
+      ConsejoEstabilidad_tutorial_50: -511781075
+      ConsejoEstabilidad_tutorial_51: 965443610
+      ConsejoEstabilidad_tutorial_52: 1612543541
+      ConsejoEstabilidad_tutorial_53: 1333542918
+      ConsejoEstabilidad_tutorial_54: 1618620311
+      ConsejoEstabilidad_tutorial_55: 496276404
+      ConsejoEstabilidad_tutorial_56: -1357656235
+      ConsejoEstabilidad_tutorial_57: -2068125626
+      ConsejoEstabilidad_tutorial_58: -242065876
+      ConsejoEstabilidad_tutorial_59: -1217679404
+      ConsejoEstabilidad_tutorial_6: -2136413399
+      ConsejoEstabilidad_tutorial_60: 1028395811
+      ConsejoEstabilidad_tutorial_61: -1853562115
+      ConsejoEstabilidad_tutorial_62: 2062808004
+      ConsejoEstabilidad_tutorial_63: 1863939957
+      ConsejoEstabilidad_tutorial_64: -1593018341
+      ConsejoEstabilidad_tutorial_65: 125219596
+      ConsejoEstabilidad_tutorial_66: 308765523
+      ConsejoEstabilidad_tutorial_67: 1303364415
+      ConsejoEstabilidad_tutorial_68: 1008828517
+      ConsejoEstabilidad_tutorial_69: -591848621
+      ConsejoEstabilidad_tutorial_7: 544802757
+      ConsejoEstabilidad_tutorial_70: 659781564
+      ConsejoEstabilidad_tutorial_71: 855493665
+      ConsejoEstabilidad_tutorial_72: 2009744297
+      ConsejoEstabilidad_tutorial_73: 1964571465
+      ConsejoEstabilidad_tutorial_74: -380691639
+      ConsejoEstabilidad_tutorial_75: 1382699489
+      ConsejoEstabilidad_tutorial_76: -1645163168
+      ConsejoEstabilidad_tutorial_77: -2936300
+      ConsejoEstabilidad_tutorial_78: -2133884871
+      ConsejoEstabilidad_tutorial_79: 483030913
+      ConsejoEstabilidad_tutorial_8: 1080076171
+      ConsejoEstabilidad_tutorial_80: -2063496087
+      ConsejoEstabilidad_tutorial_81: 1959069770
+      ConsejoEstabilidad_tutorial_82: -1305524748
+      ConsejoEstabilidad_tutorial_83: -1913793247
+      ConsejoEstabilidad_tutorial_84: 311971280
+      ConsejoEstabilidad_tutorial_85: -829184128
+      ConsejoEstabilidad_tutorial_86: 323452565
+      ConsejoEstabilidad_tutorial_87: -1037488863
+      ConsejoEstabilidad_tutorial_88: 1371905650
+      ConsejoEstabilidad_tutorial_89: 410936420
+      ConsejoEstabilidad_tutorial_9: 1233570119
+      ConsejoEstabilidad_tutorial_90: -678210822
+      ConsejoEstabilidad_tutorial_91: -648377822
+      ConsejoEstabilidad_tutorial_92: -96061989
+      ConsejoEstabilidad_tutorial_93: -1844719459
+      ConsejoEstabilidad_tutorial_94: -918015697
+      ConsejoEstabilidad_tutorial_95: 1235237825
+      ConsejoEstabilidad_tutorial_96: -1200336348
+      ConsejoEstabilidad_tutorial_97: 89994430
+      ConsejoEstabilidad_tutorial_98: -819404573
+      ConsejoEstabilidad_tutorial_99: -183939892
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

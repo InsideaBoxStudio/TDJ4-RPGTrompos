@@ -5,6 +5,7 @@ public class CheckPlayerTurn : MonoBehaviour
 {
     // titulo para SerializeField
     [Header("Player")]
+    [SerializeField] private int playersIndex = 0;
     [SerializeField] private Rigidbody2D playersRb;
     [SerializeField] public GameObject playersOptions;
     [SerializeField] private EnergyCounter energyCounter;
@@ -16,6 +17,7 @@ public class CheckPlayerTurn : MonoBehaviour
     [SerializeField] private float maxVelocityTurn = 1f; // velocidad maxima en la que el jugador debe estar para comenzar su turno
     private float maxVelTurn;
     [SerializeField] private CountDownRPG countDownRPG;
+    [SerializeField] public float maxWaitTime = 3; // tiempo maximo de espera para que el jugador pueda tomar su turno
     [SerializeField] private int energyGainPerTurn = 1;
 
     private bool isTurnPosible = true;
@@ -57,6 +59,10 @@ public class CheckPlayerTurn : MonoBehaviour
         // Incluye objetos inactivos por si el personaje de la CPU se activa más tarde
         // (sistema de selección de personajes).
         modoIA = FindFirstObjectByType<AIBrain>(FindObjectsInactive.Include) != null;
+        if (maxWaitTime <= 0f)
+        {
+            maxWaitTime = PlayerSettings.maxWaitTime[playersIndex];
+        }
     }
 
     void Update()
@@ -105,7 +111,7 @@ public class CheckPlayerTurn : MonoBehaviour
     public void Ready()
     {
         energyCounter.ChangeEnergy(energyGainPerTurn, "GainEnergy");
-        //Debug.Log("Turno del jugador" + gameObject.name);
+        Debug.Log("countDownRPG.countDownTime " + playersIndex + ": " + countDownRPG.countDownTime);
         isTurnActive = true;
         playersOptions.SetActive(true);
         countDownRPG.isCountingDown = true;
@@ -113,11 +119,15 @@ public class CheckPlayerTurn : MonoBehaviour
 
     public void PlayerChoseAnAction(float nextTurnTime, float maxVelocityNextTurn, bool isAdditionalTime)
     {
-
-        Debug.Log("timeUntilNextTurn: " + timeUntilNextTurn);
+        if (controladoPorIA)
+        {
+            nextTurnTime *= 3f;
+        }
+        
         maxVelocityNextTurn = 1000;
         turnTime = timeUntilNextTurn;
         turnTime += nextTurnTime;
+        turnTime = Mathf.Clamp(turnTime, 0f, maxWaitTime);
 
         /*
         if (isAdditionalTime)
