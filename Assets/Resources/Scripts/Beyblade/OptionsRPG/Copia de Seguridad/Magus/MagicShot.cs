@@ -21,7 +21,7 @@ public class MagicShot: MonoBehaviour, IAIAction
     // El disparo mágico es el especial BÁSICO del Magus: la IA lo usa en toda dificultad.
     [SerializeField] private bool esEspecialFuerte = false;
 
-    private GameObject playerObject;
+    [SerializeField] private GameObject playerObject;
 
     // El playerIndex sale del PlayerIdentity del trompo (ver PlayerIdentity.cs).
     // Si el trompo todavia no lo tiene, queda el valor serializado de siempre.

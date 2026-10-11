@@ -16,7 +16,7 @@ public class InvokeRotateOrbs : MonoBehaviour, IAIAction
     // Especial FUERTE (cuesta 4): solo la dificultad Difícil lo usa siempre.
     [SerializeField] private bool esEspecialFuerte = true;
 
-    private GameObject[] players;
+    [SerializeField] private GameObject[] players;
 
     // Se resuelve en Start (no en Awake): el AIBrain reescribe playerIndex durante
     // su propio Awake y el orden entre Awakes no está garantizado. Todos los Awake
@@ -25,10 +25,8 @@ public class InvokeRotateOrbs : MonoBehaviour, IAIAction
     {
         playerIndex = PlayerIdentity.Resolve(this, playerIndex);
 
-        players = GameObject
-            .FindGameObjectsWithTag("Player")
-            .OrderBy(go => go.name)
-            .ToArray();
+        players = new GameObject[2];
+        players[playerIndex] = PlayerSettings.player[playerIndex]; 
 
         if (playerIndex < players.Length)
             rpgTurn = players[playerIndex].GetComponent<CheckPlayerTurn>();
@@ -54,8 +52,7 @@ public class InvokeRotateOrbs : MonoBehaviour, IAIAction
     // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
     public int EnergyCost => energyCost;
     public bool IsStrong => esEspecialFuerte;
-    public bool CanExecute() => rpgTurn != null && energyCounter != null
-        && energyCounter.currentEnergy >= energyCost;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null && energyCounter.currentEnergy >= energyCost;
     public void Execute() => DoProtectiveOrbs();
 
     // Llamable por el jugador (joystick) Y por la IA (AIBrain).
@@ -66,6 +63,15 @@ public class InvokeRotateOrbs : MonoBehaviour, IAIAction
         rpgTurn.PlayerChoseAnAction(moveDuration, 3f, false);
 
         GameObject instantiatedOrbs = Instantiate(OrbPrefab);
+        
+        if (players.Length <= playerIndex)
+        {
+            players = new GameObject[playerIndex + 1];
+            players[playerIndex] = PlayerSettings.player[playerIndex]; 
+        }
+
+        Debug.Log("players[playerIndex]: " + playerIndex);
+        Debug.Log("players.Length: " + players.Length);
         instantiatedOrbs.transform.SetParent(players[playerIndex].transform);
         instantiatedOrbs.transform.position = players[playerIndex].transform.position;
 

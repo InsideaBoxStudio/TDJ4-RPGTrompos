@@ -1312,6 +1312,7 @@ MonoBehaviour:
   playersOptions: {fileID: 456577747}
   energyCounter: {fileID: 1741635320}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 0
@@ -13452,6 +13453,7 @@ MonoBehaviour:
   playersOptions: {fileID: 1686156665}
   energyCounter: {fileID: 1332804366}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 3
@@ -18564,7 +18566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSpriteButton
   updateImage: 0
-  playerIndex: 0
+  playerIndex: 1
   buttonImage: {fileID: 185562109}
   buttonSprite: {fileID: 0}
   buttonType: 2
@@ -19033,7 +19035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &200243836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19049,13 +19051,13 @@ MonoBehaviour:
   playerIndex: 1
   layerSprite: {fileID: 21300000, guid: 987126d2ad1e3624fbccfc18f2e6fdf3, type: 3}
   attackOptionsPrefabs:
-  - {fileID: 2850021845802316316, guid: 2cbe91d0bc17ba547a24b535366b3304, type: 3}
-  - {fileID: 5114844534089548324, guid: 6f66e8879b07913409a2fe194e71ab58, type: 3}
-  - {fileID: 8060378796720072480, guid: f8820a836868504488bd8ad1dbf06df6, type: 3}
-  - {fileID: 5614752747601795855, guid: 7eb126fedd6f42b469b6d8c372b68ba1, type: 3}
+  - {fileID: 2850021845802316316, guid: 629db19d1927f8849b7fdfe53289e521, type: 3}
+  - {fileID: 5114844534089548324, guid: bc71f084a7eb4a440901b49cd9e2b4d0, type: 3}
+  - {fileID: 8060378796720072480, guid: 2e34195a3cbef8240bbaf4140743f782, type: 3}
+  - {fileID: 5614752747601795855, guid: 02f851e8b01e808409f78feb7deca6ba, type: 3}
   specialOptionsPrefabs:
-  - {fileID: 6887830578771854043, guid: eb3967bd35dee6f4ca0e5b91fba00212, type: 3}
-  - {fileID: 7216221692050360425, guid: 309f2b14034a5e04c9bb18a6872a10ad, type: 3}
+  - {fileID: 6887830578771854043, guid: bec5fabefe9921c4bb476364604e03f9, type: 3}
+  - {fileID: 7216221692050360425, guid: 18f24f113d466ac4894409350e3f64f4, type: 3}
   heaviness: 8
   health: 90
   maxWaitTime: 3
@@ -24061,6 +24063,7 @@ MonoBehaviour:
   playersOptions: {fileID: 1345657985}
   energyCounter: {fileID: 842503160}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 3
@@ -31763,7 +31766,6 @@ GameObject:
   - component: {fileID: 500684816}
   - component: {fileID: 500684821}
   - component: {fileID: 500684820}
-  - component: {fileID: 500684819}
   - component: {fileID: 500684818}
   - component: {fileID: 500684817}
   m_Layer: 5
@@ -31805,7 +31807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSpriteButton
   updateImage: 0
-  playerIndex: 0
+  playerIndex: 1
   buttonImage: {fileID: 500684820}
   buttonSprite: {fileID: 0}
   buttonType: 1
@@ -31824,26 +31826,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 20, y: -23}
   m_UseGraphicAlpha: 0
---- !u!114 &500684819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500684815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7a8609ebcb4a24b8f521e859e5a551, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovementOption
-  Prompter: {fileID: 1078147527}
-  rpgTurn: {fileID: 61699220}
-  energyCounter: {fileID: 1741635320}
-  rb: {fileID: 61699221}
-  playerIndex: 0
-  energyCost: 1
-  moveSpeed: 6
-  moveDuration: 0.5
 --- !u!114 &500684820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38295,6 +38277,7 @@ MonoBehaviour:
   playersOptions: {fileID: 1733135616}
   energyCounter: {fileID: 819220639}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 0
@@ -44517,6 +44500,7 @@ MonoBehaviour:
   energyCost: 4
   moveDuration: 2
   esEspecialFuerte: 1
+  players: []
 --- !u!114 &795810577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44537,6 +44521,9 @@ MonoBehaviour:
   energyCost: 4
   moveSpeed: 3
   esEspecialFuerte: 1
+  rpgTurn: {fileID: 0}
+  players: []
+  instantiateMagicTurret: {fileID: 0}
 --- !u!114 &795810578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44561,6 +44548,7 @@ MonoBehaviour:
   moveDuration: 0.5
   Recoil: 1
   esEspecialFuerte: 0
+  playerObject: {fileID: 0}
 --- !u!1 &803574344
 GameObject:
   m_ObjectHideFlags: 0
@@ -49142,10 +49130,10 @@ MonoBehaviour:
   nintendoButtonEast: {fileID: -5331335319782994297, guid: 7bb9880433731744486765e984df690b, type: 3}
   nintendoButtonWest: {fileID: 1802789682893428954, guid: 4a5104276a918894f9506760dad0e2bc, type: 3}
   nintendoButtonNorth: {fileID: -2819826207962336372, guid: 0426c49a922cdb347a17c1a969c9b583, type: 3}
-  keyboardButtonSouth: {fileID: 8810427808921172602, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
-  keyboardButtonEast: {fileID: -41487745693597185, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonSouth: {fileID: -2762490669450497885, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonEast: {fileID: 7996121578558630571, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
   keyboardButtonWest: {fileID: 6935026963976880266, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
-  keyboardButtonNorth: {fileID: 6841239326778661734, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonNorth: {fileID: 7940797479791744602, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
   genericButtonSouth: {fileID: -1753562884466354025, guid: 924a8000cd57c0d4e80182cb1c4773f3, type: 3}
   genericButtonEast: {fileID: 7142519560363098256, guid: d999a781f1aed93479a11bc94ba7d3c8, type: 3}
   genericButtonWest: {fileID: 3797299000033533846, guid: 6f73112aefc4e2c4382f8686b62e533b, type: 3}
@@ -49851,7 +49839,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3795547789189819144, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1927082436}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7895771926199071776, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 967353789}
   m_SourcePrefab: {fileID: 100100000, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
 --- !u!224 &967353785 stripped
 RectTransform:
@@ -49863,6 +49854,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3795547789189819144, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
   m_PrefabInstance: {fileID: 967353784}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &967353787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7895771926199071776, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
+  m_PrefabInstance: {fileID: 967353784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &967353788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3638726632731361598, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
+  m_PrefabInstance: {fileID: 967353784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967353787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &967353789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967353787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c617e81d90f414193b2d0ab37e5a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeSpriteButton
+  updateImage: 0
+  playerIndex: 1
+  buttonImage: {fileID: 967353788}
+  buttonSprite: {fileID: 0}
+  buttonType: 0
 --- !u!1 &970993634
 GameObject:
   m_ObjectHideFlags: 0
@@ -50780,6 +50804,7 @@ MonoBehaviour:
   playersOptions: {fileID: 1099303144}
   energyCounter: {fileID: 1130093692}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 3
@@ -68039,8 +68064,6 @@ GameObject:
   - component: {fileID: 1119386374}
   - component: {fileID: 1119386380}
   - component: {fileID: 1119386379}
-  - component: {fileID: 1119386378}
-  - component: {fileID: 1119386377}
   - component: {fileID: 1119386376}
   - component: {fileID: 1119386375}
   m_Layer: 5
@@ -68082,7 +68105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSpriteButton
   updateImage: 0
-  playerIndex: 0
+  playerIndex: 1
   buttonImage: {fileID: 1119386379}
   buttonSprite: {fileID: 0}
   buttonType: 0
@@ -68101,41 +68124,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.7490196}
   m_EffectDistance: {x: 20, y: -23}
   m_UseGraphicAlpha: 0
---- !u!114 &1119386377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119386373}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 5, y: -5}
-  m_UseGraphicAlpha: 1
---- !u!114 &1119386378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119386373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d7a8609ebcb4a24b8f521e859e5a551, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovementOption
-  Prompter: {fileID: 1078147527}
-  rpgTurn: {fileID: 61699220}
-  energyCounter: {fileID: 1741635320}
-  rb: {fileID: 61699221}
-  playerIndex: 0
-  energyCost: 1
-  moveSpeed: 6
-  moveDuration: 0.5
 --- !u!114 &1119386379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69446,6 +69434,7 @@ MonoBehaviour:
   moveDuration: 0.5
   Recoil: 1
   esEspecialFuerte: 0
+  playerObject: {fileID: 0}
 --- !u!1 &1185896683
 GameObject:
   m_ObjectHideFlags: 0
@@ -86457,6 +86446,7 @@ MonoBehaviour:
   playersOptions: {fileID: 1472840956}
   energyCounter: {fileID: 1917858586}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 3
@@ -106715,6 +106705,7 @@ MonoBehaviour:
   playersOptions: {fileID: 12125294}
   energyCounter: {fileID: 722704008}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 3
@@ -114633,7 +114624,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3795547789189819144, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
       insertIndex: -1
       addedObject: {fileID: 99661399}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7895771926199071776, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1663470853}
   m_SourcePrefab: {fileID: 100100000, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
 --- !u!224 &1663470850 stripped
 RectTransform:
@@ -114645,6 +114639,28 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3795547789189819144, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
   m_PrefabInstance: {fileID: 1663470849}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1663470852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7895771926199071776, guid: 84580fa91d2b4db4ba6dbef75e07a398, type: 3}
+  m_PrefabInstance: {fileID: 1663470849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1663470853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663470852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c617e81d90f414193b2d0ab37e5a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeSpriteButton
+  updateImage: 0
+  playerIndex: 0
+  buttonImage: {fileID: 967353788}
+  buttonSprite: {fileID: 0}
+  buttonType: 0
 --- !u!1 &1666120739
 GameObject:
   m_ObjectHideFlags: 0
@@ -127229,7 +127245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeSpriteButton
   updateImage: 0
-  playerIndex: 0
+  playerIndex: 1
   buttonImage: {fileID: 1988514785}
   buttonSprite: {fileID: 0}
   buttonType: 3
@@ -141335,6 +141351,7 @@ MonoBehaviour:
   playersOptions: {fileID: 1149026553}
   energyCounter: {fileID: 2052786185}
   rpgTurn: {fileID: 2097228477}
+  firstTurnTime: 2
   maxVelocityTurn: 0.5
   countDownRPG: {fileID: 368004130}
   maxWaitTime: 3

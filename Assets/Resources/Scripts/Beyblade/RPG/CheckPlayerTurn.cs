@@ -14,13 +14,14 @@ public class CheckPlayerTurn : MonoBehaviour
     [Header("")]
 
     [Header("Turn Settings")]
+    [SerializeField] private float firstTurnTime = 2f;
     [SerializeField] private float maxVelocityTurn = 1f; // velocidad maxima en la que el jugador debe estar para comenzar su turno
     private float maxVelTurn;
     [SerializeField] private CountDownRPG countDownRPG;
     [SerializeField] public float maxWaitTime = 3; // tiempo maximo de espera para que el jugador pueda tomar su turno
     [SerializeField] private int energyGainPerTurn = 1;
 
-    private bool isTurnPosible = true;
+    private bool isTurnPosible = false;
     public bool isTurnActive = false;
     public float turnTime = 0f;
 
@@ -40,17 +41,18 @@ public class CheckPlayerTurn : MonoBehaviour
 
     void Awake()
     {
-        PlayerChoseAnAction(2f, 1000f, false);
-        Time.timeScale = 0f;
+        // Al comenzar, el jugador puede intentar tomar su primer turno
+        isTurnPosible = false;
+        isTurnActive = false;
+
         maxVelTurn = maxVelocityTurn;
 
-        // Un prefab NO puede guardar referencias a objetos de la escena: al colocar
-        // una instancia, estos dos campos vienen vacíos. Como hay uno solo de cada
-        // uno por escena, los buscamos acá. Así el trompo puede ser un prefab sin
-        // que haya que recablear nada a mano en cada instancia.
-        // Si están asignados en el Inspector (escenas viejas), se respetan.
-        if (rpgTurn == null) rpgTurn = FindFirstObjectByType<RPGTurn>();
-        if (countDownRPG == null) countDownRPG = FindFirstObjectByType<CountDownRPG>();
+        // Buscar referencias si no fueron asignadas en el Inspector
+        if (rpgTurn == null)
+            rpgTurn = FindFirstObjectByType<RPGTurn>();
+
+        if (countDownRPG == null)
+            countDownRPG = FindFirstObjectByType<CountDownRPG>();
     }
 
     void Start()
@@ -63,6 +65,8 @@ public class CheckPlayerTurn : MonoBehaviour
         {
             maxWaitTime = PlayerSettings.maxWaitTime[playersIndex];
         }
+
+        Invoke("NextTurnTime", firstTurnTime);
     }
 
     void Update()
@@ -111,7 +115,6 @@ public class CheckPlayerTurn : MonoBehaviour
     public void Ready()
     {
         energyCounter.ChangeEnergy(energyGainPerTurn, "GainEnergy");
-        Debug.Log("countDownRPG.countDownTime " + playersIndex + ": " + countDownRPG.countDownTime);
         isTurnActive = true;
         playersOptions.SetActive(true);
         countDownRPG.isCountingDown = true;

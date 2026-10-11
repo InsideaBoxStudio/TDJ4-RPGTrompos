@@ -15,11 +15,11 @@ public class ListOfTips : MonoBehaviour
 
     void Update()
     {
-        if (Gamepad.all[0].leftShoulder.wasPressedThisFrame) // reemplazar por InputSystem
+        if (Gamepad.all.Count > 1 && Gamepad.all[0].leftShoulder.wasPressedThisFrame) // reemplazar por InputSystem
         {
             PreviousTip();
         }
-        else if (Gamepad.all[0].rightShoulder.wasPressedThisFrame) // reemplazar por InputSystem
+        else if (Gamepad.all.Count > 1 && Gamepad.all[0].rightShoulder.wasPressedThisFrame) // reemplazar por InputSystem
         {
             NextTip();
         }

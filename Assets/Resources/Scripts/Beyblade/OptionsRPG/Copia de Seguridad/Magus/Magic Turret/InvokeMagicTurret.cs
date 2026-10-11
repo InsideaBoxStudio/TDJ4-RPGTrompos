@@ -17,9 +17,9 @@ public class InvokeMagicTurret : MonoBehaviour, IAIAction
     // Especial FUERTE (cuesta 4): solo la dificultad Difícil lo usa siempre.
     [SerializeField] private bool esEspecialFuerte = true;
 
-    private CheckPlayerTurn rpgTurn;
-    private GameObject[] players;
-    private GameObject instantiateMagicTurret;
+    [SerializeField] private CheckPlayerTurn rpgTurn;
+    [SerializeField] private GameObject[] players;
+    [SerializeField] private GameObject instantiateMagicTurret;
 
     // Se resuelve en Start (no en Awake): el AIBrain reescribe playerIndex durante
     // su propio Awake y el orden entre Awakes no está garantizado. Todos los Awake
@@ -59,8 +59,7 @@ public class InvokeMagicTurret : MonoBehaviour, IAIAction
     // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
     public int EnergyCost => energyCost;
     public bool IsStrong => esEspecialFuerte;
-    public bool CanExecute() => rpgTurn != null && energyCounter != null
-        && energyCounter.currentEnergy >= energyCost;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null && energyCounter.currentEnergy >= energyCost;
     public void Execute() => DoMagicTurret();
 
     // Llamable por el jugador (joystick) Y por la IA (AIBrain).

@@ -7419,6 +7419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762778151}
   - component: {fileID: 1762778149}
+  - component: {fileID: 1762778152}
   m_Layer: 0
   m_Name: Configs
   m_TagString: Untagged
@@ -7455,6 +7456,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762778152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762778148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12751e079b898ec4481afaeba09d33a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  musicSources: []
+  soundSources:
+  - {fileID: 42310357}
+  generalPower: 100
+  musicPower: 100
+  soundPower: 100
 --- !u!1 &1763264295
 GameObject:
   m_ObjectHideFlags: 0
@@ -9444,10 +9463,10 @@ MonoBehaviour:
   nintendoButtonEast: {fileID: -5331335319782994297, guid: 7bb9880433731744486765e984df690b, type: 3}
   nintendoButtonWest: {fileID: 1802789682893428954, guid: 4a5104276a918894f9506760dad0e2bc, type: 3}
   nintendoButtonNorth: {fileID: -2819826207962336372, guid: 0426c49a922cdb347a17c1a969c9b583, type: 3}
-  keyboardButtonSouth: {fileID: 8810427808921172602, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
-  keyboardButtonEast: {fileID: -41487745693597185, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
-  keyboardButtonWest: {fileID: 6935026963976880266, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
-  keyboardButtonNorth: {fileID: 6841239326778661734, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonSouth: {fileID: -8693772196486708863, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonEast: {fileID: 6841239326778661734, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonWest: {fileID: 8810427808921172602, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonNorth: {fileID: -1333745913900609359, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
   genericButtonSouth: {fileID: -1753562884466354025, guid: 924a8000cd57c0d4e80182cb1c4773f3, type: 3}
   genericButtonEast: {fileID: 7142519560363098256, guid: d999a781f1aed93479a11bc94ba7d3c8, type: 3}
   genericButtonWest: {fileID: 3797299000033533846, guid: 6f73112aefc4e2c4382f8686b62e533b, type: 3}

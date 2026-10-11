@@ -39,49 +39,60 @@ public class Prompter : MonoBehaviour
 
     void Update()
     {
-        // actualizar estado del turno SIEMPRE
+        // Actualizar estado del turno SIEMPRE
         bool turnActive = false;
-        if (rpgTurn) {
+
+        if (rpgTurn)
+        {
             turnActive = rpgTurn.isTurnActive;
         }
 
-        // verificar que exista el gamepad
-        if (Gamepad.all.Count > playerIndex)
+        // ============================
+        // INPUT DE APUNTADO
+        // ============================
+
+        // Player 1 puede usar WASD si hay menos de 2 joysticks
+        if (Gamepad.all.Count == playerIndex)
+        {
+            input = ApuntarWASD();
+        }
+        // Si hay joystick disponible para este jugador
+        else if (Gamepad.all.Count > playerIndex)
         {
             input = Gamepad.all[playerIndex].rightStick.ReadValue();
         }
-
-        // >>> TECLADO <<< si se toca WASD/IJKL, apuntar con el teclado
-        Vector2 teclas = TeclasJugador.Apuntar(playerIndex);
-        if (teclas != Vector2.zero) input = teclas;
-        // <<< TECLADO <<<
-
-        if (turnActive && input != Vector2.zero)
+        else
         {
-            if (input.magnitude >= 0.95f)
-            {
-                // Obtener direcciones de la cámara
-                Vector3 camForward = cam.transform.up;     // eje Y de la cámara en 2D
-                Vector3 camRight = cam.transform.right;    // eje X de la cámara
-
-                // Convertir input a dirección en mundo
-                Vector3 moveDir = camRight * input.x + camForward * input.y;
-
-                // Calcular ángulo
-                angle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg;
-            }
-        }
-        else if (!turnActive)
-        {
-            // Si todavía no encontró al rival (se activó tarde), reintentar.
-            if (pointerPlayer == null) BuscarRival();
-            if (pointerPlayer != null)
-            {
-                Vector2 direction = (pointerPlayer.transform.position - transform.position).normalized;
-                angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            }
+            input = Vector2.zero;
         }
 
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        // ============================
+        // ROTACIÓN
+        // ============================
+
+        if (input != Vector2.zero)
+        {
+            angle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
+        }
+    }
+
+    private Vector2 ApuntarWASD()
+    {
+        Vector2 inputTeclado = Vector2.zero;
+
+        if (Keyboard.current.wKey.isPressed)
+            inputTeclado.y += 1;
+
+        if (Keyboard.current.sKey.isPressed)
+            inputTeclado.y -= 1;
+
+        if (Keyboard.current.dKey.isPressed)
+            inputTeclado.x += 1;
+
+        if (Keyboard.current.aKey.isPressed)
+            inputTeclado.x -= 1;
+
+        return inputTeclado.normalized;
     }
 }

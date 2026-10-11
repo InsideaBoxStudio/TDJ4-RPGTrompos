@@ -18,7 +18,7 @@ public class ExpandMenu2 : MonoBehaviour
     void Update()
     {
         if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonEast.isPressed)
-            || TeclasJugador.Menu2(playerIndex))) // >>> TECLADO <<<
+            || (Gamepad.all.Count == playerIndex && Keyboard.current.vKey.isPressed))) // >>> TECLADO <<<
         {
             menuToExpand.SetActive(true);
         }

@@ -17,7 +17,7 @@ public class EnergyCounter : MonoBehaviour
     [Header("Generación automática")]
     public GameObject energiaPrefab;
 
-    void Start()
+    void Awake()
     {
         // Buscar los hijos existentes
         energias.Clear();
@@ -34,8 +34,6 @@ public class EnergyCounter : MonoBehaviour
         }
         else
         {
-            // Si ya existen hijos, mantener el funcionamiento anterior.
-            // La energía inicial sigue siendo currentEnergy.
             currentEnergy = Mathf.Clamp(currentEnergy, 0, energias.Count);
         }
 
