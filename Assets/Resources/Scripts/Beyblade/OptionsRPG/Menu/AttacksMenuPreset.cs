@@ -8,8 +8,23 @@ public class AttacksMenuPreset : MonoBehaviour
     public int buttonState = -1; // Estado de los botones (0 = BotonArriba; 1 = BotonDerecha; 2 = BotonIzquierda; 3 = BotonAbajo)
     [SerializeField] private GameObject[] attackOptionsPrefabs;
 
+    // La CPU (AIBrain) crea sus propios menús de ataques y los marca con esto: el menú
+    // arma sus opciones igual, pero NO lee ni el joystick ni el teclado. Sin esto, la CPU
+    // (jugador 2) tomaría las flechas del teclado y los ataques se dispararían cuando el
+    // jugador humano mueve su propio menú.
+    [HideInInspector] public bool controladoPorIA = false;
+
     private GameObject[] optionReference;
     private Gamepad gamepad;
+
+    // Lo llama la IA justo después de crear el componente (antes de su Start): le dice de
+    // qué jugador es y si es el menú de Especiales o el de Ataques.
+    public void ConfigurarParaIA(int jugador, bool especial)
+    {
+        playerIndex = jugador;
+        isSpecial = especial;
+        controladoPorIA = true;
+    }
 
     void Start()
     {
@@ -20,6 +35,14 @@ public class AttacksMenuPreset : MonoBehaviour
         else
         {
             attackOptionsPrefabs = PlayerSettings.specialOptionsPrefabs[playerIndex]; // Obtener las opciones de ataque del jugador correspondiente
+        }
+
+        if (attackOptionsPrefabs == null)
+        {
+            Debug.LogWarning($"AttacksMenuPreset ({name}): el jugador {playerIndex} no tiene opciones de " +
+                             (isSpecial ? "especiales" : "ataque") + " cargadas en PlayerSettings.");
+            enabled = false;
+            return;
         }
 
         Debug.Log(attackOptionsPrefabs);
@@ -43,6 +66,12 @@ public class AttacksMenuPreset : MonoBehaviour
 
     void Update()
     {
+        if (controladoPorIA)
+        {
+            buttonState = -1; // la IA llama a DoAttack() directo; nadie "aprieta" el menú
+            return;
+        }
+
         if (gamepad != null) // si hay un gamepad asignado, usar la entrada del joystick
         {
             joystickInput();

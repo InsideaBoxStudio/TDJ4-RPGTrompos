@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PoisonOption : MonoBehaviour
+public class PoisonOption : MonoBehaviour, IAIAction
 {
     [SerializeField] private int childIndex = 0;
     [SerializeField] private GameObject PrefabVeneno;
@@ -34,6 +34,16 @@ public class PoisonOption : MonoBehaviour
             DoAttack();
         }
     }
+
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
+    // Especial FUERTE (cuesta 4): solo la dificultad Dificil lo usa siempre.
+    [SerializeField] private bool esEspecialFuerte = true;
+
+    public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null
+        && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoAttack();
 
     public void DoAttack()
     {

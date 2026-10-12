@@ -186,6 +186,11 @@ public class AIBrain : MonoBehaviour
     [SerializeField] private MovementOption moveAction;
     [SerializeField] private WaitOption waitAction;
 
+    [Header("Acciones básicas de la estructura NUEVA (si existen, tienen prioridad sobre las de arriba)")]
+    [SerializeField] private BasicAttackOption attackOption;
+    [SerializeField] private Move moveOption;
+    [SerializeField] private Wait waitOption;
+
     // Especiales del personaje: NO se listan acá. La IA descubre en Awake todo lo que
     // implemente IAIAction dentro de su propio personaje. Así el cerebro no conoce
     // personajes concretos y agregar uno nuevo no obliga a tocar este archivo.
@@ -241,6 +246,10 @@ public class AIBrain : MonoBehaviour
         // de todos sus scripts. Así no hay que tocar índices a mano en el editor.
         if (forzarPlayerIndex) ForzarPlayerIndex();
 
+        // Con el trompo "Base" de la estructura nueva, la CPU arma sus propios menús de
+        // ataques (el humano los abre apretando un botón; la CPU nunca lo hace).
+        CrearMenusDeAtaque();
+
         // Autocompletar referencias (este objeto + hijos). Se reintenta en Update
         // por si los componentes se activan tarde (sistema de selección de personajes).
         AutocompletarReferencias();
@@ -276,6 +285,41 @@ public class AIBrain : MonoBehaviour
         id.PlayerIndex = playerIndexCPU;
     }
 
+    // ESTRUCTURA NUEVA: los ataques ya no son scripts pegados al trompo sino prefabs que
+    // un AttacksMenuPreset instancia cuando el menú se abre por primera vez. El humano lo
+    // abre apretando un botón; la CPU no, así que sus ataques nunca existirían.
+    //
+    // Se resuelve creando, dentro del propio trompo de la CPU, dos menús invisibles (uno
+    // de Ataques y otro de Especiales) que arman las opciones con los prefabs que el
+    // PresetCPU dejó en PlayerSettings. No hay interfaz de por medio, y las opciones
+    // quedan al alcance de GetComponentsInChildren<IAIAction>(). Van "controlados por la
+    // IA": no leen joystick ni teclado.
+    //
+    // Si el trompo es de la estructura vieja (no tiene el componente Move nuevo) no se
+    // hace nada: sigue usando los scripts de siempre.
+    void CrearMenusDeAtaque()
+    {
+        if (GetComponentInChildren<Move>(true) == null) return;
+
+        // Por si el cuerpo ya trae sus propios menús dentro de la interfaz (el trompo Base
+        // los trae) y alguien los activa: que tampoco lean el teclado.
+        foreach (AttacksMenuPreset menu in GetComponentsInChildren<AttacksMenuPreset>(true))
+        {
+            menu.playerIndex = playerIndexCPU;
+            menu.controladoPorIA = true;
+        }
+
+        CrearMenu("OpcionesIA_Ataques", false);
+        CrearMenu("OpcionesIA_Especiales", true);
+    }
+
+    void CrearMenu(string nombre, bool especial)
+    {
+        GameObject contenedor = new GameObject(nombre);
+        contenedor.transform.SetParent(transform, false);
+        contenedor.AddComponent<AttacksMenuPreset>().ConfigurarParaIA(playerIndexCPU, especial);
+    }
+
     // Busca los componentes de combate del propio trompo. Busca en este objeto y sus
     // hijos; si no los encuentra (porque el AIBrain quedó por encima en la jerarquía),
     // busca también desde el objeto raíz del personaje hacia abajo. Reintentable.
@@ -292,6 +336,13 @@ public class AIBrain : MonoBehaviour
         if (attackAction == null) attackAction = BuscarEnTrompo<BasicAttack>();
         if (moveAction == null) moveAction = BuscarEnTrompo<MovementOption>();
         if (waitAction == null) waitAction = BuscarEnTrompo<WaitOption>();
+        // Acciones básicas de la estructura nueva. Se buscan SOLO dentro de este personaje
+        // (sin caer a transform.root): la CPU tiene otros personajes hermanos y no hay que
+        // agarrarle el Move o el ataque a uno que no es el suyo. El ataque básico recién
+        // existe cuando el menú de ataques arma sus opciones, así que se reintenta.
+        if (attackOption == null) attackOption = GetComponentInChildren<BasicAttackOption>(true);
+        if (moveOption == null) moveOption = GetComponentInChildren<Move>(true);
+        if (waitOption == null) waitOption = GetComponentInChildren<Wait>(true);
         // Los especiales se buscan SOLO dentro del propio personaje (sin caer al hermano
         // por transform.root): si esta IA es un Magus, encuentra los del Magus y ninguno
         // del Ninja. Antes, el Magus agarraba los del Ninja hermano y al lanzarlos se
@@ -321,8 +372,17 @@ public class AIBrain : MonoBehaviour
     bool ReferenciasCompletas()
     {
         return check != null && energyCounter != null && rb != null
-            && vida != null && attackAction != null && moveAction != null && waitAction != null
+            && vida != null && BasicasListas()
             && especiales != null && especiales.Length > 0;
+    }
+
+    // ¿Tiene atacar, moverse y esperar? Sirven las de la estructura nueva o las viejas.
+    // Sin esto la IA no puede hacer NADA en su turno.
+    bool BasicasListas()
+    {
+        return (attackOption != null || attackAction != null)
+            && (moveOption != null || moveAction != null)
+            && (waitOption != null || waitAction != null);
     }
 
     // Busca al rival: otro objeto activo con tag "Player" en otra layer.
@@ -412,6 +472,8 @@ public class AIBrain : MonoBehaviour
     // forzamos tras este límite en vez de quedar congelados hasta el countdown (~10s).
     private float tiempoTrasActuar = 0f;
     private const float maxEsperaCierreTurno = 1.0f; // >>> FIX MAGUS CONGELADO <<<
+    private const float maxEsperaBasicas = 1.5f;     // tope para esperar atacar/moverse/esperar
+    private bool vidaInicializada = false;
 
     void Update()
     {
@@ -432,6 +494,16 @@ public class AIBrain : MonoBehaviour
         // que la IA haga NADA. Así la pelea no arranca antes de tiempo.
         if (countDown != null && !countDown.finished) return;
 
+        // Vida llena: Start() ya lo hace, pero con el trompo "Base" la vida máxima la lee
+        // Vida.Start() de PlayerSettings, y el orden entre los Start de dos scripts no está
+        // garantizado. Si el de la IA corriera primero, SetFullLife() cargaría 0 de vida y
+        // la CPU perdería en el primer frame. Se repite hasta que la vida máxima exista.
+        if (!vidaInicializada && vida != null && vida.VidaMaxima > 0f)
+        {
+            vida.SetFullLife();
+            vidaInicializada = true;
+        }
+
         if (check != null && check.isTurnActive)
         {
             if (!hasActedThisTurn)
@@ -439,7 +511,13 @@ public class AIBrain : MonoBehaviour
                 // Demora de reacción según dificultad: la Fácil "piensa" más lento.
                 // Usamos unscaledDeltaTime porque durante el turno el tiempo está congelado.
                 tiempoEnTurno += Time.unscaledDeltaTime;
-                if (tiempoEnTurno >= demoraReaccion)
+
+                // Los ataques de la estructura nueva se arman un par de frames después de
+                // que aparece el trompo: si el turno empieza antes, se espera a tenerlos
+                // (con un tope, para no quedar colgada si algo faltara de verdad).
+                bool puedeActuar = BasicasListas() || tiempoEnTurno >= maxEsperaBasicas;
+
+                if (puedeActuar && tiempoEnTurno >= demoraReaccion)
                 {
                     hasActedThisTurn = true;
                     tiempoTrasActuar = 0f;
@@ -506,24 +584,28 @@ public class AIBrain : MonoBehaviour
     // Reusan los scripts del trompo, así que producen el mismo efecto (y daño)
     // que cuando los dispara el jugador.
 
+    // Cada acción usa la de la estructura NUEVA si existe y, si no, la vieja.
     public void PerformAttack()
     {
-        if (attackAction == null) { Debug.LogError("La IA no tiene script Attack en su trompo."); return; }
+        if (attackOption == null && attackAction == null) { Debug.LogError("La IA no tiene script Attack en su trompo."); return; }
         if (!HasEnergyToAttack()) { PerformWait(); return; }
-        attackAction.DoAttack();
+        if (attackOption != null) attackOption.DoAttack();
+        else attackAction.DoAttack();
     }
 
     public void PerformApproach()
     {
-        if (moveAction == null) { Debug.LogError("La IA no tiene script MovementOption en su trompo."); return; }
+        if (moveOption == null && moveAction == null) { Debug.LogError("La IA no tiene script MovementOption en su trompo."); return; }
         if (!HasEnergyToMove()) { PerformWait(); return; }
-        moveAction.DoMove();
+        if (moveOption != null) moveOption.DoMove();
+        else moveAction.DoMove();
     }
 
     public void PerformWait()
     {
-        if (waitAction == null) { Debug.LogError("La IA no tiene script WaitOption en su trompo."); return; }
-        waitAction.DoWait();
+        if (waitOption == null && waitAction == null) { Debug.LogError("La IA no tiene script WaitOption en su trompo."); return; }
+        if (waitOption != null) waitOption.DoWait();
+        else waitAction.DoWait();
     }
 
     // ALEJARSE de verdad. >>> FIX RETREAT <<<
@@ -535,14 +617,15 @@ public class AIBrain : MonoBehaviour
     public void PerformRetreat()
     {
         // Sin script de movimiento, sin energía o sin rival, no queda otra que esperar.
-        if (moveAction == null || !HasEnergyToMove() || enemy == null || rb == null)
+        if ((moveOption == null && moveAction == null) || !HasEnergyToMove() || enemy == null || rb == null)
         {
             PerformWait();
             return;
         }
 
         Vector2 haciaElRival = (Vector2)enemy.position - rb.position;
-        moveAction.DoMove(-haciaElRival); // alejarse
+        if (moveOption != null) moveOption.DoMove(-haciaElRival); // alejarse
+        else moveAction.DoMove(-haciaElRival);
     }
 
     // Devuelve true si la IA "duda" este turno y prefiere esperar en vez de atacar.

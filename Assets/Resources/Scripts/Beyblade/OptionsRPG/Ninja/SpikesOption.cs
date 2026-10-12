@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SpikesOption : MonoBehaviour
+public class SpikesOption : MonoBehaviour, IAIAction
 {
     [SerializeField] private int childIndex = 0;
     [SerializeField] private GameObject PinchosPrefab;
@@ -42,6 +42,16 @@ public class SpikesOption : MonoBehaviour
             DoAttack();
         }
     }
+
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
+    // Especial FUERTE: solo la dificultad Dificil lo usa siempre.
+    [SerializeField] private bool esEspecialFuerte = true;
+
+    public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null
+        && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoAttack();
 
     // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
     public void DoAttack()
