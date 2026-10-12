@@ -30,6 +30,9 @@ public class AttacksMenuPreset : MonoBehaviour
             optionReference[i] = Instantiate(attackOptionsPrefabs[i], transform); // Instanciar la opcion de ataque y establecerla como hija del objeto actual
         }
 
+        // Oscurece las opciones que el jugador no puede pagar con su energia actual
+        gameObject.AddComponent<ColorSinEnergia>().Iniciar(optionReference, playerIndex);
+
         gamepad = PlayerSettings.gamepad[playerIndex]; // obtener el gamepad del jugador correspondiente
 
         if (gamepad == null && Gamepad.all.Count > 0 && playerIndex == 0)
