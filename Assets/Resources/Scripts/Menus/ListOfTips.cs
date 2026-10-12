@@ -1,67 +1,90 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Lista de consejos de la pantalla de selección. Cambia sola cada nextTipTime
+// segundos y el jugador la puede mover a mano:
+//   - L1 / R1 de CUALQUIER joystick conectado,
+//   - Q / E del teclado,
+//   - los botones L y R de la pantalla (que llaman a PreviousTip / NextTip).
+//
+// Antes solo respondía al L1/R1 del PRIMER joystick y solo si había DOS o más
+// conectados (Gamepad.all.Count > 1): con un solo joystick, o solo con teclado, los
+// botones L y R no hacían nada.
 public class ListOfTips : MonoBehaviour
 {
     [SerializeField] private GameObject[] tips;
     [SerializeField] private float nextTipTime = 5f;
     [SerializeField] private int currentTip = 0;
-    [SerializeField] private int lastTip = -1;
 
-    void Start()
+    // Segundos desde el último cambio. Se reinicia al cambiar a mano, así el consejo
+    // que el jugador acaba de elegir no desaparece enseguida por el cambio automático.
+    private float tiempoDesdeElCambio;
+
+    private void Start()
     {
-        InvokeRepeating("NextTip", nextTipTime, nextTipTime);
+        Mostrar();
     }
 
-    void Update()
+    private void Update()
     {
-        if (Gamepad.all.Count > 1 && Gamepad.all[0].leftShoulder.wasPressedThisFrame) // reemplazar por InputSystem
-        {
-            PreviousTip();
-        }
-        else if (Gamepad.all.Count > 1 && Gamepad.all[0].rightShoulder.wasPressedThisFrame) // reemplazar por InputSystem
-        {
-            NextTip();
-        }
+        if (tips == null || tips.Length == 0) return;
 
-        if (lastTip == currentTip) return;
+        if (PidioAnterior()) PreviousTip();
+        else if (PidioSiguiente()) NextTip();
 
-        lastTip = currentTip;
-
-        if (currentTip > tips.Length - 1)
-        {
-            currentTip = 0;
-        }
-        else if (currentTip < 0)
-        {
-            currentTip = tips.Length - 1;
-        }
-
-        ChangeTip();
+        // Tiempo sin escalar: en un menú el timeScale puede haber quedado en 0 de la
+        // pelea anterior y el cambio automático no correría nunca.
+        tiempoDesdeElCambio += Time.unscaledDeltaTime;
+        if (tiempoDesdeElCambio >= nextTipTime) NextTip();
     }
 
-    private void PreviousTip()
+    // Públicos: los botones L y R de la pantalla los llaman desde su onClick.
+    public void PreviousTip()
     {
-        currentTip --;
+        IrA(currentTip - 1);
     }
 
-    private void NextTip()
+    public void NextTip()
     {
-        currentTip ++;
+        IrA(currentTip + 1);
     }
 
-    private void ChangeTip()
+    private void IrA(int indice)
     {
+        if (tips == null || tips.Length == 0) return;
+
+        // Vuelta circular, también hacia atrás desde el primero.
+        currentTip = ((indice % tips.Length) + tips.Length) % tips.Length;
+        tiempoDesdeElCambio = 0f;
+        Mostrar();
+    }
+
+    private void Mostrar()
+    {
+        if (tips == null) return;
+
         for (int i = 0; i < tips.Length; i++)
         {
-            if (i == currentTip)
-            {
-                tips[i].SetActive(true);
-            }
-            else
-            {
-                tips[i].SetActive(false);
-            }
+            if (tips[i] != null) tips[i].SetActive(i == currentTip);
         }
+    }
+
+    // ---- Entrada ----
+    private static bool PidioAnterior()
+    {
+        for (int i = 0; i < Gamepad.all.Count; i++)
+            if (Gamepad.all[i].leftShoulder.wasPressedThisFrame) return true;
+
+        Keyboard teclado = Keyboard.current;
+        return teclado != null && teclado.qKey.wasPressedThisFrame;
+    }
+
+    private static bool PidioSiguiente()
+    {
+        for (int i = 0; i < Gamepad.all.Count; i++)
+            if (Gamepad.all[i].rightShoulder.wasPressedThisFrame) return true;
+
+        Keyboard teclado = Keyboard.current;
+        return teclado != null && teclado.eKey.wasPressedThisFrame;
     }
 }
