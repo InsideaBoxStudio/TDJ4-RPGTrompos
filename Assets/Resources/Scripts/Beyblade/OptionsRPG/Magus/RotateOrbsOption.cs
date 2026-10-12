@@ -2,7 +2,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class RotateOrbsOption : MonoBehaviour
+public class RotateOrbsOption : MonoBehaviour, IAIAction
 {
     [SerializeField] private int childIndex = 0;
     [SerializeField] private GameObject OrbPrefab;
@@ -56,6 +56,13 @@ public class RotateOrbsOption : MonoBehaviour
             DoAttack();
         }
     }
+
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
+    public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null
+        && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoAttack();
 
     public void DoAttack()
     {

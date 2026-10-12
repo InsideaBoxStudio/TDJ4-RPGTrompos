@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CloneOption : MonoBehaviour
+public class CloneOption : MonoBehaviour, IAIAction
 {
     [SerializeField] private int childIndex = 0;
     [SerializeField] private GameObject ClonePrefab;
@@ -41,6 +41,16 @@ public class CloneOption : MonoBehaviour
             DoAttack();
         }
     }
+
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
+    // Especial FUERTE: solo la dificultad Dificil lo usa siempre.
+    [SerializeField] private bool esEspecialFuerte = true;
+
+    public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null
+        && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoAttack();
 
     // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
     public void DoAttack()

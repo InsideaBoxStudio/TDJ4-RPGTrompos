@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ShurikenOption : MonoBehaviour
+public class ShurikenOption : MonoBehaviour, IAIAction
 {
     [SerializeField] private int childIndex = 0;
     [SerializeField] private GameObject ShurikenPrefab;
@@ -40,6 +40,16 @@ public class ShurikenOption : MonoBehaviour
             DoAttack();
         }
     }
+
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
+    // El shuriken es el especial BASICO del Ninja: la IA lo usa en toda dificultad.
+    [SerializeField] private bool esEspecialFuerte = false;
+
+    public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null
+        && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoAttack();
 
     // Llamable por el jugador (teclado/joystick) Y por la IA (AIBrain).
     public void DoAttack()

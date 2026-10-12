@@ -2,7 +2,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SustitutionOption : MonoBehaviour
+public class SustitutionOption : MonoBehaviour, IAIAction
 {
     [SerializeField] private int childIndex = 0;
     [SerializeField] private int playerIndex = 0;
@@ -48,6 +48,16 @@ public class SustitutionOption : MonoBehaviour
             DoAttack();
         }
     }
+
+    // ---- IAIAction: contrato con la IA (ver IAIAction.cs) ----
+    // Especial FUERTE (defensivo): solo la dificultad Dificil lo usa siempre.
+    [SerializeField] private bool esEspecialFuerte = true;
+
+    public int EnergyCost => energyCost;
+    public bool IsStrong => esEspecialFuerte;
+    public bool CanExecute() => rpgTurn != null && energyCounter != null
+        && energyCounter.currentEnergy >= energyCost;
+    public void Execute() => DoAttack();
 
     // Llamable por el jugador (joystick) Y por la IA (AIBrain).
     public void DoAttack()
