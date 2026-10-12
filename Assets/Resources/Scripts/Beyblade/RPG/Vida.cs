@@ -170,6 +170,32 @@ public class Vida : MonoBehaviour
         damageNum.text = " ";
     }
 
+    // Cura al trompo sin pasar de la vida máxima. Devuelve true si curó algo (false
+    // si ya estaba lleno o si ya perdió: una cura no revive).
+    //
+    // Antes los objetos de curar llamaban a Damage() con un valor negativo. Funcionaba,
+    // pero cada cura disparaba el destello rojo de golpe, el sonido de golpe, la pausa
+    // de impacto, y además podía pasar la vida máxima (la barra mostraba más de 100 %).
+    // Acá solo se mueve la barra y se muestra el "+N" en verde.
+    public bool Heal(int amount)
+    {
+        if (amount <= 0 || vidaActual <= 0) return false;
+
+        int tope = (int)maxLife;
+        int curado = Mathf.Min(amount, tope - vidaActual);
+        if (curado <= 0) return false;
+
+        vidaActual += curado;
+        lifeBar.GetComponent<CircularBar>().healthPercent = vidaActual / maxLife * 100;
+
+        TMP_Text numero = lifeBar.GetComponentInChildren<TMP_Text>();
+        numero.color = Color.green;
+        numero.text = "+" + curado;
+        CancelInvoke(nameof(ReturnText));
+        Invoke(nameof(ReturnText), 1f);
+        return true;
+    }
+
     // Llamado por la IA (AIBrain) para cargarse vida llena sin usar la barra de timing.
     public void SetFullLife()
     {
