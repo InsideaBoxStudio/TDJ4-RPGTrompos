@@ -58,9 +58,9 @@ public class AttacksMenuPreset : MonoBehaviour
 
         gamepad = PlayerSettings.gamepad[playerIndex]; // obtener el gamepad del jugador correspondiente
 
-        if (gamepad == null && Gamepad.all.Count > 0 && playerIndex == 0)
+        if (gamepad == null && Gamepad.all.Count > playerIndex)
         {
-            gamepad = Gamepad.all[0]; // Si no hay guardado un gamepad para el jugador pero hay un joystic conectado, asignarle el primer joystic conectado;
+            gamepad = Gamepad.all[playerIndex]; // Si no hay guardado un gamepad para el jugador pero hay un joystic conectado para el, asignarselo (el primero es del J1, el segundo del J2);
         }
     }
 
@@ -84,26 +84,8 @@ public class AttacksMenuPreset : MonoBehaviour
 
     private void keyboardInput()
     {
-        if (Keyboard.current.upArrowKey.isPressed) // Arriba
-        {
-            buttonState = 0;
-        }
-        else if (Keyboard.current.rightArrowKey.isPressed) // Derecha
-        {
-            buttonState = 1;
-        }
-        else if (Keyboard.current.leftArrowKey.isPressed) // Izquierda
-        {
-            buttonState = 2;
-        }
-        else if (Keyboard.current.downArrowKey.isPressed) // Abajo
-        {
-            buttonState = 3;
-        }
-        else // Ninguno
-        {
-            buttonState = -1;
-        }
+        // Flechas para el J1, IJKL para el J2 (cada jugador tiene sus teclas, ver TeclasJugador)
+        buttonState = TeclasJugador.MenuDireccion(playerIndex);
     }
 
     private void joystickInput()

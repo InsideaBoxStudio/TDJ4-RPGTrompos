@@ -39,7 +39,7 @@ public class TimingBar : MonoBehaviour
         if (countDown != null) countDownTime = countDown.countDownTime;
 
         if ((Gamepad.all.Count > jugador && Gamepad.all[jugador].buttonSouth.wasPressedThisFrame)
-            || (Keyboard.current[Key.Q].wasPressedThisFrame && jugador == Gamepad.all.Count)) // >>> TECLADO <<< (Q frena la barra del J1)
+            || (TeclasJugador.UsaTeclado(jugador) && TeclasJugador.Esperar(jugador))) // >>> TECLADO <<< (Q frena la barra del J1, U o Enter la del J2)
         {
             barStopped = true;
 

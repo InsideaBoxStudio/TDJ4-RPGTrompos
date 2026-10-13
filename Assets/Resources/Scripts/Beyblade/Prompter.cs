@@ -51,10 +51,10 @@ public class Prompter : MonoBehaviour
         // INPUT DE APUNTADO
         // ============================
 
-        // Player 1 puede usar WASD si hay menos de 2 joysticks
-        if (Gamepad.all.Count == playerIndex)
+        // Sin joystick propio apunta con el teclado: WASD el J1, IJKL el J2 (ver TeclasJugador)
+        if (TeclasJugador.UsaTeclado(playerIndex))
         {
-            input = ApuntarWASD();
+            input = TeclasJugador.Apuntar(playerIndex).normalized;
         }
         // Si hay joystick disponible para este jugador
         else if (Gamepad.all.Count > playerIndex)
@@ -75,24 +75,5 @@ public class Prompter : MonoBehaviour
             angle = Mathf.Atan2(input.y, input.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
-    }
-
-    private Vector2 ApuntarWASD()
-    {
-        Vector2 inputTeclado = Vector2.zero;
-
-        if (Keyboard.current.wKey.isPressed)
-            inputTeclado.y += 1;
-
-        if (Keyboard.current.sKey.isPressed)
-            inputTeclado.y -= 1;
-
-        if (Keyboard.current.dKey.isPressed)
-            inputTeclado.x += 1;
-
-        if (Keyboard.current.aKey.isPressed)
-            inputTeclado.x -= 1;
-
-        return inputTeclado.normalized;
     }
 }
