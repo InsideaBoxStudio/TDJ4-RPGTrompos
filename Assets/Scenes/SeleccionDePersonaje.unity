@@ -15015,7 +15015,6 @@ GameObject:
   - component: {fileID: 1644186296}
   - component: {fileID: 1644186298}
   - component: {fileID: 1644186297}
-  - component: {fileID: 1644186299}
   m_Layer: 0
   m_Name: MultiplayerEventSystem_P2
   m_TagString: Untagged
@@ -15023,19 +15022,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1644186299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644186293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c3494f0f7404bdea70e91ff9f4c9c63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EntradaJugadorUI
-  playerIndex: 1
 --- !u!4 &1644186294
 Transform:
   m_ObjectHideFlags: 0
@@ -17240,7 +17226,6 @@ GameObject:
   - component: {fileID: 1855752617}
   - component: {fileID: 1855752619}
   - component: {fileID: 1855752618}
-  - component: {fileID: 1855752620}
   m_Layer: 0
   m_Name: MultiplayerEventSystem_P1
   m_TagString: Untagged
@@ -17248,19 +17233,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1855752620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1855752614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c3494f0f7404bdea70e91ff9f4c9c63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EntradaJugadorUI
-  playerIndex: 0
 --- !u!4 &1855752615
 Transform:
   m_ObjectHideFlags: 0
