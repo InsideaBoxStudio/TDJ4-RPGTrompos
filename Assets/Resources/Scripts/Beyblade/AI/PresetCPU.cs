@@ -45,6 +45,15 @@ public class PresetCPU : MonoBehaviour
     private void Awake()
     {
         Aplicar();
+
+        // El teclado del jugador humano no le llega a la CPU (ver TeclasJugador.MarcarIA).
+        TeclasJugador.MarcarIA(playerIndex, true);
+    }
+
+    // Se suelta al destruirse: en el 1 contra 1 que sigue, ese jugador vuelve a ser humano.
+    private void OnDestroy()
+    {
+        TeclasJugador.MarcarIA(playerIndex, false);
     }
 
     // Pisa SIEMPRE lo que hubiera: PlayerSettings es estático y sobrevive de una pelea a
