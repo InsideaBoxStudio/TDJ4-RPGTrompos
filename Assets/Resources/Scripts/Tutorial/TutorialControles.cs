@@ -1,37 +1,100 @@
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.DualShock;
+using UnityEngine.InputSystem.XInput;
 
 // ============================================================================
 //  NOMBRES DE LOS CONTROLES PARA LOS CARTELES
 //  ----------------------------------------------------------------------------
-//  Los carteles tienen que nombrar el boton que el jugador tiene en la mano: si hay un
-//  joystick conectado se habla de la cruceta y los botones, si no, de las teclas. Los
-//  nombres salen del mismo mapa que usa el juego (Controles / TeclasJugador, jugador 0),
-//  asi que si alguien cambia una tecla alla, solo hay que actualizar esta tabla.
+//  Los carteles tienen que nombrar el boton que el jugador tiene en la mano. Si hay un
+//  joystick conectado se habla de SUS botones, con los nombres de su marca (PlayStation:
+//  cruz, circulo, cuadrado, triangulo, L1, R1, L2; Xbox: A, B, X, Y, LB, RB, LT); si no hay
+//  ninguno, de las teclas. Los nombres de teclas salen del mismo mapa que usa el juego
+//  (Controles / TeclasJugador, jugador 0): si alguien cambia una tecla alla, hay que
+//  actualizar esta tabla.
 //
-//  Para los botones de forma se dan los dos nombres (PlayStation / Xbox) porque desde
-//  el codigo no se puede saber de que marca es el joystick con certeza.
+//  La marca se deduce del tipo de dispositivo que reporta el Input System. Un joystick que
+//  llega por un programa que lo disfraza (por ejemplo un DualShock emulado como Xbox) se ve
+//  como Xbox: por eso el cartel muestra al pie QUE CONTROL detecto, asi se nota enseguida
+//  si no coincide con el que se tiene en la mano.
+//
+//  Todo se calcula al momento de preguntar (no se guarda): si se conecta o desconecta un
+//  joystick con el tutorial abierto, el director vuelve a armar los textos (ver Firma).
 // ============================================================================
 public static class TutorialControles
 {
-    public static bool ConJoystick => Gamepad.all.Count > 0;
+    private enum Marca { Teclado, PlayStation, Xbox, Generico }
+
+    private static Gamepad Pad => Gamepad.all.Count > 0 ? Gamepad.all[0] : null;
+
+    private static Marca Actual
+    {
+        get
+        {
+            Gamepad pad = Pad;
+            if (pad == null) return Marca.Teclado;
+            if (pad is DualShockGamepad) return Marca.PlayStation;
+            if (pad is XInputController) return Marca.Xbox;
+            return Marca.Generico;
+        }
+    }
+
+    public static bool ConJoystick => Pad != null;
+
+    // Cambia cuando cambia el tipo de control o cuantos hay: el director la compara para saber
+    // cuando rehacer los textos.
+    public static string Firma => Actual + "/" + Gamepad.all.Count;
+
+    // Para mostrar al pie del cartel: lo que el juego detecto.
+    public static string Detectado
+    {
+        get
+        {
+            Gamepad pad = Pad;
+            if (pad == null) return "Teclado (no hay joystick conectado)";
+
+            string nombre = string.IsNullOrEmpty(pad.displayName) ? pad.name : pad.displayName;
+            switch (Actual)
+            {
+                case Marca.PlayStation: return "Joystick PlayStation (" + nombre + ")";
+                case Marca.Xbox: return "Joystick Xbox (" + nombre + ")";
+                default: return "Joystick (" + nombre + ")";
+            }
+        }
+    }
+
+    // ---- Botones de forma ----
+
+    private static string Forma(string playStation, string xbox, string generico, string teclado)
+    {
+        switch (Actual)
+        {
+            case Marca.PlayStation: return playStation;
+            case Marca.Xbox: return xbox;
+            case Marca.Generico: return generico;
+            default: return teclado;
+        }
+    }
 
     public static string Atacar => ConJoystick ? "cruceta ARRIBA" : "W";
     public static string Derecha => ConJoystick ? "cruceta DERECHA" : "D";
     public static string Izquierda => ConJoystick ? "cruceta IZQUIERDA" : "A";
     public static string Abajo => ConJoystick ? "cruceta ABAJO" : "S";
 
-    public static string Avanzar => ConJoystick ? "triángulo / Y" : "E";
-    public static string Esperar => ConJoystick ? "cruz / A" : "Q";
+    // buttonNorth / buttonSouth / buttonWest / buttonEast
+    public static string Avanzar => Forma("triángulo", "Y", "botón de arriba", "E");
+    public static string Esperar => Forma("cruz", "A", "botón de abajo", "Q");
+    public static string Menu1 => Forma("cuadrado", "X", "botón izquierdo", "C");
+    public static string Menu2 => Forma("círculo", "B", "botón derecho", "V");
 
-    public static string L1 => ConJoystick ? "L1 / LB" : "R";
-    public static string R1 => ConJoystick ? "R1 / RB" : "F";
-    public static string L2 => ConJoystick ? "L2 / LT" : "T";
-
-    public static string Menu1 => ConJoystick ? "cuadrado / X" : "C";
-    public static string Menu2 => ConJoystick ? "círculo / B" : "V";
+    // gatillos y hombros
+    public static string L1 => Forma("L1", "LB", "gatillo izquierdo (superior)", "R");
+    public static string R1 => Forma("R1", "RB", "gatillo derecho (superior)", "F");
+    public static string L2 => Forma("L2", "LT", "gatillo izquierdo (inferior)", "T");
 
     public static string Apuntar => ConJoystick ? "el STICK DERECHO" : "las teclas W A S D";
 
-    public const string Continuar = "ENTER o START";
-    public const string Saltar = "TAB o R3";
+    // Tambien dependen del joystick: el que continua y salta en los carteles.
+    public static string Continuar => ConJoystick ? "ENTER o " + Forma("OPTIONS", "MENU", "START", "START") : "ENTER";
+    public static string Saltar => ConJoystick ? "TAB o R3 (apretar el stick derecho)" : "TAB";
+    public static string ConfirmarFinal => ConJoystick ? Esperar + " o ENTER" : "ENTER o ESPACIO";
 }
