@@ -82,7 +82,7 @@ public static class TutorialControles
 
     // buttonNorth / buttonSouth / buttonWest / buttonEast
     public static string Avanzar => Forma("triángulo", "Y", "botón de arriba", "E");
-    public static string Esperar => Forma("cruz", "A", "botón de abajo", "Q");
+    public static string Esperar => Forma("X", "A", "botón de abajo", "Q");
     public static string Menu1 => Forma("cuadrado", "X", "botón izquierdo", "C");
     public static string Menu2 => Forma("círculo", "B", "botón derecho", "V");
 
@@ -93,8 +93,6 @@ public static class TutorialControles
 
     public static string Apuntar => ConJoystick ? "el STICK DERECHO" : "las teclas W A S D";
 
-    // Tambien dependen del joystick: el que continua y salta en los carteles.
-    public static string Continuar => ConJoystick ? "ENTER o " + Forma("OPTIONS", "MENU", "START", "START") : "ENTER";
-    public static string Saltar => ConJoystick ? "TAB o R3 (apretar el stick derecho)" : "TAB";
+    // Para volver al menu al terminar (lo hace EndGame con Controles.Confirmar: boton de abajo o ENTER/ESPACIO).
     public static string ConfirmarFinal => ConJoystick ? Esperar + " o ENTER" : "ENTER o ESPACIO";
 }

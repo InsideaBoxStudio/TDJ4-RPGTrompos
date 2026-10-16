@@ -210,6 +210,7 @@ public class TutorialDirector : MonoBehaviour
         PrepararCuentaInicial();
         pasos.AddRange(CrearPasos());
         firmaControles = TutorialControles.Firma;
+        Debug.Log("Tutorial: control detectado: " + TutorialControles.Detectado);
 
         energiaPrevia = energiaJ.currentEnergy;
         vidaCpuPrevia = vidaCpu.vidaActual;
@@ -318,11 +319,9 @@ public class TutorialDirector : MonoBehaviour
         // ---- Antes de pelear ----
         lista.Add(new Paso
         {
-            titulo = "¡Bienvenido al entrenamiento!",
-            texto = "Acá aprendés a jugar peleando contra un trompo que se queda quieto, así podés probar todo sin apuros. " +
-                    "Vas a manejar a un <b>Ninja</b>.\n" +
-                    "El objetivo: dejar la <b>VIDA</b> del rival en 0. La pelea no es en tiempo real, es por <b>TURNOS</b>: " +
-                    "cada turno elegís UNA acción, y mientras elegís el juego se congela.",
+            titulo = "¡Bienvenido!",
+            texto = "Acá aprendés a jugar.\n" +
+                    "Tu objetivo: dejar la <b>VIDA</b> del rival en 0.",
             soloLeer = true
         });
 
@@ -332,7 +331,7 @@ public class TutorialDirector : MonoBehaviour
             texto = "Antes de pelear lanzás tu trompo. El cordón entra en el lanzador y vos elegís el momento de soltar: " +
                     "<b>cuanto más adentro esté el cordón, más vida inicial tiene tu trompo</b>. " +
                     "En una partida normal la barra se mueve sola y tenés 3 segundos para frenarla; acá el juego espera a que estés listo.",
-            objetivo = "Cuando el cordón esté adentro, apretá  [" + TutorialControles.Esperar + "]",
+            objetivo = "Cuando el cordón esté adentro, apretá  <b>" + TutorialControles.Esperar + "</b>",
             condicion = () => cordonListo && Controles.Esperar(0),
             alEntrar = IniciarCordon,
             alSalir = SoltarLanzamiento, // recien ahora corre el 3, 2, 1, GO!
@@ -403,8 +402,8 @@ public class TutorialDirector : MonoBehaviour
         {
             titulo = "El menú de ataques",
             texto = "Mientras mantenés apretado el botón se despliega el menú de <b>ATAQUES</b>: ahí ves qué ataque tiene " +
-                    "cada dirección y cuánta energía cuesta. El botón [" + TutorialControles.Menu2 + "] despliega los <b>ESPECIALES</b>.",
-            objetivo = "Mantené apretado  [" + TutorialControles.Menu1 + "]",
+                    "cada dirección y cuánta energía cuesta. El botón <b>" + TutorialControles.Menu2 + "</b> despliega los <b>ESPECIALES</b>.",
+            objetivo = "Mantené apretado  <b>" + TutorialControles.Menu1 + "</b>",
             requiereTurno = true,
             condicion = () => Controles.Menu1(0) || Controles.Menu2(0)
         });
@@ -415,7 +414,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "El ataque básico  (" + costoBasico + " de energía)",
             texto = "Es tu ataque más barato: tu trompo <b>embiste hacia donde apunta la flecha</b>. " +
                     "Si impacta, el rival pierde vida y vos recuperás +2 de energía, por eso conviene acertar.",
-            objetivo = "Atacá con  [" + TutorialControles.Atacar + "]  y lográ un impacto",
+            objetivo = "Atacá con  <b>" + TutorialControles.Atacar + "</b>  y lográ un impacto",
             requiereTurno = true,
             ataque = "BasicAttack",
             separar = true,
@@ -429,7 +428,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "Moverse  (" + costoMover + " de energía)",
             texto = "Tu trompo avanza hacia donde apunta la flecha. Sirve para <b>acercarte al rival</b>, alejarte de un golpe " +
                     "o acomodarte antes de atacar.",
-            objetivo = "Moverte con  [" + TutorialControles.Avanzar + "]",
+            objetivo = "Moverte con  <b>" + TutorialControles.Avanzar + "</b>",
             requiereTurno = true,
             ataque = "Move",
             energiaMinima = costoMover
@@ -440,7 +439,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "Esperar  (gratis)",
             texto = "Esperar <b>no gasta energía</b>: pasás el turno sin hacer nada. Es útil cuando no te alcanza la energía " +
                     "o querés juntar +1 antes de gastar en un golpe fuerte.",
-            objetivo = "Esperá con  [" + TutorialControles.Esperar + "]",
+            objetivo = "Esperá con  <b>" + TutorialControles.Esperar + "</b>",
             requiereTurno = true,
             ataque = "Wait"
         });
@@ -450,7 +449,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "El shuriken  (" + costoShuriken + " de energía)",
             texto = "Lanza un proyectil que <b>rebota hasta 3 veces en los bordes</b> antes de desaparecer: pega desde lejos, " +
                     "sin que tengas que acercarte. Al lanzarlo tu trompo retrocede un poco.",
-            objetivo = "Lanzá el shuriken con  [" + TutorialControles.Derecha + "]  y lográ un impacto",
+            objetivo = "Lanzá el shuriken con  <b>" + TutorialControles.Derecha + "</b>  y lográ un impacto",
             requiereTurno = true,
             ataque = "LaunchShuriken",
             separar = true,
@@ -464,7 +463,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "Los pinchos  (" + costoPinchos + " de energía)",
             texto = "Soltás pinchos hacia adelante: <b>dañan a quien los pise y lo obligan a esperar más</b> para su próximo turno. " +
                     "Son una trampa: sirven para frenar el ritmo del rival.",
-            objetivo = "Soltá los pinchos con  [" + TutorialControles.Izquierda + "]  y lográ un impacto",
+            objetivo = "Soltá los pinchos con  <b>" + TutorialControles.Izquierda + "</b>  y lográ un impacto",
             requiereTurno = true,
             ataque = "LaunchPinchos",
             separar = true,
@@ -478,7 +477,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "El clon  (" + costoClon + " de energía)",
             texto = "Lanzás un <b>clon</b> de tu trompo hacia un costado y vos salís despedido para el lado contrario. " +
                     "El clon choca con lo que encuentre, así que sirve para atacar desde otro ángulo.",
-            objetivo = "Lanzá el clon con  [" + TutorialControles.R1 + "]",
+            objetivo = "Lanzá el clon con  <b>" + TutorialControles.R1 + "</b>",
             requiereTurno = true,
             ataque = "LaunchClone",
             energiaMinima = costoClon
@@ -487,10 +486,10 @@ public class TutorialDirector : MonoBehaviour
         lista.Add(new Paso
         {
             titulo = "El veneno  (" + costoVeneno + " de energía)",
-            texto = "Es un especial con <b>minijuego de timing</b>: apretá  [" + TutorialControles.Esperar + "]  justo cuando el indicador pase " +
+            texto = "Es un especial con <b>minijuego de timing</b>: apretá  <b>" + TutorialControles.Esperar + "</b>  justo cuando el indicador pase " +
                     "por la zona marcada. Si lo clavás, el veneno queda cargado en tu próximo golpe y daña al rival " +
                     "cada segundo; si fallás, te lo comés vos. Es caro, pero el daño sigue aunque no lo toques.",
-            objetivo = "Usá el veneno con  [" + TutorialControles.L1 + "]",
+            objetivo = "Usá el veneno con  <b>" + TutorialControles.L1 + "</b>",
             requiereTurno = true,
             ataque = "Poison",
             energiaMinima = costoVeneno
@@ -500,7 +499,7 @@ public class TutorialDirector : MonoBehaviour
         {
             titulo = "Contagiar el veneno",
             texto = "El veneno viaja con tu <b>próximo ataque</b>: cuando golpeás al rival se lo pasás. " +
-                    "Probalo con el ataque básico [" + TutorialControles.Atacar + "] o con un shuriken [" + TutorialControles.Derecha + "].",
+                    "Probalo con el ataque básico <b>" + TutorialControles.Atacar + "</b> o con un shuriken <b>" + TutorialControles.Derecha + "</b>.",
             objetivo = "Golpeá al rival con cualquier ataque",
             requiereTurno = true,
             condicion = () => golpeEnPaso,
@@ -513,7 +512,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "La sustitución  (" + costoSustitucion + " de energía)",
             texto = "Es una jugada <b>defensiva</b>: crea un señuelo que viaja con tu próximo proyectil y te deja " +
                     "<b>cambiar de lugar con él</b> para escaparte de un golpe. Cuesta poco, pero hay que saber cuándo usarla.",
-            objetivo = "Usá la sustitución con  [" + TutorialControles.L2 + "]",
+            objetivo = "Usá la sustitución con  <b>" + TutorialControles.L2 + "</b>",
             requiereTurno = true,
             ataque = "Sustitution",
             energiaMinima = costoSustitucion
@@ -523,8 +522,8 @@ public class TutorialDirector : MonoBehaviour
         {
             titulo = "La sierra  (" + costoSierra + " de energía, la más cara)",
             texto = "Embestís al rival y, si lo alcanzás, <b>quedan trabados un instante</b>: en ese momento cada vez que apretás " +
-                    "[" + TutorialControles.Esperar + "] le hacés daño. ¡Apretalo lo más rápido que puedas!",
-            objetivo = "Usá la sierra con  [" + TutorialControles.Abajo + "]  y lográ un impacto",
+                    "<b>" + TutorialControles.Esperar + "</b> le hacés daño. ¡Apretalo lo más rápido que puedas!",
+            objetivo = "Usá la sierra con  <b>" + TutorialControles.Abajo + "</b>  y lográ un impacto",
             requiereTurno = true,
             ataque = "Sierra",
             separar = true,
@@ -537,7 +536,7 @@ public class TutorialDirector : MonoBehaviour
         lista.Add(new Paso
         {
             titulo = "Defensa: el parry",
-            texto = "Cuando <b>NO es tu turno</b> podés apretar  [" + TutorialControles.L1 + "]  justo antes de recibir un golpe: " +
+            texto = "Cuando <b>NO es tu turno</b> podés apretar  <b>" + TutorialControles.L1 + "</b>  justo antes de recibir un golpe: " +
                     "tu trompo queda inmune un instante y rechaza el choque. Cuesta 1 de energía y, si fallás, tenés que " +
                     "esperar un segundo para poder intentarlo de nuevo.\n" +
                     "Hoy el rival no ataca, así que no se puede practicar acá, pero se usa mucho en el 1 contra 1.",
@@ -595,15 +594,10 @@ public class TutorialDirector : MonoBehaviour
     {
         estadoMostrado = null;
         string objetivo = string.IsNullOrEmpty(actual.objetivo) ? "" : "► " + actual.objetivo;
-        string pie = actual.soloLeer && actual.condicion == null
-            ? TutorialControles.Continuar + ": continuar     " + TutorialControles.Saltar + ": saltar"
-            : TutorialControles.Saltar + ": saltar este paso";
 
-        // Al pie se dice que control detecto el juego: si no coincide con el que se tiene en la
-        // mano (por ejemplo un joystick que llega disfrazado de otro), se nota enseguida.
-        pie += "\nControl detectado: " + TutorialControles.Detectado;
-
-        panel.Mostrar("Paso " + (indice + 1) + " de " + pasos.Count, actual.titulo, actual.texto, objetivo, pie);
+        // Un solo boton hace de "continuar" y de "saltar" (ver PidioSaltar).
+        panel.Mostrar("Paso " + (indice + 1) + " de " + pasos.Count, actual.titulo, actual.texto, objetivo,
+            "ENTER: saltar     R3: saltar");
     }
 
     // Si se conecta o desconecta un joystick con el tutorial abierto (los inalambricos a veces
@@ -616,6 +610,7 @@ public class TutorialDirector : MonoBehaviour
         string firma = TutorialControles.Firma;
         if (firma == firmaControles) return;
         firmaControles = firma;
+        Debug.Log("Tutorial: control detectado: " + TutorialControles.Detectado); // para diagnosticar si los nombres no coinciden
 
         List<Paso> nuevos = CrearPasos();
         for (int i = 0; i < pasos.Count && i < nuevos.Count; i++)
@@ -870,7 +865,7 @@ public class TutorialDirector : MonoBehaviour
             // llegue el turno: se estaria explicando algo que todavia no se ve.
             if (actual.requiereTurno && !turnoJ.isTurnActive) return false;
 
-            return actual.condicion != null ? actual.condicion() : PidioContinuar();
+            return actual.condicion != null && actual.condicion(); // los que solo se leen avanzan por PidioSaltar
         }
 
         if (actual.ataque != null)
@@ -883,25 +878,14 @@ public class TutorialDirector : MonoBehaviour
         return actual.condicion != null && actual.condicion();
     }
 
-    private bool PidioContinuar()
-    {
-        if (Keyboard.current != null &&
-            (Keyboard.current.enterKey.wasPressedThisFrame ||
-             Keyboard.current.numpadEnterKey.wasPressedThisFrame ||
-             Keyboard.current.spaceKey.wasPressedThisFrame))
-            return true;
-
-        for (int i = 0; i < Gamepad.all.Count; i++)
-        {
-            Gamepad pad = Gamepad.all[i];
-            if (pad != null && pad.startButton.wasPressedThisFrame) return true;
-        }
-        return false;
-    }
-
+    // Pasar un cartel que solo se lee y saltar un paso es lo mismo: avanzar. Por eso hay UN solo
+    // boton para las dos cosas: ENTER en el teclado, R3 (apretar el stick derecho) en el joystick.
+    // Ninguno de los dos es una accion de combate, asi que no dispara nada del juego.
     private bool PidioSaltar()
     {
-        if (Keyboard.current != null && Keyboard.current.tabKey.wasPressedThisFrame) return true;
+        if (Keyboard.current != null &&
+            (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.numpadEnterKey.wasPressedThisFrame))
+            return true;
 
         for (int i = 0; i < Gamepad.all.Count; i++)
         {

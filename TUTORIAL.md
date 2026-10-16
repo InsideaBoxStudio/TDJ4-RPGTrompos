@@ -17,8 +17,9 @@ Cada cartel explica **por qué** existe la mecánica, no solo qué tecla apretar
 
 | Acción | Teclado | Joystick |
 |---|---|---|
-| Continuar un cartel | ENTER o ESPACIO | START |
-| Saltar el paso actual | TAB | R3 |
+| Pasar un cartel / saltar el paso actual | ENTER | R3 (apretar el stick derecho) |
+
+Los carteles nombran los botones del joystick conectado (PlayStation: X, círculo, cuadrado, triángulo, L1/R1/L2; Xbox: A, B, X, Y, LB/RB/LT) y usan teclas solo si no hay joystick. En la Console queda una línea «Tutorial: control detectado» por si los nombres no coinciden con el control que se tiene en la mano.
 
 ## Qué enseña (en este orden)
 
