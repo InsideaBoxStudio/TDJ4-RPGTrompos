@@ -6,21 +6,28 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // ============================================================================
 //  DIRECTOR DEL TUTORIAL
 //  ----------------------------------------------------------------------------
-//  Corre encima de la escena Practica (pelea contra la computadora) y la convierte en
-//  una clase guiada: va mostrando carteles con el paso a seguir y espera a que el
-//  jugador lo haga de verdad antes de pasar al siguiente. Explica el PORQUE de cada
-//  cosa, no solo la tecla.
+//  Corre en la escena Tutorial (una copia de Practica) y la convierte en una clase
+//  COREOGRAFIADA: el juego se pausa cada vez que el jugador tiene que hacer algo, se
+//  le ensena UNA mecanica a la vez, y recien cuando la hace de verdad se sigue. Explica
+//  el PORQUE de cada cosa, no solo la tecla.
 //
-//  NO MODIFICA NINGUN SCRIPT NI ESCENA DEL JUEGO. Todo lo hace desde afuera, leyendo
-//  datos que el juego ya expone (energia gastada, vida, turno activo...) y moviendo
-//  solo los campos publicos pensados para eso. Lo que cambia, y por que:
+//  Los dos momentos de pausa:
+//   - LANZAMIENTO: el cordon entra solo en el lanzador y todo queda quieto hasta que el
+//     jugador aprieta el boton.
+//   - CADA TURNO: el juego ya se congela solo cuando llega el turno; ahi se muestra el
+//     cartel de la mecanica del paso y se espera la accion.
 //
-//   - Deja solo Ninja contra Ninja. En Practica el Caballero del jugador viene prendido
-//     de fabrica y ActiveCharacter solo prende, nunca apaga: apareceria duplicado.
+//  NO MODIFICA NINGUN SCRIPT DEL JUEGO NI LA ESCENA DE PRACTICA. Todo lo hace desde
+//  afuera, leyendo datos que el juego ya expone (energia gastada, vida, turno activo...)
+//  y moviendo solo los campos publicos pensados para eso. Lo que cambia, y por que:
+//
+//   - Deja solo Ninja contra Ninja. El Caballero del jugador viene prendido de fabrica
+//     (la escena es copia de Practica) y ActiveCharacter solo prende, nunca apaga.
 //   - La CPU se queda quieta ("maniqui de practica"): se apaga su AIBrain y, cuando le
 //     toca su turno, solo espera. Asi el jugador puede probar todo sin apuros.
 //   - El rival no baja de cierta vida hasta el ultimo paso, y despues le queda poca
@@ -42,6 +49,9 @@ public class TutorialDirector : MonoBehaviour
     private const float ReaccionCpu = 0.35f;      // la CPU espera un instante antes de pasar su turno
     private const float CierreForzadoCpu = 1.2f;  // si la espera no cerro el turno, se cierra a la fuerza
     private const int IntentosMaximos = 3;        // golpes fallidos antes de dar el paso por bueno
+    private const float DuracionCordon = 2f;      // segundos que tarda el cordon en entrar al lanzador
+    private const float PosicionCordonAdentro = 1f; // valor de la barra con el cordon completamente adentro (y vida maxima)
+    private const float VidaRival = 100f;         // el juego deja a la CPU con muy poca vida en esta escena (ver PrepararCpu)
 
     // Un paso del tutorial. Es solo datos: la logica comun esta en Actualizar().
     private class Paso
@@ -54,6 +64,7 @@ public class TutorialDirector : MonoBehaviour
         public string ataque;            // clave con la que el juego registra el uso (ver UsoRegistrado)
         public bool requiereGolpe;       // ademas de usarlo, tiene que impactar al rival
         public Func<bool> condicion;     // condicion propia (si no hay "ataque")
+        public Func<string> estadoExtra; // linea de estado propia del paso (vacia = la comun)
         public Func<Transform> resaltar;
         public int energiaMinima;        // energia que se asegura mientras el paso esta activo
         public Action alEntrar;
@@ -105,8 +116,17 @@ public class TutorialDirector : MonoBehaviour
     private float tiempoTurnoCpu;
     private float tiempoCierreCpu;
 
-    private static readonly FieldInfo campoBarraDetenida =
-        typeof(TimingBar).GetField("barStopped", BindingFlags.NonPublic | BindingFlags.Instance);
+    // Coreografia del lanzamiento: el cordon (la barra del lanzador) entra solo y se queda
+    // quieto, con todo pausado, hasta que el jugador aprieta el boton.
+    private Scrollbar barraCordon;
+    private bool animandoCordon;
+    private bool cordonListo;
+    private float tiempoCordon;
+
+    // Vida maxima de Vida (campo privado). No hay forma publica de devolverle la vida a la CPU:
+    // el juego la baja al 10% al "frenar" su barra de lanzamiento.
+    private static readonly FieldInfo campoVidaMaxima =
+        typeof(Vida).GetField("maxLife", BindingFlags.NonPublic | BindingFlags.Instance);
 
     // ------------------------------------------------------------------ arranque
 
@@ -117,8 +137,26 @@ public class TutorialDirector : MonoBehaviour
         DejarSoloElPersonaje("Jugador1");
         DejarSoloElPersonaje("CPU");
 
+        PrepararBarraDelJugador();
+
         panel = new GameObject("TutorialPanel").AddComponent<TutorialPanel>();
         panel.transform.SetParent(transform, false);
+    }
+
+    // La barra del lanzador del jugador se apaga ANTES de su primer Update: en el tutorial no
+    // oscila sola sino que la mueve el director (ver Coreografia del lanzamiento). Si no se
+    // apagara, frenaria sola a la mitad cuando termine la cuenta regresiva.
+    private void PrepararBarraDelJugador()
+    {
+        foreach (TimingBar barra in FindObjectsByType<TimingBar>(FindObjectsSortMode.None))
+        {
+            if (barra.transform.root.name != "Jugador1") continue;
+
+            barraJ = barra;
+            barraCordon = barra.GetComponent<Scrollbar>();
+            barra.enabled = false;
+            return;
+        }
     }
 
     // Se busca entre las raices de la escena (no con GameObject.Find) para no confundir el
@@ -186,7 +224,7 @@ public class TutorialDirector : MonoBehaviour
         if (vidaJ == null || vidaCpu == null || contenedorJ == null || contenedorCpu == null) return false;
 
         energiaJ = contenedorJ.GetComponentInChildren<EnergyCounter>(true);
-        barraJ = contenedorJ.GetComponentInChildren<TimingBar>(true);
+        if (barraJ == null) barraJ = contenedorJ.GetComponentInChildren<TimingBar>(true);
         if (energiaJ == null) return false;
 
         cerebroCpu = contenedorCpu.GetComponent<AIBrain>();
@@ -204,6 +242,12 @@ public class TutorialDirector : MonoBehaviour
     private void PrepararCpu()
     {
         if (cerebroCpu != null) cerebroCpu.enabled = false;
+
+        // En esta escena la barra de lanzamiento de la CPU la frena el AIBrain "casi centrada" y
+        // Vida.WaitForInfo la interpreta como un 10% de la vida: la CPU quedaria con 10 de vida y
+        // un solo shuriken la mataria antes de terminar la clase. Se le devuelve la vida entera.
+        if (campoVidaMaxima != null) campoVidaMaxima.SetValue(vidaCpu, VidaRival);
+        vidaCpu.SetFullLife();
     }
 
     private void PrepararCuentaInicial()
@@ -264,12 +308,16 @@ public class TutorialDirector : MonoBehaviour
         pasos.Add(new Paso
         {
             titulo = "Paso 1: el lanzamiento",
-            texto = "Antes de pelear lanzás tu trompo. La barra se mueve sola y la frenás con un botón: " +
-                    "<b>cuanto más llena esté, más vida inicial tiene tu trompo</b>. " +
-                    "En una partida normal tenés 3 segundos; acá tenés todo el tiempo que quieras.",
-            objetivo = "Frená la barra con  " + "[" + TutorialControles.Esperar + "]",
-            condicion = BarraDetenida,
-            alSalir = () => RetenerCuenta(false), // recien ahora corre el 3, 2, 1, GO!
+            texto = "Antes de pelear lanzás tu trompo. El cordón entra en el lanzador y vos elegís el momento de soltar: " +
+                    "<b>cuanto más adentro esté el cordón, más vida inicial tiene tu trompo</b>. " +
+                    "En una partida normal la barra se mueve sola y tenés 3 segundos para frenarla; acá el juego espera a que estés listo.",
+            objetivo = "Cuando el cordón esté adentro, apretá  [" + TutorialControles.Esperar + "]",
+            condicion = () => cordonListo && Controles.Esperar(0),
+            alEntrar = IniciarCordon,
+            alSalir = SoltarLanzamiento, // recien ahora corre el 3, 2, 1, GO!
+            estadoExtra = () => cordonListo
+                ? "El cordón está completamente adentro del lanzador: ¡ahora!"
+                : "Mirá cómo el cordón entra en el lanzador…",
             resaltar = () => barraJ != null ? barraJ.transform : null
         });
 
@@ -547,6 +595,7 @@ public class TutorialDirector : MonoBehaviour
 
         ActualizarSensores();
         MoverCpu();
+        AnimarCordon();
 
         if (termino)
         {
@@ -759,10 +808,42 @@ public class TutorialDirector : MonoBehaviour
         return false;
     }
 
-    private bool BarraDetenida()
+    // ---- Coreografia del lanzamiento ----
+
+    private void IniciarCordon()
     {
-        if (barraJ != null && campoBarraDetenida != null && (bool)campoBarraDetenida.GetValue(barraJ)) return true;
-        return Controles.Esperar(0);
+        tiempoCordon = 0f;
+        animandoCordon = barraCordon != null;
+        cordonListo = barraCordon == null; // sin barra que animar no hay nada que esperar
+        if (barraCordon != null) barraCordon.value = 0f;
+    }
+
+    // El cordon entra solo en el lanzador y se queda quieto: el juego sigue pausado
+    // (timeScale = 0 desde que arranca la escena) hasta que el jugador aprieta el boton.
+    private void AnimarCordon()
+    {
+        if (!animandoCordon) return;
+
+        tiempoCordon += Time.unscaledDeltaTime;
+        float avance = Mathf.Clamp01(tiempoCordon / DuracionCordon);
+        barraCordon.value = Mathf.SmoothStep(0f, PosicionCordonAdentro, avance);
+
+        if (avance >= 1f)
+        {
+            animandoCordon = false;
+            cordonListo = true;
+        }
+    }
+
+    // El jugador solto el lanzador: la vida inicial se fija con la posicion del cordon (en el
+    // juego lo hace TimingBar, que aca esta apagado) y se libera la cuenta regresiva.
+    private void SoltarLanzamiento()
+    {
+        animandoCordon = false;
+        if (barraCordon != null) barraCordon.value = PosicionCordonAdentro;
+
+        vidaJ.WaitForInfo(PosicionCordonAdentro);
+        RetenerCuenta(false);
     }
 
     private bool RivalDerrotado()
@@ -793,6 +874,10 @@ public class TutorialDirector : MonoBehaviour
             estado = actual.ataque != null && actual.requiereGolpe && !golpeTrasUso
                 ? "Seguimos: a veces no impacta, es parte del juego."
                 : "¡Bien hecho!";
+        }
+        else if (actual.estadoExtra != null)
+        {
+            estado = actual.estadoExtra();
         }
         else if (actual.requiereTurno && !turnoJ.isTurnActive)
         {

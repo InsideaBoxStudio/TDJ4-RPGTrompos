@@ -4,10 +4,11 @@ using UnityEngine.SceneManagement;
 // ============================================================================
 //  ESTADO DEL TUTORIAL
 //  ----------------------------------------------------------------------------
-//  El tutorial NO es una escena aparte: reutiliza la escena de Practica (pelea contra
-//  la computadora) y le pone encima un "director" que guia al jugador (ver
-//  TutorialDirector). Este archivo solo guarda si el tutorial esta activo y deja todo
-//  como estaba al salir.
+//  El tutorial vive en su PROPIA escena ("Tutorial", una copia de Practica con la pelea
+//  contra la computadora) y un "director" la guia como una coreografia: pausa el juego
+//  cada vez que el jugador tiene que hacer algo (ver TutorialDirector). La escena de
+//  Practica no se toca, asi que la pelea normal no puede romperse por culpa del tutorial.
+//  Este archivo solo guarda si el tutorial esta activo y deja todo como estaba al salir.
 //
 //  POR QUE SE RESTAURAN LOS DATOS: la dificultad y los personajes elegidos son
 //  estaticos y sobreviven al cambio de escena. Si el tutorial dejara "Ninja" cargado,
@@ -20,7 +21,7 @@ using UnityEngine.SceneManagement;
 public static class TutorialModo
 {
     public const string EscenaEntrada = "SeleccionDificultad"; // pantalla previa a Practica: aca aparece el boton
-    public const string EscenaCombate = "Practica";            // la pelea contra la computadora
+    public const string EscenaCombate = "Tutorial";            // copia de Practica donde corre la clase guiada
     public const string PersonajeTutorial = "Ninja";           // el que tiene mas ataques distintos para probar
 
     public static bool Activo { get; private set; }
