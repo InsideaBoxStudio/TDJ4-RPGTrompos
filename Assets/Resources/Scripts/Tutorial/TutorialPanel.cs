@@ -201,6 +201,12 @@ public class TutorialPanel : MonoBehaviour
         Poner(txtEstado, linea);
     }
 
+    // Esconde solo el cartel (no cambia lo que hay que resaltar): para cuando el paso todavia no empezo.
+    public void OcultarCartel()
+    {
+        cartel.gameObject.SetActive(false);
+    }
+
     public void Ocultar()
     {
         cartel.gameObject.SetActive(false);

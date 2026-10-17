@@ -11,7 +11,8 @@ Abrir `Assets/Scenes/Tutorial.unity` y darle Play. Para sumarla a un build hay q
 El juego se pausa cada vez que el jugador tiene que hacer algo, y se le enseña **una mecánica a la vez**:
 
 1. **Lanzamiento:** el cordón entra solo en el lanzador y todo queda quieto hasta que el jugador aprieta el botón.
-2. **Cada turno:** el juego ya se congela solo cuando llega el turno. Ahí aparece el cartel de la mecánica y se espera a que el jugador la haga de verdad (y, si corresponde, que pegue) antes de pasar a la siguiente.
+2. **Choque y primer turno:** los trompos chocan sin cartel. Como siguen rebotando y el del jugador casi nunca baja la velocidad que el juego pide para empezar el turno, pasado un rato el director le **pide el turno al juego** (`CheckPlayerTurn.RequestTurnNow`, el mismo método que usa la CPU). Se congela todo, aparece el menú de golpes y recién ahí el cartel, que explica también la energía.
+3. **Cada turno siguiente:** el cartel de la mecánica y la espera a que el jugador la haga de verdad (y, si corresponde, que pegue). Si el turno tarda, se pide igual.
 
 Cada cartel explica **por qué** existe la mecánica, no solo qué tecla apretar, y un marco amarillo resalta la parte de la pantalla de la que se habla.
 
@@ -23,7 +24,20 @@ Los carteles nombran los botones del joystick conectado (PlayStation: X, círcul
 
 ## Qué enseña (en este orden)
 
-Lanzamiento, turnos, energía, vida, apuntar, menú de ataques, ataque básico, moverse, esperar, shuriken, pinchos, clon, veneno (y cómo contagiarlo), sustitución, sierra, parry (solo se explica) y por último ganar la pelea.
+Son 10 pasos:
+
+1. Bienvenida y objetivo.
+2. Lanzamiento.
+3. Primer turno: menú de golpes, energía y ataque básico (con impacto).
+4. La vida del rival (se explica después de pegarle).
+5. Shuriken (y cómo apuntar).
+6. Pinchos.
+7. Clon.
+8. Moverse.
+9. Sierra.
+10. Ganar la pelea.
+
+Quedaron afuera (para sumar después si hace falta): esperar, veneno, sustitución, parry y el menú de especiales.
 
 ## Qué hace el tutorial con la partida
 
