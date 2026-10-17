@@ -42,7 +42,9 @@ public class TutorialPanel : MonoBehaviour
 
     private RectTransform marco;
     private Image[] bordes;
+    private Image anillo;
     private Transform resaltado;
+    private bool resaltadoEsCirculo;
 
     // ---------------- armado ----------------
 
@@ -79,6 +81,46 @@ public class TutorialPanel : MonoBehaviour
         }
 
         marco.gameObject.SetActive(false);
+
+        // Alternativa al marco: un circulo que rodea al objeto (para cosas redondas, como el lanzador).
+        RectTransform rectAnillo = NuevoRect("Anillo", canvasRect);
+        rectAnillo.anchorMin = rectAnillo.anchorMax = rectAnillo.pivot = new Vector2(0.5f, 0.5f);
+        anillo = rectAnillo.gameObject.AddComponent<Image>();
+        anillo.sprite = CrearSpriteAnillo();
+        anillo.color = ColorMarco;
+        anillo.raycastTarget = false;
+        anillo.gameObject.SetActive(false);
+    }
+
+    // Un anillo (circulo hueco) dibujado por codigo: asi no hace falta ningun asset de imagen.
+    // El borde se suaviza un pixel para que no se vea escalonado al agrandarlo.
+    private static Sprite CrearSpriteAnillo()
+    {
+        const int lado = 256;
+        const float grosor = 14f;
+
+        Texture2D textura = new Texture2D(lado, lado, TextureFormat.RGBA32, false);
+        textura.wrapMode = TextureWrapMode.Clamp;
+        textura.filterMode = FilterMode.Bilinear;
+
+        float centro = (lado - 1) * 0.5f;
+        float radioExterior = lado * 0.5f - 1f;
+        float radioInterior = radioExterior - grosor;
+
+        Color32[] pixeles = new Color32[lado * lado];
+        for (int y = 0; y < lado; y++)
+        {
+            for (int x = 0; x < lado; x++)
+            {
+                float distancia = Mathf.Sqrt((x - centro) * (x - centro) + (y - centro) * (y - centro));
+                float alfa = Mathf.Clamp01(radioExterior - distancia) * Mathf.Clamp01(distancia - radioInterior);
+                pixeles[y * lado + x] = new Color32(255, 255, 255, (byte)(alfa * 255f));
+            }
+        }
+
+        textura.SetPixels32(pixeles);
+        textura.Apply();
+        return Sprite.Create(textura, new Rect(0f, 0f, lado, lado), new Vector2(0.5f, 0.5f), 100f);
     }
 
     private void ArmarCartel()
@@ -165,10 +207,18 @@ public class TutorialPanel : MonoBehaviour
         Resaltar(null);
     }
 
-    public void Resaltar(Transform objetivo)
+    // conCirculo: en vez del marco rectangular, un circulo alrededor del objeto.
+    public void Resaltar(Transform objetivo, bool conCirculo = false)
     {
         resaltado = objetivo;
-        if (objetivo == null) marco.gameObject.SetActive(false);
+        resaltadoEsCirculo = conCirculo;
+        if (objetivo == null) OcultarResalte();
+    }
+
+    private void OcultarResalte()
+    {
+        marco.gameObject.SetActive(false);
+        anillo.gameObject.SetActive(false);
     }
 
     private static void Poner(Text texto, string valor)
@@ -184,14 +234,14 @@ public class TutorialPanel : MonoBehaviour
     {
         if (resaltado == null || !resaltado.gameObject.activeInHierarchy)
         {
-            marco.gameObject.SetActive(false);
+            OcultarResalte();
             return;
         }
 
         Vector2 min, max;
         if (!RectaEnPantalla(resaltado, out min, out max))
         {
-            marco.gameObject.SetActive(false);
+            OcultarResalte();
             return;
         }
 
@@ -199,20 +249,37 @@ public class TutorialPanel : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, min, null, out localMin);
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, max, null, out localMax);
 
+        Vector2 centro = (localMin + localMax) * 0.5f;
+
+        // El resaltado parpadea para llamar la atencion sin tapar lo que resalta.
+        float pulso = 0.55f + 0.45f * Mathf.PingPong(Time.unscaledTime * 1.6f, 1f);
+        Color c = ColorMarco;
+        c.a = pulso;
+
+        if (resaltadoEsCirculo)
+        {
+            // Un circulo que rodea al objeto: su diametro es el lado mayor, con aire alrededor.
+            Vector2 caja = localMax - localMin;
+            float diametro = Mathf.Max(Mathf.Max(caja.x, caja.y) * 1.35f, 90f);
+
+            marco.gameObject.SetActive(false);
+            anillo.rectTransform.anchoredPosition = centro;
+            anillo.rectTransform.sizeDelta = new Vector2(diametro, diametro);
+            anillo.color = c;
+            anillo.gameObject.SetActive(true);
+            return;
+        }
+
         const float margen = 14f;
         Vector2 tamano = (localMax - localMin) + new Vector2(margen * 2f, margen * 2f);
         tamano = new Vector2(Mathf.Max(tamano.x, 40f), Mathf.Max(tamano.y, 40f));
 
-        marco.anchoredPosition = (localMin + localMax) * 0.5f;
+        marco.anchoredPosition = centro;
         marco.sizeDelta = tamano;
         PonerBordes(tamano);
-
-        // Late: el marco parpadea para llamar la atencion sin tapar lo que resalta.
-        float pulso = 0.55f + 0.45f * Mathf.PingPong(Time.unscaledTime * 1.6f, 1f);
-        Color c = ColorMarco;
-        c.a = pulso;
         for (int i = 0; i < bordes.Length; i++) bordes[i].color = c;
 
+        anillo.gameObject.SetActive(false);
         marco.gameObject.SetActive(true);
     }
 

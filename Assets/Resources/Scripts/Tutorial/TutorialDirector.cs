@@ -72,6 +72,7 @@ public class TutorialDirector : MonoBehaviour
         public Func<bool> condicion;     // condicion propia (si no hay "ataque")
         public Func<string> estadoExtra; // linea de estado propia del paso (vacia = la comun)
         public Func<Transform> resaltar;
+        public bool resaltarConCirculo;  // el resaltado es un circulo alrededor del objeto (si no, un marco)
         public bool separar;             // al llegar el turno, se acomodan los trompos para que se vea la flecha
         public int energiaMinima;        // energia que se asegura mientras el paso esta activo
         public Action alEntrar;
@@ -288,6 +289,15 @@ public class TutorialDirector : MonoBehaviour
         return barra != null ? barra.transform : null;
     }
 
+    // El lanzador en si (el dibujo donde entra el cordon), no toda la barra: el circulo lo rodea a el.
+    private Transform Lanzador()
+    {
+        if (barraJ == null) return null;
+
+        Transform dibujo = barraJ.transform.Find("Image (1)");
+        return dibujo != null ? dibujo : barraJ.transform;
+    }
+
     private Transform Flecha()
     {
         Prompter flecha = contenedorJ != null ? contenedorJ.GetComponentInChildren<Prompter>(true) : null;
@@ -329,8 +339,7 @@ public class TutorialDirector : MonoBehaviour
         {
             titulo = "Paso 1: el lanzamiento",
             texto = "Antes de pelear lanzás tu trompo. El cordón entra en el lanzador y vos elegís el momento de soltar: " +
-                    "<b>cuanto más adentro esté el cordón, más vida inicial tiene tu trompo</b>. " +
-                    "En una partida normal la barra se mueve sola y tenés 3 segundos para frenarla; acá el juego espera a que estés listo.",
+                    "<b>cuanto más adentro esté el cordón, más vida inicial tiene tu trompo</b>.",
             objetivo = "Cuando el cordón esté adentro, apretá  <b>" + TutorialControles.Esperar + "</b>",
             condicion = () => cordonListo && Controles.Esperar(0),
             alEntrar = IniciarCordon,
@@ -338,7 +347,8 @@ public class TutorialDirector : MonoBehaviour
             estadoExtra = () => cordonListo
                 ? "El cordón está completamente adentro del lanzador: ¡ahora!"
                 : "Mirá cómo el cordón entra en el lanzador…",
-            resaltar = () => barraJ != null ? barraJ.transform : null
+            resaltar = Lanzador,
+            resaltarConCirculo = true
         });
 
         lista.Add(new Paso
@@ -587,7 +597,7 @@ public class TutorialDirector : MonoBehaviour
         // El cartel y el marco se arman una sola vez por paso: lo que cambia cuadro a cuadro
         // es solo la linea de estado (ver Dibujar).
         MostrarCartel();
-        panel.Resaltar(actual.resaltar != null ? actual.resaltar() : null);
+        panel.Resaltar(actual.resaltar != null ? actual.resaltar() : null, actual.resaltarConCirculo);
     }
 
     private void MostrarCartel()
@@ -596,7 +606,7 @@ public class TutorialDirector : MonoBehaviour
         string objetivo = string.IsNullOrEmpty(actual.objetivo) ? "" : "► " + actual.objetivo;
 
         // Un solo boton hace de "continuar" y de "saltar" (ver PidioSaltar).
-        panel.Mostrar("Paso " + (indice + 1) + " de " + pasos.Count, actual.titulo, actual.texto, objetivo,
+        panel.Mostrar("", actual.titulo, actual.texto, objetivo,
             "ENTER: saltar     R3: saltar");
     }
 
