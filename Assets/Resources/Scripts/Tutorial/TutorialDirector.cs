@@ -56,6 +56,7 @@ public class TutorialDirector : MonoBehaviour
     private const int IntentosMaximos = 3;        // golpes fallidos antes de dar el paso por bueno
     private const float DuracionCordon = 2f;      // segundos que tarda el cordon en entrar al lanzador
     private const float PosicionCordonAdentro = 1f; // valor de la barra con el cordon completamente adentro (y vida maxima)
+    private const float EsperaTurnoCpu = 1f;      // segundos de juego antes de darle el turno a la CPU para que ataque
     private const float EsperaTurno = 2.6f;       // segundos de juego sin turno antes de pedirselo al juego (ver ForzarTurno)
     private const float DistanciaPractica = 5f;  // distancia entre los trompos cuando se acomodan para apuntar
     private const float VidaRival = 100f;        // el juego deja a la CPU con muy poca vida en esta escena (ver PrepararCpu)
@@ -75,6 +76,7 @@ public class TutorialDirector : MonoBehaviour
         public Func<string> estadoExtra; // linea de estado propia del paso (vacia = la comun)
         public Func<Transform> resaltar;
         public bool resaltarConCirculo;  // el resaltado es un circulo alrededor del objeto (si no, un marco)
+        public bool cpuAtaca;            // en este paso la CPU toma su turno y ataca al jugador
         public bool separar;             // al llegar el turno, se acomodan los trompos para que se vea la flecha
         public int energiaMinima;        // energia que se asegura mientras el paso esta activo
         public Action alEntrar;
@@ -104,6 +106,9 @@ public class TutorialDirector : MonoBehaviour
     private EndGame fin;
     private TimingBar barraJ;
     private Transform contenedorJ;
+    private Transform contenedorCpu;
+    private BasicAttack ataqueCpu;
+    private EnergyCounter energiaCpu;
 
     // Estado de los sensores.
     private readonly Dictionary<string, int> conteoPrevio = new Dictionary<string, int>();
@@ -119,6 +124,20 @@ public class TutorialDirector : MonoBehaviour
     private bool separadoEnPaso;
     private bool cartelVisible = true;
     private float tiempoSinTurno;
+
+    // Contraataque del rival (el paso en que la CPU ataca al jugador).
+    private bool cpuAtacaPendiente;
+    private bool cpuAtaco;
+    private bool cpuAcomodado;
+    private bool golpeAlJugador;
+    private float tiempoCpuAtaco;
+    private float tiempoSinTurnoCpu;
+    private float vidaJPrevia;
+
+    // Solo para el registro de la Console (diagnostico).
+    private bool turnoJPrevio;
+    private bool turnoCpuPrevio;
+    private float proximoRegistro;
     private string estadoMostrado;
 
     // Retencion de la cuenta regresiva del lanzamiento.
@@ -143,6 +162,12 @@ public class TutorialDirector : MonoBehaviour
     // el juego la baja al 10% al "frenar" su barra de lanzamiento.
     private static readonly FieldInfo campoVidaMaxima =
         typeof(Vida).GetField("maxLife", BindingFlags.NonPublic | BindingFlags.Instance);
+
+    // Bandera con la que CheckPlayerTurn dice "todavia no podes tener turno" (se pone en false con
+    // cada golpe y hasta que pasa el enfriamiento). Los choques seguidos la mantienen apagada y el
+    // turno no llegaba nunca; el director la levanta cuando le pide el turno al juego.
+    private static readonly FieldInfo campoTurnoPosible =
+        typeof(CheckPlayerTurn).GetField("isTurnPosible", BindingFlags.NonPublic | BindingFlags.Instance);
 
     // Angulo de la flecha de apuntar (campo privado de Prompter).
     private static readonly FieldInfo campoAnguloFlecha =
@@ -218,6 +243,7 @@ public class TutorialDirector : MonoBehaviour
 
         energiaPrevia = energiaJ.currentEnergy;
         vidaCpuPrevia = vidaCpu.vidaActual;
+        vidaJPrevia = vidaJ.vidaActual;
 
         // La cuenta regresiva se retiene desde el principio, no recien en el paso del
         // lanzamiento: si no, los carteles de bienvenida se leerian mientras corre y la
@@ -242,7 +268,7 @@ public class TutorialDirector : MonoBehaviour
         vidaJ = turnoJ.GetComponent<Vida>();
         vidaCpu = turnoCpu.GetComponent<Vida>();
         contenedorJ = turnoJ.transform.parent;
-        Transform contenedorCpu = turnoCpu.transform.parent;
+        contenedorCpu = turnoCpu.transform.parent;
         if (vidaJ == null || vidaCpu == null || contenedorJ == null || contenedorCpu == null) return false;
 
         energiaJ = contenedorJ.GetComponentInChildren<EnergyCounter>(true);
@@ -252,6 +278,8 @@ public class TutorialDirector : MonoBehaviour
         cerebroCpu = contenedorCpu.GetComponent<AIBrain>();
         if (cerebroCpu == null) cerebroCpu = contenedorCpu.GetComponentInChildren<AIBrain>(true);
         esperaCpu = contenedorCpu.GetComponentInChildren<WaitOption>(true);
+        ataqueCpu = contenedorCpu.GetComponentInChildren<BasicAttack>(true);
+        energiaCpu = contenedorCpu.GetComponentInChildren<EnergyCounter>(true);
 
         cuentaInicial = FindFirstObjectByType<CountDown>();
         relojTurno = FindFirstObjectByType<CountDownRPG>();
@@ -317,19 +345,15 @@ public class TutorialDirector : MonoBehaviour
     // Arma la lista de pasos con los nombres de botones del control que HAY AHORA. Se vuelve a
     // llamar si cambia el control (ver ActualizarControles) y se copian solo los textos.
     //
-    // Son pocos pasos a proposito (10): la clase sigue el hilo de una pelea real. Lanzamiento,
-    // choque, primer turno con el menu de golpes (ahi se explica la energia), la vida del rival
-    // recien cuando se le pega, y despues un poder nuevo por vez hasta ganar.
+    // Siguen el hilo de una pelea real, en 8 pasos: lanzamiento, choque, el menu de golpes que
+    // aparece al llegar el turno, la energia, un primer golpe, como impacta, el contraataque del
+    // rival y un ultimo golpe para ganar.
     private List<Paso> CrearPasos()
     {
         List<Paso> lista = new List<Paso>();
 
-        int costoShuriken = Costo<LaunchShuriken>(2);
-        int costoPinchos = Costo<LaunchPinchos>(2);
-        int costoClon = Costo<LaunchClone>(2);
-        int costoSierra = Costo<Cierra>(4);
         const int costoBasico = 1;
-        const int costoMover = 1;
+        int costoShuriken = Costo<LaunchShuriken>(2);
 
         // 1. Bienvenida
         lista.Add(new Paso
@@ -357,120 +381,106 @@ public class TutorialDirector : MonoBehaviour
             resaltarConCirculo = true
         });
 
-        // 3. Primer turno: el cartel aparece recien cuando llega el turno (despues del choque)
+        // 3. El choque, y recien al llegar el turno aparece el menu de golpes (y este cartel)
         lista.Add(new Paso
         {
-            titulo = "Tu turno: elegí un golpe",
-            texto = "Los trompos chocaron y el tuyo bajó la velocidad: <b>ahora es tu turno</b>. El juego se detiene y elegís UNA acción " +
-                    "con tu control. Cada acción gasta <b>ENERGÍA</b> (las barritas marcadas) y, si pegás, recuperás +2. " +
-                    "El ataque básico cuesta " + costoBasico + " y embiste hacia donde apunta la flecha.",
-            objetivo = "Atacá con  <b>" + TutorialControles.Atacar + "</b>  y lográ un impacto",
+            titulo = "Tu turno: el menú de golpes",
+            texto = "Los trompos chocaron y el tuyo bajó la velocidad: <b>ahora es tu turno</b>. El juego se detiene y aparece tu menú. " +
+                    "En cada turno elegís <b>UNA</b> acción: un golpe, un especial, moverte o esperar.",
+            soloLeer = true,
             requiereTurno = true,
             ocultoHastaTurno = true,
+            separar = true,
+            resaltar = Botonera
+        });
+
+        // 4. La barra de energia (el menu de golpes la muestra)
+        lista.Add(new Paso
+        {
+            titulo = "La energía",
+            texto = "Estas barritas son tu <b>ENERGÍA</b>. Cada golpe gasta un poco y, si no te alcanza, no se puede usar. " +
+                    "Ganás +1 al empezar cada turno y <b>+2 cada vez que le pegás al rival</b>: atacar te devuelve energía. " +
+                    "Para practicar, el tutorial te regala la que necesites.",
+            soloLeer = true,
+            requiereTurno = true,
+            resaltar = Energia
+        });
+
+        // 5. Un golpe
+        lista.Add(new Paso
+        {
+            titulo = "Tu primer golpe  (" + costoBasico + " de energía)",
+            texto = "El ataque básico es el más barato: tu trompo <b>embiste hacia donde apunta la flecha</b>. " +
+                    (TutorialControles.ConJoystick
+                        ? "Apuntá con <b>el STICK DERECHO</b> hacia el rival."
+                        : "La flecha apunta sola hacia el rival (con W A S D la podés girar, pero esas teclas también lanzan ataques)."),
+            objetivo = "Atacá con  <b>" + TutorialControles.Atacar + "</b>  y lográ un impacto",
+            requiereTurno = true,
             ataque = "BasicAttack",
             requiereGolpe = true,
-            separar = true,
             energiaMinima = costoBasico,
-            resaltar = Energia,
+            resaltar = Flecha,
             pistaFallo = "No impactó. Esperá tu próximo turno, mirá que la flecha apunte al rival y volvé a intentar."
         });
 
-        // 4. La vida, explicada cuando el rival ya perdio vida
+        // 6. Como impacta
         lista.Add(new Paso
         {
-            titulo = "La vida del rival",
-            texto = "¡Le sacaste vida! El círculo del rival es su <b>VIDA</b>: cuando llega a 0, pierde. " +
-                    "Cada golpe además <b>lo hace esperar más para su próximo turno</b>, así que pegar también te da ventaja de tiempo.",
+            titulo = "El impacto",
+            texto = "¡Le diste! Mirá la <b>VIDA</b> del rival (el círculo): bajó, y cuando llegue a 0 pierde. " +
+                    "Cada golpe además <b>lo hace esperar más para su próximo turno</b>, y a vos te devolvió +2 de energía.",
             soloLeer = true,
-            resaltar = () => VidaVisual(turnoCpu != null ? turnoCpu.transform.parent : null)
+            resaltar = () => VidaVisual(contenedorCpu)
         });
 
-        // 5. Otro poder: el shuriken (y como apuntar)
+        // 7. El rival ataca (la CPU toma su turno y le pega al jugador)
         lista.Add(new Paso
         {
-            titulo = "El shuriken  (" + costoShuriken + " de energía)",
-            texto = "Lanza un proyectil que <b>rebota hasta 3 veces en los bordes</b> antes de desaparecer: pega desde lejos. " +
-                    (TutorialControles.ConJoystick
-                        ? "Apuntá con <b>el STICK DERECHO</b>: la flecha marca hacia dónde sale."
-                        : "La flecha marca hacia dónde sale y apunta sola hacia el rival (con W A S D la podés girar, pero esas teclas también lanzan ataques)."),
-            objetivo = "Lanzá el shuriken con  <b>" + TutorialControles.Derecha + "</b>  y lográ un impacto",
-            requiereTurno = true,
-            ataque = "LaunchShuriken",
-            requiereGolpe = true,
-            separar = true,
-            energiaMinima = costoShuriken,
-            resaltar = Flecha,
-            pistaFallo = "No impactó. Con apuntar hacia el rival alcanza; si rebotó, esperá tu turno y probá otra vez."
+            titulo = "Ahora ataca el rival",
+            texto = "Acá los dos se pegan. Ahora le toca al rival: te va a atacar y vas a ver cómo baja <b>tu VIDA</b>. " +
+                    "Cuando recibís un golpe también <b>tenés que esperar más</b> para tu próximo turno.",
+            cpuAtaca = true,
+            alEntrar = PrepararContraataque,
+            condicion = () => cpuAtaco && (golpeAlJugador || tiempoCpuAtaco > 4f),
+            estadoExtra = () => !cpuAtaco
+                ? "El rival está por atacar…"
+                : (golpeAlJugador ? "¡Te pegó! Mirá cómo bajó tu vida." : "Mirá el ataque del rival…"),
+            resaltar = () => VidaVisual(contenedorJ)
         });
 
-        // 6. Pinchos
+        // 8. Devolver el golpe y terminar
         lista.Add(new Paso
         {
-            titulo = "Los pinchos  (" + costoPinchos + " de energía)",
-            texto = "Soltás pinchos hacia adelante: <b>dañan a quien los pise y lo obligan a esperar más</b> para su próximo turno. " +
-                    "Son una trampa: sirven para frenar el ritmo del rival.",
-            objetivo = "Soltá los pinchos con  <b>" + TutorialControles.Izquierda + "</b>  y lográ un impacto",
-            requiereTurno = true,
-            ataque = "LaunchPinchos",
-            requiereGolpe = true,
-            separar = true,
-            energiaMinima = costoPinchos,
-            pistaFallo = "Los pinchos tienen que tocar al rival. Apuntá hacia él y volvé a intentar en tu próximo turno."
-        });
-
-        // 7. Clon
-        lista.Add(new Paso
-        {
-            titulo = "El clon  (" + costoClon + " de energía)",
-            texto = "Lanzás un <b>clon</b> de tu trompo hacia un costado y vos salís despedido para el lado contrario. " +
-                    "El clon choca con lo que encuentre: sirve para atacar desde otro ángulo.",
-            objetivo = "Lanzá el clon con  <b>" + TutorialControles.R1 + "</b>",
-            requiereTurno = true,
-            ataque = "LaunchClone",
-            energiaMinima = costoClon
-        });
-
-        // 8. Moverse
-        lista.Add(new Paso
-        {
-            titulo = "Moverse  (" + costoMover + " de energía)",
-            texto = "Tu trompo avanza hacia donde apunta la flecha. Sirve para <b>acercarte al rival</b>, alejarte de un golpe " +
-                    "o acomodarte antes de atacar.",
-            objetivo = "Moverte con  <b>" + TutorialControles.Avanzar + "</b>",
-            requiereTurno = true,
-            ataque = "Move",
-            energiaMinima = costoMover
-        });
-
-        // 9. Sierra (el golpe mas fuerte)
-        lista.Add(new Paso
-        {
-            titulo = "La sierra  (" + costoSierra + " de energía, la más cara)",
-            texto = "Embestís al rival y, si lo alcanzás, <b>quedan trabados un instante</b>: en ese momento cada vez que apretás " +
-                    "<b>" + TutorialControles.Esperar + "</b> le hacés daño. ¡Apretalo lo más rápido que puedas!",
-            objetivo = "Usá la sierra con  <b>" + TutorialControles.Abajo + "</b>  y lográ un impacto",
-            requiereTurno = true,
-            ataque = "Sierra",
-            requiereGolpe = true,
-            separar = true,
-            energiaMinima = costoSierra,
-            pistaFallo = "La sierra tiene que alcanzar al rival. Apuntá hacia él y probá otra vez."
-        });
-
-        // 10. Ganar
-        lista.Add(new Paso
-        {
-            titulo = "¡A ganar!",
-            texto = "Ya sabés lo básico. Al rival le queda <b>muy poca vida</b>: usá lo que quieras para dejarla en 0.",
+            titulo = "Devolvé el golpe",
+            texto = "Es tu turno otra vez. Al rival le queda <b>muy poca vida</b>: usá el ataque que quieras para dejarla en 0.",
             objetivo = "Dejá la vida del rival en 0",
             requiereTurno = true,
+            separar = true,
             condicion = () => RivalDerrotado(),
             energiaMinima = costoShuriken,
             alEntrar = PrepararFinal,
-            resaltar = () => VidaVisual(turnoCpu != null ? turnoCpu.transform.parent : null)
+            resaltar = () => VidaVisual(contenedorCpu)
         });
 
         return lista;
+    }
+
+    // El rival ataca en cuanto le toque el turno (ver MoverCpu); el director se lo da si tarda.
+    private void PrepararContraataque()
+    {
+        cpuAtacaPendiente = true;
+    }
+
+    // La botonera del menu de golpes del jugador (el panel con los botones de accion).
+    private Transform Botonera()
+    {
+        if (contenedorJ == null) return null;
+
+        foreach (Transform hijo in contenedorJ.GetComponentsInChildren<Transform>(true))
+        {
+            if (hijo.name == "Buttoms") return hijo;
+        }
+        return null;
     }
 
     // ------------------------------------------------------------------ flujo de pasos
@@ -496,6 +506,13 @@ public class TutorialDirector : MonoBehaviour
         separadoEnPaso = false;
         tiempoSinTurno = 0f;
         cartelVisible = true;
+        cpuAtacaPendiente = false;
+        cpuAtaco = false;
+        cpuAcomodado = false;
+        golpeAlJugador = false;
+        tiempoCpuAtaco = 0f;
+        tiempoSinTurnoCpu = 0f;
+        Registrar("paso " + (indice + 1) + " de " + pasos.Count + ": " + actual.titulo);
 
         if (actual.alEntrar != null) actual.alEntrar();
 
@@ -569,7 +586,7 @@ public class TutorialDirector : MonoBehaviour
 
         panel.Resaltar(null);
         panel.Mostrar("", "¡Ganaste! Tutorial completo",
-            "Ya probaste el ataque básico, el shuriken, los pinchos, el clon, el movimiento y la sierra. " +
+            "Aprendiste cómo se lanza, el menú de golpes, la energía y cómo se pelea por turnos: pegás, el rival te pega y gana el que se queda sin vida. " +
             "Cada personaje tiene sus propios ataques para descubrir. ¡Ahora probá un 1 contra 1!",
             "", "Para volver al menú:  " + TutorialControles.ConfirmarFinal);
     }
@@ -587,6 +604,7 @@ public class TutorialDirector : MonoBehaviour
 
         ActualizarControles();
         ActualizarSensores();
+        RegistrarTurnos();
         MoverCpu();
         AnimarCordon();
 
@@ -612,6 +630,19 @@ public class TutorialDirector : MonoBehaviour
     private void ForzarTurno()
     {
         bool corriendo = cuentaInicial == null || cuentaInicial.finished;
+
+        // Turno de la CPU, solo en el paso en que tiene que atacar al jugador.
+        if (actual.cpuAtaca && !cpuAtaco && !turnoCpu.isTurnActive && corriendo)
+        {
+            tiempoSinTurnoCpu += Time.deltaTime;
+            if (tiempoSinTurnoCpu >= EsperaTurnoCpu) PedirTurno(turnoCpu);
+        }
+        else
+        {
+            tiempoSinTurnoCpu = 0f;
+        }
+
+        // Turno del jugador.
         if (!actual.requiereTurno || turnoJ.isTurnActive || !corriendo)
         {
             tiempoSinTurno = 0f;
@@ -619,7 +650,45 @@ public class TutorialDirector : MonoBehaviour
         }
 
         tiempoSinTurno += Time.deltaTime; // tiempo de juego: si el juego esta frenado, no cuenta
-        if (tiempoSinTurno >= EsperaTurno) turnoJ.RequestTurnNow(); // si todavia no puede (enfriamiento), reintenta
+        if (tiempoSinTurno >= EsperaTurno) PedirTurno(turnoJ);
+
+        // Si algo impide el turno, que quede escrito por que (se lee en la Console).
+        if (Time.unscaledTime >= proximoRegistro)
+        {
+            proximoRegistro = Time.unscaledTime + 2f;
+            Registrar("esperando el turno: " + tiempoSinTurno.ToString("0.0") + " s sin turno, timeScale = " +
+                      Time.timeScale + ", cuenta inicial terminada = " + corriendo);
+        }
+    }
+
+    // Le pide el turno al juego con el mismo metodo que usa la CPU (RequestTurnNow). Antes se levanta
+    // la bandera de enfriamiento de CheckPlayerTurn: los choques seguidos la dejaban apagada y el
+    // pedido era rechazado una y otra vez.
+    private void PedirTurno(CheckPlayerTurn turno)
+    {
+        if (campoTurnoPosible != null) campoTurnoPosible.SetValue(turno, true);
+        turno.RequestTurnNow();
+    }
+
+    // Diagnostico: deja en la Console cuando empieza y termina cada turno.
+    private void Registrar(string mensaje)
+    {
+        Debug.Log("Tutorial: " + mensaje);
+    }
+
+    private void RegistrarTurnos()
+    {
+        if (turnoJ.isTurnActive != turnoJPrevio)
+        {
+            turnoJPrevio = turnoJ.isTurnActive;
+            Registrar("turno del jugador " + (turnoJPrevio ? "EMPIEZA" : "termina") + " (timeScale = " + Time.timeScale + ")");
+        }
+
+        if (turnoCpu.isTurnActive != turnoCpuPrevio)
+        {
+            turnoCpuPrevio = turnoCpu.isTurnActive;
+            Registrar("turno de la CPU " + (turnoCpuPrevio ? "EMPIEZA" : "termina") + " (timeScale = " + Time.timeScale + ")");
+        }
     }
 
     private void LateUpdate()
@@ -666,7 +735,16 @@ public class TutorialDirector : MonoBehaviour
         if (vidaCpu.vidaActual < vidaCpuPrevia - 0.01f)
         {
             if (usosPaso > 0) golpeTrasUso = true;
+            Registrar("el rival recibio un golpe (vida " + vidaCpu.vidaActual + ")");
         }
+
+        if (vidaJ.vidaActual < vidaJPrevia - 0.01f)
+        {
+            golpeAlJugador = true;
+            Registrar("el jugador recibio un golpe (vida " + vidaJ.vidaActual + ")");
+        }
+
+        if (cpuAtaco) tiempoCpuAtaco += Time.unscaledDeltaTime;
     }
 
     private void RegistrarUso(string clave)
@@ -690,6 +768,12 @@ public class TutorialDirector : MonoBehaviour
         tiempoTurnoCpu += Time.unscaledDeltaTime;
         if (tiempoTurnoCpu < ReaccionCpu) return;
 
+        if (cpuAtacaPendiente && ataqueCpu != null)
+        {
+            AtacarConLaCpu();
+            return;
+        }
+
         if (esperaCpu != null && tiempoCierreCpu <= 0f) esperaCpu.DoWait();
 
         tiempoCierreCpu += Time.unscaledDeltaTime;
@@ -698,6 +782,34 @@ public class TutorialDirector : MonoBehaviour
             turnoCpu.PlayerChoseAnAction(0.5f, 1000f, false);
             tiempoCierreCpu = 0f;
         }
+    }
+
+    // El contraataque: los trompos se ubican frente a frente a 4 unidades, la flecha de la CPU mira
+    // al jugador (a 180 grados) y la CPU hace su ataque basico con los mismos metodos del juego.
+    private void AtacarConLaCpu()
+    {
+        if (!cpuAcomodado)
+        {
+            cpuAcomodado = true;
+            Rigidbody2D cuerpoJ = turnoJ.GetComponent<Rigidbody2D>();
+            Rigidbody2D cuerpoCpu = turnoCpu.GetComponent<Rigidbody2D>();
+            if (cuerpoJ != null && cuerpoCpu != null)
+            {
+                Colocar(cuerpoJ, new Vector2(-2f, 0f));
+                Colocar(cuerpoCpu, new Vector2(2f, 0f));
+            }
+            GirarFlecha(contenedorCpu, 180f);
+            return; // el ataque sale en el cuadro siguiente, con la flecha ya girada
+        }
+
+        // La energia de la CPU no se usa en el tutorial: se le asegura la del ataque.
+        if (energiaCpu != null && energiaCpu.currentEnergy < 1) energiaCpu.ChangeEnergy(1, "Ninguno");
+
+        cpuAtacaPendiente = false;
+        cpuAtaco = true;
+        tiempoCpuAtaco = 0f;
+        Registrar("la CPU ataca");
+        ataqueCpu.DoAttack();
     }
 
     private void ProtegerVidas()
@@ -713,6 +825,7 @@ public class TutorialDirector : MonoBehaviour
 
         // Se guarda DESPUES de proteger: el sensor de golpes compara contra la vida ya corregida.
         vidaCpuPrevia = vidaCpu.vidaActual;
+        vidaJPrevia = vidaJ.vidaActual;
     }
 
     private void AsegurarEnergia()
@@ -856,7 +969,13 @@ public class TutorialDirector : MonoBehaviour
         tiempoCordon = 0f;
         animandoCordon = barraCordon != null;
         cordonListo = barraCordon == null; // sin barra que animar no hay nada que esperar
-        if (barraCordon != null) barraCordon.value = 0f;
+        if (barraCordon != null)
+        {
+            // La barra del lanzador va de a 11 escalones (pensada para frenarla con el boton): al
+            // moverla por codigo se veia trabada y a saltos. En el tutorial se mueve sin escalones.
+            barraCordon.numberOfSteps = 0;
+            barraCordon.value = 0f;
+        }
     }
 
     // El cordon entra solo en el lanzador y se queda quieto: el juego sigue pausado
