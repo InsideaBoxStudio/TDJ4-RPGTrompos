@@ -11,7 +11,7 @@ Abrir `Assets/Scenes/Tutorial.unity` y darle Play. Para sumarla a un build hay q
 El juego se pausa cada vez que el jugador tiene que hacer algo, y se le enseña **una mecánica a la vez**:
 
 1. **Lanzamiento:** el cordón entra solo en el lanzador y todo queda quieto hasta que el jugador aprieta el botón.
-2. **Choque y primer turno:** los trompos chocan sin cartel. Como siguen rebotando y cada golpe frena el turno, el del jugador casi nunca llega solo: pasado un rato el director **le pide el turno al juego** (`CheckPlayerTurn.RequestTurnNow`, el mismo método que usa la CPU) y antes levanta la bandera de enfriamiento (`isTurnPosible`) que los choques mantenían apagada. Se congela todo, aparece el menú de golpes y recién ahí el cartel.
+2. **Choque y primer turno:** los trompos chocan sin cartel. Como siguen rebotando y cada golpe frena el turno, el del jugador casi nunca llega solo. Por eso, 0,7 s después del primer golpe entre los trompos (para que se vea el choque) el director **abre el turno directamente**: llama a `CheckPlayerTurn.Ready()` (lo que hace el juego al empezar un turno: suma la energía y muestra el menú de golpes) y congela el juego. Recién ahí aparece el cartel con el «ENTER: saltar / R3: saltar». Si no hubiera golpe, lo abre igual a los 2,6 s.
 3. **Cada turno siguiente:** el cartel de la mecánica y la espera a que el jugador la haga de verdad (y, si corresponde, que pegue). Si el turno tarda, se pide igual.
 4. **Contraataque:** el director también le da el turno a la CPU, que hace su ataque básico con los métodos del juego, para que el jugador vea cómo se recibe un golpe.
 

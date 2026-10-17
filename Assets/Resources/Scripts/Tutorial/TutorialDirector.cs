@@ -56,6 +56,7 @@ public class TutorialDirector : MonoBehaviour
     private const int IntentosMaximos = 3;        // golpes fallidos antes de dar el paso por bueno
     private const float DuracionCordon = 2f;      // segundos que tarda el cordon en entrar al lanzador
     private const float PosicionCordonAdentro = 1f; // valor de la barra con el cordon completamente adentro (y vida maxima)
+    private const float RetrasoTrasChoque = 0.7f; // segundos que se deja ver el choque antes de abrir el menu
     private const float EsperaTurnoCpu = 1f;      // segundos de juego antes de darle el turno a la CPU para que ataque
     private const float EsperaTurno = 2.6f;       // segundos de juego sin turno antes de pedirselo al juego (ver ForzarTurno)
     private const float DistanciaPractica = 5f;  // distancia entre los trompos cuando se acomodan para apuntar
@@ -124,6 +125,8 @@ public class TutorialDirector : MonoBehaviour
     private bool separadoEnPaso;
     private bool cartelVisible = true;
     private float tiempoSinTurno;
+    private bool choqueDetectado;
+    private float tiempoDelChoque;
 
     // Contraataque del rival (el paso en que la CPU ataca al jugador).
     private bool cpuAtacaPendiente;
@@ -505,6 +508,8 @@ public class TutorialDirector : MonoBehaviour
         avisoEnergia = false;
         separadoEnPaso = false;
         tiempoSinTurno = 0f;
+        choqueDetectado = false;
+        tiempoDelChoque = 0f;
         cartelVisible = true;
         cpuAtacaPendiente = false;
         cpuAtaco = false;
@@ -650,7 +655,14 @@ public class TutorialDirector : MonoBehaviour
         }
 
         tiempoSinTurno += Time.deltaTime; // tiempo de juego: si el juego esta frenado, no cuenta
-        if (tiempoSinTurno >= EsperaTurno) PedirTurno(turnoJ);
+
+        // El primer turno llega con el choque: un instante despues del primer golpe entre los
+        // trompos (para que se vea) se frena todo y aparece el menu. Si no hubiera golpe, vale el
+        // tiempo de espera de siempre.
+        bool llegoElMomento = actual.ocultoHastaTurno && choqueDetectado
+            ? tiempoSinTurno - tiempoDelChoque >= RetrasoTrasChoque
+            : tiempoSinTurno >= EsperaTurno;
+        if (llegoElMomento) PedirTurno(turnoJ);
 
         // Si algo impide el turno, que quede escrito por que (se lee en la Console).
         if (Time.unscaledTime >= proximoRegistro)
@@ -667,7 +679,17 @@ public class TutorialDirector : MonoBehaviour
     private void PedirTurno(CheckPlayerTurn turno)
     {
         if (campoTurnoPosible != null) campoTurnoPosible.SetValue(turno, true);
-        turno.RequestTurnNow();
+
+        // Se abre el turno directamente en vez de usar RequestTurnNow: ese metodo tiene varias
+        // condiciones que lo rechazan en silencio y en las pruebas el turno nunca llegaba. Ready() es
+        // lo que hace el juego al empezar un turno (suma la energia del turno y muestra el menu de
+        // golpes); falta congelar el juego, que es lo que hace RPGTurn. Cuando el jugador actua,
+        // PlayerChoseAnAction cierra el turno y el juego vuelve a correr solo.
+        if (turno.isTurnActive) return;
+
+        turno.Ready();
+        Time.timeScale = 0f;
+        Registrar("turno abierto por el tutorial");
     }
 
     // Diagnostico: deja en la Console cuando empieza y termina cada turno.
@@ -731,6 +753,13 @@ public class TutorialDirector : MonoBehaviour
 
         // Esperar es gratis, no deja rastro en la energia: se reconoce por el boton.
         if (turnoJ.isTurnActive && Controles.Esperar(0)) RegistrarUso("Wait");
+
+        if (!choqueDetectado && (vidaCpu.vidaActual < vidaCpuPrevia - 0.01f || vidaJ.vidaActual < vidaJPrevia - 0.01f))
+        {
+            choqueDetectado = true;
+            tiempoDelChoque = tiempoSinTurno;
+            Registrar("primer choque detectado");
+        }
 
         if (vidaCpu.vidaActual < vidaCpuPrevia - 0.01f)
         {
