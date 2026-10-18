@@ -1033,7 +1033,10 @@ public class TutorialDirector : MonoBehaviour
             bool volver = PidioR3() || (fin == null && (Controles.Confirmar() || PidioSaltar()));
             if (volver)
             {
-                Time.timeScale = 1f; // el menu no tiene que arrancar congelado
+                // Igual que al terminar cualquier pelea: EndGame deja el juego congelado y asi llega al
+                // menu (ChangeMap lo descongela al elegir un modo). Si llegara corriendo, los trompos del
+                // fondo del menu se disparan entre si.
+                Time.timeScale = 0f;
                 SceneManager.LoadScene("InitMenu");
             }
             return;
@@ -1157,23 +1160,11 @@ public class TutorialDirector : MonoBehaviour
         }
     }
 
-    // Pase lo que pase (X, R3, ENTER o cualquier otro camino al menu), la escena del tutorial no deja el
-    // juego congelado: EndGame pone timeScale = 0 al terminar y lo deja asi al cargar el menu, y el
-    // menu tiene fisica (los trompos del fondo) que quedaria clavada.
-    private void OnDestroy()
-    {
-        Time.timeScale = 1f;
-    }
-
     private void LateUpdate()
     {
         if (!listo) return;
 
         if (retenerCuenta && cuentaInicial != null) cuentaInicial.countDownTime = cuentaOriginal;
-
-        // EndGame carga el menu con el juego congelado (timeScale = 0) y el menu arranca trabado. Se
-        // destraba en el mismo cuadro en que se pide volver (LateUpdate corre despues de EndGame.Update).
-        if (termino && (Controles.Confirmar() || PidioR3())) Time.timeScale = 1f;
 
         // En la pelea libre el juego corre con sus reglas: reloj de turno, CPU pensando y vidas reales.
         // Solo se siguen anotando las vidas, para que el sensor de golpes no registre el mismo golpe en

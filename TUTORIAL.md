@@ -75,6 +75,10 @@ Al terminar, `EndGame` muestra su pantalla de siempre y vuelve a `InitMenu`.
 
 Para quitar el tutorial: borrar la carpeta `Scripts/Tutorial` y la escena `Tutorial.unity`.
 
+## Nota sobre la vuelta al menú
+
+Al terminar cualquier pelea, `EndGame` deja `Time.timeScale = 0` y así se carga `InitMenu`: los trompos del fondo del menú quedan quietos en el centro, y `ChangeMap` vuelve a poner el tiempo en 1 al elegir un modo. El tutorial hace exactamente lo mismo (también al salir con R3). Si el menú llegara con el tiempo corriendo, esos trompos (físicos: `GravityToPoint` + `BeybladeCollider` con `reboundForceBeybladeStay = -10`) se disparan entre sí a los pocos segundos y dejan estelas largas; pasa igual dando Play directo en `InitMenu` y esperando. Es un tema del menú, no del tutorial.
+
 ## Cómo agregar o cambiar un paso
 
 Los pasos están en `TutorialDirector.ConstruirPasos()`: cada uno es un título, un texto y una condición. Para el ataque que se usa, `ataque` es el nombre con el que el juego lo anota en `EnergyCounter.ataquesUsados`.
