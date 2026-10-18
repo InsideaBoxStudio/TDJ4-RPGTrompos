@@ -10,10 +10,14 @@ Abrir `Assets/Scenes/Tutorial.unity` y darle Play. Para sumarla a un build hay q
 
 El juego se pausa cada vez que el jugador tiene que hacer algo, y se le enseña **una mecánica a la vez**:
 
-1. **Lanzamiento:** el cordón entra solo en el lanzador y todo queda quieto hasta que el jugador aprieta el botón.
-2. **Choque y primer turno:** los trompos chocan sin cartel. Como siguen rebotando y cada golpe frena el turno, el del jugador casi nunca llega solo. Por eso, 0,7 s después del primer golpe entre los trompos (para que se vea el choque) el director **abre el turno directamente**: llama a `CheckPlayerTurn.Ready()` (lo que hace el juego al empezar un turno: suma la energía y muestra el menú de golpes) y congela el juego. Recién ahí aparece el cartel con el «ENTER: saltar / R3: saltar». Si no hubiera golpe, lo abre igual a los 2,6 s.
+1. **Lanzamiento:** el cordón entra y sale del lanzador (como en el juego, pero más lento y sin cuenta regresiva) y todo queda quieto hasta que el jugador aprieta el botón **con el cordón adentro** (umbral `CordonAdentro`); si lo aprieta afuera, se le avisa y sigue. La vida inicial sale de la posición real de la barra.
+2. **Choque y primer turno:** los trompos chocan sin cartel. Como siguen rebotando y cada golpe frena el turno, el del jugador casi nunca llega solo. Por eso, 0,7 s después del primer golpe entre los trompos (para que se vea el choque) el director **le abre el turno** por la misma puerta que usa la CPU (`RPGTurn.NotifyReadyImmediate`): el juego suma la energía, muestra el menú de golpes y se congela. Recién ahí aparece el cartel con el «ENTER: saltar / R3: saltar». Si no hubiera golpe, lo abre igual a los 2,6 s.
+
+   Para que ese turno sobreviva hubo que reparar el **reloj de turno** (`CountDownRPG`): en esta escena nace en 0 porque el director prende al Ninja desde su `Awake`, y el `Awake` del trompo reinicia el reloj antes de que el reloj haya guardado su duración. Con el reloj en 0 el juego cierra cualquier turno en el mismo cuadro en que empieza. El director lee la duración antes de prender al Ninja y la repone al arrancar.
 3. **Cada turno siguiente:** el cartel de la mecánica y la espera a que el jugador la haga de verdad (y, si corresponde, que pegue). Si el turno tarda, se pide igual.
-4. **Contraataque:** el director también le da el turno a la CPU, que hace su ataque básico con los métodos del juego, para que el jugador vea cómo se recibe un golpe.
+4. **Contraataque:** el director también le da el turno a la CPU, que hace su ataque básico con los métodos del juego, para que el jugador vea cómo se recibe un golpe. Fuera de ese paso la CPU no tiene turno.
+
+Ojo al probar: las **paredes del estadio hacen 2 de daño** (`StadiumCollider`). Después de embestir, el trompo del jugador suele rebotar contra la pared y perder vida varias veces seguidas: no es la CPU atacando.
 
 En la Console quedan líneas que empiezan con «Tutorial:» (paso actual, cuándo empieza y termina cada turno, golpes recibidos). Sirven para diagnosticar si algo no avanza.
 
@@ -27,18 +31,25 @@ Los carteles nombran los botones del joystick conectado (PlayStation: X, círcul
 
 ## Qué enseña (en este orden)
 
-Son 8 pasos, siguiendo el hilo de una pelea real:
+Son 11 pasos, siguiendo el hilo de una pelea real:
 
 1. Bienvenida y objetivo.
 2. Lanzamiento (el cordón entra al lanzador).
-3. Choque y menú de golpes: aparece al llegar el turno.
-4. La barra de energía.
-5. Un golpe (ataque básico, con impacto).
+3. Choque y menú de golpes: aparece al llegar el turno; al apretar el botón del menú (cuadrado / X / C) el director **deja el menú abierto** y lo resalta (en el juego solo se ve mientras se mantiene). Ningún otro botón responde.
+4. El primer golpe: el ataque básico, con impacto (único golpe habilitado); el menú se cierra con el golpe, como en el juego.
+5. La barra de energía: mientras se lee, la barra baja y sube sola en ciclo (llena → gasta 4 → recupera 2) para que se vea cómo funciona; al salir se deja llena.
 6. Cómo impacta: la vida del rival.
-7. El rival ataca: se ve cómo baja la vida del jugador.
-8. Devolver el golpe y ganar.
+7. El menú de especiales: el otro botón (círculo / B / V); también queda abierto.
+8. El veneno (L1 / LB / R): abre el minijuego de timing del juego; el cartel resalta el indicador y dice **¡AHORA!** cuando está en la zona. Si sale bien queda cargado, si sale mal el jugador se envenena solo (el tutorial lo dice y sigue).
+9. Contagiarlo: un golpe (básico o shuriken) pasa el veneno al rival, que pierde vida cada segundo. Si el veneno se perdió en el paso anterior, alcanza con pegarle.
+10. El rival ataca: le tira un shuriken al jugador y se ve cómo baja su vida. Hasta acá la CPU **no toma turnos**: el director le mantiene apagada la bandera de turno, así el trompo rival no actúa ni congela el juego mientras se practica.
+11. La pelea de verdad: se prende el `AIBrain` de la CPU, se sacan los pisos de vida y el reloj de turno vuelve a correr; todas las acciones quedan habilitadas. El rival arranca con poca vida para que el cierre sea corto. El cartel recuerda cómo abrir los menús; si el jugador se queda 6 s en su turno sin hacer nada, el cartel vuelve con una ayuda. Si los trompos quedan rebotando y nadie consigue turno en 4 s, el director le abre uno al jugador. Al caer el rival aparece «¡Ganaste!» (sin pedir botón) y se vuelve al menú con X / R3.
 
-Quedaron afuera (para sumar después si hace falta): esperar, moverse, shuriken, pinchos, clon, sierra, veneno, sustitución y parry.
+**Carteles:** ninguno se va solo. Los de lectura avanzan con ENTER / R3; los de acción quedan en «¡Bien hecho!» hasta ENTER / R3, salvo el lanzamiento (arranca al soltar) y los dos de abrir menú (siguen directo al golpe). El del último paso se cierra con ENTER / R3 y la pelea sigue; al caer el rival aparece «¡Ganaste!» y se vuelve al menú con X / R3 (o ENTER / ESPACIO).
+
+**Botones por paso:** cada paso dice qué scripts del jugador responden (`permitidos`), menús incluidos; el director apaga los demás con `enabled = false` (sin tocar la escena). En el paso del menú de golpes solo abre cuadrado; en el de especiales, solo círculo.
+
+Quedaron afuera (para sumar después si hace falta): esperar, moverse, pinchos, clon, sierra, sustitución y parry.
 
 ## Qué hace el tutorial con la partida
 
@@ -70,4 +81,4 @@ Los pasos están en `TutorialDirector.ConstruirPasos()`: cada uno es un título,
 
 ## Qué falta probar
 
-Se compiló sin errores, pero todavía no se jugó. Revisar que el cordón entre y se frene, que cada paso se complete, que el marco amarillo caiga sobre lo que se explica y que al final se pueda ganar. La posición del cordón "completamente adentro" es la constante `PosicionCordonAdentro` del director, por si hay que ajustarla.
+Revisar que cada paso se complete, que el marco amarillo caiga sobre lo que se explica y que al final se pueda ganar. La velocidad del cordón y desde dónde cuenta como "adentro" son las constantes `VelocidadCordon` y `CordonAdentro` del director, por si hay que ajustarlas. Pendiente: confirmar cómo se ve `InitMenu` al volver (comparar con un Play directo en esa escena).

@@ -93,6 +93,7 @@ public static class TutorialControles
 
     public static string Apuntar => ConJoystick ? "el STICK DERECHO" : "las teclas W A S D";
 
-    // Para volver al menu al terminar (lo hace EndGame con Controles.Confirmar: boton de abajo o ENTER/ESPACIO).
-    public static string ConfirmarFinal => ConJoystick ? Esperar + " o ENTER" : "ENTER o ESPACIO";
+    // Para volver al menu al terminar: el boton de abajo lo atiende EndGame (Controles.Confirmar) y R3 el
+    // director; con teclado, ENTER o ESPACIO.
+    public static string ConfirmarFinal => ConJoystick ? Esperar + " o R3" : "ENTER o ESPACIO";
 }
