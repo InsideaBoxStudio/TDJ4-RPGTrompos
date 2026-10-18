@@ -10,31 +10,40 @@ public class JoystickSpriteManager : MonoBehaviour
     public Sprite psButtonEast;
     public Sprite psButtonWest;
     public Sprite psButtonNorth;
+    public Sprite psButtonL1;
+    public Sprite psButtonR1;
 
     [Header("Xbox")]
     public Sprite xboxButtonSouth;
     public Sprite xboxButtonEast;
     public Sprite xboxButtonWest;
     public Sprite xboxButtonNorth;
+    public Sprite xboxButtonL1;
+    public Sprite xboxButtonR1;
 
     [Header("Nintendo")]
     public Sprite nintendoButtonSouth;
     public Sprite nintendoButtonEast;
     public Sprite nintendoButtonWest;
     public Sprite nintendoButtonNorth;
+    public Sprite nintendoButtonL1;
+    public Sprite nintendoButtonR1;
 
     [Header("Teclado")]
     public Sprite keyboardButtonSouth;
     public Sprite keyboardButtonEast;
     public Sprite keyboardButtonWest;
     public Sprite keyboardButtonNorth;
+    public Sprite keyboardButtonL1;
+    public Sprite keyboardButtonR1;
 
     [Header("Genérico")]
     public Sprite genericButtonSouth;
     public Sprite genericButtonEast;
     public Sprite genericButtonWest;
     public Sprite genericButtonNorth;
-
+    public Sprite genericButtonL1;
+    public Sprite genericButtonR1;
 
     public enum JoystickType
     {
@@ -45,14 +54,8 @@ public class JoystickSpriteManager : MonoBehaviour
         Generic
     }
 
-
-    // Tipo de control de cada jugador
     private JoystickType[] playerJoystickTypes;
-
-    // Gamepad asignado a cada jugador.
-    // Puede ser null si el jugador utiliza teclado.
     private Gamepad[] playerGamepads;
-
 
     private void Awake()
     {
@@ -72,13 +75,11 @@ public class JoystickSpriteManager : MonoBehaviour
 
     private void Update()
     {
-        // Detectar cambios en los gamepads conectados
         if (Gamepad.all.Count != playerGamepads.Length)
         {
             DetectGamepads();
         }
     }
-
 
     // =========================================================
     // DETECTAR CONTROLES
@@ -91,10 +92,8 @@ public class JoystickSpriteManager : MonoBehaviour
         playerJoystickTypes = new JoystickType[playerCount];
         playerGamepads = new Gamepad[playerCount];
 
-
         for (int i = 0; i < playerCount; i++)
         {
-            // Si existe un gamepad para este jugador
             if (i < Gamepad.all.Count)
             {
                 Gamepad gamepad = Gamepad.all[i];
@@ -104,13 +103,11 @@ public class JoystickSpriteManager : MonoBehaviour
             }
             else
             {
-                // No hay Gamepad → teclado
                 playerGamepads[i] = null;
                 playerJoystickTypes[i] = JoystickType.Keyboard;
             }
         }
     }
-
 
     // =========================================================
     // DETECTAR TIPO DE GAMEPAD
@@ -127,12 +124,10 @@ public class JoystickSpriteManager : MonoBehaviour
             return JoystickType.PlayStation;
         }
 
-
         if (name.Contains("xbox"))
         {
             return JoystickType.Xbox;
         }
-
 
         if (name.Contains("switch") ||
             name.Contains("nintendo"))
@@ -140,10 +135,8 @@ public class JoystickSpriteManager : MonoBehaviour
             return JoystickType.Nintendo;
         }
 
-
         return JoystickType.Generic;
     }
-
 
     // =========================================================
     // BOTÓN SOUTH
@@ -154,26 +147,20 @@ public class JoystickSpriteManager : MonoBehaviour
         if (!IsValidPlayer(playerIndex))
             return genericButtonSouth;
 
-
         switch (playerJoystickTypes[playerIndex])
         {
             case JoystickType.PlayStation:
                 return psButtonSouth;
-
             case JoystickType.Xbox:
                 return xboxButtonSouth;
-
             case JoystickType.Nintendo:
                 return nintendoButtonSouth;
-
             case JoystickType.Keyboard:
                 return keyboardButtonSouth;
-
             default:
                 return genericButtonSouth;
         }
     }
-
 
     // =========================================================
     // BOTÓN EAST
@@ -184,26 +171,20 @@ public class JoystickSpriteManager : MonoBehaviour
         if (!IsValidPlayer(playerIndex))
             return genericButtonEast;
 
-
         switch (playerJoystickTypes[playerIndex])
         {
             case JoystickType.PlayStation:
                 return psButtonEast;
-
             case JoystickType.Xbox:
                 return xboxButtonEast;
-
             case JoystickType.Nintendo:
                 return nintendoButtonEast;
-
             case JoystickType.Keyboard:
                 return keyboardButtonEast;
-
             default:
                 return genericButtonEast;
         }
     }
-
 
     // =========================================================
     // BOTÓN WEST
@@ -214,26 +195,20 @@ public class JoystickSpriteManager : MonoBehaviour
         if (!IsValidPlayer(playerIndex))
             return genericButtonWest;
 
-
         switch (playerJoystickTypes[playerIndex])
         {
             case JoystickType.PlayStation:
                 return psButtonWest;
-
             case JoystickType.Xbox:
                 return xboxButtonWest;
-
             case JoystickType.Nintendo:
                 return nintendoButtonWest;
-
             case JoystickType.Keyboard:
                 return keyboardButtonWest;
-
             default:
                 return genericButtonWest;
         }
     }
-
 
     // =========================================================
     // BOTÓN NORTH
@@ -244,26 +219,68 @@ public class JoystickSpriteManager : MonoBehaviour
         if (!IsValidPlayer(playerIndex))
             return genericButtonNorth;
 
-
         switch (playerJoystickTypes[playerIndex])
         {
             case JoystickType.PlayStation:
                 return psButtonNorth;
-
             case JoystickType.Xbox:
                 return xboxButtonNorth;
-
             case JoystickType.Nintendo:
                 return nintendoButtonNorth;
-
             case JoystickType.Keyboard:
                 return keyboardButtonNorth;
-
             default:
                 return genericButtonNorth;
         }
     }
 
+    // =========================================================
+    // BOTÓN L1
+    // =========================================================
+
+    public Sprite GetButtonL1(int playerIndex)
+    {
+        if (!IsValidPlayer(playerIndex))
+            return genericButtonL1;
+
+        switch (playerJoystickTypes[playerIndex])
+        {
+            case JoystickType.PlayStation:
+                return psButtonL1;
+            case JoystickType.Xbox:
+                return xboxButtonL1;
+            case JoystickType.Nintendo:
+                return nintendoButtonL1;
+            case JoystickType.Keyboard:
+                return keyboardButtonL1;
+            default:
+                return genericButtonL1;
+        }
+    }
+
+    // =========================================================
+    // BOTÓN R1
+    // =========================================================
+
+    public Sprite GetButtonR1(int playerIndex)
+    {
+        if (!IsValidPlayer(playerIndex))
+            return genericButtonR1;
+
+        switch (playerJoystickTypes[playerIndex])
+        {
+            case JoystickType.PlayStation:
+                return psButtonR1;
+            case JoystickType.Xbox:
+                return xboxButtonR1;
+            case JoystickType.Nintendo:
+                return nintendoButtonR1;
+            case JoystickType.Keyboard:
+                return keyboardButtonR1;
+            default:
+                return genericButtonR1;
+        }
+    }
 
     // =========================================================
     // INFORMACIÓN
@@ -277,7 +294,6 @@ public class JoystickSpriteManager : MonoBehaviour
         return playerJoystickTypes[playerIndex];
     }
 
-
     public Gamepad GetGamepad(int playerIndex)
     {
         if (!IsValidPlayer(playerIndex))
@@ -286,7 +302,6 @@ public class JoystickSpriteManager : MonoBehaviour
         return playerGamepads[playerIndex];
     }
 
-
     public bool IsUsingKeyboard(int playerIndex)
     {
         if (!IsValidPlayer(playerIndex))
@@ -294,7 +309,6 @@ public class JoystickSpriteManager : MonoBehaviour
 
         return playerJoystickTypes[playerIndex] == JoystickType.Keyboard;
     }
-
 
     private bool IsValidPlayer(int playerIndex)
     {

@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 static class PlayerSettings
 {
+    static public string gameMode;
+    static public GameObject stadium;
     static public GameObject[] player = new GameObject[2]; // [playerIndex]
     static public Gamepad[] gamepad = new Gamepad[2]; // [playerIndex]
 

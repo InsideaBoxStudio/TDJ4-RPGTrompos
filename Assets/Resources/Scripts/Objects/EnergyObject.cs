@@ -7,11 +7,14 @@ public class EnergyObject : MonoBehaviour
     {
         if (!collider.gameObject.CompareTag("Player")) return;
 
-        EnergyCounter energyCounter = collider.gameObject.GetComponent<DefPlayerID>().energyCounter;
+        DefPlayerID playerID = collider.gameObject.GetComponent<DefPlayerID>();
+        if (playerID == null) return;
+
+        EnergyCounter energyCounter = playerID.energyCounter;
         if (energyCounter == null) return;
 
         energyCounter.ChangeEnergy(addEnergy, "Nothing");
-        
+
         Destroy(gameObject);
     }
 }

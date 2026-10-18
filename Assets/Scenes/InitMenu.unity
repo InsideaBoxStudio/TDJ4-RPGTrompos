@@ -5367,6 +5367,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeMap
   activeGameObject: []
   map: SeleccionDePersonaje
+  isCancelButton: 0
+  cancelAction: {fileID: 0}
   noSelected: 1
   wait: 0.5
 --- !u!114 &257328299
@@ -6508,6 +6510,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeMap
   activeGameObject: []
   map: SeleccionDificultad
+  isCancelButton: 0
+  cancelAction: {fileID: 0}
   noSelected: 1
   wait: 0.5
 --- !u!114 &676488351
@@ -8014,6 +8018,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeMap
   activeGameObject: []
   map: ConfigMenu
+  isCancelButton: 0
+  cancelAction: {fileID: 0}
   noSelected: 1
   wait: 0.2
 --- !u!1 &986927825
@@ -14760,22 +14766,32 @@ MonoBehaviour:
   psButtonEast: {fileID: -3183741816759727448, guid: f2d83ca984ae13342ac0226976a06073, type: 3}
   psButtonWest: {fileID: 7868853199443491677, guid: ae40d076818aff24dbbfe221932e5590, type: 3}
   psButtonNorth: {fileID: 3631682976611520101, guid: a3cb5e9f3564132469725915119cd02d, type: 3}
+  psButtonL1: {fileID: 5259492506439636702, guid: 9495384e301e8d9429bf6a34d0c5bd33, type: 3}
+  psButtonR1: {fileID: 5710003453027194822, guid: 1c437ebc28380ca4cac716f712e87c7f, type: 3}
   xboxButtonSouth: {fileID: -1753562884466354025, guid: 924a8000cd57c0d4e80182cb1c4773f3, type: 3}
   xboxButtonEast: {fileID: 7142519560363098256, guid: d999a781f1aed93479a11bc94ba7d3c8, type: 3}
   xboxButtonWest: {fileID: 3797299000033533846, guid: 6f73112aefc4e2c4382f8686b62e533b, type: 3}
   xboxButtonNorth: {fileID: -3377600582468429038, guid: bf9d5cd407e04c94c8ccb9a88d4007b3, type: 3}
+  xboxButtonL1: {fileID: 113371796362707746, guid: 92adb36f6f9cbbf4ca1edb3e02180459, type: 3}
+  xboxButtonR1: {fileID: 1626926146113704552, guid: 99da515d701a21048be8584a27e0977e, type: 3}
   nintendoButtonSouth: {fileID: 7142519560363098256, guid: d999a781f1aed93479a11bc94ba7d3c8, type: 3}
   nintendoButtonEast: {fileID: -5331335319782994297, guid: 7bb9880433731744486765e984df690b, type: 3}
   nintendoButtonWest: {fileID: 1802789682893428954, guid: 4a5104276a918894f9506760dad0e2bc, type: 3}
   nintendoButtonNorth: {fileID: -2819826207962336372, guid: 0426c49a922cdb347a17c1a969c9b583, type: 3}
+  nintendoButtonL1: {fileID: 113371796362707746, guid: 92adb36f6f9cbbf4ca1edb3e02180459, type: 3}
+  nintendoButtonR1: {fileID: 1626926146113704552, guid: 99da515d701a21048be8584a27e0977e, type: 3}
   keyboardButtonSouth: {fileID: -2762490669450497885, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
   keyboardButtonEast: {fileID: 7996121578558630571, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
   keyboardButtonWest: {fileID: 6935026963976880266, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
   keyboardButtonNorth: {fileID: 7940797479791744602, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonL1: {fileID: -7181070692037742654, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
+  keyboardButtonR1: {fileID: -5816641443748078990, guid: 6e8e43f31fd0b674d8d0f8052e6df9ff, type: 3}
   genericButtonSouth: {fileID: -1753562884466354025, guid: 924a8000cd57c0d4e80182cb1c4773f3, type: 3}
   genericButtonEast: {fileID: 7142519560363098256, guid: d999a781f1aed93479a11bc94ba7d3c8, type: 3}
   genericButtonWest: {fileID: 3797299000033533846, guid: 6f73112aefc4e2c4382f8686b62e533b, type: 3}
   genericButtonNorth: {fileID: -3377600582468429038, guid: bf9d5cd407e04c94c8ccb9a88d4007b3, type: 3}
+  genericButtonL1: {fileID: 113371796362707746, guid: 92adb36f6f9cbbf4ca1edb3e02180459, type: 3}
+  genericButtonR1: {fileID: 1626926146113704552, guid: 99da515d701a21048be8584a27e0977e, type: 3}
 --- !u!4 &1770042693
 Transform:
   m_ObjectHideFlags: 0

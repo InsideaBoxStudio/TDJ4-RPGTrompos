@@ -7,19 +7,32 @@ public class ListOfTips : MonoBehaviour
     [SerializeField] private float nextTipTime = 5f;
     [SerializeField] private int currentTip = 0;
     [SerializeField] private int lastTip = -1;
+    public InputActionReference L1Action;
+    public InputActionReference R1Action;
 
     void Start()
     {
-        InvokeRepeating("NextTip", nextTipTime, nextTipTime);
+        Invoke("NextTip", nextTipTime);
+    }
+
+    void OnEnable()
+    {
+        if (L1Action == null || R1Action == null) return;
+        L1Action.action.Enable();
+        R1Action.action.Enable();
     }
 
     void Update()
     {
-        if (Gamepad.all.Count > 1 && Gamepad.all[0].leftShoulder.wasPressedThisFrame) // reemplazar por InputSystem
+        if ( L1Action.action.WasPressedThisFrame() ||
+             Gamepad.current != null && Gamepad.current.leftShoulder.wasPressedThisFrame ||
+             Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame) // reemplazar por InputSystem
         {
             PreviousTip();
         }
-        else if (Gamepad.all.Count > 1 && Gamepad.all[0].rightShoulder.wasPressedThisFrame) // reemplazar por InputSystem
+        else if ( R1Action.action.WasPressedThisFrame() ||
+                  Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame ||
+                  Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame) // reemplazar por InputSystem
         {
             NextTip();
         }
@@ -43,11 +56,15 @@ public class ListOfTips : MonoBehaviour
     private void PreviousTip()
     {
         currentTip --;
+        CancelInvoke("NextTip");
+        Invoke("NextTip", nextTipTime);
     }
 
     private void NextTip()
     {
         currentTip ++;
+        CancelInvoke("NextTip");
+        Invoke("NextTip", nextTipTime);
     }
 
     private void ChangeTip()

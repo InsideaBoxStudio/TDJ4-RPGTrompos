@@ -80,7 +80,8 @@ public class ChangeMenuOptions : MonoBehaviour
         // Si no hay menú siguiente, cambiar de escena
         if (nextOptionMenu == null || nextOptionMenu.Length == 0)
         {
-            SceneManager.LoadScene(changeScene);
+            PlayerSettings.gameMode = changeScene;
+            SceneManager.LoadScene("StadiumSetting");
             return;
         }
 

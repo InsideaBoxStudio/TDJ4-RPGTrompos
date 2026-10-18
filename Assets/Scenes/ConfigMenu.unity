@@ -1251,6 +1251,7 @@ GameObject:
   - component: {fileID: 209285633}
   - component: {fileID: 209285632}
   - component: {fileID: 209285631}
+  - component: {fileID: 209285636}
   m_Layer: 5
   m_Name: Sonido
   m_TagString: Untagged
@@ -1409,6 +1410,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209285627}
   m_CullTransparentMesh: 1
+--- !u!114 &209285636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209285627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a950ff81c59442ae5e07a04d98181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeMap
+  activeGameObject: []
+  map: InitMenu
+  isCancelButton: 1
+  cancelAction: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  noSelected: 1
+  wait: 0.2
 --- !u!1 &227123944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,6 +2844,7 @@ GameObject:
   - component: {fileID: 636750757}
   - component: {fileID: 636750756}
   - component: {fileID: 636750755}
+  - component: {fileID: 636750760}
   m_Layer: 5
   m_Name: Video
   m_TagString: Untagged
@@ -2983,6 +3003,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636750751}
   m_CullTransparentMesh: 1
+--- !u!114 &636750760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636750751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5a950ff81c59442ae5e07a04d98181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeMap
+  activeGameObject: []
+  map: InitMenu
+  isCancelButton: 1
+  cancelAction: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  noSelected: 1
+  wait: 0.2
 --- !u!1 &639509817
 GameObject:
   m_ObjectHideFlags: 0
@@ -5341,6 +5379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChangeMap
   activeGameObject: []
   map: InitMenu
+  isCancelButton: 1
+  cancelAction: {fileID: 7727032971491509709, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   noSelected: 1
   wait: 0.2
 --- !u!1 &1281348527

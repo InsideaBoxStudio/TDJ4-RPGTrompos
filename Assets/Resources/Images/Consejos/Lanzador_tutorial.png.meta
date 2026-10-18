@@ -1,0 +1,5567 @@
+fileFormatVersion: 2
+guid: 06b9d22caf03b2943831668a43b0040d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5822440890925767291
+    second: Lanzador_tutorial_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lanzador_tutorial_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ad65544277dc050800000000000000
+      internalID: 5822440890925767291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899770006913c414a874c573cef1dad1
+      internalID: 1135080384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5e0d4acbd319a468810d696622ab48
+      internalID: -1331757445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57242c6435239e648a7380144b704e39
+      internalID: 1300089438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13203716a059234ca69ff5a8cc02349
+      internalID: 625680094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_5
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7ab2515e182c44eb7b009058948278
+      internalID: -610882479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a26c89a91eafe7488587225d4faf91b
+      internalID: -1427507983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_7
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7648609a1bfc88f4ebcc8fe5ddc6e938
+      internalID: 951829713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_8
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a574426621e40439f76f53fa294215
+      internalID: -1766065207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_9
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2f66f765fef534a888d0a75fc2dde9
+      internalID: -158502311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_10
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27997122a3c3e2e429d6dab99d1e9303
+      internalID: -1304064285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_11
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af4a8eeee6011d743a96636f7db9a7c3
+      internalID: 1073068308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_12
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058dc1f19b0357a4aa1ea0a0d822fee1
+      internalID: -1019435586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_13
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44e031bb32fe0a47b26eb1fc89b8f65
+      internalID: -235095819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_14
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810428c8b00c4dc4cbd2de4d0cf9c269
+      internalID: 1365941743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_15
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1890
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94a0e356d77eef4e93412996183bee7
+      internalID: 2019490976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e024523cbe24a842a7966a5c6e70a05
+      internalID: 40451022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_17
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342b64d56e2c959428e1eff12222a860
+      internalID: -1057241247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_18
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea52feb9ba5a6ea4d8557b14aa2b68de
+      internalID: 719172078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e46aff844358849871c5cf45e83eb6
+      internalID: -1631231162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_20
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cf4c45cd7e47a47929d9e24af1e192
+      internalID: 939138893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_21
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9d86ed311404040830d4ea55953b99
+      internalID: 521837602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_22
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de47725e276d245408084aa4820ac810
+      internalID: 1888097819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_23
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22526437ad3a8b429d0037f134c55ae
+      internalID: -2069981793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_24
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54accc0991b488a43b58e65dd4f1b691
+      internalID: -1560925502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_25
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312aa0e0e272a1a45b009722826a929a
+      internalID: -1241340712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_26
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f330ba3bbd290340a724cb9a98b7309
+      internalID: -102653964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_27
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1961111877dc042b9a3a3e8e765861
+      internalID: 1170978821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_28
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ee3c9109733ffc43a0e32f8c2009569
+      internalID: 1188030744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_29
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0394e11ed2c9e0d49b10ef2d4fdffc6a
+      internalID: 1885837684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_30
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab81dd6f3f19ed4385447d0b574e248
+      internalID: 151234781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_31
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1755
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21b423c8554458418eff6bf2e6c8565
+      internalID: -1942599767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b6c1527241fb348b9d8cd9f43324a0
+      internalID: 526008007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_33
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06dd84840ee59a4998d75e6cf13aa99
+      internalID: 2131517676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_34
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72612c554f3400e4687b1d8ed649756c
+      internalID: -477271956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_35
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874f7f483411ffa4a88119bdef845c5b
+      internalID: 1287997423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_36
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e74755a817a3954fba3abbd541896e0
+      internalID: -1729709575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_37
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c370ec58646b1cf428806be2d9d85f1e
+      internalID: -596701475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_38
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49850941237bb24abde7b8db6b7141a
+      internalID: 2145345906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_39
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e117f5693c35b44d8f042179f193ce8
+      internalID: 1584356881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_40
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab52717117ac5f24e9992379295a95c2
+      internalID: -563200009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_41
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4292bdcfe8771047999191113b2ab4a
+      internalID: -559503878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_42
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228b7a8bc67c89f41962dab2b062c722
+      internalID: -2048909176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_43
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa00de73e2455844299264ba1ae1d7c4
+      internalID: 196781726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_44
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bb66465ccd3d4438acca41a1704825
+      internalID: 621614305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_45
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f72a68a74fc5e4b8c0cd52226d0d81
+      internalID: -271705466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_46
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a7d99662b5954429571793a197b00d
+      internalID: -1786962298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_47
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1620
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8988bc4fa9e579044b29329b4857ea5f
+      internalID: 606924082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1dba3b63b9ca948ae03f053f14110a
+      internalID: 1000872809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_49
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ec5ef0ef808b149acec3bdda9da420
+      internalID: 802616491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_50
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7590faa60afaea34b9b1fcdb77012e73
+      internalID: -2004049997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_51
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021157b20a819bf4cb340524c21a6bf6
+      internalID: 111639968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_52
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88d494c087bdd94799e3eff6456107c
+      internalID: -1564648967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_53
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae711ffe452f3a84dbc6e48d2e882106
+      internalID: -208029499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_54
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bafc029c4c0f594f8cd161dee92bf14
+      internalID: -982578390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_55
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2731762f91679468fb41e0003cd2d8
+      internalID: 1082281114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_56
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55fe2486afa2c3649bc3c74631e292a3
+      internalID: -690179571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_57
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be23ef5aefdba64faf44d4d213d0ce2
+      internalID: -24755725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_58
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e204e996b77c3842bb5910b5ec476a7
+      internalID: 1942817267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_59
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c716b75efb23d48b4f86db05fb6319
+      internalID: -1455896257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_60
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbaa94833af4b2f48bd36fc4fdf50af0
+      internalID: 1792480731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_61
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29bb89a81eb47741bc51d21eacab148
+      internalID: 1784685074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_62
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cc0ef683d7063449b037914baa63b9
+      internalID: 1862195543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_63
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1485
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1600a8ad4fc544e897bf273ad31793
+      internalID: 1098420190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd29cc200f5d8b43b66e299ac5abe71
+      internalID: 1892740150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_65
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdad5fe5cf14b7c43996c030a93b31a0
+      internalID: 1800593566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_66
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc058c930d1fa347ae536e8d41c7907
+      internalID: 1261766357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_67
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9b30caa68673e48bdb763601d61128
+      internalID: -353463785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_68
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cea0527a2d7e2459be7b9598bc7747
+      internalID: -115599748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_69
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54a1f8ad37a4ac46a5070ea15d8d408
+      internalID: -1052057618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_70
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd8f2d4b74546a4891046c6ae3e17b0
+      internalID: 32332440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_71
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6c525f7f2ae8e4a92050e25c6ad067
+      internalID: 437904909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_72
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5a310ce6a67314c9ca5040ee21a978
+      internalID: 1844907170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_73
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a6e0e8ac25a484793841b9ab1fb95d
+      internalID: -1030204936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_74
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd867606ad5ad148a6ad911175534fc
+      internalID: -1778788808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_75
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970c970498c0cab4681318a777752590
+      internalID: 845369605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_76
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89609daf1ac13b14982b4c02bdd2ecbf
+      internalID: 663849735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_77
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44319d2950089d748a78cad59fa9708a
+      internalID: 698537448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_78
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed482f37904b3ce41ae0718829f33916
+      internalID: 1041719080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_79
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1350
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57185ec38a3370c48870611d065d32b9
+      internalID: -1555217591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c9d0329cb5f864982b434b13ef87b4
+      internalID: -1027176165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_81
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6eb63a5ee58a2f41b6dffb8dcbf33cc
+      internalID: -156625483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_82
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4588c0072fa144894fd7e24af6b16b
+      internalID: 686054474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_83
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6b9ff9505b23b46b6fc4d25d60a1c4
+      internalID: 1835839466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_84
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7e76cd94c7c404c808bd92a6780563
+      internalID: -114055925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_85
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131e47abce6e00747b39fb43c81f9ba3
+      internalID: -2131382162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_86
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860c85d2d4ff20d4994f140684b5aaba
+      internalID: 1416427056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_87
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500959a0630f2b94abbd8c38c99b36aa
+      internalID: 939198177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_88
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618f04ddeded9ad4dae12d5458b3ccdb
+      internalID: -953037940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_89
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a29f794177ad124d9a407b71277e70b
+      internalID: -507948255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_90
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6506c88956631c848a25d735df0b1912
+      internalID: 2010201494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_91
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606a6ae3dbde8214da79dde78626b813
+      internalID: 247338074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_92
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98325a11f3218e4d8f26f4f5aa7f1d9
+      internalID: 818559851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_93
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43cb529e533ba2f438d1707f989b6883
+      internalID: 157658703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_94
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fdec024c1a2f74498edf03f6673d87
+      internalID: 350889786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_95
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1215
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04628b306331e8846b3c293b07840a65
+      internalID: 2083647192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5eac9493923f534986ef79b16664b68
+      internalID: -1851545003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_97
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbce8f8e0ca87294cbd233f7dffccec7
+      internalID: -88011747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_98
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1bfe07656673b9489493647572093e5
+      internalID: 2056271682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_99
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6c4aa4e8c88b441bd17da749065c78
+      internalID: -1917858447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_100
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd2fcadeb8ff7343808935b634b213e
+      internalID: -204327816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_101
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0fdff54296d8b469830379d511e59a
+      internalID: 1567783783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_102
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1e5681e3ea12d84fbef227234986dcb
+      internalID: -1820873526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_103
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503f10e11cd823748a7c9a34994a4a28
+      internalID: 34344977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_104
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67127c3b776275f4fb4ad1e795675fc6
+      internalID: -1121091557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_105
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4acaa7a8abbecb428cdab9aee63c16c
+      internalID: 1592910603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_106
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60c105fca54cd34c93d4a6dca4c311a
+      internalID: -1281926834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_107
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7432fdd5132f66f4a95652ab55aaeeff
+      internalID: -292345843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_108
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9599ba091542d44b5ffb940d743a66
+      internalID: -417535775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_109
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017b69d3fdd517f43affc08084a8a7b6
+      internalID: 96157480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_110
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ba1024d1bf4fc4e957b71cf394c392
+      internalID: 294529509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_111
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1080
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fedc5aa7e657b44a89150e3116d72e4
+      internalID: -60293227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfdbb03538604b42a2d6e517821e17a
+      internalID: 1231063770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_113
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1128ac03e35b674aac60794f7caf074
+      internalID: -1343517014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_114
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656b651616a12be4eba1e896f87cde2a
+      internalID: -1138808922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_115
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b7e6fb4bd922148a7da5ece879c623
+      internalID: 1439574250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_116
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7650c6ba6464c842978a6d6c3df81ab
+      internalID: 839935114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_117
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879fd719fccdf6345912eaf494c1be31
+      internalID: 1473103535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_118
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c08c7589f9d14c640aad123caee63ba2
+      internalID: -1577548495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_119
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ac23146cc7fbb40bb08dd4d3f1d0de
+      internalID: -1127093841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_120
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7dfa6fce73a1f479848bc20667ea8e
+      internalID: -392871545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_121
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46da9c65b05444449ab8bc9eb24adc23
+      internalID: -191964583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_122
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83bc9d6d160e3b49b629eb5fc3748c9
+      internalID: 108766827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_123
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95529ffb3e3acb43a9140a77bd12226
+      internalID: 2115689340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_124
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d232d3660d31e26479a91ce4ff9dc0fd
+      internalID: -1896079403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_125
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e865c1fde2313fa498ba70b32d36c628
+      internalID: 1116081327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_126
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e6922da545e1848a9262198dee0517
+      internalID: -1433307693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_127
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 945
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00d43093c6eb164ab155825465aeb2d
+      internalID: -1352165905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70870cb0d2a74a4fab3525c7a731a13
+      internalID: -952346315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_129
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec71b7f990951f45bb9071c0228e1dc
+      internalID: 251411625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_130
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb53f4cbb1a82d44ea9aaab2d0f697a0
+      internalID: 218776163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_131
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a25c33598e9fc248971a7a9c12248d7
+      internalID: -1691313057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_132
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7924e40da639020499914d85facef27c
+      internalID: 1605995755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_133
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e6f1704207cf64db4848f92932f681
+      internalID: -370538883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_134
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101eff559f8995944acc96cdde4034b9
+      internalID: -1047709523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_135
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee5d942986acad429146e9c50ddbd23
+      internalID: 107243010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_136
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa12efe4b6b5a74792eab03f02babaf
+      internalID: 1901176970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_137
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708978b7a64ad2f448d91c31ebaa7902
+      internalID: -833842789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_138
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c77483adffc5e479d3c95b126f2c57
+      internalID: 1424377343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_139
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fd8adde151d654485dbc2c4ada24dc
+      internalID: -582383212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_140
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74595efe17135c4e9e5412535ac3777
+      internalID: 1115052445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_141
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6031918cb670d394aa0fd21542ff587b
+      internalID: 1586803179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_142
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da588f95e8cba6e449350cfbddfd9b89
+      internalID: -1225290082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_143
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 810
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7833a76bee851f84994edbb0d6487c05
+      internalID: -324616603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62cfac192f8ae0f4f8f30b2b93e51c9d
+      internalID: -471345090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_145
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798e013707a92c84d9e84335e1166db4
+      internalID: 1690880388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_146
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8b0fde06ffe994897443c9e2c32ccf
+      internalID: 1320403086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_147
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d69e825d51b1347bcbc6e5426e2c26
+      internalID: -271442337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_148
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c55340fbdef1304a88c24ecd603ba14
+      internalID: -472208593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_149
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2d9045d7102a0478c51d587717aa57
+      internalID: 2067800084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_150
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d1a9ee5689f684da92fa10bd30db37
+      internalID: 1867315800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_151
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97ea27e4916ac5458e4252c88052d46
+      internalID: -1958068437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_152
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65abf7ca6e7513f4e9849696b45b69a4
+      internalID: -1755442875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_153
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8da3533e636bc4bac2130bd09bb9cf
+      internalID: -1796296658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_154
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acea1b3e96491d47a048bfb2f37440f
+      internalID: -228298023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_155
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dca2e10f4814e4ea1e678de14d6708
+      internalID: -742035502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_156
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac84543ac35f1664c80ea268960738b1
+      internalID: 2017301899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_157
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b345927fe5b3794fa95bd87145e6a99
+      internalID: -2084519532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_158
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf5635637ed34b49963d25fed2384e4
+      internalID: 661059344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_159
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 675
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6758631beedec8842a30425d276f14ea
+      internalID: -847350856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4899f6cb9b2e786408842e0e588e71e0
+      internalID: 443950480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_161
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ab5c7b2d0d5c04992c5b6e8343e2c6
+      internalID: 1100871921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_162
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2c2d6ba90aecf4aa9fe49ffd645f01
+      internalID: 1568984633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_163
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e809bf579ef168b4993f458f713f589e
+      internalID: -794989867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_164
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09abc6a659086cf4b98009b4f6c95958
+      internalID: -347788739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_165
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af029dbc8a80fa4d89644a2aad60274
+      internalID: 2078858980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_166
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14876de18d3498478e95f3221fdf163
+      internalID: -214411041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_167
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 556a54bbee9b49a41b9ac65ac5753ea7
+      internalID: 1427207238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_168
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5295f43d3ae9cf40b1e65b527988959
+      internalID: -1105457743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_169
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32facb5855458064c852719c68c20059
+      internalID: -1058150488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_170
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22916abe324352c4b8969336148d8ddf
+      internalID: -350508489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_171
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0fcc2bc4b6f3b4d8afd2ff108116c4
+      internalID: 1202374516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_172
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be32c798abbc927428669697e3340b44
+      internalID: 991639561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_173
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe320d7fd79685048ad3357bc0371f89
+      internalID: 1652404506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_174
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63acd0158365fed44bfd65d7e449b20d
+      internalID: 613123708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_175
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 540
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd002565ed115041b01300b059ac3e9
+      internalID: -793525071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_176
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7009d91499d8104aaf8e3e199e9aed5
+      internalID: 1471697150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_177
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4283e13f9abdb40acbe6af9b395a34
+      internalID: -157064433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_178
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1088346f684207d4099113eb5646bdf9
+      internalID: 723294710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_179
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20078a168562e046ac3af6df7e548ca
+      internalID: -1460976792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_180
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c794fc0afee0e7140908491a3748d4c1
+      internalID: -549256808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_181
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e80fb9aaa67904cad4cc867f4152c4
+      internalID: -913175279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_182
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fa4a0467c9e8c41a2567035378fa8b
+      internalID: 992125282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_183
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae22fc49abf93844cb08510f3ece79f9
+      internalID: -1852905961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_184
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cabfd851351a5eb4dbb7e66d25a9fc4e
+      internalID: -215326252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_185
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f32811b1084d784f87356fe2260e922
+      internalID: -208735611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_186
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaf68e2907cac6448f6b4106618294b
+      internalID: 1429770321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_187
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6bddcb07118af40b2ca658a101a474
+      internalID: 1394803001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_188
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c100880e278b70246a88cd035a8eb889
+      internalID: -1650421243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_189
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa18ea0f20594849a0e9c00a609f0ca
+      internalID: 920745156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_190
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7137aff76a034fa488f55ca34fd8bca6
+      internalID: 259777369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_191
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 405
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefe36a14e3016e47a93e5973ee8ee31
+      internalID: -1353139786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_192
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b398c60ac8d566f4db71b558b4b2f980
+      internalID: 1161709865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_193
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a051af36a7f6b24c9db70874f15db38
+      internalID: 1149301763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_194
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f902a0e16a809b142833cf60929c3488
+      internalID: -1167929922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_195
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ee4c6a4bf24c54da58e5e45ff62895
+      internalID: 1405617418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_196
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157d455f6e2509145978a916a5844d87
+      internalID: 51659896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_197
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3073ae23dd87c814e98a0bb65f6d50e1
+      internalID: 857734217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_198
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2df0cdc6d6f674eb115fda464cf460
+      internalID: 652526352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_199
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98745d78e9b58fd4e92d3fee37bbda4c
+      internalID: 1804235982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_200
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e111466e9ff874bb236febce341343
+      internalID: 1448375360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_201
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c973175d645ce784d97bb3f9d72e1375
+      internalID: 1930044110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_202
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f3551314a0d8c44834784f52dbc5a3
+      internalID: -1923313504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_203
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02558976ad8f7a44cb3b7624530e628e
+      internalID: -1473452029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_204
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c3d79b3995f2944acf3cb6381d9c94
+      internalID: -305827165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_205
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bb795be3afddf48864b63cd88073a0
+      internalID: -1623688745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_206
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64d33bfa39d03a44b26b7b86c79483d
+      internalID: 713179310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_207
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 270
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a7c300d1ddf9f4d8e7080b1fa1ddee
+      internalID: 508000702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_208
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697a045f0c4da6748b29444173c49fc0
+      internalID: -1414073007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_209
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1560d4fa6ee1644b94cff5f9d28ecb6
+      internalID: -1956478721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_210
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc4984fdc0759a4c921ff897e8ac0ce
+      internalID: -126159420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_211
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc575248a24fbe7408d364c538a05b7f
+      internalID: 129676728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_212
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4c52e2b9c71ea458d000a9c02d07ec
+      internalID: -662187699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_213
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024021c553e57194087fadff753f43c8
+      internalID: 1937657482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_214
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b57b3fb81dfa74b98ba179d100f073
+      internalID: -927633536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_215
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bfed52a8ad5204bb7f4ed207ed9c2e
+      internalID: -1743532807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_216
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5b7dc41f01a0e4cb7cf2bc746c058b
+      internalID: -177958953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_217
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4743290ed96da44920defbae182c58
+      internalID: -1918306022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_218
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1939fc3f880f15046b82709c9c9ce897
+      internalID: -1683245966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_219
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d9fdca3f52ed94badff1e56f279c1a
+      internalID: 1299231310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_220
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aad37e7eb943594d9ecc6f2d72e2deb
+      internalID: -102882805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_221
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155b5b598d6cda44096df803acb08fb5
+      internalID: -1126692329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_222
+      rect:
+        serializedVersion: 2
+        x: 3360
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7244f8137e61ab54b9d66ca902f312bf
+      internalID: -195199573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_223
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 135
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71f6b1fe8dd29a46a234436ec62ff14
+      internalID: 1509440209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_224
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fefd4f8ed2a93469bb5170ed2f8ae6
+      internalID: 1092452773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_225
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b348494ec0312da4f8ecfa68fbaea502
+      internalID: -2125122489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_226
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910c57f2cf9c16f459d3a79a8ef3375c
+      internalID: 2082995672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_227
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2917345d06e8047ad875df7b252c8a
+      internalID: -1276332869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_228
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b052dc23f2b4d46a2c1568561e0ef6
+      internalID: 192790049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_229
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9535aac6f630613448c2146d6334d45d
+      internalID: 426266008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_230
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcabb3b78b0775f48ac526ef4f12d248
+      internalID: -1283297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_231
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea9cd311c89fdd498d819e36f382cf5
+      internalID: 1634650452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_232
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852e009fc3e818b4e8b334d2a170dfab
+      internalID: -1473696088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_233
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ab833d69b0ea047ba3d8476d228f13
+      internalID: -12849215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_234
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4639a9d8517be4b9741601c7bc0e1a
+      internalID: -1680145770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lanzador_tutorial_235
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 240
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81abe17a73fc19c45bab82ebeb312119
+      internalID: -1887388224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 71c386d419eb98443aafb765f6e1b97c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":16.0,"y":15.0},"gridSpriteSize":{"x":240.0,"y":135.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Lanzador_tutorial_0: 5822440890925767291
+      Lanzador_tutorial_1: 1135080384
+      Lanzador_tutorial_10: -1304064285
+      Lanzador_tutorial_100: -204327816
+      Lanzador_tutorial_101: 1567783783
+      Lanzador_tutorial_102: -1820873526
+      Lanzador_tutorial_103: 34344977
+      Lanzador_tutorial_104: -1121091557
+      Lanzador_tutorial_105: 1592910603
+      Lanzador_tutorial_106: -1281926834
+      Lanzador_tutorial_107: -292345843
+      Lanzador_tutorial_108: -417535775
+      Lanzador_tutorial_109: 96157480
+      Lanzador_tutorial_11: 1073068308
+      Lanzador_tutorial_110: 294529509
+      Lanzador_tutorial_111: -60293227
+      Lanzador_tutorial_112: 1231063770
+      Lanzador_tutorial_113: -1343517014
+      Lanzador_tutorial_114: -1138808922
+      Lanzador_tutorial_115: 1439574250
+      Lanzador_tutorial_116: 839935114
+      Lanzador_tutorial_117: 1473103535
+      Lanzador_tutorial_118: -1577548495
+      Lanzador_tutorial_119: -1127093841
+      Lanzador_tutorial_12: -1019435586
+      Lanzador_tutorial_120: -392871545
+      Lanzador_tutorial_121: -191964583
+      Lanzador_tutorial_122: 108766827
+      Lanzador_tutorial_123: 2115689340
+      Lanzador_tutorial_124: -1896079403
+      Lanzador_tutorial_125: 1116081327
+      Lanzador_tutorial_126: -1433307693
+      Lanzador_tutorial_127: -1352165905
+      Lanzador_tutorial_128: -952346315
+      Lanzador_tutorial_129: 251411625
+      Lanzador_tutorial_13: -235095819
+      Lanzador_tutorial_130: 218776163
+      Lanzador_tutorial_131: -1691313057
+      Lanzador_tutorial_132: 1605995755
+      Lanzador_tutorial_133: -370538883
+      Lanzador_tutorial_134: -1047709523
+      Lanzador_tutorial_135: 107243010
+      Lanzador_tutorial_136: 1901176970
+      Lanzador_tutorial_137: -833842789
+      Lanzador_tutorial_138: 1424377343
+      Lanzador_tutorial_139: -582383212
+      Lanzador_tutorial_14: 1365941743
+      Lanzador_tutorial_140: 1115052445
+      Lanzador_tutorial_141: 1586803179
+      Lanzador_tutorial_142: -1225290082
+      Lanzador_tutorial_143: -324616603
+      Lanzador_tutorial_144: -471345090
+      Lanzador_tutorial_145: 1690880388
+      Lanzador_tutorial_146: 1320403086
+      Lanzador_tutorial_147: -271442337
+      Lanzador_tutorial_148: -472208593
+      Lanzador_tutorial_149: 2067800084
+      Lanzador_tutorial_15: 2019490976
+      Lanzador_tutorial_150: 1867315800
+      Lanzador_tutorial_151: -1958068437
+      Lanzador_tutorial_152: -1755442875
+      Lanzador_tutorial_153: -1796296658
+      Lanzador_tutorial_154: -228298023
+      Lanzador_tutorial_155: -742035502
+      Lanzador_tutorial_156: 2017301899
+      Lanzador_tutorial_157: -2084519532
+      Lanzador_tutorial_158: 661059344
+      Lanzador_tutorial_159: -847350856
+      Lanzador_tutorial_16: 40451022
+      Lanzador_tutorial_160: 443950480
+      Lanzador_tutorial_161: 1100871921
+      Lanzador_tutorial_162: 1568984633
+      Lanzador_tutorial_163: -794989867
+      Lanzador_tutorial_164: -347788739
+      Lanzador_tutorial_165: 2078858980
+      Lanzador_tutorial_166: -214411041
+      Lanzador_tutorial_167: 1427207238
+      Lanzador_tutorial_168: -1105457743
+      Lanzador_tutorial_169: -1058150488
+      Lanzador_tutorial_17: -1057241247
+      Lanzador_tutorial_170: -350508489
+      Lanzador_tutorial_171: 1202374516
+      Lanzador_tutorial_172: 991639561
+      Lanzador_tutorial_173: 1652404506
+      Lanzador_tutorial_174: 613123708
+      Lanzador_tutorial_175: -793525071
+      Lanzador_tutorial_176: 1471697150
+      Lanzador_tutorial_177: -157064433
+      Lanzador_tutorial_178: 723294710
+      Lanzador_tutorial_179: -1460976792
+      Lanzador_tutorial_18: 719172078
+      Lanzador_tutorial_180: -549256808
+      Lanzador_tutorial_181: -913175279
+      Lanzador_tutorial_182: 992125282
+      Lanzador_tutorial_183: -1852905961
+      Lanzador_tutorial_184: -215326252
+      Lanzador_tutorial_185: -208735611
+      Lanzador_tutorial_186: 1429770321
+      Lanzador_tutorial_187: 1394803001
+      Lanzador_tutorial_188: -1650421243
+      Lanzador_tutorial_189: 920745156
+      Lanzador_tutorial_19: -1631231162
+      Lanzador_tutorial_190: 259777369
+      Lanzador_tutorial_191: -1353139786
+      Lanzador_tutorial_192: 1161709865
+      Lanzador_tutorial_193: 1149301763
+      Lanzador_tutorial_194: -1167929922
+      Lanzador_tutorial_195: 1405617418
+      Lanzador_tutorial_196: 51659896
+      Lanzador_tutorial_197: 857734217
+      Lanzador_tutorial_198: 652526352
+      Lanzador_tutorial_199: 1804235982
+      Lanzador_tutorial_2: -1331757445
+      Lanzador_tutorial_20: 939138893
+      Lanzador_tutorial_200: 1448375360
+      Lanzador_tutorial_201: 1930044110
+      Lanzador_tutorial_202: -1923313504
+      Lanzador_tutorial_203: -1473452029
+      Lanzador_tutorial_204: -305827165
+      Lanzador_tutorial_205: -1623688745
+      Lanzador_tutorial_206: 713179310
+      Lanzador_tutorial_207: 508000702
+      Lanzador_tutorial_208: -1414073007
+      Lanzador_tutorial_209: -1956478721
+      Lanzador_tutorial_21: 521837602
+      Lanzador_tutorial_210: -126159420
+      Lanzador_tutorial_211: 129676728
+      Lanzador_tutorial_212: -662187699
+      Lanzador_tutorial_213: 1937657482
+      Lanzador_tutorial_214: -927633536
+      Lanzador_tutorial_215: -1743532807
+      Lanzador_tutorial_216: -177958953
+      Lanzador_tutorial_217: -1918306022
+      Lanzador_tutorial_218: -1683245966
+      Lanzador_tutorial_219: 1299231310
+      Lanzador_tutorial_22: 1888097819
+      Lanzador_tutorial_220: -102882805
+      Lanzador_tutorial_221: -1126692329
+      Lanzador_tutorial_222: -195199573
+      Lanzador_tutorial_223: 1509440209
+      Lanzador_tutorial_224: 1092452773
+      Lanzador_tutorial_225: -2125122489
+      Lanzador_tutorial_226: 2082995672
+      Lanzador_tutorial_227: -1276332869
+      Lanzador_tutorial_228: 192790049
+      Lanzador_tutorial_229: 426266008
+      Lanzador_tutorial_23: -2069981793
+      Lanzador_tutorial_230: -1283297
+      Lanzador_tutorial_231: 1634650452
+      Lanzador_tutorial_232: -1473696088
+      Lanzador_tutorial_233: -12849215
+      Lanzador_tutorial_234: -1680145770
+      Lanzador_tutorial_235: -1887388224
+      Lanzador_tutorial_236: -1014028995
+      Lanzador_tutorial_237: 580160042
+      Lanzador_tutorial_238: -2132262912
+      Lanzador_tutorial_239: 1433874530
+      Lanzador_tutorial_24: -1560925502
+      Lanzador_tutorial_25: -1241340712
+      Lanzador_tutorial_26: -102653964
+      Lanzador_tutorial_27: 1170978821
+      Lanzador_tutorial_28: 1188030744
+      Lanzador_tutorial_29: 1885837684
+      Lanzador_tutorial_3: 1300089438
+      Lanzador_tutorial_30: 151234781
+      Lanzador_tutorial_31: -1942599767
+      Lanzador_tutorial_32: 526008007
+      Lanzador_tutorial_33: 2131517676
+      Lanzador_tutorial_34: -477271956
+      Lanzador_tutorial_35: 1287997423
+      Lanzador_tutorial_36: -1729709575
+      Lanzador_tutorial_37: -596701475
+      Lanzador_tutorial_38: 2145345906
+      Lanzador_tutorial_39: 1584356881
+      Lanzador_tutorial_4: 625680094
+      Lanzador_tutorial_40: -563200009
+      Lanzador_tutorial_41: -559503878
+      Lanzador_tutorial_42: -2048909176
+      Lanzador_tutorial_43: 196781726
+      Lanzador_tutorial_44: 621614305
+      Lanzador_tutorial_45: -271705466
+      Lanzador_tutorial_46: -1786962298
+      Lanzador_tutorial_47: 606924082
+      Lanzador_tutorial_48: 1000872809
+      Lanzador_tutorial_49: 802616491
+      Lanzador_tutorial_5: -610882479
+      Lanzador_tutorial_50: -2004049997
+      Lanzador_tutorial_51: 111639968
+      Lanzador_tutorial_52: -1564648967
+      Lanzador_tutorial_53: -208029499
+      Lanzador_tutorial_54: -982578390
+      Lanzador_tutorial_55: 1082281114
+      Lanzador_tutorial_56: -690179571
+      Lanzador_tutorial_57: -24755725
+      Lanzador_tutorial_58: 1942817267
+      Lanzador_tutorial_59: -1455896257
+      Lanzador_tutorial_6: -1427507983
+      Lanzador_tutorial_60: 1792480731
+      Lanzador_tutorial_61: 1784685074
+      Lanzador_tutorial_62: 1862195543
+      Lanzador_tutorial_63: 1098420190
+      Lanzador_tutorial_64: 1892740150
+      Lanzador_tutorial_65: 1800593566
+      Lanzador_tutorial_66: 1261766357
+      Lanzador_tutorial_67: -353463785
+      Lanzador_tutorial_68: -115599748
+      Lanzador_tutorial_69: -1052057618
+      Lanzador_tutorial_7: 951829713
+      Lanzador_tutorial_70: 32332440
+      Lanzador_tutorial_71: 437904909
+      Lanzador_tutorial_72: 1844907170
+      Lanzador_tutorial_73: -1030204936
+      Lanzador_tutorial_74: -1778788808
+      Lanzador_tutorial_75: 845369605
+      Lanzador_tutorial_76: 663849735
+      Lanzador_tutorial_77: 698537448
+      Lanzador_tutorial_78: 1041719080
+      Lanzador_tutorial_79: -1555217591
+      Lanzador_tutorial_8: -1766065207
+      Lanzador_tutorial_80: -1027176165
+      Lanzador_tutorial_81: -156625483
+      Lanzador_tutorial_82: 686054474
+      Lanzador_tutorial_83: 1835839466
+      Lanzador_tutorial_84: -114055925
+      Lanzador_tutorial_85: -2131382162
+      Lanzador_tutorial_86: 1416427056
+      Lanzador_tutorial_87: 939198177
+      Lanzador_tutorial_88: -953037940
+      Lanzador_tutorial_89: -507948255
+      Lanzador_tutorial_9: -158502311
+      Lanzador_tutorial_90: 2010201494
+      Lanzador_tutorial_91: 247338074
+      Lanzador_tutorial_92: 818559851
+      Lanzador_tutorial_93: 157658703
+      Lanzador_tutorial_94: 350889786
+      Lanzador_tutorial_95: 2083647192
+      Lanzador_tutorial_96: -1851545003
+      Lanzador_tutorial_97: -88011747
+      Lanzador_tutorial_98: 2056271682
+      Lanzador_tutorial_99: -1917858447
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
