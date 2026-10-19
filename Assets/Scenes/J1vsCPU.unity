@@ -35831,6 +35831,7 @@ GameObject:
   - component: {fileID: 1122304167}
   - component: {fileID: 1122304166}
   - component: {fileID: 1122304165}
+  - component: {fileID: 1910000000}
   m_Layer: 3
   m_Name: 0
   m_TagString: Player
@@ -95026,3 +95027,15 @@ SceneRoots:
   - {fileID: 1002265545}
   - {fileID: 1734377635}
   - {fileID: 941406033}
+--- !u!114 &1910000000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122304162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29183962459e5e840965b4794a367726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

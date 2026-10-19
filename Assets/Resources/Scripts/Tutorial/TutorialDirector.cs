@@ -165,6 +165,7 @@ public class TutorialDirector : MonoBehaviour
     // queda nada para contagiar; el paso de contagio se conforma entonces con cualquier golpe.
     private bool venenoPerdido;
     private bool golpeAlRivalEnPaso; // el rival perdio vida durante este paso (sin importar con que)
+    private int golpesAlRivalEnPaso; // cuantas veces
 
     // Vida del veneno (campo privado de Poison). Su cuenta regresiva corre desde que nace, este activo
     // o no: si entre cargarlo y pegar pasa un rato (leer el cartel, esperar el turno), al contagiar ya
@@ -174,8 +175,6 @@ public class TutorialDirector : MonoBehaviour
     private const int VidaVenenoEnClase = 15;
     private Poison venenoAsistido;
 
-    // Usos de cada ataque al entrar al paso, para contar los que hubo DENTRO del paso.
-    private readonly Dictionary<string, int> conteoAlEntrar = new Dictionary<string, int>();
 
     // Ultimo paso: la pelea sigue sola, con la CPU pensando y sin ayudas del director.
     private bool peleaLibre;
@@ -634,7 +633,7 @@ public class TutorialDirector : MonoBehaviour
             titulo = "El veneno  (" + costoVeneno + " de energía)",
             texto = "Es un especial con <b>minijuego</b>: al activarlo aparece un indicador, y tenés que apretar " +
                     "<b>" + TutorialControles.Esperar + "</b> justo cuando pasa por la zona marcada. Si acertás, el veneno queda " +
-                    "<b>cargado en tu próximo shuriken</b>; si fallás, te lo comés vos.",
+                    "<b>cargado en tu próximo golpe</b>; si fallás, te lo comés vos.",
             objetivo = "Activá el veneno con  <b>" + TutorialControles.Veneno + "</b>  y apretá  <b>" + TutorialControles.Esperar + "</b>  cuando diga ¡AHORA!",
             requiereTurno = true,
             ataque = "Poison",
@@ -647,14 +646,15 @@ public class TutorialDirector : MonoBehaviour
             resaltar = ResaltarVeneno
         });
 
-        // 9. Contagiarlo: el veneno viaja en el shuriken (el cuerpo del trompo Base no contagia: no tiene
-        //    el componente Poisoned que si tienen los proyectiles) y al pegar le baja la vida cada segundo.
+        // 9. Contagiarlo: el veneno pasa al rival con el proximo golpe (el cuerpo del trompo y los
+        //    proyectiles llevan el componente Poisoned) y le baja la vida cada segundo.
         lista.Add(new Paso
         {
             titulo = "Contagiá el veneno",
-            texto = "El veneno viaja en tu <b>shuriken</b>: con el menú de golpes abierto, tiralo con <b>" + TutorialControles.Derecha + "</b> " +
-                    "hacia el rival y mirá cómo <b>pierde vida cada segundo</b>.",
-            objetivo = "Tirale un shuriken al rival para contagiarlo",
+            texto = "El veneno viaja con tu <b>próximo golpe</b>: pegale al rival con el ataque básico " +
+                    "(<b>" + TutorialControles.Atacar + "</b>) o con el shuriken (<b>" + TutorialControles.Derecha + "</b>, pega de lejos) " +
+                    "y mirá cómo <b>pierde vida cada segundo</b>.",
+            objetivo = "Golpeá al rival para contagiarlo",
             requiereTurno = true,
             separar = true,
             condicion = ContagioResuelto,
@@ -662,7 +662,7 @@ public class TutorialDirector : MonoBehaviour
             energiaMinima = costoShuriken,
             menuFijo = typeof(ExpandMenu),
             menuAbiertoAlEntrar = true,
-            permitidos = new[] { typeof(ShurikenOption) },
+            permitidos = new[] { typeof(BasicAttackOption), typeof(ShurikenOption) },
             resaltar = () => VidaVisual(contenedorCpu)
         });
 
@@ -754,30 +754,21 @@ public class TutorialDirector : MonoBehaviour
     }
 
     // El contagio se da por hecho cuando el rival quedo envenenado. Si el veneno se perdio en el paso
-    // anterior alcanza con pegarle; y si tras varios shurikens no prendio (el veneno pudo agotarse en
-    // el camino), se sigue igual con un aviso: la clase no puede quedar trabada en esto.
+    // anterior alcanza con pegarle; y si tras varios golpes no prendio (el veneno pudo agotarse en el
+    // camino), se sigue igual con un aviso: la clase no puede quedar trabada en esto.
     private bool ContagioResuelto()
     {
         if (RivalEnvenenado()) return true;
-        if (venenoPerdido) return golpeAlRivalEnPaso;
-        return UsosEnPaso("LaunchShuriken") >= IntentosMaximos && golpeAlRivalEnPaso;
+        if (venenoPerdido) return golpesAlRivalEnPaso > 0;
+        return golpesAlRivalEnPaso >= IntentosMaximos;
     }
 
     private string EstadoDelContagio()
     {
         if (RivalEnvenenado()) return "¡Envenenado! Mirá cómo le baja la vida.";
-
-        int usos = UsosEnPaso("LaunchShuriken");
-        if (usos > 0) return "El shuriken salió pero el veneno no prendió: esperá tu turno y probá otra vez  (intento " + usos + " de " + IntentosMaximos + ")";
+        if (golpesAlRivalEnPaso > 0)
+            return "Le pegaste pero el veneno no prendió: esperá tu turno y probá otra vez  (golpe " + golpesAlRivalEnPaso + " de " + IntentosMaximos + ")";
         return "";
-    }
-
-    private int UsosEnPaso(string clave)
-    {
-        int ahora, antes;
-        conteoPrevio.TryGetValue(clave, out ahora);
-        conteoAlEntrar.TryGetValue(clave, out antes);
-        return ahora - antes;
     }
 
     // Apenas aparece el veneno del jugador se le alarga la vida (ver campoVidaVeneno). Una sola vez por
@@ -1034,8 +1025,7 @@ public class TutorialDirector : MonoBehaviour
         tiempoSinTurnoCpu = 0f;
         cartelCerrado = false;
         golpeAlRivalEnPaso = false;
-        conteoAlEntrar.Clear();
-        foreach (KeyValuePair<string, int> uso in conteoPrevio) conteoAlEntrar[uso.Key] = uso.Value;
+        golpesAlRivalEnPaso = 0;
         tiempoDemoEnergia = 0f;
         faseDemoEnergia = -1;
         tiempoSinAccionJ = 0f;
@@ -1379,6 +1369,7 @@ public class TutorialDirector : MonoBehaviour
         if (vidaCpu.vidaActual < vidaCpuPrevia - 0.01f)
         {
             golpeAlRivalEnPaso = true;
+            golpesAlRivalEnPaso++;
             if (usosPaso > 0) golpeTrasUso = true;
             Registrar("el rival recibio un golpe (vida " + vidaCpu.vidaActual + ")");
         }
