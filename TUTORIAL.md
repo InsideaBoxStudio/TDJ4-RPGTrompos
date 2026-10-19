@@ -1,12 +1,12 @@
 # Tutorial del juego
 
-Es una pelea **coreografiada** contra la computadora, en una **escena aparte** (`Assets/Scenes/Tutorial.unity`, copia de `J1vsCPU`). Está pensada como una escena independiente: no hay ningún botón ni enganche en otras escenas, y no se tocó nada de lo que ya existía. Cómo se llega a ella (menú, botón, etc.) queda para decidir después.
+Es una pelea **coreografiada** contra la computadora, en una **escena aparte** (`Assets/Scenes/Tutorial.unity`, copia de `J1vsCPU`). Lo único que toca fuera de ella es el botón **Tutorial** del menú principal (`InitMenu`, un `ChangeMap` igual al de los otros botones) y la entrada en Build Settings.
 
 El jugador usa el trompo **Base** del juego, armado por partes: el `DefaultPlayerSettings` de la escena (activo, así la escena funciona también abriéndola directo) le da ataque básico, shuriken, pinchos y sierra, y veneno, clon y sustitución como especiales. El rival se **sortea** entre los personajes de la CPU que haya en la escena (Ninja, Magus, Knight).
 
 ## Cómo probarlo
 
-Abrir `Assets/Scenes/Tutorial.unity` y darle Play. Para sumarla a un build hay que agregarla a los Build Settings (a propósito no se hizo).
+Desde el juego: en el menú principal hay un botón **Tutorial** debajo de «Modo J1 VS CPU» (carga la escena directo, sin selector). En el editor: abrir `Assets/Scenes/Tutorial.unity` y darle Play. La escena está en los Build Settings.
 
 ## Cómo funciona la coreografía
 
