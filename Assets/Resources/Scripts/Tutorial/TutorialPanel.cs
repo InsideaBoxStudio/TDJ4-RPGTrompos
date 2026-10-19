@@ -6,7 +6,9 @@ using UnityEngine.UI;
 //  CARTEL DEL TUTORIAL
 //  ----------------------------------------------------------------------------
 //  Arma por codigo (sin escena ni prefab) un canvas "overlay" con:
-//    - un cartel abajo con titulo, explicacion, objetivo y una linea de estado;
+//    - un cartel a la DERECHA, sobre la misma textura del menu principal (Resources/Images/UI.png,
+//      el panel oscuro con la franja roja en diagonal) puesta en espejo, con titulo, explicacion,
+//      objetivo y una linea de estado en su parte oscura;
 //    - un marco que resalta la parte de la pantalla de la que se esta hablando
 //      (la barra de energia, la vida, la flecha de apuntar...).
 //
@@ -21,7 +23,16 @@ using UnityEngine.UI;
 // ============================================================================
 public class TutorialPanel : MonoBehaviour
 {
-    private static readonly Color FondoCartel = new Color(0.05f, 0.06f, 0.10f, 0.92f);
+    private static readonly Color FondoCartel = new Color(0.05f, 0.06f, 0.10f, 0.92f); // respaldo si falta la textura
+    private const string RutaTextura = "Images/UI"; // el fondo del menu principal, en Resources
+
+    // Donde va el texto, en fraccion de la pantalla. En la textura espejada la franja roja va de ~60% del
+    // ancho (arriba) a ~80% (abajo): la columna arranca pasada la franja y usa la mitad superior, que es
+    // donde el panel oscuro es mas ancho.
+    private const float ColumnaIzquierda = 0.735f;
+    private const float ColumnaDerecha = 0.985f;
+    private const float ColumnaAbajo = 0.30f;
+    private const float ColumnaArriba = 0.95f;
     private static readonly Color ColorTitulo = new Color(1f, 0.85f, 0.25f);
     private static readonly Color ColorObjetivo = new Color(0.45f, 0.95f, 1f);
     private static readonly Color ColorEstado = new Color(0.55f, 1f, 0.55f);
@@ -125,33 +136,60 @@ public class TutorialPanel : MonoBehaviour
 
     private void ArmarCartel()
     {
+        // Contenedor a pantalla completa: adentro van la textura y, aparte, la columna de texto (si el
+        // texto fuera hijo de la textura se espejaria con ella).
         cartel = NuevoRect("Cartel", canvasRect);
-        cartel.anchorMin = cartel.anchorMax = new Vector2(0.5f, 0f);
-        cartel.pivot = new Vector2(0.5f, 0f);
-        cartel.anchoredPosition = new Vector2(0f, 36f);
-        cartel.sizeDelta = new Vector2(1500f, 0f);
+        Estirar(cartel);
 
-        Image fondo = cartel.gameObject.AddComponent<Image>();
-        fondo.color = FondoCartel;
+        RectTransform fondoRect = NuevoRect("Fondo", cartel);
+        Estirar(fondoRect);
+        Image fondo = fondoRect.gameObject.AddComponent<Image>();
         fondo.raycastTarget = false;
 
-        VerticalLayoutGroup columna = cartel.gameObject.AddComponent<VerticalLayoutGroup>();
-        columna.padding = new RectOffset(32, 32, 20, 18);
-        columna.spacing = 8f;
-        columna.childControlWidth = true;
-        columna.childControlHeight = true;
-        columna.childForceExpandWidth = true;
-        columna.childForceExpandHeight = false;
+        Sprite textura = Resources.Load<Sprite>(RutaTextura);
+        if (textura != null)
+        {
+            // La textura trae el panel a la izquierda; espejada queda a la derecha, como pidio el equipo.
+            fondo.sprite = textura;
+            fondo.type = Image.Type.Simple;
+            fondo.color = Color.white;
+            fondoRect.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else
+        {
+            Debug.LogWarning("Tutorial: no se encontro la textura " + RutaTextura + "; el cartel usa un fondo liso.");
+            fondo.color = FondoCartel;
+            fondoRect.anchorMin = new Vector2(ColumnaIzquierda - 0.03f, 0f);
+        }
 
-        ContentSizeFitter ajuste = cartel.gameObject.AddComponent<ContentSizeFitter>();
-        ajuste.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        RectTransform columna = NuevoRect("Columna", cartel);
+        columna.anchorMin = new Vector2(ColumnaIzquierda, ColumnaAbajo);
+        columna.anchorMax = new Vector2(ColumnaDerecha, ColumnaArriba);
+        columna.offsetMin = columna.offsetMax = Vector2.zero;
 
-        txtContador = NuevoTexto("Contador", cartel, 24, ColorPie, FontStyle.Normal);
-        txtTitulo = NuevoTexto("Titulo", cartel, 42, ColorTitulo, FontStyle.Bold);
-        txtCuerpo = NuevoTexto("Cuerpo", cartel, 31, Color.white, FontStyle.Normal);
-        txtObjetivo = NuevoTexto("Objetivo", cartel, 33, ColorObjetivo, FontStyle.Bold);
-        txtEstado = NuevoTexto("Estado", cartel, 30, ColorEstado, FontStyle.Bold);
-        txtPie = NuevoTexto("Pie", cartel, 24, ColorPie, FontStyle.Italic);
+        VerticalLayoutGroup layout = columna.gameObject.AddComponent<VerticalLayoutGroup>();
+        layout.padding = new RectOffset(0, 0, 0, 0);
+        layout.spacing = 12f;
+        layout.childAlignment = TextAnchor.UpperLeft;
+        layout.childControlWidth = true;
+        layout.childControlHeight = true;
+        layout.childForceExpandWidth = true;
+        layout.childForceExpandHeight = false;
+
+        // Tamanos pensados para una columna de ~480 px (a 1920 de ancho).
+        txtContador = NuevoTexto("Contador", columna, 20, ColorPie, FontStyle.Normal);
+        txtTitulo = NuevoTexto("Titulo", columna, 36, ColorTitulo, FontStyle.Bold);
+        txtCuerpo = NuevoTexto("Cuerpo", columna, 26, Color.white, FontStyle.Normal);
+        txtObjetivo = NuevoTexto("Objetivo", columna, 28, ColorObjetivo, FontStyle.Bold);
+        txtEstado = NuevoTexto("Estado", columna, 26, ColorEstado, FontStyle.Bold);
+        txtPie = NuevoTexto("Pie", columna, 20, ColorPie, FontStyle.Italic);
+    }
+
+    private static void Estirar(RectTransform rect)
+    {
+        rect.anchorMin = Vector2.zero;
+        rect.anchorMax = Vector2.one;
+        rect.offsetMin = rect.offsetMax = Vector2.zero;
     }
 
     private static RectTransform NuevoRect(string nombre, Transform padre)
