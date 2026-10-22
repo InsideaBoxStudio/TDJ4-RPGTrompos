@@ -42436,6 +42436,7 @@ GameObject:
   - component: {fileID: 1224379796}
   - component: {fileID: 1224379797}
   - component: {fileID: 1224379798}
+  - component: {fileID: 1920000000}
   m_Layer: 0
   m_Name: Estadio
   m_TagString: GravityPoint
@@ -95039,3 +95040,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29183962459e5e840965b4794a367726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1920000000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224379795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2f4a9e1d3b4f0c9a8e6d5b2f1a0c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radio: 1.2
+  transicion: 0.6
+  gravedadAdentro: 0
