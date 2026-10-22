@@ -10,12 +10,17 @@ public class GravityToPoint : MonoBehaviour
 
     Rigidbody2D rb;
 
+    // Zona plana del estadio (opcional): si el punto de gravedad la tiene, la atraccion se
+    // debilita cerca del centro. Ver ZonaPlana.cs.
+    private ZonaPlana zonaPlana;
+
     void Start()
     {
         if (gravityPoint == null)
         {
             gravityPoint = GameObject.FindGameObjectWithTag("GravityPoint").transform;
         }
+        zonaPlana = gravityPoint.GetComponent<ZonaPlana>();
 
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0; // Desactivamos gravedad normal
@@ -33,8 +38,9 @@ public class GravityToPoint : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 direction = (gravityPoint.position - transform.position).normalized;
-        rb.AddForce(direction * gravityStrength);
+        Vector2 haciaElCentro = gravityPoint.position - transform.position;
+        float factor = zonaPlana != null ? zonaPlana.Factor(haciaElCentro.magnitude) : 1f;
+        rb.AddForce(haciaElCentro.normalized * gravityStrength * factor);
 
         rb.AddForce(-rb.linearVelocity * frictionStrength);
     }
