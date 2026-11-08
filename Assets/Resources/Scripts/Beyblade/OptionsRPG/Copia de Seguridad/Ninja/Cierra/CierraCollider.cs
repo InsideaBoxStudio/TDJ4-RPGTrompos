@@ -61,7 +61,7 @@ public class CierraCollider : MonoBehaviour
         if (hasCollided)
         {
             //hacer daño cada vez que se precione el boton
-            if ((Gamepad.all.Count > playerID && Gamepad.all[playerID].buttonSouth.wasPressedThisFrame)
+            if ((JoystickPorJugador.De(playerID) != null && JoystickPorJugador.De(playerID).buttonSouth.wasPressedThisFrame)
                 || TeclasJugador.Esperar(playerID)) // >>> TECLADO <<<
             {
                 otherPlayer.GetComponent<Vida>().Damage(damage, contactPoint);

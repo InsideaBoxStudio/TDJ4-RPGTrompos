@@ -34,7 +34,8 @@ public class ShurikenOption : MonoBehaviour
     void Update()
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
-        
+        if (!turnActive) return; // fuera de turno no se dispara (antes faltaba)
+
         if (attacksMenuPreset.buttonState == childIndex) // >>> TECLADO <<<
         {
             DoAttack();

@@ -24,7 +24,8 @@ public static class TutorialControles
 {
     private enum Marca { Teclado, PlayStation, Xbox, Generico }
 
-    private static Gamepad Pad => Gamepad.all.Count > 0 ? Gamepad.all[0] : null;
+    // El joystick del J1, el mismo que usa el juego (ver JoystickPorJugador).
+    private static Gamepad Pad => JoystickPorJugador.De(0);
 
     private static Marca Actual
     {

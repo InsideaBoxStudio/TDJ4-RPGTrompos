@@ -26,13 +26,13 @@ public class ChangeMenuOptions : MonoBehaviour
     {
         //si el jugador preciona esc
         if (Keyboard.current.escapeKey.wasPressedThisFrame &&
-            Gamepad.all.Count <= playerIndex)
+            JoystickPorJugador.De(playerIndex) == null)
         {
             PreviousMenu();
         }
 
-        if (Gamepad.all.Count > playerIndex &&
-            Gamepad.all[playerIndex].buttonEast.wasPressedThisFrame)
+        Gamepad pad = JoystickPorJugador.De(playerIndex);
+        if (pad != null && pad.buttonEast.wasPressedThisFrame)
         {
             PreviousMenu();
         }

@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.DualShock;
+using UnityEngine.InputSystem.XInput;
 
 public class JoystickSpriteManager : MonoBehaviour
 {
@@ -73,11 +75,19 @@ public class JoystickSpriteManager : MonoBehaviour
         DetectGamepads();
     }
 
+    // Se vuelve a detectar solo si cambió el joystick ASIGNADO a algún jugador. Antes se
+    // re-detectaba cuando cambiaba la cantidad de joysticks y se tomaban por posición, así
+    // que cualquier reconexión (o un joystick virtual de Steam/DS4Windows) hacía saltar los
+    // íconos de un jugador a otro en plena partida.
     private void Update()
     {
-        if (Gamepad.all.Count != playerGamepads.Length)
+        for (int i = 0; i < playerGamepads.Length; i++)
         {
-            DetectGamepads();
+            if (playerGamepads[i] != JoystickPorJugador.De(i))
+            {
+                DetectGamepads();
+                return;
+            }
         }
     }
 
@@ -94,10 +104,9 @@ public class JoystickSpriteManager : MonoBehaviour
 
         for (int i = 0; i < playerCount; i++)
         {
-            if (i < Gamepad.all.Count)
+            Gamepad gamepad = JoystickPorJugador.De(i);
+            if (gamepad != null)
             {
-                Gamepad gamepad = Gamepad.all[i];
-
                 playerGamepads[i] = gamepad;
                 playerJoystickTypes[i] = DetectJoystickType(gamepad);
             }
@@ -115,6 +124,12 @@ public class JoystickSpriteManager : MonoBehaviour
 
     private JoystickType DetectJoystickType(Gamepad gamepad)
     {
+        // Primero por tipo de dispositivo: es lo que reporta el driver. Por nombre fallaba
+        // en Windows, donde un joystick de Xbox se llama "XInputControllerWindows" (no dice
+        // "xbox") y quedaba como genérico; el tutorial ya detectaba así.
+        if (gamepad is DualShockGamepad) return JoystickType.PlayStation;
+        if (gamepad is XInputController) return JoystickType.Xbox;
+
         string name = gamepad.name.ToLower();
 
         if (name.Contains("dualshock") ||

@@ -13,7 +13,7 @@ public class ConectedControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Gamepad.all.Count > connectedDeviceId)
+        if (JoystickPorJugador.De(connectedDeviceId) != null)
         {
             image.color = ConnectedColor;
         }

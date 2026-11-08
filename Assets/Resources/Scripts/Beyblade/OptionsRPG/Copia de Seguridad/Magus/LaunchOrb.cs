@@ -32,7 +32,7 @@ public class LaunchOrb : MonoBehaviour, IAIAction
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+        if (turnActive && ((JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).dpad.down.wasPressedThisFrame)
             || TeclasJugador.Abajo(playerIndex))) // >>> TECLADO <<<
         {
             DoLaunch();

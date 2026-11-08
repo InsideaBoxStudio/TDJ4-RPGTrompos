@@ -24,10 +24,7 @@ public class DefaultPlayerSettings : MonoBehaviour
         // GAMEPAD
         // --------------------------------------------------
 
-        if (Gamepad.all.Count > playerIndex)
-        {
-            gamepad = Gamepad.all[playerIndex];
-        }
+        gamepad = JoystickPorJugador.De(playerIndex);
 
         // --------------------------------------------------
         // GAMEPAD ARRAY

@@ -36,7 +36,7 @@ public class LaunchPinchos : MonoBehaviour, IAIAction
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
 
-        if (turnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.left.wasPressedThisFrame)
+        if (turnActive && ((JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).dpad.left.wasPressedThisFrame)
             || TeclasJugador.Pinchos(playerIndex))) // >>> TECLADO <<<
         {
             DoLaunch();

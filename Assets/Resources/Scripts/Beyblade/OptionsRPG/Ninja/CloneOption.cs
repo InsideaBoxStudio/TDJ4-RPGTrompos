@@ -35,7 +35,8 @@ public class CloneOption : MonoBehaviour
     void Update()
     {
         bool turnActive = rpgTurn.isTurnActive;
-        
+        if (!turnActive) return; // fuera de turno no se dispara (antes faltaba)
+
         if (attacksMenuPreset.buttonState == childIndex) // >>> TECLADO <<<
         {
             DoAttack();

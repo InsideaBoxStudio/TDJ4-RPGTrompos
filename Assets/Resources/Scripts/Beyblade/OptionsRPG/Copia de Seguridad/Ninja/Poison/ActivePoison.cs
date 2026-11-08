@@ -23,7 +23,7 @@ public class ActivePoison : MonoBehaviour
 
     void Update()
     {
-        if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].leftShoulder.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && ((JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).leftShoulder.wasPressedThisFrame)
             || TeclasJugador.Veneno(playerIndex))) // >>> TECLADO <<<
         {
             energyCounter.ChangeEnergy(-energyCost, "Poison");

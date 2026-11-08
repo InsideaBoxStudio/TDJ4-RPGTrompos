@@ -38,6 +38,8 @@ public class ShieldOption : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (rpgTurn == null || !rpgTurn.isTurnActive) return; // fuera de turno no se dispara (antes faltaba)
+
         if (attacksMenuPreset.buttonState == childIndex) // >>> TECLADO <<<
         {
             DoAttack();

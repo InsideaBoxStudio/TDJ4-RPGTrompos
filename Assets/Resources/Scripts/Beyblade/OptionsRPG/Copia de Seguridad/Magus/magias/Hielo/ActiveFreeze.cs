@@ -22,7 +22,7 @@ public class ActiveFreezen : MonoBehaviour
 
     void Update()
     {
-        if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].rightShoulder.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && ((JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).rightShoulder.wasPressedThisFrame)
             || TeclasJugador.R1(playerIndex))) // >>> TECLADO <<< (+ guarda anti-crash sin joystick)
         {
             energyCounter.ChangeEnergy(-energyCost, "Freeze");

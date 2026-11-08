@@ -32,11 +32,12 @@ using UnityEngine.InputSystem;
 // ============================================================================
 public static class Controles
 {
-    // Devuelve el gamepad de ese jugador, o null si no hay ninguno conectado en
-    // esa posición. Chequear null es lo que permite jugar solo con teclado.
+    // Devuelve el gamepad de ese jugador, o null si no tiene: juega con teclado.
+    // Quién tiene qué joystick lo decide JoystickPorJugador (estable aunque un
+    // joystick se desconecte o aparezca otro), no la posición en Gamepad.all.
     private static Gamepad Pad(int p)
     {
-        return (p >= 0 && Gamepad.all.Count > p) ? Gamepad.all[p] : null;
+        return JoystickPorJugador.De(p);
     }
 
     // ---- ACCIONES DE COMBATE ----

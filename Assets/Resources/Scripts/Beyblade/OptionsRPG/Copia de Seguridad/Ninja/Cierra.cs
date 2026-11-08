@@ -35,7 +35,7 @@ public class Cierra : MonoBehaviour, IAIAction
     // Update is called once per frame
     void Update()
     {
-        if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].dpad.down.wasPressedThisFrame)
+        if (rpgTurn.isTurnActive && ((JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).dpad.down.wasPressedThisFrame)
             || TeclasJugador.Abajo(playerIndex))) // >>> TECLADO <<< (si es su turno y presiona abajo)
         {
             DoCierra();

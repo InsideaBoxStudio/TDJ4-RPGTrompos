@@ -17,8 +17,8 @@ public class ExpandMenu2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rpgTurn.isTurnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonEast.isPressed)
-            || (Gamepad.all.Count == playerIndex && Keyboard.current.vKey.isPressed))) // >>> TECLADO <<<
+        if (rpgTurn.isTurnActive && ((JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).buttonEast.isPressed)
+            || (JoystickPorJugador.UsaTeclado(playerIndex) && Keyboard.current.vKey.isPressed))) // >>> TECLADO <<<
         {
             menuToExpand.SetActive(true);
         }

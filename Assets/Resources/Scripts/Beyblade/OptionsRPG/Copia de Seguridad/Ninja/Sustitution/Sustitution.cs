@@ -16,7 +16,7 @@ public class Sustitution : MonoBehaviour
     void Update()
     {
         if (Time.timeScale == 0) return;
-        if (Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonEast.wasPressedThisFrame)
+        if (JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).buttonEast.wasPressedThisFrame)
         {
             parent = gameObject.transform.parent.gameObject;
             initPositionObject = parent.transform.position;

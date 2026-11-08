@@ -28,7 +28,7 @@ public class Move : MonoBehaviour
     {
         bool turnActive = rpgTurn.isTurnActive; // actualizar estado del turno
         
-        if (turnActive && ((Gamepad.all.Count > playerIndex && Gamepad.all[playerIndex].buttonNorth.wasPressedThisFrame)
+        if (turnActive && ((JoystickPorJugador.De(playerIndex) != null && JoystickPorJugador.De(playerIndex).buttonNorth.wasPressedThisFrame)
             || TeclasJugador.Avanzar(playerIndex))) // >>> TECLADO <<<
         {
             DoMove();

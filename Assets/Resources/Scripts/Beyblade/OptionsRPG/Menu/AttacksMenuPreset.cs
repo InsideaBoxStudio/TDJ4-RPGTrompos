@@ -30,16 +30,16 @@ public class AttacksMenuPreset : MonoBehaviour
             optionReference[i] = Instantiate(attackOptionsPrefabs[i], transform); // Instanciar la opcion de ataque y establecerla como hija del objeto actual
         }
 
-        gamepad = PlayerSettings.gamepad[playerIndex]; // obtener el gamepad del jugador correspondiente
-
-        if (gamepad == null && Gamepad.all.Count > 0 && playerIndex == 0)
-        {
-            gamepad = Gamepad.all[0]; // Si no hay guardado un gamepad para el jugador pero hay un joystic conectado, asignarle el primer joystic conectado;
-        }
     }
 
     void Update()
     {
+        // Se pregunta cada frame (es leer un array): si el joystick se desconecta y vuelve,
+        // el menú lo sigue. Antes se guardaba en Start y el J2 nunca tenía joystick acá
+        // (PlayerSettings.gamepad no se carga en las escenas de pelea), así que su menú
+        // leía las flechas del teclado en vez de su cruceta.
+        gamepad = JoystickPorJugador.De(playerIndex);
+
         if (gamepad != null) // si hay un gamepad asignado, usar la entrada del joystick
         {
             joystickInput();

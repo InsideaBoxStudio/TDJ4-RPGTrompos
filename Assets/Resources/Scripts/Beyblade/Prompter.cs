@@ -54,9 +54,10 @@ public class Prompter : MonoBehaviour
             input = Vector2.zero;
 
             // Apuntado con joystick.
-            if (Gamepad.all.Count > playerIndex)
+            Gamepad pad = JoystickPorJugador.De(playerIndex);
+            if (pad != null)
             {
-                input = Gamepad.all[playerIndex].rightStick.ReadValue();
+                input = pad.rightStick.ReadValue();
             }
 
             // Apuntado con teclado.
