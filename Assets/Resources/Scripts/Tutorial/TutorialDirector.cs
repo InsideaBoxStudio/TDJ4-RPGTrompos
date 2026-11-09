@@ -510,8 +510,8 @@ public class TutorialDirector : MonoBehaviour
 
         // Costos de los prefabs de opciones del juego (los *Option no exponen su costo; si cambian, ajustar).
         const int costoBasico = 1;
-        const int costoVeneno = 4;
-        const int costoShuriken = 2;
+        const int costoVeneno = 2;  // energyCost del prefab Poison
+        const int costoShuriken = 3;  // energyCost del prefab Shuriken
 
         // 1. Bienvenida
         lista.Add(new Paso
@@ -1112,7 +1112,7 @@ public class TutorialDirector : MonoBehaviour
         bool gano = vidaCpu == null || vidaCpu.vidaActual <= 0f || (vidaJ != null && vidaJ.vidaActual > 0f);
         panel.Resaltar(null);
         panel.Mostrar("", gano ? "¡Ganaste! Tutorial completo" : "Tutorial completo",
-            "Aprendiste cómo se lanza, el menú de golpes, la energía, los especiales y cómo se pelea por turnos: pegás, el rival te pega y gana el que se queda sin vida. " +
+            "Aprendiste cómo se lanza, el menú de golpes, la energía, los especiales y cómo se pelea por turnos: pegás, el rival te pega y pierde el que se queda sin vida. " +
             "Cada personaje tiene sus propios ataques para descubrir. ¡Ahora probá un 1 contra 1!",
             "", "Para volver al menú:  " + TutorialControles.ConfirmarFinal);
     }
@@ -1604,7 +1604,9 @@ public class TutorialDirector : MonoBehaviour
         if (actual.ataque != null)
         {
             if (usosPaso <= 0) return false;
-            if (!actual.requiereGolpe) return true;
+            // Si el paso tiene condicion propia (el veneno: esperar a que cierre el minijuego)
+            // manda ella; si no, alcanza con haberlo usado.
+            if (!actual.requiereGolpe) return actual.condicion == null || actual.condicion();
             return golpeTrasUso || usosPaso >= IntentosMaximos;
         }
 

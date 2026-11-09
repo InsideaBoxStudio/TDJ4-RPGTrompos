@@ -6,9 +6,12 @@ using UnityEngine;
 // que el estadio nunca quede sin paredes.
 public class InstantiateStadium : MonoBehaviour
 {
+    [Tooltip("Usar siempre el muro de la escena, sin importar el estadio elegido (Tutorial: sus distancias están calibradas para ese muro).")]
+    [SerializeField] private bool ignorarEleccion = false;
+
     void Awake()
     {
-        GameObject elegido = PlayerSettings.stadium;
+        GameObject elegido = ignorarEleccion ? null : PlayerSettings.stadium;
 
         // Muros que vienen en la escena (hijos directos "Muro ..."): se usan solo
         // si no hay estadio elegido, así no quedan dos muros encimados.

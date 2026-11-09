@@ -42494,6 +42494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3043c9a59a7c97049863509979046c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InstantiateStadium
+  ignorarEleccion: 1
 --- !u!1 &1242899951
 GameObject:
   m_ObjectHideFlags: 0

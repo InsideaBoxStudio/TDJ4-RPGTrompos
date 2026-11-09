@@ -25,6 +25,7 @@ public class EmparejarJugadorSelector : MonoBehaviour
     private PlayerInput playerInput;
     private Gamepad emparejado;
     private bool conTeclado;
+    private float proximoReintento;
 
     private void Awake()
     {
@@ -49,10 +50,25 @@ public class EmparejarJugadorSelector : MonoBehaviour
 
     private void Emparejar()
     {
-        emparejado = JoystickPorJugador.De(playerIndex);
-        conTeclado = emparejado == null && JoystickPorJugador.UsaTeclado(playerIndex);
+        Gamepad pad = JoystickPorJugador.De(playerIndex);
+        bool teclado = pad == null && JoystickPorJugador.UsaTeclado(playerIndex);
 
-        if (!playerInput.user.valid) return; // no se emparejó con nada: no hay a quién cambiar
+        // Si al activarse no había ningún dispositivo libre, el PlayerInput se quedó
+        // sin usuario. Apagarlo y prenderlo lo hace emparejarse de nuevo; después se
+        // corrige abajo con el dispositivo que corresponde.
+        if (!playerInput.user.valid && (pad != null || teclado))
+        {
+            if (Time.unscaledTime < proximoReintento) return;
+            proximoReintento = Time.unscaledTime + 1f; // como mucho una vez por segundo
+            playerInput.enabled = false;
+            playerInput.enabled = true;
+        }
+
+        // Sin usuario todavía: no se guarda el estado, así el Update lo reintenta.
+        if (!playerInput.user.valid) return;
+
+        emparejado = pad;
+        conTeclado = teclado;
 
         try
         {
@@ -66,6 +82,13 @@ public class EmparejarJugadorSelector : MonoBehaviour
                     playerInput.SwitchCurrentControlScheme(EsquemaTeclado, Keyboard.current, Mouse.current);
                 else
                     playerInput.SwitchCurrentControlScheme(EsquemaTeclado, Keyboard.current);
+            }
+            else
+            {
+                // Ni joystick ni teclado (por ejemplo, el J2 cuando se desconecta el
+                // único joystick y el teclado pasa al J1): se le saca lo que tenía,
+                // para que una tecla no mueva los dos cursores.
+                playerInput.user.UnpairDevices();
             }
         }
         catch (System.Exception e)
